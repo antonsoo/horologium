@@ -20,7 +20,7 @@
  * Elul(6).
  */
 
-import { type JulianDay, amod, jdWeekday, julianToJD, mod } from './core/jd.js';
+import { type JulianDay, jdWeekday, julianToJD, mod } from './core/jd.js';
 import type { CalendarTablet } from './types.js';
 
 export interface HebrewDate {

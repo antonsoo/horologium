@@ -2,12 +2,12 @@ import { describe, expect, it } from 'vitest';
 import {
   COPTIC_EPOCH_JD,
   COPTIC_MONTH_NAMES,
-  ETHIOPIAN_EPOCH_JD,
-  ETHIOPIAN_MONTH_NAMES,
   copticFromJD,
   copticToJD,
   describeCoptic,
   describeEthiopian,
+  ETHIOPIAN_EPOCH_JD,
+  ETHIOPIAN_MONTH_NAMES,
   ethiopianFromJD,
   ethiopianToJD,
 } from '../src/lib/coptic.js';

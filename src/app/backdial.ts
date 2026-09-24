@@ -4,7 +4,7 @@
  * a simplified stand-in for the Antikythera mechanism's five-turn and
  * four-turn back-dial spirals.
  */
-import { METONIC_MONTHS, SAROS_DAYS, cycleProgress } from '../lib/astronomy/sun-moon.js';
+import { cycleProgress, METONIC_MONTHS, SAROS_DAYS } from '../lib/astronomy/sun-moon.js';
 import type { JulianDay } from '../lib/core/jd.js';
 
 const SYNODIC_MONTH = 29.530588861;

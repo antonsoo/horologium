@@ -22,8 +22,8 @@
 import { sunTimes } from './astronomy/sun-moon.js';
 import {
   type CalendarDate,
-  type JulianDay,
   isJulianLeapYear,
+  type JulianDay,
   jdToJulian,
   jdWeekday,
   julianToJD,

@@ -16,7 +16,7 @@
  * use) selectable.
  */
 
-import { type JulianDay, amod, mod } from './core/jd.js';
+import { amod, type JulianDay, mod } from './core/jd.js';
 import type { CalendarTablet } from './types.js';
 
 export interface MayaLongCount {

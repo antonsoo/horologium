@@ -29,7 +29,7 @@
  *   the well-known modern-date fact this epoch is supposed to reproduce.
  */
 
-import { type JulianDay, julianToJD, mod } from './core/jd.js';
+import { type JulianDay, julianToJD } from './core/jd.js';
 import type { CalendarTablet } from './types.js';
 
 export interface ThirteenMonthDate {
@@ -42,17 +42,6 @@ export interface ThirteenMonthDate {
 
 export type CopticDate = ThirteenMonthDate;
 export type EthiopianDate = ThirteenMonthDate;
-
-/** Shared leap rule: the 13th month has 6 days iff `(year + 1) mod 4 == 0`. */
-function isLeapYear(year: number): boolean {
-  return mod(year + 1, 4) === 0;
-}
-
-/** Length in days of `month` (1-13) of `year`, under the shared Coptic/Ethiopian rule. */
-function monthLength(year: number, month: number): number {
-  if (month <= 12) return 30;
-  return isLeapYear(year) ? 6 : 5;
-}
 
 /**
  * JD for a `{year, month, day}` under the shared 13-month arithmetic, given

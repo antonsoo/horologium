@@ -24,8 +24,8 @@
 
   --font-display: "Cinzel", "Trajan Pro", serif;
   --font-body: "EB Garamond", "Cormorant Garamond", Georgia, serif;
-  --font-native: "EB Garamond", "Noto Serif Hebrew", "Noto Serif SC", "Noto Sans SC", "Noto Sans",
-    Georgia, serif;
+  --font-native:
+    "EB Garamond", "Noto Serif Hebrew", "Noto Serif SC", "Noto Sans SC", "Noto Sans", Georgia, serif;
 
   color-scheme: light;
 }
@@ -72,7 +72,9 @@ body {
   font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.5;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
   min-height: 100vh;
 }
 
@@ -412,18 +414,32 @@ select {
   color: var(--fg-soft);
   text-align: center;
 }
-.site-footer a {
+/* biome-ignore lint/style/noDescendingSpecificity: the :root[data-theme="dark"] .site-footer a
+   compound selector right after this one already out-specifies the earlier dark-mode `a` rule,
+   so color: inherit correctly wins in both themes despite the warning. */
+.site-footer a,
+:root[data-theme="dark"] .site-footer a {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--card-border);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-footer a {
+    color: inherit;
+  }
 }
 .site-footer p {
   margin: 0.3em 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* A global motion killswitch has to out-rank every component's own
+     transition/animation declaration, which is exactly what !important
+     is for here (the standard pattern for prefers-reduced-motion). */
   * {
+    /* biome-ignore lint/complexity/noImportantStyles: see comment above */
     animation-duration: 0.001ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: see comment above */
     transition-duration: 0.001ms !important;
   }
 }
@@ -591,7 +607,9 @@ select {
   fill: var(--carnelian);
   stroke: #2a1e11;
   stroke-width: 1;
-  transition: cx 0.6s ease, cy 0.6s ease;
+  transition:
+    cx 0.6s ease,
+    cy 0.6s ease;
 }
 .backdial-label {
   font-family: var(--font-display);

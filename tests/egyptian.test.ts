@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { gregorianToJD, julianToJD } from '../src/lib/core/jd.js';
 import {
-  EGYPTIAN_EPOCH_JD,
   describe as describeEgyptian,
+  EGYPTIAN_EPOCH_JD,
   fromJD,
   seasonForMonth,
   sothicCyclePosition,

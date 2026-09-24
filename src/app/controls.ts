@@ -1,9 +1,9 @@
 /** Time travel, location, presets, and the URL permalink hash. */
 import {
-  type JulianDay,
   dateToJD,
   displayYear,
   gregorianToJD,
+  type JulianDay,
   jdToGregorian,
 } from '../lib/core/jd.js';
 import { ANCIENT_CITIES } from '../lib/roman.js';

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { gregorianToJD } from '../src/lib/core/jd.js';
 import {
-  GMT_CORRELATION_STANDARD,
   fromJD,
+  GMT_CORRELATION_STANDARD,
   haabFromJD,
   jdFromLongCount,
   longCountFromJD,

@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { jdWeekday, julianToJD } from '../src/lib/core/jd.js';
 import {
-  ISLAMIC_EPOCH_JD,
-  ISLAMIC_MONTH_NAMES,
   describe as describeIslamic,
   fromJD,
+  ISLAMIC_EPOCH_JD,
+  ISLAMIC_MONTH_NAMES,
   islamicLeapYear,
   toJD,
 } from '../src/lib/islamic.js';

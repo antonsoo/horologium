@@ -27,7 +27,7 @@
  *   312 gives amod(1, 15) = 1, landing exactly on 312-313 CE as required.
  */
 
-import { type JulianDay, amod, jdToJulian, julianToJD } from './core/jd.js';
+import { amod, type JulianDay, jdToJulian, julianToJD } from './core/jd.js';
 import { JULIAN_MONTH_NAMES_EN } from './roman.js';
 import type { CalendarTablet } from './types.js';
 

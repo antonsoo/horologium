@@ -6,17 +6,17 @@
  * between calendars that both have a `fromJD`. `core` and `astronomy` are the
  * shared foundation everything else is built on.
  */
-export * as core from './core/jd.js';
-export * as astronomy from './astronomy/sun-moon.js';
 
-export * as roman from './roman.js';
+export * as astronomy from './astronomy/sun-moon.js';
 export * as byzantine from './byzantine.js';
-export * as islamic from './islamic.js';
+export * as chinese from './chinese.js';
 export * as coptic from './coptic.js';
 export * as ethiopian from './coptic.js';
-export * as hebrew from './hebrew.js';
+export * as core from './core/jd.js';
 export * as egyptian from './egyptian.js';
+export * as hebrew from './hebrew.js';
+export * as islamic from './islamic.js';
 export * as maya from './maya.js';
-export * as chinese from './chinese.js';
+export * as roman from './roman.js';
 
 export type { CalendarTablet } from './types.js';

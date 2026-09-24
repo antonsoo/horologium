@@ -33,8 +33,8 @@ import {
   solarTermBefore,
   sunLongitude,
 } from './astronomy/sun-moon.js';
-import { gregorianToJD, jdToGregorian, mod } from './core/jd.js';
 import type { JulianDay } from './core/jd.js';
+import { gregorianToJD, jdToGregorian, mod } from './core/jd.js';
 import type { CalendarTablet } from './types.js';
 
 const CHINA_UTC_OFFSET_DAYS = 8 / 24;

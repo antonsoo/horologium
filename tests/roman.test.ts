@@ -2,10 +2,10 @@ import { describe, expect, it } from 'vitest';
 import { isJulianLeapYear, julianToJD } from '../src/lib/core/jd.js';
 import {
   ANCIENT_CITIES,
-  ROME,
   describe as describeRoman,
   fromJD,
   latinWeekday,
+  ROME,
   romanHour,
   toJD,
   toRomanNumerals,
