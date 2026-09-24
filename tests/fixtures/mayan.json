@@ -1,0 +1,3002 @@
+[
+  {
+    "gregorian": [
+      1915,
+      8,
+      24
+    ],
+    "jd": 2420733.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 15,
+      "tun": 1,
+      "winal": 4,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      2105,
+      2,
+      28
+    ],
+    "jd": 2489953.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 4,
+      "tun": 13,
+      "winal": 9,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      128,
+      5,
+      2
+    ],
+    "jd": 1767932.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 4,
+      "tun": 7,
+      "winal": 16,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1093,
+      5,
+      18
+    ],
+    "jd": 2120407.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 13,
+      "tun": 7,
+      "winal": 0,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      734,
+      3,
+      6
+    ],
+    "jd": 1989211.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 15,
+      "tun": 2,
+      "winal": 10,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      2189,
+      4,
+      10
+    ],
+    "jd": 2520675.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 8,
+      "tun": 18,
+      "winal": 15,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      1630,
+      8,
+      15
+    ],
+    "jd": 2316631.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 0,
+      "tun": 12,
+      "winal": 1,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      391,
+      7,
+      1
+    ],
+    "jd": 1864050.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 17,
+      "tun": 14,
+      "winal": 16,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      628,
+      10,
+      6
+    ],
+    "jd": 1950710.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 9,
+      "tun": 15,
+      "winal": 11,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      2165,
+      2,
+      7
+    ],
+    "jd": 2511847.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 7,
+      "tun": 14,
+      "winal": 6,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      878,
+      6,
+      18
+    ],
+    "jd": 2041911.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 2,
+      "tun": 8,
+      "winal": 17,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      1182,
+      9,
+      6
+    ],
+    "jd": 2153024.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 17,
+      "tun": 17,
+      "winal": 11,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      681,
+      12,
+      3
+    ],
+    "jd": 1970126.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 12,
+      "tun": 9,
+      "winal": 10,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      557,
+      3,
+      9
+    ],
+    "jd": 1924567.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 6,
+      "tun": 3,
+      "winal": 0,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1921,
+      7,
+      1
+    ],
+    "jd": 2422871.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 15,
+      "tun": 7,
+      "winal": 3,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      208,
+      9,
+      6
+    ],
+    "jd": 1797278.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 8,
+      "tun": 9,
+      "winal": 7,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      852,
+      1,
+      22
+    ],
+    "jd": 2032267.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 1,
+      "tun": 2,
+      "winal": 3,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      935,
+      12,
+      12
+    ],
+    "jd": 2062906.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 5,
+      "tun": 7,
+      "winal": 5,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      333,
+      12,
+      27
+    ],
+    "jd": 1843045.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 14,
+      "tun": 16,
+      "winal": 10,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      2340,
+      6,
+      10
+    ],
+    "jd": 2575887.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 16,
+      "tun": 12,
+      "winal": 4,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      982,
+      4,
+      25
+    ],
+    "jd": 2079842.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 7,
+      "tun": 14,
+      "winal": 6,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      1156,
+      5,
+      14
+    ],
+    "jd": 2143413.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 16,
+      "tun": 10,
+      "winal": 16,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1049,
+      7,
+      13
+    ],
+    "jd": 2104392.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 11,
+      "tun": 2,
+      "winal": 9,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1602,
+      9,
+      8
+    ],
+    "jd": 2306428.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 19,
+      "tun": 3,
+      "winal": 13,
+      "kin": 6
+    }
+  },
+  {
+    "gregorian": [
+      2178,
+      7,
+      15
+    ],
+    "jd": 2516753.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 8,
+      "tun": 7,
+      "winal": 17,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1110,
+      3,
+      3
+    ],
+    "jd": 2126539.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 14,
+      "tun": 4,
+      "winal": 0,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      2179,
+      9,
+      17
+    ],
+    "jd": 2517182.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 8,
+      "tun": 9,
+      "winal": 3,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      1466,
+      10,
+      5
+    ],
+    "jd": 2256782.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 12,
+      "tun": 5,
+      "winal": 15,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      652,
+      4,
+      11
+    ],
+    "jd": 1959298.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 10,
+      "tun": 19,
+      "winal": 8,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      317,
+      6,
+      19
+    ],
+    "jd": 1837010.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 13,
+      "tun": 19,
+      "winal": 14,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      1754,
+      6,
+      15
+    ],
+    "jd": 2361860.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 6,
+      "tun": 17,
+      "winal": 12,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      353,
+      7,
+      26
+    ],
+    "jd": 1850196.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 15,
+      "tun": 16,
+      "winal": 7,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      2046,
+      9,
+      25
+    ],
+    "jd": 2468613.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 1,
+      "tun": 14,
+      "winal": 4,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1035,
+      9,
+      27
+    ],
+    "jd": 2099354.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 10,
+      "tun": 8,
+      "winal": 9,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      1905,
+      7,
+      21
+    ],
+    "jd": 2417047.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 14,
+      "tun": 11,
+      "winal": 0,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      2217,
+      1,
+      4
+    ],
+    "jd": 2530805.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 10,
+      "tun": 7,
+      "winal": 0,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      1773,
+      6,
+      4
+    ],
+    "jd": 2368789.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 7,
+      "tun": 16,
+      "winal": 17,
+      "kin": 7
+    }
+  },
+  {
+    "gregorian": [
+      526,
+      11,
+      26
+    ],
+    "jd": 1913506.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 4,
+      "tun": 12,
+      "winal": 5,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      1089,
+      9,
+      7
+    ],
+    "jd": 2119058.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 13,
+      "tun": 3,
+      "winal": 4,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1645,
+      5,
+      24
+    ],
+    "jd": 2322027.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 1,
+      "tun": 7,
+      "winal": 1,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1748,
+      7,
+      20
+    ],
+    "jd": 2359704.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 6,
+      "tun": 11,
+      "winal": 13,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      1274,
+      2,
+      28
+    ],
+    "jd": 2186437.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 2,
+      "tun": 10,
+      "winal": 7,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      926,
+      12,
+      13
+    ],
+    "jd": 2059620.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 4,
+      "tun": 18,
+      "winal": 2,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      832,
+      3,
+      16
+    ],
+    "jd": 2025016.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 0,
+      "tun": 2,
+      "winal": 0,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      1285,
+      8,
+      2
+    ],
+    "jd": 2190610.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 3,
+      "tun": 2,
+      "winal": 0,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      1743,
+      11,
+      1
+    ],
+    "jd": 2357981.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 6,
+      "tun": 6,
+      "winal": 16,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1212,
+      11,
+      17
+    ],
+    "jd": 2164054.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 19,
+      "tun": 8,
+      "winal": 4,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      1123,
+      12,
+      21
+    ],
+    "jd": 2131580.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 14,
+      "tun": 18,
+      "winal": 0,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      803,
+      5,
+      3
+    ],
+    "jd": 2014471.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 18,
+      "tun": 12,
+      "winal": 13,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      1410,
+      2,
+      1
+    ],
+    "jd": 2236082.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 9,
+      "tun": 8,
+      "winal": 6,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      1827,
+      10,
+      3
+    ],
+    "jd": 2388632.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 10,
+      "tun": 12,
+      "winal": 1,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1191,
+      9,
+      14
+    ],
+    "jd": 2156319.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 18,
+      "tun": 6,
+      "winal": 13,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      589,
+      8,
+      13
+    ],
+    "jd": 1936412.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 7,
+      "tun": 15,
+      "winal": 16,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1687,
+      4,
+      10
+    ],
+    "jd": 2337323.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 3,
+      "tun": 9,
+      "winal": 10,
+      "kin": 1
+    }
+  },
+  {
+    "gregorian": [
+      2286,
+      8,
+      15
+    ],
+    "jd": 2556230.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 13,
+      "tun": 17,
+      "winal": 11,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      835,
+      2,
+      12
+    ],
+    "jd": 2026079.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 0,
+      "tun": 4,
+      "winal": 17,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      571,
+      1,
+      15
+    ],
+    "jd": 1929627.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 6,
+      "tun": 17,
+      "winal": 1,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      486,
+      2,
+      19
+    ],
+    "jd": 1898617.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 2,
+      "tun": 10,
+      "winal": 16,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      2051,
+      4,
+      8
+    ],
+    "jd": 2470269.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 1,
+      "tun": 18,
+      "winal": 15,
+      "kin": 7
+    }
+  },
+  {
+    "gregorian": [
+      908,
+      12,
+      4
+    ],
+    "jd": 2053037.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 3,
+      "tun": 19,
+      "winal": 15,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      766,
+      9,
+      18
+    ],
+    "jd": 2001095.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 16,
+      "tun": 15,
+      "winal": 10,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      625,
+      12,
+      8
+    ],
+    "jd": 1949677.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 9,
+      "tun": 12,
+      "winal": 13,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      2015,
+      8,
+      2
+    ],
+    "jd": 2457236.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 0,
+      "tun": 2,
+      "winal": 11,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      1937,
+      10,
+      18
+    ],
+    "jd": 2428824.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 16,
+      "tun": 3,
+      "winal": 13,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      1905,
+      3,
+      23
+    ],
+    "jd": 2416927.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 14,
+      "tun": 10,
+      "winal": 12,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1342,
+      11,
+      15
+    ],
+    "jd": 2211533.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 6,
+      "tun": 0,
+      "winal": 2,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      200,
+      6,
+      11
+    ],
+    "jd": 1794269.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 8,
+      "tun": 1,
+      "winal": 1,
+      "kin": 7
+    }
+  },
+  {
+    "gregorian": [
+      2255,
+      8,
+      3
+    ],
+    "jd": 2544895.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 12,
+      "tun": 6,
+      "winal": 2,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      1736,
+      9,
+      21
+    ],
+    "jd": 2355384.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 5,
+      "tun": 19,
+      "winal": 13,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      2058,
+      2,
+      12
+    ],
+    "jd": 2472771.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 2,
+      "tun": 5,
+      "winal": 14,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      1615,
+      8,
+      4
+    ],
+    "jd": 2311141.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 19,
+      "tun": 16,
+      "winal": 14,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1638,
+      9,
+      28
+    ],
+    "jd": 2319597.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 1,
+      "tun": 0,
+      "winal": 5,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      2047,
+      3,
+      24
+    ],
+    "jd": 2468793.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 1,
+      "tun": 14,
+      "winal": 13,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1182,
+      5,
+      19
+    ],
+    "jd": 2152914.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 17,
+      "tun": 17,
+      "winal": 5,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      449,
+      12,
+      7
+    ],
+    "jd": 1885394.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 0,
+      "tun": 14,
+      "winal": 3,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      362,
+      3,
+      10
+    ],
+    "jd": 1853345.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 16,
+      "tun": 5,
+      "winal": 3,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      1441,
+      9,
+      9
+    ],
+    "jd": 2247625.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 11,
+      "tun": 0,
+      "winal": 7,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      2164,
+      8,
+      17
+    ],
+    "jd": 2511673.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 7,
+      "tun": 13,
+      "winal": 15,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      747,
+      4,
+      14
+    ],
+    "jd": 1993998.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 15,
+      "tun": 15,
+      "winal": 15,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1478,
+      3,
+      7
+    ],
+    "jd": 2260953.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 12,
+      "tun": 17,
+      "winal": 7,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      560,
+      5,
+      21
+    ],
+    "jd": 1925736.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 6,
+      "tun": 6,
+      "winal": 4,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      1324,
+      5,
+      13
+    ],
+    "jd": 2204773.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 5,
+      "tun": 1,
+      "winal": 6,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      2357,
+      5,
+      6
+    ],
+    "jd": 2582061.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 17,
+      "tun": 9,
+      "winal": 6,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      615,
+      4,
+      8
+    ],
+    "jd": 1945780.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 9,
+      "tun": 1,
+      "winal": 16,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      2375,
+      9,
+      21
+    ],
+    "jd": 2588773.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 18,
+      "tun": 8,
+      "winal": 0,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      450,
+      12,
+      1
+    ],
+    "jd": 1885753.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 0,
+      "tun": 15,
+      "winal": 3,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1278,
+      5,
+      15
+    ],
+    "jd": 2187974.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 2,
+      "tun": 14,
+      "winal": 12,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      1261,
+      2,
+      19
+    ],
+    "jd": 2181680.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 1,
+      "tun": 17,
+      "winal": 3,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      424,
+      11,
+      20
+    ],
+    "jd": 1876246.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 19,
+      "tun": 8,
+      "winal": 14,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      2369,
+      12,
+      4
+    ],
+    "jd": 2586656.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 18,
+      "tun": 2,
+      "winal": 2,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      349,
+      8,
+      8
+    ],
+    "jd": 1848748.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 15,
+      "tun": 12,
+      "winal": 7,
+      "kin": 6
+    }
+  },
+  {
+    "gregorian": [
+      1845,
+      8,
+      16
+    ],
+    "jd": 2395159.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 11,
+      "tun": 10,
+      "winal": 3,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      1385,
+      12,
+      13
+    ],
+    "jd": 2227267.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 8,
+      "tun": 3,
+      "winal": 15,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1037,
+      4,
+      10
+    ],
+    "jd": 2099915.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 10,
+      "tun": 10,
+      "winal": 1,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      708,
+      5,
+      3
+    ],
+    "jd": 1979773.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 13,
+      "tun": 16,
+      "winal": 6,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1599,
+      10,
+      14
+    ],
+    "jd": 2305368.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 19,
+      "tun": 0,
+      "winal": 14,
+      "kin": 6
+    }
+  },
+  {
+    "gregorian": [
+      1991,
+      4,
+      11
+    ],
+    "jd": 2448357.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 18,
+      "tun": 17,
+      "winal": 17,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      477,
+      4,
+      2
+    ],
+    "jd": 1895372.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 2,
+      "tun": 1,
+      "winal": 16,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      918,
+      4,
+      12
+    ],
+    "jd": 2056453.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 4,
+      "tun": 9,
+      "winal": 6,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      1966,
+      12,
+      3
+    ],
+    "jd": 2439462.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 17,
+      "tun": 13,
+      "winal": 5,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      2063,
+      2,
+      3
+    ],
+    "jd": 2474588.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 2,
+      "tun": 10,
+      "winal": 15,
+      "kin": 6
+    }
+  },
+  {
+    "gregorian": [
+      2060,
+      7,
+      7
+    ],
+    "jd": 2473647.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 2,
+      "tun": 8,
+      "winal": 4,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1633,
+      9,
+      15
+    ],
+    "jd": 2317758.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 0,
+      "tun": 15,
+      "winal": 3,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1710,
+      7,
+      3
+    ],
+    "jd": 2345807.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 4,
+      "tun": 13,
+      "winal": 2,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      2110,
+      1,
+      2
+    ],
+    "jd": 2491722.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 4,
+      "tun": 18,
+      "winal": 8,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      139,
+      9,
+      3
+    ],
+    "jd": 1772073.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 4,
+      "tun": 19,
+      "winal": 7,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      5,
+      10,
+      7
+    ],
+    "jd": 1723165.5,
+    "longCount": {
+      "baktun": 7,
+      "katun": 18,
+      "tun": 3,
+      "winal": 10,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      2340,
+      5,
+      15
+    ],
+    "jd": 2575861.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 16,
+      "tun": 12,
+      "winal": 2,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1966,
+      4,
+      24
+    ],
+    "jd": 2439239.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 17,
+      "tun": 12,
+      "winal": 11,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      986,
+      9,
+      2
+    ],
+    "jd": 2081433.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 7,
+      "tun": 18,
+      "winal": 13,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      685,
+      7,
+      11
+    ],
+    "jd": 1971442.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 12,
+      "tun": 13,
+      "winal": 4,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      202,
+      5,
+      23
+    ],
+    "jd": 1794980.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 8,
+      "tun": 3,
+      "winal": 0,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      1606,
+      9,
+      10
+    ],
+    "jd": 2307891.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 19,
+      "tun": 7,
+      "winal": 14,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      504,
+      11,
+      9
+    ],
+    "jd": 1905454.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 3,
+      "tun": 9,
+      "winal": 16,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      200,
+      10,
+      5
+    ],
+    "jd": 1794385.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 8,
+      "tun": 1,
+      "winal": 7,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      266,
+      5,
+      28
+    ],
+    "jd": 1818361.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 11,
+      "tun": 7,
+      "winal": 17,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1604,
+      4,
+      17
+    ],
+    "jd": 2307015.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 19,
+      "tun": 5,
+      "winal": 6,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      470,
+      10,
+      14
+    ],
+    "jd": 1893010.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 1,
+      "tun": 15,
+      "winal": 6,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      2226,
+      2,
+      25
+    ],
+    "jd": 2534144.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 10,
+      "tun": 16,
+      "winal": 5,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      41,
+      3,
+      27
+    ],
+    "jd": 1736120.5,
+    "longCount": {
+      "baktun": 7,
+      "katun": 19,
+      "tun": 19,
+      "winal": 9,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      1706,
+      3,
+      18
+    ],
+    "jd": 2344239.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 4,
+      "tun": 8,
+      "winal": 13,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      1225,
+      2,
+      12
+    ],
+    "jd": 2168524.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 0,
+      "tun": 0,
+      "winal": 12,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      803,
+      2,
+      14
+    ],
+    "jd": 2014393.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 18,
+      "tun": 12,
+      "winal": 9,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      97,
+      7,
+      18
+    ],
+    "jd": 1756687.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 2,
+      "tun": 16,
+      "winal": 12,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1635,
+      11,
+      8
+    ],
+    "jd": 2318542.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 0,
+      "tun": 17,
+      "winal": 7,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      2114,
+      7,
+      25
+    ],
+    "jd": 2493387.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 5,
+      "tun": 3,
+      "winal": 1,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      576,
+      11,
+      4
+    ],
+    "jd": 1931747.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 7,
+      "tun": 2,
+      "winal": 17,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1099,
+      1,
+      27
+    ],
+    "jd": 2122487.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 13,
+      "tun": 12,
+      "winal": 14,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1568,
+      2,
+      26
+    ],
+    "jd": 2293815.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 17,
+      "tun": 8,
+      "winal": 12,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      1445,
+      10,
+      19
+    ],
+    "jd": 2249126.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 11,
+      "tun": 4,
+      "winal": 10,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      2365,
+      8,
+      14
+    ],
+    "jd": 2585083.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 17,
+      "tun": 17,
+      "winal": 14,
+      "kin": 1
+    }
+  },
+  {
+    "gregorian": [
+      962,
+      12,
+      25
+    ],
+    "jd": 2072781.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 6,
+      "tun": 14,
+      "winal": 12,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1360,
+      8,
+      2
+    ],
+    "jd": 2218003.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 6,
+      "tun": 18,
+      "winal": 2,
+      "kin": 1
+    }
+  },
+  {
+    "gregorian": [
+      2323,
+      12,
+      28
+    ],
+    "jd": 2569878.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 15,
+      "tun": 15,
+      "winal": 9,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1662,
+      9,
+      13
+    ],
+    "jd": 2328348.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 2,
+      "tun": 4,
+      "winal": 11,
+      "kin": 6
+    }
+  },
+  {
+    "gregorian": [
+      1540,
+      7,
+      24
+    ],
+    "jd": 2283737.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 16,
+      "tun": 0,
+      "winal": 12,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      2146,
+      1,
+      10
+    ],
+    "jd": 2504879.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 6,
+      "tun": 14,
+      "winal": 17,
+      "kin": 17
+    }
+  },
+  {
+    "gregorian": [
+      1330,
+      5,
+      20
+    ],
+    "jd": 2206971.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 5,
+      "tun": 7,
+      "winal": 8,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      1586,
+      6,
+      5
+    ],
+    "jd": 2300489.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 18,
+      "tun": 7,
+      "winal": 4,
+      "kin": 7
+    }
+  },
+  {
+    "gregorian": [
+      1733,
+      3,
+      19
+    ],
+    "jd": 2354102.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 5,
+      "tun": 16,
+      "winal": 3,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      498,
+      10,
+      18
+    ],
+    "jd": 1903241.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 3,
+      "tun": 3,
+      "winal": 13,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      130,
+      7,
+      12
+    ],
+    "jd": 1768733.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 4,
+      "tun": 10,
+      "winal": 2,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      409,
+      8,
+      10
+    ],
+    "jd": 1870665.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 18,
+      "tun": 13,
+      "winal": 5,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      208,
+      5,
+      25
+    ],
+    "jd": 1797174.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 8,
+      "tun": 9,
+      "winal": 2,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      480,
+      12,
+      2
+    ],
+    "jd": 1896712.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 2,
+      "tun": 5,
+      "winal": 11,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1732,
+      9,
+      18
+    ],
+    "jd": 2353920.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 5,
+      "tun": 15,
+      "winal": 11,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      1495,
+      7,
+      9
+    ],
+    "jd": 2267286.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 13,
+      "tun": 15,
+      "winal": 0,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      1661,
+      1,
+      14
+    ],
+    "jd": 2327741.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 2,
+      "tun": 2,
+      "winal": 16,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1299,
+      8,
+      3
+    ],
+    "jd": 2195724.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 3,
+      "tun": 16,
+      "winal": 4,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      865,
+      12,
+      17
+    ],
+    "jd": 2037345.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 1,
+      "tun": 16,
+      "winal": 5,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      1469,
+      7,
+      5
+    ],
+    "jd": 2257786.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 12,
+      "tun": 8,
+      "winal": 11,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      1014,
+      8,
+      26
+    ],
+    "jd": 2091652.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 9,
+      "tun": 7,
+      "winal": 2,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      289,
+      1,
+      8
+    ],
+    "jd": 1826622.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 12,
+      "tun": 10,
+      "winal": 17,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      1940,
+      6,
+      2
+    ],
+    "jd": 2429782.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 16,
+      "tun": 6,
+      "winal": 7,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      2282,
+      12,
+      1
+    ],
+    "jd": 2554877.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 13,
+      "tun": 13,
+      "winal": 15,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      345,
+      2,
+      14
+    ],
+    "jd": 1847112.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 15,
+      "tun": 7,
+      "winal": 15,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      2111,
+      6,
+      20
+    ],
+    "jd": 2492256.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 4,
+      "tun": 19,
+      "winal": 16,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      1062,
+      5,
+      6
+    ],
+    "jd": 2109072.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 11,
+      "tun": 15,
+      "winal": 9,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1934,
+      12,
+      21
+    ],
+    "jd": 2427792.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 16,
+      "tun": 0,
+      "winal": 15,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      243,
+      8,
+      28
+    ],
+    "jd": 1810052.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 10,
+      "tun": 4,
+      "winal": 16,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1979,
+      1,
+      18
+    ],
+    "jd": 2443891.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 18,
+      "tun": 5,
+      "winal": 10,
+      "kin": 9
+    }
+  },
+  {
+    "gregorian": [
+      2031,
+      2,
+      19
+    ],
+    "jd": 2462916.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 0,
+      "tun": 18,
+      "winal": 7,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      838,
+      4,
+      8
+    ],
+    "jd": 2027230.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 0,
+      "tun": 8,
+      "winal": 3,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      1433,
+      2,
+      1
+    ],
+    "jd": 2244483.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 10,
+      "tun": 11,
+      "winal": 12,
+      "kin": 1
+    }
+  },
+  {
+    "gregorian": [
+      1216,
+      12,
+      25
+    ],
+    "jd": 2165553.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 19,
+      "tun": 12,
+      "winal": 7,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      269,
+      1,
+      12
+    ],
+    "jd": 1819321.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 11,
+      "tun": 10,
+      "winal": 11,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1032,
+      11,
+      1
+    ],
+    "jd": 2098294.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 10,
+      "tun": 5,
+      "winal": 10,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      2232,
+      5,
+      15
+    ],
+    "jd": 2536415.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 11,
+      "tun": 2,
+      "winal": 10,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      2120,
+      7,
+      26
+    ],
+    "jd": 2495580.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 5,
+      "tun": 9,
+      "winal": 2,
+      "kin": 18
+    }
+  },
+  {
+    "gregorian": [
+      1939,
+      4,
+      24
+    ],
+    "jd": 2429377.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 16,
+      "tun": 5,
+      "winal": 4,
+      "kin": 15
+    }
+  },
+  {
+    "gregorian": [
+      1956,
+      11,
+      13
+    ],
+    "jd": 2435790.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 17,
+      "tun": 3,
+      "winal": 1,
+      "kin": 8
+    }
+  },
+  {
+    "gregorian": [
+      2207,
+      2,
+      27
+    ],
+    "jd": 2527206.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 9,
+      "tun": 17,
+      "winal": 0,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      2291,
+      10,
+      10
+    ],
+    "jd": 2558112.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 14,
+      "tun": 2,
+      "winal": 15,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      218,
+      12,
+      6
+    ],
+    "jd": 1801021.5,
+    "longCount": {
+      "baktun": 8,
+      "katun": 8,
+      "tun": 19,
+      "winal": 14,
+      "kin": 19
+    }
+  },
+  {
+    "gregorian": [
+      1223,
+      9,
+      1
+    ],
+    "jd": 2167994.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 19,
+      "tun": 19,
+      "winal": 3,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      1183,
+      10,
+      21
+    ],
+    "jd": 2153434.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 17,
+      "tun": 18,
+      "winal": 13,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      2400,
+      2,
+      13
+    ],
+    "jd": 2597684.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 19,
+      "tun": 12,
+      "winal": 14,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      1621,
+      4,
+      16
+    ],
+    "jd": 2313223.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 0,
+      "tun": 2,
+      "winal": 11,
+      "kin": 1
+    }
+  },
+  {
+    "gregorian": [
+      2258,
+      4,
+      16
+    ],
+    "jd": 2545882.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 12,
+      "tun": 8,
+      "winal": 16,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      1612,
+      12,
+      4
+    ],
+    "jd": 2310168.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 19,
+      "tun": 14,
+      "winal": 2,
+      "kin": 6
+    }
+  },
+  {
+    "gregorian": [
+      1840,
+      5,
+      19
+    ],
+    "jd": 2393244.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 11,
+      "tun": 4,
+      "winal": 16,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      1114,
+      7,
+      17
+    ],
+    "jd": 2128136.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 14,
+      "tun": 8,
+      "winal": 8,
+      "kin": 14
+    }
+  },
+  {
+    "gregorian": [
+      868,
+      11,
+      10
+    ],
+    "jd": 2038404.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 1,
+      "tun": 19,
+      "winal": 4,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      613,
+      11,
+      2
+    ],
+    "jd": 1945258.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 9,
+      "tun": 0,
+      "winal": 8,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1827,
+      5,
+      18
+    ],
+    "jd": 2388494.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 10,
+      "tun": 11,
+      "winal": 12,
+      "kin": 12
+    }
+  },
+  {
+    "gregorian": [
+      1358,
+      1,
+      15
+    ],
+    "jd": 2217073.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 6,
+      "tun": 15,
+      "winal": 9,
+      "kin": 11
+    }
+  },
+  {
+    "gregorian": [
+      2168,
+      4,
+      3
+    ],
+    "jd": 2512998.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 7,
+      "tun": 17,
+      "winal": 9,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1422,
+      10,
+      9
+    ],
+    "jd": 2240715.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 10,
+      "tun": 1,
+      "winal": 3,
+      "kin": 13
+    }
+  },
+  {
+    "gregorian": [
+      1074,
+      12,
+      1
+    ],
+    "jd": 2113664.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 12,
+      "tun": 8,
+      "winal": 5,
+      "kin": 2
+    }
+  },
+  {
+    "gregorian": [
+      956,
+      7,
+      20
+    ],
+    "jd": 2070432.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 6,
+      "tun": 8,
+      "winal": 3,
+      "kin": 10
+    }
+  },
+  {
+    "gregorian": [
+      1280,
+      5,
+      17
+    ],
+    "jd": 2188707.5,
+    "longCount": {
+      "baktun": 11,
+      "katun": 2,
+      "tun": 16,
+      "winal": 13,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      939,
+      11,
+      13
+    ],
+    "jd": 2064338.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 5,
+      "tun": 11,
+      "winal": 4,
+      "kin": 16
+    }
+  },
+  {
+    "gregorian": [
+      1035,
+      10,
+      10
+    ],
+    "jd": 2099367.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 10,
+      "tun": 8,
+      "winal": 10,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1074,
+      9,
+      10
+    ],
+    "jd": 2113582.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 12,
+      "tun": 8,
+      "winal": 1,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      923,
+      9,
+      5
+    ],
+    "jd": 2058425.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 4,
+      "tun": 14,
+      "winal": 15,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      696,
+      2,
+      8
+    ],
+    "jd": 1975306.5,
+    "longCount": {
+      "baktun": 9,
+      "katun": 13,
+      "tun": 3,
+      "winal": 17,
+      "kin": 4
+    }
+  },
+  {
+    "gregorian": [
+      1906,
+      2,
+      1
+    ],
+    "jd": 2417242.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 14,
+      "tun": 11,
+      "winal": 10,
+      "kin": 0
+    }
+  },
+  {
+    "gregorian": [
+      1792,
+      10,
+      20
+    ],
+    "jd": 2375867.5,
+    "longCount": {
+      "baktun": 12,
+      "katun": 8,
+      "tun": 16,
+      "winal": 11,
+      "kin": 5
+    }
+  },
+  {
+    "gregorian": [
+      1086,
+      11,
+      9
+    ],
+    "jd": 2118025.5,
+    "longCount": {
+      "baktun": 10,
+      "katun": 13,
+      "tun": 0,
+      "winal": 7,
+      "kin": 3
+    }
+  },
+  {
+    "gregorian": [
+      2348,
+      11,
+      19
+    ],
+    "jd": 2578971.5,
+    "longCount": {
+      "baktun": 13,
+      "katun": 17,
+      "tun": 0,
+      "winal": 14,
+      "kin": 9
+    }
+  }
+]

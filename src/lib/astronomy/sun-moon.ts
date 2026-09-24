@@ -69,7 +69,7 @@ export function moonLongitude(jd: JulianDay): number {
   const lp = normalizeDegrees(218.3164477 + 481267.88123421 * t - 0.0015786 * t * t);
   const d = normalizeDegrees(297.8501921 + 445267.1114034 * t - 0.0018819 * t * t);
   const m = normalizeDegrees(357.5291092 + 35999.0502909 * t - 0.0001536 * t * t);
-  const mp = normalizeDegrees(134.9633964 + 477198.8675055 * t + 0.0089970 * t * t);
+  const mp = normalizeDegrees(134.9633964 + 477198.8675055 * t + 0.008997 * t * t);
   const f = normalizeDegrees(93.272095 + 483202.0175233 * t - 0.0036539 * t * t);
 
   const [dR, mR, mpR, fR] = [d * DEG, m * DEG, mp * DEG, f * DEG];
@@ -175,7 +175,10 @@ function findElongationCrossing(jd: JulianDay, targetDeg: number, direction: -1 
   for (let i = 0; i < 40; i++) {
     b = a + step;
     fb = f(b);
-    if (Math.sign(fa) !== Math.sign(fb) || fb === 0) break;
+    // A real root has fa/fb close together with opposite signs; the +-180
+    // wrap point (target+180 away) also flips Math.sign but jumps by ~360,
+    // so exclude that case or we'll "find" a root 6 lunar months off target.
+    if (fb === 0 || (Math.sign(fa) !== Math.sign(fb) && Math.abs(fa - fb) < 180)) break;
     a = b;
     fa = fb;
   }
@@ -229,7 +232,10 @@ export function findSolarLongitudeCrossing(
   for (let i = 0; i < 200; i++) {
     b = a + step;
     fb = f(b);
-    if (Math.sign(fa) !== Math.sign(fb) || fb === 0) break;
+    // See the identical guard in findElongationCrossing: reject the
+    // antipodal (target+180) wrap, which also flips Math.sign but is not
+    // a real crossing of `targetDeg`.
+    if (fb === 0 || (Math.sign(fa) !== Math.sign(fb) && Math.abs(fa - fb) < 180)) break;
     a = b;
     fa = fb;
   }
@@ -378,7 +384,8 @@ export function sunTimes(jd: JulianDay, latDeg: number, lonDeg: number): SunTime
 
   const latRad = latDeg * DEG;
   const h0 = -0.8333 * DEG; // standard refraction + solar semidiameter
-  const cosH = (Math.sin(h0) - Math.sin(latRad) * Math.sin(decl)) / (Math.cos(latRad) * Math.cos(decl));
+  const cosH =
+    (Math.sin(h0) - Math.sin(latRad) * Math.sin(decl)) / (Math.cos(latRad) * Math.cos(decl));
 
   if (cosH > 1) return { sunriseJD: transitJD, transitJD, sunsetJD: transitJD, circumpolar: true }; // polar night
   if (cosH < -1) return { sunriseJD: transitJD, transitJD, sunsetJD: transitJD, circumpolar: true }; // polar day
@@ -400,7 +407,11 @@ export interface CycleProgress {
 }
 
 /** Position within a repeating cycle of `lengthDays` days, counted from `epochJd`. */
-export function cycleProgress(jd: JulianDay, epochJd: JulianDay, lengthDays: number): CycleProgress {
+export function cycleProgress(
+  jd: JulianDay,
+  epochJd: JulianDay,
+  lengthDays: number,
+): CycleProgress {
   const elapsed = jd - epochJd;
   const cycleNumber = Math.floor(elapsed / lengthDays);
   const fraction = elapsed / lengthDays - cycleNumber;
