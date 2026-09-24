@@ -50,6 +50,8 @@ maya.describe(jd).summary; // "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K
 hebrew.describe(jd).native; // "ח׳ טבת תשע״ג" (8 Tevet 5773)
 ```
 
+See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable version (`npm run build:lib && node examples/basic-usage.mjs`).
+
 ## Features
 
 - **13 calendar systems** with real epochs, real leap-year/intercalation
