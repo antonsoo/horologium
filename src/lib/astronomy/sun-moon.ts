@@ -10,10 +10,12 @@
  *    degrading gracefully outside that span).
  *  - Moon: ch. 47's mean elements, truncated to the ten largest periodic
  *    terms of Table 47.A (the terms in D, M, M', F with coefficients
- *    >= 0.04 degrees). Full ELP2000-82B has ~60 terms; this truncation is
- *    accurate to roughly a few arcminutes near J2000 and a few tenths of a
- *    degree over +/-5000 years. See `docs/CALENDARS.md` for measured error
- *    against a Skyfield/JPL-ephemeris oracle.
+ *    >= 0.04 degrees). Full ELP2000-82B has ~60 terms; measured against
+ *    Skyfield + JPL DE421 over 1900-2053 (tests/astronomy.test.ts), this
+ *    truncation's worst error is about 0.68 degrees, well under 1 degree.
+ *    Expect it to degrade further over the +/-5000 year range the rest of
+ *    this project covers, where it is unverified (DE421 doesn't reach that
+ *    far) and should be read as illustrative, not precise.
  *
  * New moon and solstice/equinox/solar-term times are *not* looked up from a
  * periodic-term table (Meeus ch. 49 has ~14 correction terms we do not

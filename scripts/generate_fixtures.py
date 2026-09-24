@@ -8,6 +8,10 @@ independent, third-party implementations:
     conversions.
   - lunardate (https://github.com/lidatong/lunardate) for Chinese New Year
     dates.
+  - skyfield (https://rhodesmill.org/skyfield/), backed by the JPL DE421
+    ephemeris, for Sun/Moon/planet geocentric ecliptic longitudes (this
+    project's own low-precision formulas are checked against real
+    ephemeris positions, not just against themselves).
 
 Setup (creates a throwaway venv, does not touch the project's own deps):
     uv venv /tmp/horologium-oracle
@@ -148,5 +152,40 @@ while d < datetime.date(2036, 1, 1):
         prev_key = key
     d += datetime.timedelta(days=1)
 write("chinese-month-boundaries.json", chinese_months)
+
+# --- Sun/Moon/planet geocentric ecliptic longitudes (skyfield + DE421) ---
+# DE421 covers 1899-2053, so we sample only within that range - this checks
+# our low-precision formulas' *current* accuracy, which is what the README
+# and docs/CALENDARS.md claim; ancient-date accuracy is explicitly labelled
+# as unverifiable this way and is not claimed.
+from skyfield.api import load
+from skyfield.framelib import ecliptic_frame
+
+ts = load.timescale()
+eph = load("de421.bsp")
+earth = eph["earth"]
+sun = eph["sun"]
+moon = eph["moon"]
+bodies = {
+    "sun": sun,
+    "moon": moon,
+    "mercury": eph["mercury"],
+    "venus": eph["venus"],
+    "mars": eph["mars"],
+    "jupiter": eph["jupiter barycenter"],
+    "saturn": eph["saturn barycenter"],
+}
+
+astro = []
+for y, m, d in sample_gregorian_dates(60, 1900, 2053):
+    jd = cd_jd.from_gregorian(y, m, d)
+    t = ts.tt_jd(jd)  # close enough to UT for this low-precision cross-check
+    entry = {"gregorian": [y, m, d], "jd": jd, "longitudes": {}}
+    for name, body in bodies.items():
+        astrometric = earth.at(t).observe(body).apparent()
+        _, lon, _ = astrometric.frame_latlon(ecliptic_frame)
+        entry["longitudes"][name] = lon.degrees % 360
+    astro.append(entry)
+write("astronomy-longitudes.json", astro)
 
 print("done")
