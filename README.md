@@ -82,6 +82,8 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   (measured with `npm run build`; no framework, no charting library, no
   analytics).
 
+<img src="docs/assets/dial-dark.png" alt="The same dial in the night-sky dark theme" width="420" />
+
 ## Usage examples
 
 ```ts
