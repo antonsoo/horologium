@@ -235,17 +235,29 @@ export function buildControls(): ControlsHandles {
   geoBtn.textContent = 'Use my location';
   geoBtn.addEventListener('click', () => {
     if (!('geolocation' in navigator)) return;
-    navigator.geolocation.getCurrentPosition((pos) => {
-      state.latDeg = pos.coords.latitude;
-      state.lonDeg = pos.coords.longitude;
-      state.locationName = 'My location';
-      const opt = document.createElement('option');
-      opt.value = 'My location';
-      opt.textContent = 'My location';
-      opt.selected = true;
-      locSelect.appendChild(opt);
-      emit();
-    });
+    const originalLabel = geoBtn.textContent;
+    geoBtn.textContent = 'Locating...';
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        geoBtn.textContent = originalLabel;
+        state.latDeg = pos.coords.latitude;
+        state.lonDeg = pos.coords.longitude;
+        state.locationName = 'My location';
+        const opt = document.createElement('option');
+        opt.value = 'My location';
+        opt.textContent = 'My location';
+        opt.selected = true;
+        locSelect.appendChild(opt);
+        emit();
+      },
+      () => {
+        // Permission denied or unavailable: say so rather than failing silently.
+        geoBtn.textContent = 'Location unavailable';
+        setTimeout(() => {
+          geoBtn.textContent = originalLabel;
+        }, 2500);
+      },
+    );
   });
   locRow.append(locSelect, geoBtn);
   locField.appendChild(locRow);
