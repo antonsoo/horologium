@@ -86,8 +86,11 @@ month, on the same leap-year cycle as the Julian calendar.
   that Ethiopian New Year falls around 11 September (12 September in the
   Gregorian year before a Gregorian leap year).
 
-Both verified against `convertdate`'s Coptic implementation and internal
-brute-force month enumeration; purely arithmetic, no accuracy caveats.
+Both are checked by internal brute-force month enumeration (independently
+recomputing the calendar month by month and comparing); Coptic is
+additionally cross-checked against `convertdate`'s Coptic module (which has
+no separate Ethiopian module to check against). Purely arithmetic, no
+accuracy caveats beyond that.
 
 ## Hebrew calendar (`src/lib/hebrew.ts`)
 

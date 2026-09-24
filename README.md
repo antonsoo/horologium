@@ -129,7 +129,7 @@ computed").
   every derived quantity (a new moon, a solstice, a Chinese month boundary)
   internally consistent with everything else the library computes.
 - **The full breakdown** — epoch, structure, rules, sources, and measured
-  accuracy for all 14 calendars and the astronomy module — is in
+  accuracy for all 13 calendars and the astronomy module — is in
   [`docs/CALENDARS.md`](docs/CALENDARS.md).
 - **The web app** (`src/app/`) is plain TypeScript and hand-built SVG: no UI
   framework, no charting library. The front dial and back dial are built
@@ -140,10 +140,15 @@ computed").
 
 - Calendars that are pure arithmetic (Roman, Byzantine, Islamic, Coptic,
   Ethiopian, Hebrew, Egyptian civil, Maya, Zoroastrian) are **exact** — no
-  floating-point astronomy involved — and the first eight are cross-checked
-  against independent, third-party implementations (Python's `convertdate`)
-  across hundreds of dates each; see `tests/oracle-fixtures.test.ts` and
-  `scripts/generate_fixtures.py`.
+  floating-point astronomy involved. Four of them (Hebrew, Islamic, Coptic,
+  Maya) are cross-checked against an independent third-party
+  implementation (Python's `convertdate`) across hundreds of dates each;
+  see `tests/oracle-fixtures.test.ts` and `scripts/generate_fixtures.py`.
+  `convertdate` has no Roman, Byzantine, Ethiopian, Egyptian-civil, or
+  Zoroastrian module to check against, so those instead get hand-derived
+  epoch verification and independent reference-fact checks (e.g. Ethiopian
+  New Year's well-known ~11 September date) — see each module's own tests
+  and `docs/CALENDARS.md`.
 - The **Chinese**, **Greek (Attic)**, and **Babylonian** lunisolar
   calendars are explicit reconstructions (real historical calendars were
   set by observation and, for Babylon and Athens, irregular official
