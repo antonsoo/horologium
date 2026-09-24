@@ -18,5 +18,5 @@ export * as hebrew from './hebrew.js';
 export * as islamic from './islamic.js';
 export * as maya from './maya.js';
 export * as roman from './roman.js';
-
 export type { CalendarTablet } from './types.js';
+export * as zoroastrian from './zoroastrian.js';

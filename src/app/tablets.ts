@@ -9,6 +9,7 @@ import * as islamic from '../lib/islamic.js';
 import * as maya from '../lib/maya.js';
 import * as roman from '../lib/roman.js';
 import type { CalendarTablet } from '../lib/types.js';
+import * as zoroastrian from '../lib/zoroastrian.js';
 
 function collect(jd: JulianDay): CalendarTablet[] {
   return [
@@ -21,6 +22,7 @@ function collect(jd: JulianDay): CalendarTablet[] {
     coptic.describeCoptic(jd),
     coptic.describeEthiopian(jd),
     byzantine.describe(jd),
+    zoroastrian.describe(jd),
   ];
 }
 
