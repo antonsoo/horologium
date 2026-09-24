@@ -211,6 +211,17 @@ select {
   margin: 0.6rem 0 0;
 }
 
+.dial-caption-note {
+  font-family: var(--font-body);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.78rem;
+  max-width: 34em;
+  margin: 0.35rem auto 0;
+  opacity: 0.85;
+}
+
 .readout {
   text-align: center;
   margin: 0.2rem 0 1.6rem;

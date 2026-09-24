@@ -22,6 +22,10 @@ app.innerHTML = `
       <figure class="dial-figure" id="dial-mount"></figure>
     </section>
     <p class="dial-caption">Sun · Moon · Mercury · Venus · Mars · Jupiter · Saturn · date pointer</p>
+    <p class="dial-caption dial-caption-note">
+      Positions are computed, not observed: Sun/Moon accurate to a fraction of a degree; planets
+      use elements valid 1800&ndash;2050 CE and are illustrative outside that range.
+    </p>
     <div class="readout">
       <div class="primary" id="readout-primary"></div>
       <div class="secondary" id="readout-secondary"></div>
