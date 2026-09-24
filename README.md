@@ -2,7 +2,6 @@
 
 **What time is it in Babylon?** A live, Antikythera-inspired clock for the calendars of the ancient world — and a small, tested TypeScript library behind it.
 
-[![CI](https://github.com/antonsoo/horologium/actions/workflows/ci.yml/badge.svg)](https://github.com/antonsoo/horologium/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/demo-antonsoo.github.io%2Fhorologium-8a6d3b)](https://antonsoo.github.io/horologium/)
 
