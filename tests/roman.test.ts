@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isJulianLeapYear, julianToJD } from '../src/lib/core/jd.js';
+import { gregorianToJD, isJulianLeapYear, julianToJD } from '../src/lib/core/jd.js';
 import {
   ANCIENT_CITIES,
   describe as describeRoman,
@@ -37,6 +37,14 @@ describe('roman calendar hand-checked dates', () => {
     expect(date.aucYear).toBe(710);
     const tablet = describeRoman(jd);
     expect(tablet.transliteration).toBe('Idibus Martiis');
+  });
+
+  it("describe()'s body line glosses the underlying Julian-calendar date", () => {
+    // 24 September 2026 (Gregorian) is 11 September 2026 (Julian) - a.d. III
+    // Id. Sept. The summary should say so explicitly, in plain English.
+    const jd = gregorianToJD(2026, 9, 24);
+    const tablet = describeRoman(jd);
+    expect(tablet.summary).toContain('Julian date 11 September 2026');
   });
 
   it('renders the Kalends of January in ablative and accusative forms', () => {

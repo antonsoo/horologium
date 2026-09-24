@@ -51,7 +51,17 @@ export function buildTablets(container: HTMLElement, jd: JulianDay): void {
     }
     card.appendChild(heading);
 
-    card.appendChild(el('div', 'tablet-native', t.native));
+    const nativeEl = el('div', 'tablet-native', t.native);
+    // Hebrew is written right-to-left; without an explicit direction the
+    // browser's bidi algorithm can misplace punctuation like the gershayim
+    // (e.g. in a year like תשפ״ז) when it sits next to this page's LTR
+    // surroundings. Islamic transliterations here are Latin-script (this
+    // library doesn't render Arabic), so only Hebrew needs this.
+    if (t.id === 'hebrew') {
+      nativeEl.dir = 'rtl';
+      nativeEl.lang = 'he';
+    }
+    card.appendChild(nativeEl);
     if (t.transliteration && t.transliteration !== t.native) {
       card.appendChild(el('div', 'tablet-translit', t.transliteration));
     }

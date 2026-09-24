@@ -90,6 +90,14 @@ describe('Egyptian calendar: describe()', () => {
     const jd = gregorianToJD(2024, 1, 1);
     const tablet = describeEgyptian(jd);
     expect(tablet.isReconstruction).toBe(false);
-    expect(tablet.summary).toMatch(/year \d+ of Nabonassar/);
+    expect(tablet.native).toMatch(/year \d+ of Nabonassar/);
+  });
+
+  it('the body line adds season and Sothic-cycle info rather than repeating the date', () => {
+    const jd = gregorianToJD(2024, 1, 1);
+    const tablet = describeEgyptian(jd);
+    expect(tablet.summary).not.toBe(tablet.native);
+    expect(tablet.summary).toMatch(/Sothic cycle/);
+    expect(tablet.summary).toMatch(/Akhet|Peret|Shemu/);
   });
 });

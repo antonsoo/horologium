@@ -22,6 +22,7 @@
 import { sunTimes } from './astronomy/sun-moon.js';
 import {
   type CalendarDate,
+  displayYear,
   isJulianLeapYear,
   type JulianDay,
   jdToJulian,
@@ -376,12 +377,18 @@ function englishReferenceName(point: RomanReferencePoint): string {
 function formatSummary(date: RomanDate): string {
   const monthName = JULIAN_MONTH_NAMES_EN[date.referenceMonth - 1];
   const refName = englishReferenceName(date.referencePoint);
+  // The Julian-calendar gloss (this library's own reference point for the
+  // Roman date) explains why a Gregorian-calendar date looks "off": by
+  // 2026 CE the two calendars differ by 13 days, so 24 September Gregorian
+  // is 11 September Julian, three days before the Ides of September.
+  const julianGloss = `Julian date ${date.day} ${JULIAN_MONTH_NAMES_EN[date.month - 1]} ${displayYear(date.year)}.`;
   if (date.isBissextile)
-    return `The intercalated leap day (doubled "sixth day before the Kalends of March"), AUC ${date.aucYear}`;
-  if (date.romanCount === 1) return `The ${refName} of ${monthName}, AUC ${date.aucYear}`;
+    return `The intercalated leap day (doubled "sixth day before the Kalends of March"), AUC ${date.aucYear}. ${julianGloss}`;
+  if (date.romanCount === 1)
+    return `The ${refName} of ${monthName}, AUC ${date.aucYear}. ${julianGloss}`;
   if (date.romanCount === 2)
-    return `The day before the ${refName} of ${monthName}, AUC ${date.aucYear}`;
-  return `${date.romanCount} days before the ${refName} of ${monthName}, AUC ${date.aucYear}`;
+    return `The day before the ${refName} of ${monthName}, AUC ${date.aucYear}. ${julianGloss}`;
+  return `${date.romanCount} days before the ${refName} of ${monthName}, AUC ${date.aucYear}. ${julianGloss}`;
 }
 
 /** `CalendarTablet` for the Roman (Julian) civil calendar date at `jd`. */

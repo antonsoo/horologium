@@ -116,7 +116,9 @@ export function describe(jd: JulianDay): CalendarTablet {
     name: 'Islamic Tabular (Civil) Calendar',
     native: transliteration,
     transliteration,
-    summary: `${transliteration} (tabular/arithmetical reckoning -- the observational calendar used for religious practice can differ by a day or two)`,
+    summary:
+      'Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious ' +
+      'observance can differ from this date by a day or two in either direction.',
     method:
       'Arithmetical civil tabular Islamic calendar ("Kuwaiti algorithm"): fixed 30-year cycle, ' +
       '11 leap years at cycle positions 2,5,7,10,13,16,18,21,24,26,29, 12 months alternating ' +

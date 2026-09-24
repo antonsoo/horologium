@@ -135,21 +135,32 @@ export function sothicCyclePosition(jd: JulianDay): SothicCyclePosition {
   return { yearsIntoCycle, cycleAnchorCE: SOTHIC_CENSORINUS_ANCHOR_CE };
 }
 
+const SEASON_ROMAN = ['I', 'II', 'III', 'IV'];
+
 export function describe(jd: JulianDay): CalendarTablet {
   const date = fromJD(jd);
   const isEpagomenal = date.month === 13;
   const monthLabel = isEpagomenal
     ? (EGYPTIAN_EPAGOMENAL_NAMES[date.day - 1] ?? 'Epagomenal day')
     : (EGYPTIAN_MONTH_NAMES[date.month - 1] ?? 'Thoth');
-  const summary = isEpagomenal
+  const title = isEpagomenal
     ? `${monthLabel}, year ${date.year} of Nabonassar`
     : `${date.day} ${monthLabel}, year ${date.year} of Nabonassar`;
+
+  // The body line adds information beyond the title: season position and
+  // where this date sits in the Sothic cycle, rather than repeating the date.
+  const season = seasonForMonth(date.month);
+  const sothic = sothicCyclePosition(jd);
+  const seasonPart = season
+    ? `${season.name} ${SEASON_ROMAN[Math.floor((date.month - 1) / 4)] ?? 'I'}, day ${date.day} of the season`
+    : 'the 5 epagomenal days, outside all three seasons';
+  const summary = `${seasonPart} — year ${sothic.yearsIntoCycle} of the ${SOTHIC_CYCLE_YEARS}-year Sothic cycle since the ${sothic.cycleAnchorCE} CE anchor.`;
 
   return {
     id: 'egyptian',
     name: 'Egyptian Civil Calendar',
-    native: summary,
-    transliteration: summary,
+    native: title,
+    transliteration: title,
     summary,
     method:
       'Ptolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months ' +

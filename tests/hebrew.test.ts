@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { gregorianToJD, jdToGregorian } from '../src/lib/core/jd.js';
 import {
+  describe as describeHebrew,
   fromJD,
   isHebrewLeapYear,
   monthName,
@@ -60,6 +61,18 @@ describe('Hebrew calendar: Hebrew numerals', () => {
 
   it('appends a geresh to single-letter numerals', () => {
     expect(toHebrewNumeral(5)).toBe('ה׳');
+  });
+});
+
+describe('Hebrew calendar: describe()', () => {
+  it('the body line adds weekday and year-shape info, not a repeat of the transliteration', () => {
+    const jd = gregorianToJD(2024, 10, 3); // Rosh Hashanah 5785, a Thursday
+    const tablet = describeHebrew(jd);
+    expect(tablet.transliteration).toBe('1 Tishrei 5785');
+    expect(tablet.summary).not.toContain('1 Tishrei 5785');
+    expect(tablet.summary).toMatch(/Yom \w+|Shabbat/);
+    expect(tablet.summary).toMatch(/deficient|regular|complete/);
+    expect(tablet.summary).toMatch(/leap year|common year/);
   });
 });
 

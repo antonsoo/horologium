@@ -62,4 +62,11 @@ describe('islamic calendar hand-checked dates', () => {
     expect(tablet.method.toLowerCase()).toContain('tabular');
     expect(tablet.isReconstruction).toBe(false);
   });
+
+  it("describe()'s body line is the observational-calendar caveat, not a repeat of the date", () => {
+    const jd = toJD({ year: 1446, month: 9, day: 14 });
+    const tablet = describeIslamic(jd);
+    expect(tablet.summary).not.toContain('14 Ramadan 1446');
+    expect(tablet.summary.toLowerCase()).toContain('moon-sighting');
+  });
 });

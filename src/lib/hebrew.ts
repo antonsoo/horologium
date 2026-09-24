@@ -220,7 +220,7 @@ export function roshHashanah(hebrewYear: number): JulianDay {
 
 export type HebrewYearType = 'deficient' | 'regular' | 'complete';
 
-interface YearShape {
+export interface YearShape {
   length: number;
   type: HebrewYearType;
   /** 29 or 30. */
@@ -236,7 +236,7 @@ interface YearShape {
  * standard technique (Reingold & Dershowitz), rather than a separate closed
  * form for "is this Cheshvan/Kislev long or short".
  */
-function yearShape(year: number): YearShape {
+export function yearShape(year: number): YearShape {
   const length = roshHashanah(year + 1) - roshHashanah(year);
   const base = isHebrewLeapYear(year) ? 383 : 353;
   const extraDays = length - base; // 0 = deficient, 1 = regular, 2 = complete
@@ -398,6 +398,17 @@ export function toHebrewNumeral(n: number): string {
   return withHebrewPunctuation(letters);
 }
 
+/** Weekday names, 0 = Sunday .. 6 = Saturday, matching {@link jdWeekday}. */
+const HEBREW_WEEKDAY_NAMES = [
+  'Yom Rishon',
+  'Yom Sheni',
+  'Yom Shlishi',
+  "Yom Revi'i",
+  'Yom Chamishi',
+  'Yom Shishi',
+  'Shabbat',
+];
+
 export function describe(jd: JulianDay): CalendarTablet {
   const date = fromJD(jd);
   const name = monthName(date.year, date.month);
@@ -406,12 +417,23 @@ export function describe(jd: JulianDay): CalendarTablet {
   const yearHe = toHebrewNumeral(date.year);
   const transliteration = `${date.day} ${name} ${date.year}`;
 
+  // The body line adds information beyond the title: weekday, this
+  // month's actual length, and the year's shape - not a repeat of the date.
+  const weekday = HEBREW_WEEKDAY_NAMES[jdWeekday(jd)] ?? 'Yom Rishon';
+  const months = hebrewMonthsInYear(date.year);
+  const thisMonth = months.find((m) => m.month === date.month);
+  const shape = yearShape(date.year);
+  const leapNote = isHebrewLeapYear(date.year)
+    ? 'leap year (13 months)'
+    : 'common year (12 months)';
+  const summary = `${weekday}; ${name} has ${thisMonth?.length ?? 29} days this year; a ${shape.type} ${leapNote}, ${shape.length} days total.`;
+
   return {
     id: 'hebrew',
     name: 'Hebrew Calendar',
     native: `${dayHe} ${nameHe} ${yearHe}`,
     transliteration,
-    summary: transliteration,
+    summary,
     method:
       'Exact molad (mean lunar conjunction) arithmetic chained from the traditional epoch molad ' +
       '(BaHaRaD, 2d 5h 204p after creation) through the 19-year Metonic cycle, with all four Rosh ' +
