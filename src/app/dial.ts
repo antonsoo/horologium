@@ -158,8 +158,10 @@ export function buildDial(): DialHandles {
     );
   }
   for (let m = 0; m < 12; m++) {
-    const deg = m * (360 / 12.1667) + 360 / 24.3; // approx center of each 30-day month band
-    const [lx, ly] = polar(211, (m * 30 * 365) / 365 + 15);
+    // Center of each 30-day month band (12 months * 30 days = 360 of the
+    // ring's 365 days; the 5 epagomenal days at the end are left unlabeled).
+    const bandCenterDeg = m * 30 + 15;
+    const [lx, ly] = polar(211, bandCenterDeg);
     const label = svgEl('text', {
       x: lx,
       y: ly,
@@ -169,7 +171,6 @@ export function buildDial(): DialHandles {
     });
     label.textContent = EGYPT_MONTHS[m] ?? '';
     egyptGroup.appendChild(label);
-    void deg;
   }
   svg.appendChild(egyptGroup);
 

@@ -20,7 +20,13 @@
   --fg: var(--ink);
   --fg-soft: var(--ink-soft);
   --accent: var(--verdigris);
-  --accent-strong: var(--bronze-light);
+  --accent-text: var(--verdigris-dark);
+  /* --bronze-light reads as gilt but is only ~2:1 against papyrus/card-bg -
+     nowhere near text contrast, and short of even the 3:1 non-text/UI
+     boundary minimum - so --gilt-border/-text (its accessible stand-ins
+     for borders and hover text) use darker bronze tones instead. */
+  --gilt-border: var(--bronze);
+  --gilt-text: var(--bronze-dark);
 
   --font-display: "Cinzel", "Trajan Pro", serif;
   --font-body: "EB Garamond", "Cormorant Garamond", Georgia, serif;
@@ -38,7 +44,9 @@
   --card-border: rgba(232, 230, 218, 0.14);
   --shadow: rgba(0, 0, 0, 0.5);
   --accent: #6fb7a4;
-  --accent-strong: #d9b64a;
+  --accent-text: #6fb7a4;
+  --gilt-border: #d9b64a;
+  --gilt-text: #d9b64a;
   color-scheme: dark;
 }
 
@@ -51,7 +59,9 @@
     --card-border: rgba(232, 230, 218, 0.14);
     --shadow: rgba(0, 0, 0, 0.5);
     --accent: #6fb7a4;
-    --accent-strong: #d9b64a;
+    --accent-text: #6fb7a4;
+    --gilt-border: #d9b64a;
+    --gilt-text: #d9b64a;
     color-scheme: dark;
   }
 }
@@ -175,7 +185,7 @@ select {
   text-transform: uppercase;
 }
 .theme-toggle:hover {
-  border-color: var(--accent-strong);
+  border-color: var(--gilt-border);
 }
 
 /* ---------- Dial ---------- */
@@ -271,8 +281,8 @@ select {
   font-family: var(--font-body);
 }
 .btn:hover {
-  border-color: var(--accent-strong);
-  color: var(--accent-strong);
+  border-color: var(--gilt-border);
+  color: var(--gilt-text);
 }
 .btn.primary {
   background: var(--accent);
@@ -341,7 +351,7 @@ select {
   font-size: 0.72rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -387,7 +397,7 @@ select {
   color: var(--fg-soft);
 }
 .tablet summary:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .tablet .method {
   margin: 0.4rem 0 0;
