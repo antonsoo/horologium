@@ -5,3 +5,7 @@ dist/
 npm-debug.log*
 .vite/
 docs/assets/*.tmp.png
+
+# scripts/generate_fixtures.py's throwaway Python environment + ephemeris
+.venv-oracle/
+*.bsp

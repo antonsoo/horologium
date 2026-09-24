@@ -39,8 +39,7 @@
     "test:watch": "vitest",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.lib.json",
-    "fixtures": "uv run --python /tmp/horologium-oracle/bin/python scripts/generate_fixtures.py"
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.lib.json"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

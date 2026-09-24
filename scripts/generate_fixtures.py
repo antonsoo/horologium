@@ -13,14 +13,14 @@ independent, third-party implementations:
     project's own low-precision formulas are checked against real
     ephemeris positions, not just against themselves).
 
-Setup (creates a throwaway venv, does not touch the project's own deps):
-    uv venv /tmp/horologium-oracle
-    uv pip install --python /tmp/horologium-oracle/bin/python \\
-        convertdate lunardate skyfield
+Setup (creates a throwaway venv outside the repo, does not touch the
+project's own JS/TS deps; .venv-oracle here is just an example path):
+    uv venv .venv-oracle
+    uv pip install --python .venv-oracle/bin/python convertdate lunardate skyfield
 
-Run:
-    uv run --python /tmp/horologium-oracle/bin/python \\
-        scripts/generate_fixtures.py
+Run (downloads the ~17 MB DE421 ephemeris to the working directory on
+first use, cached by Skyfield after that):
+    uv run --python .venv-oracle/bin/python scripts/generate_fixtures.py
 
 Writes JSON files to tests/fixtures/. These are pure data: the TypeScript
 test suite reads them and asserts our implementation reproduces them
