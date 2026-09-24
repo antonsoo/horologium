@@ -445,12 +445,21 @@ export function latinWeekday(jd: JulianDay): string {
 /** Rome, the default location for Roman seasonal hours. */
 export const ROME = { latDeg: 41.9028, lonDeg: 12.4964 };
 
-/** A handful of other ancient-city coordinates useful elsewhere in this project (e.g. a scrubber UI). */
+/**
+ * Ancient-site coordinates useful elsewhere in this project (e.g. the web
+ * app's location picker and Roman-hour calculation). Coordinates are the
+ * modern geographic location of each site (Chang'an = modern Xi'an,
+ * Tenochtitlan = modern Mexico City, Babylon = near modern Hillah, Iraq).
+ */
 export const ANCIENT_CITIES: Array<{ name: string; latDeg: number; lonDeg: number }> = [
   { name: 'Rome', ...ROME },
   { name: 'Athens', latDeg: 37.9838, lonDeg: 23.7275 },
   { name: 'Alexandria', latDeg: 31.2001, lonDeg: 29.9187 },
+  { name: 'Babylon', latDeg: 32.5355, lonDeg: 44.4275 },
   { name: 'Jerusalem', latDeg: 31.7683, lonDeg: 35.2137 },
+  { name: "Chang'an (Xi'an)", latDeg: 34.3416, lonDeg: 108.9398 },
+  { name: 'Tikal', latDeg: 17.222, lonDeg: -89.6237 },
+  { name: 'Tenochtitlan (Mexico City)', latDeg: 19.4326, lonDeg: -99.1332 },
 ];
 
 const HORA_NAMES = [

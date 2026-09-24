@@ -1,0 +1,602 @@
+/* Horologium — bronze & verdigris, papyrus by day, night sky after dark. */
+
+:root {
+  --papyrus: #ede3c8;
+  --papyrus-dim: #e2d5b0;
+  --ink: #2b2013;
+  --ink-soft: #5a4c34;
+  --bronze-dark: #3b2a1a;
+  --bronze: #8a6d3b;
+  --bronze-light: #c9a227;
+  --verdigris: #4f8a7b;
+  --verdigris-dark: #2f5c50;
+  --carnelian: #a83c2e;
+  --card-bg: #f7f1de;
+  --card-border: rgba(43, 32, 19, 0.16);
+  --shadow: rgba(43, 32, 19, 0.25);
+  --focus: #1f6f5c;
+
+  --bg: var(--papyrus);
+  --fg: var(--ink);
+  --fg-soft: var(--ink-soft);
+  --accent: var(--verdigris);
+  --accent-strong: var(--bronze-light);
+
+  --font-display: "Cinzel", "Trajan Pro", serif;
+  --font-body: "EB Garamond", "Cormorant Garamond", Georgia, serif;
+  --font-native: "EB Garamond", "Noto Serif Hebrew", "Noto Serif SC", "Noto Sans SC", "Noto Sans",
+    Georgia, serif;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --fg: #e8e6da;
+  --fg-soft: #b7b39c;
+  --card-bg: #131c2e;
+  --card-border: rgba(232, 230, 218, 0.14);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --accent: #6fb7a4;
+  --accent-strong: #d9b64a;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1220;
+    --fg: #e8e6da;
+    --fg-soft: #b7b39c;
+    --card-bg: #131c2e;
+    --card-border: rgba(232, 230, 218, 0.14);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --accent: #6fb7a4;
+    --accent-strong: #d9b64a;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.5;
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: radial-gradient(circle at 1px 1px, var(--fg) 1px, transparent 0);
+  background-size: 22px 22px;
+  z-index: 0;
+}
+
+a {
+  color: var(--verdigris-dark);
+}
+:root[data-theme="dark"] a {
+  color: var(--accent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) a {
+    color: var(--accent);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--card-bg);
+  color: var(--fg);
+  padding: 0.6em 1em;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 1em;
+  top: 1em;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  padding: 2.4rem 0 1.2rem;
+  text-align: center;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--fg-soft);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin: 0.4em 0 0;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1.6rem;
+  right: 20px;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.45em 0.9em;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.theme-toggle:hover {
+  border-color: var(--accent-strong);
+}
+
+/* ---------- Dial ---------- */
+
+.dial-section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.dial-figure {
+  width: min(560px, 92vw);
+  margin: 0;
+}
+
+.dial-caption {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+  margin: 0.6rem 0 0;
+}
+
+.readout {
+  text-align: center;
+  margin: 0.2rem 0 1.6rem;
+}
+.readout .primary {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  letter-spacing: 0.03em;
+}
+.readout .secondary {
+  color: var(--fg-soft);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+/* ---------- Controls ---------- */
+
+.controls {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 2.2rem;
+  box-shadow: 0 8px 24px -16px var(--shadow);
+}
+
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.3rem;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.field input[type="number"] {
+  min-width: 0;
+}
+
+.field label {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+}
+
+.field input,
+.field select {
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 0.45em 0.6em;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 0.45em 0.85em;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.btn:hover {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+}
+.btn.primary {
+  background: var(--accent);
+  color: var(--card-bg);
+  border-color: transparent;
+}
+.btn.primary:hover {
+  filter: brightness(1.08);
+  color: var(--card-bg);
+}
+
+.step-group,
+.preset-group {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.scrubber {
+  width: 100%;
+  margin-top: 0.9rem;
+}
+.scrubber input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.scrubber-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--fg-soft);
+  margin-top: 0.2rem;
+}
+
+/* ---------- Tablets ---------- */
+
+.tablets-heading {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0 0 1.2rem;
+}
+
+.tablets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.6rem;
+}
+
+.tablet {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem 1rem;
+  box-shadow: 0 6px 18px -14px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tablet-name {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tablet-badge {
+  font-size: 0.62rem;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.12em 0.55em;
+  color: var(--fg-soft);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.tablet-native {
+  font-family: var(--font-native);
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.tablet-translit {
+  font-style: italic;
+  color: var(--fg-soft);
+  font-size: 0.96rem;
+}
+
+.tablet-summary {
+  font-size: 0.92rem;
+}
+
+.tablet details {
+  font-size: 0.82rem;
+  color: var(--fg-soft);
+  margin-top: 0.1rem;
+}
+.tablet summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+}
+.tablet summary:hover {
+  color: var(--accent);
+}
+.tablet .method {
+  margin: 0.4rem 0 0;
+  line-height: 1.45;
+}
+
+/* ---------- Back dial ---------- */
+
+.backdial-section {
+  text-align: center;
+  margin-bottom: 2.6rem;
+}
+.backdial-figure {
+  width: min(420px, 88vw);
+  margin: 0 auto;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--card-border);
+  padding: 1.6rem 0 2.6rem;
+  font-size: 0.85rem;
+  color: var(--fg-soft);
+  text-align: center;
+}
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--card-border);
+}
+.site-footer p {
+  margin: 0.3em 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls-row {
+    gap: 0.7rem 1rem;
+  }
+  .theme-toggle {
+    position: static;
+    display: block;
+    margin: 0 auto 0.8rem;
+  }
+}
+
+/* ---------- Dial SVG ---------- */
+
+.dial-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 30px var(--shadow));
+}
+
+.ring-face {
+  fill: var(--card-bg);
+  stroke: #2a1e11;
+  stroke-width: 1;
+}
+:root[data-theme="dark"] .ring-face {
+  fill: #16233a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ring-face {
+    fill: #16233a;
+  }
+}
+.zodiac-face {
+  fill: #f4ecd4;
+}
+.egypt-face {
+  fill: #efe3c0;
+}
+:root[data-theme="dark"] .zodiac-face,
+:root[data-theme="dark"] .egypt-face {
+  fill: #142138;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .zodiac-face,
+  :root:not([data-theme="light"]) .egypt-face {
+    fill: #142138;
+  }
+}
+
+.ring-divider {
+  stroke: #6b512c;
+  stroke-width: 1;
+  opacity: 0.55;
+}
+.egypt-tick-minor {
+  stroke: #6b512c;
+  stroke-width: 0.6;
+  opacity: 0.45;
+}
+.egypt-tick-major {
+  stroke: #3b2a1a;
+  stroke-width: 1.3;
+  opacity: 0.8;
+}
+.fine-tick {
+  stroke: #6b512c;
+  stroke-width: 0.6;
+  opacity: 0.5;
+}
+.inner-face {
+  fill: var(--card-bg);
+  stroke: #2a1e11;
+  stroke-width: 1;
+}
+
+.zodiac-glyph {
+  font-family: var(--font-display);
+  font-size: 15px;
+  fill: #4a3720;
+}
+.egypt-label {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 8px;
+  fill: #5a4626;
+}
+:root[data-theme="dark"] .zodiac-glyph,
+:root[data-theme="dark"] .egypt-label {
+  fill: #cfc7a4;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .zodiac-glyph,
+  :root:not([data-theme="light"]) .egypt-label {
+    fill: #cfc7a4;
+  }
+}
+
+.pointer-needle {
+  stroke: #241a10;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+.planet-needle {
+  stroke-width: 1.6;
+  opacity: 0.85;
+}
+.sun-needle {
+  stroke: var(--bronze-light);
+  stroke-width: 3;
+}
+.moon-needle {
+  stroke: #7d7666;
+}
+.sun-disc {
+  fill: #e8c25a;
+  stroke: #7a5a1c;
+  stroke-width: 1.2;
+}
+.moon-dark {
+  fill: #4a4030;
+}
+.moon-lit {
+  fill: url(#silverBall);
+}
+.planet-glyph {
+  font-size: 15px;
+  fill: #3b2a1a;
+  font-family: var(--font-body);
+}
+:root[data-theme="dark"] .planet-glyph {
+  fill: #e8e6da;
+}
+.date-arrow {
+  fill: var(--verdigris-dark);
+}
+
+.pointer {
+  transform-origin: 300px 300px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Back dial SVG ---------- */
+
+.backdial-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.backdial-field {
+  fill: var(--card-bg);
+  stroke: var(--card-border);
+}
+.spiral-track {
+  fill: none;
+  stroke: var(--bronze);
+  stroke-width: 1.4;
+  opacity: 0.75;
+}
+.spiral-marker {
+  fill: var(--carnelian);
+  stroke: #2a1e11;
+  stroke-width: 1;
+  transition: cx 0.6s ease, cy 0.6s ease;
+}
+.backdial-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  fill: var(--fg-soft);
+  text-transform: uppercase;
+}

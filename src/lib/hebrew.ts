@@ -313,7 +313,9 @@ export function fromJD(jd: JulianDay): HebrewDate {
   while (roshHashanah(year) > jd) year -= 1;
   while (roshHashanah(year + 1) <= jd) year += 1;
 
-  const dayOfYear = jd - roshHashanah(year);
+  // Floor to a whole day: `jd` usually carries a time-of-day fraction (e.g.
+  // "now"), but a Hebrew calendar date is day-granular.
+  const dayOfYear = Math.floor(jd - roshHashanah(year));
   let elapsed = 0;
   for (const { month, length } of hebrewMonthsInYear(year)) {
     if (dayOfYear < elapsed + length) {
