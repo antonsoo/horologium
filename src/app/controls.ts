@@ -5,6 +5,7 @@ import {
   gregorianToJD,
   type JulianDay,
   jdToGregorian,
+  julianToJD,
 } from '../lib/core/jd.js';
 import { ANCIENT_CITIES } from '../lib/roman.js';
 
@@ -21,11 +22,15 @@ export interface Preset {
   jd: JulianDay;
 }
 
+// Ancient/medieval dates are given in the Julian calendar, the one
+// actually in use at the time (this is what the Roman/Greek tablets are
+// keyed on too) - using gregorianToJD here would silently shift these by
+// several days relative to the calendar the preset's own name refers to.
 export const PRESETS: Preset[] = [
-  { label: 'Ides of March, 44 BCE', jd: gregorianToJD(-43, 3, 15) },
-  { label: 'Fall of Constantinople, 1453', jd: gregorianToJD(1453, 5, 29) },
+  { label: 'Ides of March, 44 BCE', jd: julianToJD(-43, 3, 15) },
+  { label: 'Fall of Constantinople, 1453', jd: julianToJD(1453, 5, 29) },
   { label: 'Maya 13.0.0.0.0', jd: gregorianToJD(2012, 12, 21) },
-  { label: 'First Olympiad, 776 BCE', jd: gregorianToJD(-775, 7, 1) },
+  { label: 'First Olympiad, 776 BCE', jd: julianToJD(-775, 7, 1) },
 ];
 
 const MONTH_NAMES = [

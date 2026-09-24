@@ -24,6 +24,11 @@ Initial release.
 - Chinese calendar: sexagenary year/day, and an astronomically-computed
   lunisolar month/day (new moons and the 24 solar terms in China Standard
   Time) with the standard leap-month rule.
+- Zoroastrian (Yazdegerdi) calendar.
+- Greek Olympiad reckoning and an astronomical reconstruction of the Attic
+  lunisolar calendar, with polytonic Greek month names.
+- Babylonian (Seleucid Era) calendar, an astronomical reconstruction with
+  the standard 19-year intercalation cycle.
 - Sun/Moon low-precision astronomy (position, phase, zodiac sign), the
   Metonic/Callippic/Saros/Exeligmos cycles, and Standish Keplerian-element
   positions for the five naked-eye planets.

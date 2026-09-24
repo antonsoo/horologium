@@ -188,6 +188,65 @@ cited elsewhere for the start of the current Sothic cycle.
   month falls (two candidate zhongqi-less months occur close together that
   year) - see `tests/oracle-fixtures.test.ts` for the detail and citation.
 
+## Zoroastrian (Yazdegerdi) calendar (`src/lib/zoroastrian.ts`)
+
+The traditional (Qadimi) reckoning: the same 12x30+5, no-leap-day
+structure as the Egyptian civil calendar, epoch 16 June 632 CE (Julian) -
+Yazdegerd III's accession. Not a reconstruction (attested arithmetic), but
+per-day names within each month (a real, separate 30-name tradition,
+several of which repeat the 12 month names) are deliberately not rendered:
+this project could not verify the exact name/order list with confidence
+in the time available, and a wrong name is worse than a plain number.
+
+## Greek (Attic) calendar and Olympiad reckoning (`src/lib/greek.ts`)
+
+An explicit **reconstruction**. Real Athenian practice decreed
+intercalation year to year rather than following a fixed rule (Wikipedia's
+"Attic calendar" article: a 19-year Metonic cycle was developed in Athens
+around 432 BCE but there is "no sign that any such system was in fact used
+in Athens"), so this module picks one defensible, consistent convention
+rather than guessing at attested-but-irregular history:
+
+- The year begins at the first new moon at or after the summer solstice.
+- 12 lunar months (Hekatombaion...Skirophorion) ordinarily; a year needing
+  a 13th lunation always intercalates a second Poseideon immediately after
+  the first (the single most commonly attested intercalation point,
+  though real records show months 1, 2, 7, and 8 were repeated too on
+  occasion).
+- **Olympiad**: 776 BCE (Julian) = Ol. 1.1, incrementing every 4 years from
+  the same year-start; this is the traditional epoch, not independently
+  re-derived.
+- Month names verified against Wikipedia's "Attic calendar" article,
+  including the polytonic Greek forms (e.g. Ἑκατομβαιών).
+- New moons and the solstice are root-found the same way as everywhere
+  else in this project (Meeus 1998 formulas); day boundaries use a fixed
+  mean-time offset for Athens's longitude, not the real sunset-to-sunset
+  civil day Greek practice used (the same simplification `chinese.ts`
+  makes for China Standard Time).
+
+## Babylonian (Seleucid Era) calendar (`src/lib/babylonian.ts`)
+
+An explicit **reconstruction**, epoch 1 Nisannu SE 1 = 3 April 311 BCE
+(Julian) - Seleucus I's Babylonian-reckoning return to Babylon. Nisannu 1
+is the first new moon at/after the vernal equinox each year; a year
+needing a 13th lunar month intercalates Addaru II at year-end.
+
+Richard A. Parker & Waldo H. Dubberstein's *Babylonian Chronology 626
+B.C.-A.D. 75* documents that regularized Babylonian practice (attested
+from 503 BCE) used a 19-year cycle in which 7 of every 19 years were
+intercalary: 6 added Addaru II, and 1 (cycle position 17) added an Ululu
+II mid-year instead. This module determines **whether** a year is
+intercalary astronomically (does the gap between successive Nisannu-1
+dates exceed 12 synodic months?), and always intercalates Addaru II when
+it does. It does **not** attempt the Ululu-II exception: doing so would
+require knowing which historical year corresponds to "cycle position 1,"
+and an earlier version of this module that assumed the Seleucid Era's own
+year 1 was cycle position 1 produced a leap-year pattern its own
+astronomy contradicted at some dates - rather than guess at the correct
+phase, the exception is simply not modeled. Month names are the standard
+Akkadian transliterations (Nisannu, Ayyaru, ...); cuneiform logograms are
+not rendered (same reasoning as Egyptian hieroglyphs, above).
+
 ## Astronomy (`src/lib/astronomy/`)
 
 - **Sun** (`sunLongitude`): Meeus (1998) ch. 25 low-precision method.
@@ -221,9 +280,17 @@ cited elsewhere for the start of the current Sothic cycle.
 
 ## What's not implemented
 
-The project brief also described Greek Olympiad/Attic-month reckoning,
-Aztec/Mexica tonalpohualli and xiuhpohualli, Zoroastrian, Babylonian
-Seleucid-era, and Hindu (Kali Yuga/tithi/nakshatra) calendars. These were
-cut for time against the priority list in the project brief (library
-calendars 1, 2, 4, 5, 7, 8, 10, 11, 13, then the web app, then everything
-else) rather than shipped with unverified epochs or correlation constants.
+The project brief also described Aztec/Mexica tonalpohualli and
+xiuhpohualli, and Hindu (Kali Yuga ahargana, tithi, nakshatra) calendars.
+
+- **Aztec/Mexica**: the brief's own instructions say to include this only
+  if the correlation constant (Caso's, tying the tonalpohualli/
+  xiuhpohualli count to a JD) can be verified, and to cut it and say why
+  otherwise. This project did not have a way to verify a specific
+  correlation constant with confidence in the time available, so it was
+  cut rather than guessed at.
+- **Hindu**: explicitly a stretch goal in the brief. Cut for time; a
+  correct implementation (Kali Yuga ahargana is straightforward, but tithi
+  and nakshatra need sidereal positions with a specific ayanamsa, i.e.
+  more astronomy than this project's Sun/Moon module currently offers)
+  would need more time than remained.

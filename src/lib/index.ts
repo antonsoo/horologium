@@ -8,12 +8,14 @@
  */
 
 export * as astronomy from './astronomy/sun-moon.js';
+export * as babylonian from './babylonian.js';
 export * as byzantine from './byzantine.js';
 export * as chinese from './chinese.js';
 export * as coptic from './coptic.js';
 export * as ethiopian from './coptic.js';
 export * as core from './core/jd.js';
 export * as egyptian from './egyptian.js';
+export * as greek from './greek.js';
 export * as hebrew from './hebrew.js';
 export * as islamic from './islamic.js';
 export * as maya from './maya.js';

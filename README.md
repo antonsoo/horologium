@@ -52,14 +52,16 @@ hebrew.describe(jd).native; // "ח׳ טבת תשע״ג" (8 Tevet 5773)
 
 ## Features
 
-- **14 calendar systems** with real epochs, real leap-year/intercalation
+- **13 calendar systems** with real epochs, real leap-year/intercalation
   rules, and native-script rendering where it applies: Julian Day and the
   proleptic Gregorian/Julian calendars, Roman (Kalends/Nones/Ides, AUC,
   Roman numerals, seasonal hours), Byzantine Anno Mundi + Indiction,
   Islamic tabular, Coptic, Ethiopian, Hebrew (exact molad/dehiyyot
   arithmetic), Egyptian civil (+ Sothic cycle), Maya (Long Count/Tzolk'in/
-  Haab'/Lord of the Night, with SVG bar-and-dot numerals), and Chinese
-  (sexagenary cycle + astronomically-computed lunisolar calendar).
+  Haab'/Lord of the Night, with SVG bar-and-dot numerals), Chinese
+  (sexagenary cycle + astronomically-computed lunisolar calendar),
+  Zoroastrian (Yazdegerdi), Greek (Attic months + Olympiad reckoning, with
+  polytonic Greek month names), and Babylonian (Seleucid Era).
 - **Astronomy**: Sun/Moon position and phase, the tropical zodiac, the five
   naked-eye planets (Standish/JPL Keplerian elements), and the Metonic/
   Callippic/Saros/Exeligmos cycles behind the Antikythera mechanism's back
@@ -74,7 +76,7 @@ hebrew.describe(jd).native; // "ח׳ טבת תשע״ג" (8 Tevet 5773)
   Jerusalem, Chang'an, Tikal, Tenochtitlan) plus geolocation, feeding real
   sunrise/sunset for Roman seasonal hours.
 - **Light and dark themes** ("papyrus" and "night sky"), responsive to phone
-  width, keyboard-accessible, no tracking, and a ~17 KB gzipped JS bundle
+  width, keyboard-accessible, no tracking, and a ~19 KB gzipped JS bundle
   (measured with `npm run build`; no framework, no charting library, no
   analytics).
 
@@ -135,17 +137,24 @@ computed").
 ## Accuracy and limitations
 
 - Calendars that are pure arithmetic (Roman, Byzantine, Islamic, Coptic,
-  Ethiopian, Hebrew, Egyptian civil, Maya) are **exact** — no floating-point
-  astronomy involved — and are cross-checked against independent, third-
-  party implementations (Python's `convertdate`) across hundreds of dates
-  each; see `tests/oracle-fixtures.test.ts` and `scripts/generate_fixtures.py`.
-- The **Chinese lunisolar calendar** is an explicit reconstruction (real
-  historical Chinese calendars were set by court astronomers, not this
-  formula). Cross-checked against `lunardate` for Chinese New Year every
-  year 2000-2030 (max deviation 0.7 days) and for 447 month/leap-month
-  boundaries 2000-2035 (98.2% agreement; the 8 disagreements are understood
-  and documented in `docs/CALENDARS.md`, including a genuinely disputed
-  year, 2033, where real implementations differ from each other).
+  Ethiopian, Hebrew, Egyptian civil, Maya, Zoroastrian) are **exact** — no
+  floating-point astronomy involved — and the first eight are cross-checked
+  against independent, third-party implementations (Python's `convertdate`)
+  across hundreds of dates each; see `tests/oracle-fixtures.test.ts` and
+  `scripts/generate_fixtures.py`.
+- The **Chinese**, **Greek (Attic)**, and **Babylonian** lunisolar
+  calendars are explicit reconstructions (real historical calendars were
+  set by observation and, for Babylon and Athens, irregular official
+  decree, not a fixed formula). Chinese is cross-checked against
+  `lunardate` for Chinese New Year every year 2000-2030 (max deviation 0.7
+  days) and for 447 month/leap-month boundaries 2000-2035 (98.2%
+  agreement; the 8 disagreements are understood and documented in
+  `docs/CALENDARS.md`, including a genuinely disputed year, 2033, where
+  real implementations differ from each other). Greek and Babylonian have
+  no independent oracle available, so their tests instead sweep thousands
+  of dates checking internal consistency (valid month/day ranges, no
+  boundary discontinuities) — a real bug caught this way, and fixed, is
+  documented in `babylonian.ts` and its test file.
 - **Sun/Moon/planet positions** are measured (not just asserted) against
   Skyfield + the JPL DE421 ephemeris over 1900-2053: Sun within 0.006
   degrees, Moon within 0.68 degrees, planets within ~1.5 degrees. Planetary
@@ -157,11 +166,11 @@ computed").
   Delta-T correction (Earth's rotation has slowed over millennia; this
   isn't modeled), so ancient hour boundaries drift by unquantified minutes
   over long timescales.
-- **Not implemented**: Greek Olympiad/Attic calendar, Aztec/Mexica,
-  Zoroastrian, Babylonian Seleucid-era, and Hindu calendars, all cut for
-  time rather than shipped with an unverified epoch or correlation
-  constant — see the end of `docs/CALENDARS.md` for why.
-- Tests: 81 tests across 10 files (`npm test`), including round-trip
+- **Not implemented**: Aztec/Mexica and Hindu calendars — see the end of
+  `docs/CALENDARS.md` for why (in short: the brief itself says to cut
+  Aztec without a verifiable correlation constant, and Hindu was an
+  explicit stretch goal).
+- Tests: 96 tests across 13 files (`npm test`), including round-trip
   property tests (`toJD(fromJD(jd)) === jd`) spanning roughly ±5000 years
   per invertible calendar, and well over 1,600 individual oracle-fixture
   comparisons.

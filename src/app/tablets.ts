@@ -1,9 +1,11 @@
+import * as babylonian from '../lib/babylonian.js';
 import * as byzantine from '../lib/byzantine.js';
 import * as chinese from '../lib/chinese.js';
 import * as coptic from '../lib/coptic.js';
 /** Builds the grid of calendar "tablets", one card per calendar system. */
 import type { JulianDay } from '../lib/core/jd.js';
 import * as egyptian from '../lib/egyptian.js';
+import * as greek from '../lib/greek.js';
 import * as hebrew from '../lib/hebrew.js';
 import * as islamic from '../lib/islamic.js';
 import * as maya from '../lib/maya.js';
@@ -19,6 +21,8 @@ function collect(jd: JulianDay): CalendarTablet[] {
     islamic.describe(jd),
     maya.describe(jd),
     chinese.describe(jd),
+    greek.describe(jd),
+    babylonian.describe(jd),
     coptic.describeCoptic(jd),
     coptic.describeEthiopian(jd),
     byzantine.describe(jd),
