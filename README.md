@@ -194,3 +194,7 @@ your source for any new calendar rule.
 [MIT](LICENSE) © 2026 Anton Soloviev. Bundled font (Cinzel, Cormorant
 Garamond, EB Garamond) via Google Fonts, each under the SIL Open Font
 License; no font files are vendored in this repository.
+
+---
+
+<sub>Part of [Officina](https://antonsoo.github.io/officina/), a set of small open-source tools by [Anton Soloviev](https://github.com/antonsoo).</sub>
