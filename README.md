@@ -178,7 +178,7 @@ computed").
   `docs/CALENDARS.md` for why (in short: the brief itself says to cut
   Aztec without a verifiable correlation constant, and Hindu was an
   explicit stretch goal).
-- Tests: 96 tests across 13 files (`npm test`), including round-trip
+- Tests: 100 tests across 13 files (`npm test`), including round-trip
   property tests (`toJD(fromJD(jd)) === jd`) spanning roughly ±5000 years
   per invertible calendar, and well over 1,600 individual oracle-fixture
   comparisons.
