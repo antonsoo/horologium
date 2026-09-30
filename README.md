@@ -13,9 +13,10 @@ Every "world clock" on the web answers one question: what time is it in some
 other *place*. None of them answer the question a historian, a classicist, or
 someone building an ancient-languages app actually asks: what time is it in
 some other *era*, reckoned the way the people living there reckoned it? "24
-September 2026" is meaningless to a Roman, who wants "a.d. VIII Kal. Oct.,
-AUC 2779"; to a rabbi of any century, who wants "13 Tishrei 5787"; to a
-Maya astronomer-priest, who wants "13.0.13.17.5, 11 Chikchan, 18 Ch'en".
+September 2026" is meaningless to a Roman, who wants "a.d. III Id. Sept.,
+AUC 2779" (reckoned on the Julian calendar, which by now runs 13 days behind
+ours); to a rabbi of any century, who wants "13 Tishrei 5787"; to a Maya
+astronomer-priest, who wants "13.0.13.17.5, 11 Chikchan, 18 Ch'en".
 
 This project is a small, honest attempt at that: a calendar-conversion
 library with real citations and real tests, driving a museum-quality
@@ -77,7 +78,7 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   Jerusalem, Chang'an, Tikal, Tenochtitlan) plus geolocation, feeding real
   sunrise/sunset for Roman seasonal hours.
 - **Light and dark themes** ("papyrus" and "night sky"), responsive to phone
-  width, keyboard-accessible, no tracking, and a ~19 KB gzipped JS bundle
+  width, keyboard-accessible, no tracking, and a ~20 KB gzipped JS bundle
   (measured with `npm run build`; no framework, no charting library, no
   analytics).
 
