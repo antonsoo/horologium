@@ -27,7 +27,14 @@ the Sputnik 1 launch) and against `convertdate` over a wide date spread
 
 Reckoned in the Julian calendar as used from the 45 BCE reform onward; the
 pre-reform Republican calendar (with its irregular intercalary month) is
-out of scope.
+out of scope, and dates before the reform are marked proleptic.
+
+Leap years follow the every-fourth-year rule throughout. The pontifices
+actually intercalated every third year from the reform until Augustus
+suspended leap years to make up the difference (Macrobius, *Saturnalia*
+1.14.13-15); scholars reconstruct the exact years differently. So a date
+between 45 BCE and about 8 CE is the proleptic Julian date, and the civil
+date used in Rome that day can differ from it by a day or two.
 
 - **Kalends/Nones/Ides**: Kalends = 1st of the month. Ides = 15th (March,
   May, July, October) or 13th (all other months). Nones = 8 days before

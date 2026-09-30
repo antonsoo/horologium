@@ -20,6 +20,10 @@ All notable changes to this project are documented in this file.
 - The README's opening example gave the Roman date for 24 September 2026 as
   "a.d. VIII Kal. Oct.", reckoned on the Gregorian date. The library, like a
   Roman, reckons on the Julian date: "a.d. III Id. Sept."
+- The Roman tablet's method text and `docs/CALENDARS.md` now say that dates
+  from 45 BCE to about 8 CE follow the every-fourth-year leap rule, while the
+  pontifices actually intercalated every third year until Augustus corrected
+  it, so the civil date in Rome can differ by a day or two.
 
 ## [0.1.0] - 2026-09-24
 

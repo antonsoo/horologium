@@ -410,7 +410,11 @@ export function describe(jd: JulianDay): CalendarTablet {
       'next Kalends, Nones, or Ides (the pre-reform Republican calendar with its irregular ' +
       'intercalary Mercedonius is out of scope). AUC year = astronomical year + 753 (Varronian ' +
       'epoch, 753 BCE = AUC 1). The leap day is modeled as the historical doubled ' +
-      '"a.d. VI Kalendas Martias", not a bolted-on 29th of February.',
+      '"a.d. VI Kalendas Martias", not a bolted-on 29th of February. Leap years follow the ' +
+      'every-fourth-year rule throughout; in practice the pontifices intercalated every third ' +
+      'year from 45 BCE until Augustus suspended leap years to correct it (Macrobius, ' +
+      'Saturnalia 1.14.13-15), so a date between 45 BCE and about 8 CE can differ by a day or ' +
+      'two from the civil date used in Rome, depending on the reconstruction.',
     isReconstruction: false,
     proleptic:
       jd < JULIAN_REFORM_JD
