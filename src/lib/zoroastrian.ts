@@ -24,7 +24,7 @@
  */
 
 import { type JulianDay, julianToJD, mod } from './core/jd.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface ZoroastrianDate {
   /** Year of the Yazdegerdi era, starting at 1. */
@@ -99,5 +99,6 @@ export function describe(jd: JulianDay): CalendarTablet {
       'Shahanshahi variants (which apply corrections to stay seasonally aligned) are not implemented. ' +
       'Per-day names within the month are not shown (see source comment for why).',
     isReconstruction: false,
+    proleptic: date.year < 1 ? beforeEra('the Yazdegerdi era', '632 CE') : undefined,
   };
 }

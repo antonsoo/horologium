@@ -30,7 +30,7 @@
  */
 
 import { type JulianDay, julianToJD } from './core/jd.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface ThirteenMonthDate {
   year: number;
@@ -132,6 +132,7 @@ export function describeCoptic(jd: JulianDay): CalendarTablet {
       'Thout AM 1 = 29 August 284 CE (Julian), the accession of Diocletian. Documented ' +
       'historical/liturgical dating system (still in Coptic Orthodox use), not a reconstruction.',
     isReconstruction: false,
+    proleptic: date.year < 1 ? beforeEra('the Era of the Martyrs', '284 CE') : undefined,
   };
 }
 
@@ -183,5 +184,6 @@ export function describeEthiopian(jd: JulianDay): CalendarTablet {
       'Ethiopian year preceding a Gregorian leap year). Documented historical/liturgical dating ' +
       'system, not a reconstruction.',
     isReconstruction: false,
+    proleptic: date.year < 1 ? beforeEra('the Ethiopian era', '8 CE') : undefined,
   };
 }

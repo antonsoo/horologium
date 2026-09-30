@@ -22,7 +22,7 @@
 
 import { findSolarLongitudeCrossing, nextNewMoon } from './astronomy/sun-moon.js';
 import { type JulianDay, jdToJulian, mod } from './core/jd.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 const ATHENS_LONGITUDE_DEG = 23.7275;
 const ATHENS_UTC_OFFSET_DAYS = ATHENS_LONGITUDE_DEG / 360;
@@ -180,5 +180,6 @@ export function describe(jd: JulianDay): CalendarTablet {
       '776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and ' +
       'the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998).',
     isReconstruction: true,
+    proleptic: ol.number < 1 ? beforeEra('the Olympiad count', '776 BCE') : undefined,
   };
 }

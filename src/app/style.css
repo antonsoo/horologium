@@ -368,6 +368,13 @@ select {
   justify-content: space-between;
 }
 
+.tablet-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+
 .tablet-badge {
   font-size: 0.62rem;
   border: 1px solid var(--card-border);
@@ -392,6 +399,12 @@ select {
 
 .tablet-summary {
   font-size: 0.92rem;
+}
+
+.tablet-proleptic {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--fg-soft);
 }
 
 .tablet details {

@@ -170,5 +170,9 @@ export function describe(jd: JulianDay): CalendarTablet {
       'omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s ' +
       'own attested civil-calendar arithmetic, not a modern reconstruction.',
     isReconstruction: false,
+    proleptic:
+      date.year < 1
+        ? 'Before year 1 of Nabonassar (747 BCE): the civil calendar was in use, but this year number is counted backward from that era.'
+        : undefined,
   };
 }

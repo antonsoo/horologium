@@ -31,6 +31,9 @@ import {
 } from './core/jd.js';
 import type { CalendarTablet } from './types.js';
 
+/** 1 January 45 BCE (Julian), when the reformed calendar took effect. */
+const JULIAN_REFORM_JD: JulianDay = julianToJD(-44, 1, 1);
+
 // --- Month name tables ------------------------------------------------------
 
 /** Plain English month names, reused by other Julian-calendar-based modules (e.g. Byzantine AM). */
@@ -409,6 +412,10 @@ export function describe(jd: JulianDay): CalendarTablet {
       'epoch, 753 BCE = AUC 1). The leap day is modeled as the historical doubled ' +
       '"a.d. VI Kalendas Martias", not a bolted-on 29th of February.',
     isReconstruction: false,
+    proleptic:
+      jd < JULIAN_REFORM_JD
+        ? 'Before the Julian reform of 45 BCE: this is the Julian calendar run backward; Rome itself used the pre-reform Republican calendar.'
+        : undefined,
   };
 }
 

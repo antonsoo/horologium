@@ -18,4 +18,16 @@ export interface CalendarTablet {
   method: string;
   /** True if this system is a modern scholarly reconstruction rather than a historically attested algorithm. */
   isReconstruction: boolean;
+  /**
+   * Set when the date falls before the point this reckoning starts from (an
+   * era's year 1, or the Julian reform for the Roman calendar): the value is
+   * a projection backward that no one using the calendar wrote, and this
+   * says from where.
+   */
+  proleptic?: string | undefined;
+}
+
+/** The note for a year counted backward from an era's year 1. */
+export function beforeEra(era: string, begins: string): string {
+  return `Before ${era} year 1 (${begins}): this year is counted backward from it.`;
 }

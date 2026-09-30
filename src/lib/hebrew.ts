@@ -21,7 +21,7 @@
  */
 
 import { type JulianDay, jdWeekday, julianToJD, mod } from './core/jd.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface HebrewDate {
   /** Labeled year, incrementing at Tishrei (year 1 = the traditional creation year). */
@@ -431,7 +431,8 @@ export function describe(jd: JulianDay): CalendarTablet {
   return {
     id: 'hebrew',
     name: 'Hebrew Calendar',
-    native: `${dayHe} ${nameHe} ${yearHe}`,
+    // Hebrew-letter numerals have no zero or negatives: before AM 1 the native line drops the year.
+    native: yearHe ? `${dayHe} ${nameHe} ${yearHe}` : `${dayHe} ${nameHe}`,
     transliteration,
     summary,
     method:
@@ -442,5 +443,6 @@ export function describe(jd: JulianDay): CalendarTablet {
       'closed form. This is the fixed rabbinic-calendar arithmetic in continuous use since ' +
       'Maimonides codified it (12th c. CE), not a modern astronomical reconstruction.',
     isReconstruction: false,
+    proleptic: date.year < 1 ? beforeEra('Anno Mundi', '3761 BCE') : undefined,
   };
 }

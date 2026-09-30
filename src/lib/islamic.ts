@@ -27,7 +27,7 @@
  */
 
 import { type JulianDay, mod } from './core/jd.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 /** JD of 1 Muharram AH 1 (16 July 622 CE, Julian calendar); see the module doc comment for the verification. */
 export const ISLAMIC_EPOCH_JD: JulianDay = 1948439.5;
@@ -127,5 +127,6 @@ export function describe(jd: JulianDay): CalendarTablet {
       'observational calendar that governs actual religious observance; several other tabular ' +
       'leap-year placements are also used historically, and this is one conventional choice among them.',
     isReconstruction: false,
+    proleptic: date.year < 1 ? beforeEra('the Hijri era', '622 CE') : undefined,
   };
 }

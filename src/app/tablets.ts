@@ -46,9 +46,10 @@ export function buildTablets(container: HTMLElement, jd: JulianDay): void {
     const heading = el('div', 'tablet-name');
     const nameSpan = el('span', '', t.name);
     heading.appendChild(nameSpan);
-    if (t.isReconstruction) {
-      heading.appendChild(el('span', 'tablet-badge', 'reconstruction'));
-    }
+    const badges = el('span', 'tablet-badges');
+    if (t.isReconstruction) badges.appendChild(el('span', 'tablet-badge', 'reconstruction'));
+    if (t.proleptic) badges.appendChild(el('span', 'tablet-badge', 'proleptic'));
+    if (badges.childElementCount > 0) heading.appendChild(badges);
     card.appendChild(heading);
 
     const nativeEl = el('div', 'tablet-native', t.native);
@@ -66,6 +67,7 @@ export function buildTablets(container: HTMLElement, jd: JulianDay): void {
       card.appendChild(el('div', 'tablet-translit', t.transliteration));
     }
     card.appendChild(el('p', 'tablet-summary', t.summary));
+    if (t.proleptic) card.appendChild(el('p', 'tablet-proleptic', t.proleptic));
 
     const details = document.createElement('details');
     const summary = el('summary', '', 'How this is computed');

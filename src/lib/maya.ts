@@ -249,6 +249,9 @@ export function describe(
     summary: `Long Count ${lcString}, Tzolk'in ${tzolkinString}, Haab' ${haabString}`,
     method: `Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant ${correlation} (${correlationNote}). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The G1-G9 Lord of the Night label is a widely-used epigraphic convention, not settled fact. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.`,
     isReconstruction: false,
+    proleptic: lcString.startsWith('-')
+      ? 'Before the 13.0.0.0.0 base date (3114 BCE): shown as a negative Long Count, a modern convention; Maya inscriptions reached back with higher cycles instead.'
+      : undefined,
   };
 }
 

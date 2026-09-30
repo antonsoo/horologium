@@ -110,7 +110,10 @@ egyptian.sothicCyclePosition(ides);
 Every calendar's `describe(jd)` returns a `CalendarTablet` — `native`,
 `transliteration`, `summary`, and a `method` string explaining exactly how
 the date was computed (the same text the web app shows under "How this is
-computed").
+computed"). A date before the calendar's own starting point (the Hijra for
+the Islamic calendar, 3761 BCE for the Hebrew, the 45 BCE reform for the
+Roman, and so on) also carries a `proleptic` note saying the year is counted
+backward from it; the app shows it as a "proleptic" badge on the tablet.
 
 ## How it works
 
@@ -179,7 +182,11 @@ computed").
   `docs/CALENDARS.md` for why (in short: the brief itself says to cut
   Aztec without a verifiable correlation constant, and Hindu was an
   explicit stretch goal).
-- Tests: 100 tests across 13 files (`npm test`), including round-trip
+- Dates before a calendar's era are computed by running its rules
+  backward, and the years come out zero or negative ("-1670 AH"). Those
+  tablets are marked "proleptic", with a note naming where the count really
+  starts: nobody wrote those years.
+- Tests: 112 tests across 14 files (`npm test`), including round-trip
   property tests (`toJD(fromJD(jd)) === jd`) spanning roughly ±5000 years
   per invertible calendar, and well over 1,600 individual oracle-fixture
   comparisons.

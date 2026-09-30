@@ -48,7 +48,7 @@
 
 import { findSolarLongitudeCrossing, nextNewMoon } from './astronomy/sun-moon.js';
 import { type JulianDay, jdToJulian, julianToJD } from './core/jd.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 const BABYLON_LONGITUDE_DEG = 44.4275;
 const BABYLON_UTC_OFFSET_DAYS = BABYLON_LONGITUDE_DEG / 360;
@@ -164,5 +164,6 @@ export function describe(jd: JulianDay): CalendarTablet {
       'and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see ' +
       'docs/CALENDARS.md.',
     isReconstruction: true,
+    proleptic: d.seYear < 1 ? beforeEra('the Seleucid Era', '311 BCE') : undefined,
   };
 }

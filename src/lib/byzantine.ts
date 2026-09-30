@@ -29,7 +29,7 @@
 
 import { amod, type JulianDay, jdToJulian, julianToJD } from './core/jd.js';
 import { JULIAN_MONTH_NAMES_EN } from './roman.js';
-import type { CalendarTablet } from './types.js';
+import { beforeEra, type CalendarTablet } from './types.js';
 
 /**
  * Both the AM year and the indiction change on 1 September (Julian), not 1
@@ -95,6 +95,7 @@ export function describe(jd: JulianDay): CalendarTablet {
       'year for simplicity rather than reaching for that convention. Documented historical dating ' +
       'system (Orthodox liturgical use), not a modern reconstruction.',
     isReconstruction: false,
+    proleptic: date.amYear < 1 ? beforeEra('the Byzantine Anno Mundi', '5509 BCE') : undefined,
   };
 }
 
