@@ -2,6 +2,25 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.0] - 2026-09-30
+
+### Added
+
+- `CalendarTablet.proleptic`: set when a date falls before the calendar's own
+  starting point (an era's year 1, or the Julian reform for the Roman
+  calendar), with a note saying where the count starts. The app shows a
+  "proleptic" badge and the note on those tablets; before, "3 Safar -1670 AH"
+  or "SE -688" appeared with nothing to say no one wrote such a year.
+
+### Fixed
+
+- The Hebrew tablet's native line ended in an empty year for dates before
+  AM 1 (3761 BCE), since Hebrew-letter numerals have no zero or negatives; it
+  now stops after the month.
+- The README's opening example gave the Roman date for 24 September 2026 as
+  "a.d. VIII Kal. Oct.", reckoned on the Gregorian date. The library, like a
+  Roman, reckons on the Julian date: "a.d. III Id. Sept."
+
 ## [0.1.0] - 2026-09-24
 
 Initial release.
