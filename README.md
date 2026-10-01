@@ -38,8 +38,11 @@ hot reload.
 To use the calendar library in your own project:
 
 ```sh
-npm install @antonsoloviev/horologium
+npm install --allow-git=root github:antonsoo/horologium
 ```
+
+(The npm package, `@antonsoloviev/horologium`, isn't published yet, so this
+installs from GitHub; npm 12 needs `--allow-git=root` for that.)
 
 ```ts
 import { maya, hebrew, core } from '@antonsoloviev/horologium';

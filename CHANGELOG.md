@@ -6,8 +6,8 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
-- Published to npm as `@antonsoloviev/horologium`:
-  `npm install @antonsoloviev/horologium`.
+- The package is named `@antonsoloviev/horologium`, ready for npm. It isn't
+  published yet; until it is, install from GitHub.
 
 ### Fixed
 
