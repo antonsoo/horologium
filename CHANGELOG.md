@@ -2,6 +2,25 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.2] - 2026-10-01
+
+### Fixed
+
+- Weekdays before JD 0 (1 January 4713 BCE). `jdWeekday` took its remainder
+  with `%`, which is negative there, so it returned values like -5 that are no
+  weekday. The Hebrew postponement rules compare against the weekday of the
+  molad, so 192 of the 6,000 years before the era came out 356 or 382 days
+  long, and on the last day of each the date repeated the day before. The
+  Hebrew tablet also named six days in seven "Yom Rishon" back there, and
+  `roman.latinWeekday` threw. Dates from JD 0 on were never affected.
+
+### Added
+
+- `tests/properties.test.ts`: on 6,000 seeded days from 8,800 years before
+  the present era to 11,700 years after it, every calendar converts a day to
+  a date and back to the same day, holds that date for the whole day and no
+  longer, and renders its tablet without a NaN.
+
 ## [0.2.1] - 2026-10-01
 
 ### Added

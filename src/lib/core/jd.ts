@@ -124,7 +124,9 @@ export function jdToDate(jd: JulianDay): Date {
  * Meeus (1998) ch. 7. JD 2451545.0 (2000-01-01 12:00 UTC) was a Saturday.
  */
 export function jdWeekday(jd: JulianDay): number {
-  return Math.floor(jd + 1.5) % 7;
+  // `mod`, not `%`: before JD 0 (1 January 4713 BCE) the remainder would be negative, which
+  // is no weekday at all, and the Hebrew postponement rules compare against it.
+  return mod(Math.floor(jd + 1.5), 7);
 }
 
 /**
