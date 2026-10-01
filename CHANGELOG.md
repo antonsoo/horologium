@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.1] - 2026-10-01
+
+### Added
+
+- Published to npm as `@antonsoloviev/horologium`:
+  `npm install @antonsoloviev/horologium`.
+
+### Fixed
+
+- Installing from GitHub (`npm install github:antonsoo/horologium`, which the
+  README recommended) gave a package with no built code, so the import
+  failed: there was no `prepare` script to build it. There is one now.
+
 ## [0.2.0] - 2026-09-30
 
 ### Added

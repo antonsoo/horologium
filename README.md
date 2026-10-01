@@ -35,15 +35,14 @@ npm install && npm run dev
 Open the printed `localhost` URL. That's the whole app, running locally with
 hot reload.
 
-To use the calendar library in your own project (nothing is published to
-npm yet, so install straight from GitHub):
+To use the calendar library in your own project:
 
 ```sh
-npm install github:antonsoo/horologium
+npm install @antonsoloviev/horologium
 ```
 
 ```ts
-import { maya, hebrew, core } from 'horologium';
+import { maya, hebrew, core } from '@antonsoloviev/horologium';
 
 const jd = core.gregorianToJD(2012, 12, 21);
 maya.describe(jd).summary; // "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in"
@@ -87,7 +86,7 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
 ## Usage examples
 
 ```ts
-import { roman, chinese, egyptian, core } from 'horologium';
+import { roman, chinese, egyptian, core } from '@antonsoloviev/horologium';
 
 // The Roman calendar is Julian, not Gregorian - use julianToJD for a date
 // given in the calendar the Romans themselves used.
