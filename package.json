@@ -8,7 +8,7 @@
   "homepage": "https://antonsoo.github.io/horologium/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antonsoo/horologium.git"
+    "url": "git+https://github.com/antonsoo/horologium.git"
   },
   "bugs": {
     "url": "https://github.com/antonsoo/horologium/issues"
@@ -36,7 +36,8 @@
     }
   },
   "files": [
-    "dist/lib"
+    "dist/lib",
+    "!dist/lib/**/*.map"
   ],
   "scripts": {
     "dev": "vite",
