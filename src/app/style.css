@@ -309,7 +309,8 @@ select {
   color: var(--fg-soft);
 }
 .btn.primary {
-  background: var(--accent);
+  /* --accent-text, not --accent: card-coloured text on the mid green is 3.5:1 in the light theme. */
+  background: var(--accent-text);
   color: var(--card-bg);
   border-color: transparent;
 }

@@ -49,6 +49,13 @@ The library is unchanged; these are in the clock page.
   event handlers and `eval` are not allowed. Every control was exercised
   in Chromium and Firefox with a listener for policy violations: none.
 
+### Accessibility
+
+- Checked with axe-core (WCAG 2.1 A and AA, and its best-practice rules) in light and dark,
+  at desktop and phone widths: no findings now. The primary button's
+  label was 3.5:1 on its green in the light theme; it sits on the darker green
+  of the links (6.7:1).
+
 ## [0.2.2] - 2026-10-01
 
 ### Fixed
