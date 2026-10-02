@@ -1,3 +1,4 @@
+import './fonts/fonts.css';
 import './style.css';
 import { dateToJD } from '../lib/core/jd.js';
 import { buildBackDial } from './backdial.js';

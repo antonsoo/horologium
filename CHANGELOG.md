@@ -25,6 +25,15 @@ The library is unchanged; these are in the clock page.
   service each get a sentence under the list (announced to screen readers);
   the last of these used to do nothing at all.
 
+### Changed
+
+- The page's fonts are served by the page itself. They came from Google Fonts,
+  the one request the page made to another origin; the same font files (every
+  subset, as Google serves them to a current browser) are now in
+  `src/app/fonts/`, with their SIL Open Font License texts. Nothing looks
+  different: screenshots before and after match. The page now loads with
+  every other host blocked.
+
 ## [0.2.2] - 2026-10-01
 
 ### Fixed

@@ -201,9 +201,10 @@ your source for any new calendar rule.
 
 ## License
 
-[MIT](LICENSE) © 2026 Anton Soloviev. Bundled font (Cinzel, Cormorant
-Garamond, EB Garamond) via Google Fonts, each under the SIL Open Font
-License; no font files are vendored in this repository.
+[MIT](LICENSE) © 2026 Anton Soloviev. The clock page's fonts (Cinzel,
+Cormorant Garamond, EB Garamond) are in `src/app/fonts/`, each under the SIL
+Open Font License ([`LICENSE.txt`](src/app/fonts/LICENSE.txt) there); the page
+serves them itself and asks no other host for anything.
 
 ---
 
