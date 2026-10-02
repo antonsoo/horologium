@@ -8,6 +8,12 @@ The library is unchanged; these are in the clock page.
 
 ### Fixed
 
+- The theme button did nothing when clicked, at most window widths. It sits at
+  the top right of the header, underneath the page's content wrapper, which
+  is stacked above it and took the click (between about 480 and 1,400 pixels
+  wide all or most of the button was covered; the keyboard still worked).
+  Found by asking, for every control on every site at five widths, whether a
+  click at its centre would land on it.
 - "Use my location" could say "Locating..." until the page was reloaded.
   Firefox calls neither geolocation callback when its permission prompt is
   closed without a choice. The page now waits 20 seconds for any answer, then

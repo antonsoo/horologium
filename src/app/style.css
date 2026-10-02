@@ -174,6 +174,8 @@ select {
   position: absolute;
   top: 1.6rem;
   right: 20px;
+  /* Above .wrap (z-index 1), which spans the header and would take the clicks. */
+  z-index: 2;
   background: transparent;
   border: 1px solid var(--card-border);
   border-radius: 999px;
