@@ -2,6 +2,7 @@
 
 **What time is it in Babylon?** A live, Antikythera-inspired clock for the calendars of the ancient world — and a small, tested TypeScript library behind it.
 
+[![npm](https://img.shields.io/npm/v/@antonsoloviev/horologium)](https://www.npmjs.com/package/@antonsoloviev/horologium)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/demo-antonsoo.github.io%2Fhorologium-8a6d3b)](https://antonsoo.github.io/horologium/)
 
@@ -38,11 +39,8 @@ hot reload.
 To use the calendar library in your own project:
 
 ```sh
-npm install --allow-git=root github:antonsoo/horologium
+npm install @antonsoloviev/horologium
 ```
-
-(The npm package, `@antonsoloviev/horologium`, isn't published yet, so this
-installs from GitHub; npm 12 needs `--allow-git=root` for that.)
 
 ```ts
 import { maya, hebrew, core } from '@antonsoloviev/horologium';

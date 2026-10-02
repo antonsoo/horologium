@@ -4,7 +4,7 @@
 //   npm run build:lib
 //   node examples/basic-usage.mjs
 //
-// (In your own project: `npm install --allow-git=root github:antonsoo/horologium` and
+// (In your own project: `npm install @antonsoloviev/horologium` and
 // `import { ... } from '@antonsoloviev/horologium'` instead of the relative path below.)
 
 import { chinese, core, egyptian, greek, hebrew, maya, roman } from '../dist/lib/index.js';

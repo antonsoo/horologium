@@ -4,7 +4,13 @@ All notable changes to this project are documented in this file.
 
 ## [0.2.3] - 2026-10-02
 
-The library is unchanged; these are in the clock page.
+The library's code is unchanged; the fixes are in the clock page.
+
+### Added
+
+- The library is published to npm as `@antonsoloviev/horologium`:
+  `npm install @antonsoloviev/horologium`. The README uses the registry package
+  instead of the GitHub install, which npm 12 blocks by default.
 
 ### Fixed
 
@@ -79,8 +85,8 @@ The library is unchanged; these are in the clock page.
 
 ### Added
 
-- The package is named `@antonsoloviev/horologium`, ready for npm. It isn't
-  published yet; until it is, install from GitHub.
+- The package is named `@antonsoloviev/horologium`, ready for npm (published
+  there from 0.2.3).
 
 ### Fixed
 
