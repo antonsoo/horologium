@@ -2,6 +2,29 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.3] - 2026-10-02
+
+The library is unchanged; these are in the clock page.
+
+### Fixed
+
+- "Use my location" could say "Locating..." until the page was reloaded.
+  Firefox calls neither geolocation callback when its permission prompt is
+  closed without a choice. The page now waits 20 seconds for any answer, then
+  gives the button back and says the browser has not answered; an answer that
+  comes later is still used. Found by running the page in Firefox beside
+  Chromium.
+- Pressing the button twice left its label on "Locating..." (or on "Location
+  unavailable") for good: the label to restore was read from the button, which
+  by then said that. The button is disabled while a request is out.
+- Every use of the button added another "My location" to the list of cities,
+  and choosing "My location" from the list again, after another city, changed
+  the list and not the clock. There is one entry, and it restores the
+  position.
+- A refusal, a failure to find a position and a browser without a location
+  service each get a sentence under the list (announced to screen readers);
+  the last of these used to do nothing at all.
+
 ## [0.2.2] - 2026-10-01
 
 ### Fixed

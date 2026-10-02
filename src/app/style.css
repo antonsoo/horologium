@@ -295,6 +295,17 @@ select {
   border-color: var(--gilt-border);
   color: var(--gilt-text);
 }
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.field-note {
+  margin: 0;
+  max-width: 32ch;
+  font-size: 0.85rem;
+  color: var(--fg-soft);
+}
 .btn.primary {
   background: var(--accent);
   color: var(--card-bg);

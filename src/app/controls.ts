@@ -8,6 +8,7 @@ import {
   julianToJD,
 } from '../lib/core/jd.js';
 import { ANCIENT_CITIES } from '../lib/roman.js';
+import { LOCATE_FAILURE_TEXT, locate } from './locate.js';
 
 export interface AppState {
   jd: JulianDay;
@@ -32,6 +33,9 @@ export const PRESETS: Preset[] = [
   { label: 'Maya 13.0.0.0.0', jd: gregorianToJD(2012, 12, 21) },
   { label: 'First Olympiad, 776 BCE', jd: julianToJD(-775, 7, 1) },
 ];
+
+const GEO_LABEL = 'Use my location';
+const MY_LOCATION = 'My location';
 
 const MONTH_NAMES = [
   'January',
@@ -221,46 +225,65 @@ export function buildControls(): ControlsHandles {
     if (city.name === state.locationName) opt.selected = true;
     locSelect.appendChild(opt);
   }
+  // Where the browser said we are, kept so "My location" can be chosen again from the list.
+  let myLocation: { latDeg: number; lonDeg: number } | null = null;
   locSelect.addEventListener('change', () => {
-    const city = ANCIENT_CITIES.find((c) => c.name === locSelect.value);
-    if (!city) return;
-    state.locationName = city.name;
-    state.latDeg = city.latDeg;
-    state.lonDeg = city.lonDeg;
+    const place =
+      locSelect.value === MY_LOCATION
+        ? myLocation
+        : ANCIENT_CITIES.find((c) => c.name === locSelect.value);
+    if (!place) return;
+    state.locationName = locSelect.value;
+    state.latDeg = place.latDeg;
+    state.lonDeg = place.lonDeg;
     emit();
   });
   const geoBtn = document.createElement('button');
   geoBtn.type = 'button';
   geoBtn.className = 'btn';
-  geoBtn.textContent = 'Use my location';
+  geoBtn.textContent = GEO_LABEL;
+  const locNote = document.createElement('p');
+  locNote.className = 'field-note';
+  locNote.setAttribute('role', 'status');
+  locNote.hidden = true;
+  const note = (text: string): void => {
+    locNote.textContent = text;
+    locNote.hidden = text === '';
+  };
   geoBtn.addEventListener('click', () => {
-    if (!('geolocation' in navigator)) return;
-    const originalLabel = geoBtn.textContent;
     geoBtn.textContent = 'Locating...';
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        geoBtn.textContent = originalLabel;
-        state.latDeg = pos.coords.latitude;
-        state.lonDeg = pos.coords.longitude;
-        state.locationName = 'My location';
-        const opt = document.createElement('option');
-        opt.value = 'My location';
-        opt.textContent = 'My location';
+    geoBtn.disabled = true;
+    const ready = (): void => {
+      geoBtn.textContent = GEO_LABEL;
+      geoBtn.disabled = false;
+    };
+    locate('geolocation' in navigator ? navigator.geolocation : undefined, {
+      position(latitudeDeg, longitudeDeg) {
+        ready();
+        note('');
+        myLocation = { latDeg: latitudeDeg, lonDeg: longitudeDeg };
+        state.latDeg = latitudeDeg;
+        state.lonDeg = longitudeDeg;
+        state.locationName = MY_LOCATION;
+        // One entry in the list, however many times the button is used.
+        let opt = Array.from(locSelect.options).find((o) => o.value === MY_LOCATION);
+        if (!opt) {
+          opt = document.createElement('option');
+          opt.value = MY_LOCATION;
+          opt.textContent = MY_LOCATION;
+          locSelect.appendChild(opt);
+        }
         opt.selected = true;
-        locSelect.appendChild(opt);
         emit();
       },
-      () => {
-        // Permission denied or unavailable: say so rather than failing silently.
-        geoBtn.textContent = 'Location unavailable';
-        setTimeout(() => {
-          geoBtn.textContent = originalLabel;
-        }, 2500);
+      failed(reason) {
+        ready();
+        note(LOCATE_FAILURE_TEXT[reason]);
       },
-    );
+    });
   });
   locRow.append(locSelect, geoBtn);
-  locField.appendChild(locRow);
+  locField.append(locRow, locNote);
   row1.appendChild(locField);
 
   root.appendChild(row1);
