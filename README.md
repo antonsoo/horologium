@@ -188,7 +188,7 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   backward, and the years come out zero or negative ("-1670 AH"). Those
   tablets are marked "proleptic", with a note naming where the count really
   starts: nobody wrote those years.
-- Tests: 134 tests across 15 files (`npm test`), including round-trip
+- Tests (`npm test`), including round-trip
   property tests (`toJD(fromJD(jd)) === jd`) spanning roughly ±5000 years
   per invertible calendar, and well over 1,600 individual oracle-fixture
   comparisons.
