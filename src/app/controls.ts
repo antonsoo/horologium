@@ -216,6 +216,7 @@ export function buildControls(): ControlsHandles {
   const locRow = document.createElement('div');
   locRow.style.display = 'flex';
   locRow.style.gap = '0.4rem';
+  locRow.style.flexWrap = 'wrap';
   const locSelect = document.createElement('select');
   locSelect.setAttribute('aria-label', 'Ancient city');
   for (const city of ANCIENT_CITIES) {

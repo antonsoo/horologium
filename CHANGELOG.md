@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented in this file.
 
+## [Unreleased]
+
+In the clock page; the library is unchanged.
+
+### Fixed
+
+- On a 320-pixel-wide screen (a phone, or a laptop window zoomed to 400%) the
+  page scrolled sideways: the city list and "Use my location" stayed on one
+  line, 28 pixels wider than the screen. The button now moves under the list
+  when they do not fit. Every other site was checked the same way, empty and
+  with a sample loaded.
+
 ## [0.2.3] - 2026-10-02
 
 The library's code is unchanged; the fixes are in the clock page.
