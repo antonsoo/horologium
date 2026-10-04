@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/demo-antonsoo.github.io%2Fhorologium-8a6d3b)](https://antonsoo.github.io/horologium/)
 
-![Horologium: a bronze Antikythera-inspired dial above a grid of calendar tablets, showing the Roman, Egyptian, Hebrew and Islamic dates for 24 September 2026 CE](docs/assets/hero.png)
+![Horologium: a bronze Antikythera-inspired dial, date controls and the seasonal hour in Babylon for 4 October 2026 CE](docs/assets/hero.png)
 
 ## Why this exists
 
@@ -72,17 +72,24 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   (with a half-silvered phase ball)/five-planet/date pointers — plus a back
   dial with the Metonic and Saros spirals.
 - **Time travel**: BCE-capable date entry (astronomical year numbering under
-  the hood), a year scrubber, day/month/year stepping, four historical
-  presets, and a URL permalink.
+  the hood), a year scrubber, exact civil day/month/year stepping, four
+  historical presets, and live or paused URL permalinks. Impossible dates
+  show a recoverable error; live ticks preserve unfinished date edits and
+  open calendar explanations.
 - **Location**: eight ancient cities (Rome, Athens, Alexandria, Babylon,
-  Jerusalem, Chang'an, Tikal, Tenochtitlan) plus geolocation, feeding real
-  sunrise/sunset for Roman seasonal hours.
+  Jerusalem, Chang'an, Tikal, Tenochtitlan) plus cancellable geolocation,
+  feeding a visible approximate sunrise/sunset and Roman seasonal-hour
+  readout. Personal coordinates stay in the current tab; their links
+  explicitly fall back to Rome.
 - **Light and dark themes** ("papyrus" and "night sky"), responsive to phone
-  width, keyboard-accessible, no tracking, and a ~20 KB gzipped JS bundle
+  width, keyboard-accessible, no tracking, and a ~24 KB gzipped JS bundle
   (measured with `npm run build`; no framework, no charting library, no
   analytics).
 
 <img src="docs/assets/dial-dark.png" alt="The same dial in the night-sky dark theme" width="420" />
+
+See [the clock controls and link behavior](docs/clock.md), including month-end
+clamping, BCE dates and the browser's 5001 BCE–5000 CE input range.
 
 ## Usage examples
 
@@ -139,7 +146,8 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
 - **The web app** (`src/app/`) is plain TypeScript and hand-built SVG: no UI
   framework, no charting library. The front dial and back dial are built
   once as DOM nodes and updated in place (pointer rotations, the moon-phase
-  path) on every tick or date change.
+  path) on every tick or date change. Calendar tablets also update in place
+  so their disclosures and keyboard focus survive the fifteen-second tick.
 
 ## Accuracy and limitations
 

@@ -17,6 +17,9 @@ npm install
 - `npm run lint` / `npm run lint:fix` — Biome.
 - `npm run typecheck` — `tsc --noEmit` for both the app and the library.
 - `npm run build` — builds the library (`dist/lib`) and the web app (`dist/app`).
+- `npm run test:browser` — tests the production build in Chromium and Firefox;
+  run `npm run build` first. Install the browser binaries with
+  `npx playwright install chromium firefox` if they are not already available.
 
 ## Adding or changing a calendar
 

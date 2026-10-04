@@ -4,9 +4,34 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
-In the clock page; the library is unchanged.
+Clock-page improvements and a Roman seasonal-hour fix in the source library.
+These library changes are not yet published to npm.
+
+### Added
+
+- A visible seasonal-hour, sunrise and sunset readout for the selected city
+  or a private location, with polar conditions shown as unavailable.
+- Production Chromium/Firefox workflow tests, desktop/phone accessibility
+  scans, and corresponding CI checks.
 
 ### Fixed
+
+- Roman hours now inspect neighboring UTC dates, so eastern dawns and
+  western afternoons are not incorrectly assigned to night watches.
+- Date entry rejects impossible, fractional, empty and out-of-range inputs.
+  Month/year buttons use civil arithmetic, preserve UTC time and clamp
+  month ends; year scrubbing keeps a stable anchor through a full gesture.
+- Malformed, ambiguous and excessive links recover without a startup crash
+  or an unbounded calendar computation. Live links remain live on reload;
+  paused links retain the full instant, and hash history updates the clock.
+- Cancelled or superseded geolocation callbacks cannot replace a chosen city.
+  Service exceptions, invalid coordinates and unanswered requests recover.
+  Private coordinates stay in the tab; reopened personal links explain their
+  Rome fallback instead of implying that the original position was restored.
+- Calendar explanations and focus survive updates; live ticks preserve date
+  drafts. The skip link moves focus without discarding a time permalink.
+- Minute readouts account for Julian-day floating-point precision; the
+  dial caption has sufficient contrast and dark-mode focus is visible.
 
 - On a 320-pixel-wide screen (a phone, or a laptop window zoomed to 400%) the
   page scrolled sideways: the city list and "Use my location" stayed on one
