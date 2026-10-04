@@ -1,42 +1,31 @@
-/** Time travel, location, presets, and the URL permalink hash. */
-import {
-  dateToJD,
-  displayYear,
-  gregorianToJD,
-  type JulianDay,
-  jdToGregorian,
-  julianToJD,
-} from '../lib/core/jd.js';
+/** Time travel, location, presets, and recoverable URL permalinks. */
+import { dateToJD, displayYear, gregorianToJD, jdToGregorian, julianToJD } from '../lib/core/jd.js';
 import { ANCIENT_CITIES } from '../lib/roman.js';
 import { LOCATE_FAILURE_TEXT, locate } from './locate.js';
+import {
+  type CivilUnit,
+  type ClockTime,
+  DATE_LIMIT_TEXT,
+  MAX_YEAR,
+  MIN_YEAR,
+  PRIVATE_LOCATION,
+  parseDateEntry,
+  permalinkHash,
+  readPermalink,
+  stepCivil,
+} from './time-state.js';
 
-export interface AppState {
-  jd: JulianDay;
-  live: boolean;
+export interface AppState extends ClockTime {
   latDeg: number;
   lonDeg: number;
-  locationName: string;
 }
-
-export interface Preset {
-  label: string;
-  jd: JulianDay;
-}
-
-// Ancient/medieval dates are given in the Julian calendar, the one
-// actually in use at the time (this is what the Roman/Greek tablets are
-// keyed on too) - using gregorianToJD here would silently shift these by
-// several days relative to the calendar the preset's own name refers to.
-export const PRESETS: Preset[] = [
+export const PRESETS = [
+  // Historical dates were Julian; the editor always shows proleptic Gregorian.
   { label: 'Ides of March, 44 BCE', jd: julianToJD(-43, 3, 15) },
   { label: 'Fall of Constantinople, 1453', jd: julianToJD(1453, 5, 29) },
   { label: 'Maya 13.0.0.0.0', jd: gregorianToJD(2012, 12, 21) },
   { label: 'First Olympiad, 776 BCE', jd: julianToJD(-775, 7, 1) },
 ];
-
-const GEO_LABEL = 'Use my location';
-const MY_LOCATION = 'My location';
-
 const MONTH_NAMES = [
   'January',
   'February',
@@ -51,347 +40,405 @@ const MONTH_NAMES = [
   'November',
   'December',
 ];
-
-function parseHash(): { jd: JulianDay; loc?: string } | null {
-  const raw = decodeURIComponent(location.hash.replace(/^#/, ''));
-  if (!raw) return null;
-  const params = new URLSearchParams(raw);
-  const jdStr = params.get('jd');
-  if (!jdStr) return null;
-  const jd = Number.parseFloat(jdStr);
-  if (!Number.isFinite(jd)) return null;
-  const loc = params.get('loc');
-  return loc === null ? { jd } : { jd, loc };
-}
-
-export function writeHash(state: AppState): void {
-  const params = new URLSearchParams();
-  params.set('jd', state.jd.toFixed(5));
-  params.set('loc', state.locationName);
-  history.replaceState(null, '', `#${params.toString()}`);
-}
-
 export interface ControlsHandles {
   root: HTMLElement;
   onChange: (cb: (state: AppState) => void) => void;
-  setState: (partial: Partial<AppState>) => void;
+  tick: (jd: number) => void;
   getState: () => AppState;
 }
-
+function element<K extends keyof HTMLElementTagNameMap>(
+  tag: K,
+  className: string,
+  text?: string,
+): HTMLElementTagNameMap[K] {
+  const node = document.createElement(tag);
+  node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function button(text: string, className = 'btn'): HTMLButtonElement {
+  const node = element('button', className, text);
+  node.type = 'button';
+  return node;
+}
 export function buildControls(): ControlsHandles {
-  const fromHash = parseHash();
-  const initialCity = ANCIENT_CITIES.find((c) => c.name === fromHash?.loc) ?? ANCIENT_CITIES[0];
+  const initial = readPermalink(location.hash, dateToJD(new Date()));
+  const time =
+    initial.kind === 'valid'
+      ? initial.time
+      : { jd: dateToJD(new Date()), live: true, locationName: 'Rome' };
+  const city = ANCIENT_CITIES.find((entry) => entry.name === time.locationName);
   const state: AppState = {
-    jd: fromHash?.jd ?? dateToJD(new Date()),
-    live: fromHash === null,
-    latDeg: initialCity?.latDeg ?? 41.9028,
-    lonDeg: initialCity?.lonDeg ?? 12.4964,
-    locationName: initialCity?.name ?? 'Rome',
+    ...time,
+    latDeg: city?.latDeg ?? 41.9028,
+    lonDeg: city?.lonDeg ?? 12.4964,
   };
+  const listeners: Array<(state: AppState) => void> = [];
+  const root = element('div', 'controls');
+  const linkNote = element('p', 'control-status');
+  linkNote.setAttribute('role', 'status');
+  const showLinkNote = (text: string): void => {
+    linkNote.textContent = text;
+    linkNote.hidden = text === '';
+  };
+  showLinkNote(
+    initial.kind === 'invalid' ? initial.error : initial.kind === 'valid' ? initial.note : '',
+  );
+  const row = element('div', 'controls-row');
+  const nowField = element('div', 'field');
+  nowField.append(element('span', 'field-label', 'Live'));
+  const nowBtn = button('', 'btn primary');
+  nowField.append(nowBtn);
+  row.append(nowField);
 
-  const listeners: Array<(s: AppState) => void> = [];
-  function emit() {
-    writeHash(state);
-    for (const cb of listeners) cb(state);
-  }
-
-  const root = document.createElement('div');
-  root.className = 'controls';
-
-  const row1 = document.createElement('div');
-  row1.className = 'controls-row';
-
-  // --- Now / live toggle ---
-  const nowField = document.createElement('div');
-  nowField.className = 'field';
-  nowField.appendChild(labelEl('Live'));
-  const nowBtn = document.createElement('button');
-  nowBtn.type = 'button';
-  nowBtn.className = 'btn primary';
-  nowBtn.textContent = state.live ? 'Ticking now' : 'Return to now';
-  nowBtn.addEventListener('click', () => {
-    state.live = true;
-    state.jd = dateToJD(new Date());
-    nowBtn.textContent = 'Ticking now';
-    syncInputs();
-    emit();
-  });
-  nowField.appendChild(nowBtn);
-  row1.appendChild(nowField);
-
-  // --- Date/time inputs (BCE-capable) ---
-  const dateField = document.createElement('div');
-  dateField.className = 'field';
-  dateField.appendChild(labelEl('Date (astronomical / proleptic Gregorian)'));
-  const dateRow = document.createElement('div');
-  dateRow.style.display = 'flex';
-  dateRow.style.gap = '0.4rem';
-  dateRow.style.flexWrap = 'wrap';
-
-  const yearInput = document.createElement('input');
+  const dateField = element('form', 'field date-field');
+  dateField.setAttribute('aria-label', 'Travel to a date');
+  dateField.noValidate = true;
+  dateField.append(element('span', 'field-label', 'Date · proleptic Gregorian'));
+  const dateRow = element('div', 'date-row');
+  const yearInput = element('input', 'year-input');
   yearInput.type = 'number';
-  yearInput.style.width = '6.5em';
+  yearInput.min = '1';
+  yearInput.step = '1';
   yearInput.setAttribute('aria-label', 'Year (use era selector for BCE)');
-
-  const eraSelect = document.createElement('select');
+  const eraSelect = element('select', '');
   eraSelect.setAttribute('aria-label', 'Era');
-  for (const era of ['CE', 'BCE']) {
-    const opt = document.createElement('option');
-    opt.value = era;
-    opt.textContent = era;
-    eraSelect.appendChild(opt);
-  }
-
-  const monthSelect = document.createElement('select');
+  for (const era of ['CE', 'BCE']) eraSelect.append(new Option(era, era));
+  const monthSelect = element('select', '');
   monthSelect.setAttribute('aria-label', 'Month');
-  MONTH_NAMES.forEach((m, i) => {
-    const opt = document.createElement('option');
-    opt.value = String(i + 1);
-    opt.textContent = m;
-    monthSelect.appendChild(opt);
+  MONTH_NAMES.forEach((name, i) => {
+    monthSelect.append(new Option(name, String(i + 1)));
   });
-
-  const dayInput = document.createElement('input');
+  const dayInput = element('input', 'day-input');
   dayInput.type = 'number';
   dayInput.min = '1';
   dayInput.max = '31';
-  dayInput.style.width = '4.5em';
+  dayInput.step = '1';
   dayInput.setAttribute('aria-label', 'Day');
-
-  dateRow.append(yearInput, eraSelect, monthSelect, dayInput);
-  dateField.appendChild(dateRow);
-  row1.appendChild(dateField);
-
-  const goBtn = document.createElement('button');
-  goBtn.type = 'button';
-  goBtn.className = 'btn';
-  goBtn.textContent = 'Go';
-  goBtn.addEventListener('click', () => {
-    const yearRaw = Number.parseInt(yearInput.value || '1', 10) || 1;
-    const astronomicalYear = eraSelect.value === 'BCE' ? 1 - yearRaw : yearRaw;
-    const month = Number.parseInt(monthSelect.value, 10);
-    const day = Number.parseInt(dayInput.value || '1', 10) || 1;
-    state.jd = gregorianToJD(astronomicalYear, month, day) + 0.5;
-    state.live = false;
-    nowBtn.textContent = 'Return to now';
-    emit();
-  });
-  row1.appendChild(goBtn);
-
-  // --- Step buttons ---
-  const stepField = document.createElement('div');
-  stepField.className = 'field';
-  stepField.appendChild(labelEl('Step'));
-  const stepGroup = document.createElement('div');
-  stepGroup.className = 'step-group';
-  const steps: Array<[string, number]> = [
-    ['-1y', -365.25],
-    ['-1m', -30.44],
-    ['-1d', -1],
-    ['+1d', 1],
-    ['+1m', 30.44],
-    ['+1y', 365.25],
-  ];
-  for (const [label, delta] of steps) {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'btn';
-    b.textContent = label;
-    b.addEventListener('click', () => {
-      state.jd += delta;
-      state.live = false;
-      nowBtn.textContent = 'Return to now';
-      syncInputs();
-      emit();
+  const dateInputs = [yearInput, eraSelect, monthSelect, dayInput];
+  for (const input of dateInputs) input.setAttribute('aria-describedby', 'date-help date-error');
+  const goBtn = button('Go');
+  goBtn.type = 'submit';
+  dateRow.append(...dateInputs, goBtn);
+  const dateHelp = element('p', 'field-note', 'At noon UTC · 5001 BCE–5000 CE');
+  dateHelp.id = 'date-help';
+  const dateError = element('p', 'field-error');
+  dateError.id = 'date-error';
+  dateError.setAttribute('role', 'alert');
+  dateError.hidden = true;
+  let dateDraft = false;
+  const clearDateError = (): void => {
+    dateError.hidden = true;
+    dateError.textContent = '';
+    for (const input of dateInputs) input.removeAttribute('aria-invalid');
+  };
+  for (const input of dateInputs)
+    input.addEventListener('input', () => {
+      dateDraft = true;
+      clearDateError();
     });
-    stepGroup.appendChild(b);
-  }
-  stepField.appendChild(stepGroup);
-  row1.appendChild(stepField);
-
-  // --- Location ---
-  const locField = document.createElement('div');
-  locField.className = 'field';
-  locField.appendChild(labelEl('Location'));
-  const locRow = document.createElement('div');
-  locRow.style.display = 'flex';
-  locRow.style.gap = '0.4rem';
-  locRow.style.flexWrap = 'wrap';
-  const locSelect = document.createElement('select');
-  locSelect.setAttribute('aria-label', 'Ancient city');
-  for (const city of ANCIENT_CITIES) {
-    const opt = document.createElement('option');
-    opt.value = city.name;
-    opt.textContent = city.name;
-    if (city.name === state.locationName) opt.selected = true;
-    locSelect.appendChild(opt);
-  }
-  // Where the browser said we are, kept so "My location" can be chosen again from the list.
-  let myLocation: { latDeg: number; lonDeg: number } | null = null;
-  locSelect.addEventListener('change', () => {
-    const place =
-      locSelect.value === MY_LOCATION
-        ? myLocation
-        : ANCIENT_CITIES.find((c) => c.name === locSelect.value);
-    if (!place) return;
-    state.locationName = locSelect.value;
-    state.latDeg = place.latDeg;
-    state.lonDeg = place.lonDeg;
-    emit();
+  eraSelect.addEventListener('change', () => {
+    yearInput.max = eraSelect.value === 'BCE' ? '5001' : '5000';
   });
-  const geoBtn = document.createElement('button');
-  geoBtn.type = 'button';
-  geoBtn.className = 'btn';
-  geoBtn.textContent = GEO_LABEL;
-  const locNote = document.createElement('p');
-  locNote.className = 'field-note';
+  dateField.append(dateRow, dateHelp, dateError);
+  dateField.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const result = parseDateEntry(
+      yearInput.value,
+      eraSelect.value,
+      Number(monthSelect.value),
+      dayInput.value,
+    );
+    if (result.error !== undefined) {
+      dateError.textContent = result.error;
+      dateError.hidden = false;
+      for (const input of dateInputs) input.setAttribute('aria-invalid', 'true');
+      return;
+    }
+    travel(result.jd);
+  });
+  row.append(dateField);
+
+  const stepField = element('div', 'field');
+  stepField.append(element('span', 'field-label', 'Step · calendar units'));
+  const stepGroup = element('div', 'step-group');
+  const stepButtons: Array<{ node: HTMLButtonElement; unit: CivilUnit; amount: number }> = [];
+  for (const [unit, short] of [
+    ['year', 'y'],
+    ['month', 'm'],
+    ['day', 'd'],
+  ] as const) {
+    for (const amount of [-1, 1]) {
+      const node = button(`${amount > 0 ? '+' : '-'}1${short}`);
+      node.setAttribute('aria-label', `${amount > 0 ? 'Forward' : 'Back'} one ${unit}`);
+      node.addEventListener('click', () => {
+        const jd = stepCivil(state.jd, unit, amount);
+        if (jd !== null) travel(jd);
+      });
+      stepButtons.push({ node, unit, amount });
+    }
+  }
+  for (const index of [0, 2, 4, 5, 3, 1]) {
+    const step = stepButtons[index];
+    if (step) stepGroup.append(step.node);
+  }
+  stepField.append(stepGroup);
+  row.append(stepField);
+
+  const locField = element('div', 'field location-field');
+  locField.append(element('span', 'field-label', 'Location · seasonal hours'));
+  const locRow = element('div', 'date-row');
+  const locSelect = element('select', '');
+  locSelect.setAttribute('aria-label', 'Ancient city');
+  for (const entry of ANCIENT_CITIES) locSelect.append(new Option(entry.name, entry.name));
+  locSelect.value = state.locationName;
+  let myLocation: { latDeg: number; lonDeg: number } | null = null;
+  const geoBtn = button('Use my location');
+  const cancelBtn = button('Cancel location');
+  cancelBtn.hidden = true;
+  const locNote = element('p', 'field-note');
   locNote.setAttribute('role', 'status');
   locNote.hidden = true;
-  const note = (text: string): void => {
+  const privacyNote = element(
+    'p',
+    'field-note',
+    'Coordinates stay in this tab. Shared links use Rome.',
+  );
+  privacyNote.hidden = true;
+  let cancelLocate: (() => void) | undefined;
+  const ready = (): void => {
+    geoBtn.textContent = 'Use my location';
+    geoBtn.disabled = false;
+    cancelBtn.hidden = true;
+  };
+  const stopLocate = (): void => {
+    cancelLocate?.();
+    cancelLocate = undefined;
+    ready();
+  };
+  const locationNote = (text: string): void => {
     locNote.textContent = text;
     locNote.hidden = text === '';
   };
+  cancelBtn.addEventListener('click', () => {
+    stopLocate();
+    locationNote('Location request cancelled. Pick a city or try again.');
+  });
+  locSelect.addEventListener('change', () => {
+    stopLocate();
+    const place =
+      locSelect.value === PRIVATE_LOCATION
+        ? myLocation
+        : ANCIENT_CITIES.find((entry) => entry.name === locSelect.value);
+    if (!place) return;
+    state.latDeg = place.latDeg;
+    state.lonDeg = place.lonDeg;
+    state.locationName = locSelect.value;
+    locationNote('');
+    privacyNote.hidden = state.locationName !== PRIVATE_LOCATION;
+    emit();
+  });
   geoBtn.addEventListener('click', () => {
+    stopLocate();
+    locationNote('');
     geoBtn.textContent = 'Locating...';
     geoBtn.disabled = true;
-    const ready = (): void => {
-      geoBtn.textContent = GEO_LABEL;
-      geoBtn.disabled = false;
-    };
-    locate('geolocation' in navigator ? navigator.geolocation : undefined, {
-      position(latitudeDeg, longitudeDeg) {
+    cancelBtn.hidden = false;
+    cancelLocate = locate('geolocation' in navigator ? navigator.geolocation : undefined, {
+      position(latDeg, lonDeg) {
         ready();
-        note('');
-        myLocation = { latDeg: latitudeDeg, lonDeg: longitudeDeg };
-        state.latDeg = latitudeDeg;
-        state.lonDeg = longitudeDeg;
-        state.locationName = MY_LOCATION;
-        // One entry in the list, however many times the button is used.
-        let opt = Array.from(locSelect.options).find((o) => o.value === MY_LOCATION);
-        if (!opt) {
-          opt = document.createElement('option');
-          opt.value = MY_LOCATION;
-          opt.textContent = MY_LOCATION;
-          locSelect.appendChild(opt);
-        }
-        opt.selected = true;
+        locationNote('');
+        myLocation = { latDeg, lonDeg };
+        Object.assign(state, myLocation, { locationName: PRIVATE_LOCATION });
+        if (!Array.from(locSelect.options).some((option) => option.value === PRIVATE_LOCATION))
+          locSelect.append(new Option(PRIVATE_LOCATION, PRIVATE_LOCATION));
+        locSelect.value = PRIVATE_LOCATION;
+        privacyNote.hidden = false;
         emit();
       },
       failed(reason) {
         ready();
-        note(LOCATE_FAILURE_TEXT[reason]);
+        locationNote(LOCATE_FAILURE_TEXT[reason]);
       },
     });
   });
-  locRow.append(locSelect, geoBtn);
-  locField.append(locRow, locNote);
-  row1.appendChild(locField);
+  locRow.append(locSelect, geoBtn, cancelBtn);
+  locField.append(locRow, locNote, privacyNote);
+  row.append(locField);
+  root.append(linkNote, row);
 
-  root.appendChild(row1);
-
-  // --- Presets ---
-  const row2 = document.createElement('div');
-  row2.className = 'controls-row';
-  const presetField = document.createElement('div');
-  presetField.className = 'field';
-  presetField.appendChild(labelEl('Presets'));
-  const presetGroup = document.createElement('div');
-  presetGroup.className = 'preset-group';
+  const presetField = element('div', 'field preset-field');
+  presetField.append(element('span', 'field-label', 'Presets · historical calendar dates'));
+  const presetGroup = element('div', 'preset-group');
   for (const preset of PRESETS) {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'btn';
-    b.textContent = preset.label;
-    b.addEventListener('click', () => {
-      state.jd = preset.jd;
-      state.live = false;
-      nowBtn.textContent = 'Return to now';
-      syncInputs();
-      emit();
-    });
-    presetGroup.appendChild(b);
+    const node = button(preset.label);
+    node.addEventListener('click', () => travel(preset.jd));
+    presetGroup.append(node);
   }
-  presetField.appendChild(presetGroup);
-  row2.appendChild(presetField);
-  root.appendChild(row2);
+  presetField.append(presetGroup);
+  root.append(presetField);
 
-  // --- Scrubber ---
-  const scrub = document.createElement('div');
-  scrub.className = 'scrubber';
-  const range = document.createElement('input');
+  const scrub = element('div', 'scrubber');
+  const range = element('input', '');
   range.type = 'range';
-  range.min = '-50';
-  range.max = '50';
-  range.value = '0';
   range.step = '1';
   range.setAttribute('aria-label', 'Scrub in years around the current date');
   let scrubBaseJD = state.jd;
-  range.addEventListener('pointerdown', () => {
+  let scrubbing: 'pointer' | 'keyboard' | null = null;
+  const minLabel = element('span', '');
+  const maxLabel = element('span', '');
+  function beginScrub(mode: 'pointer' | 'keyboard') {
+    if (!scrubbing) scrubBaseJD = state.jd;
+    scrubbing = mode;
+  }
+  function resetScrub() {
+    scrubbing = null;
     scrubBaseJD = state.jd;
+    const year = jdToGregorian(scrubBaseJD).year;
+    range.min = String(Math.max(-50, MIN_YEAR - year));
+    range.max = String(Math.min(50, MAX_YEAR - year));
+    range.value = '0';
+    minLabel.textContent = `${range.min} years`;
+    maxLabel.textContent = `+${range.max} years`;
+    range.setAttribute('aria-valuetext', 'Current date');
+  }
+  range.addEventListener('pointerdown', () => beginScrub('pointer'));
+  range.addEventListener('keydown', (event) => {
+    if (
+      [
+        'ArrowLeft',
+        'ArrowRight',
+        'ArrowUp',
+        'ArrowDown',
+        'Home',
+        'End',
+        'PageUp',
+        'PageDown',
+      ].includes(event.key)
+    )
+      beginScrub('keyboard');
   });
   range.addEventListener('input', () => {
-    const years = Number.parseFloat(range.value);
-    state.jd = scrubBaseJD + years * 365.25;
+    if (!scrubbing) beginScrub('keyboard');
+    const years = Number(range.value);
+    const jd = stepCivil(scrubBaseJD, 'year', years);
+    if (jd === null) {
+      showLinkNote(DATE_LIMIT_TEXT);
+      return;
+    }
+    state.jd = jd;
     state.live = false;
-    nowBtn.textContent = 'Return to now';
+    dateDraft = false;
+    clearDateError();
+    syncInputs();
+    range.setAttribute(
+      'aria-valuetext',
+      `${years > 0 ? '+' : ''}${years} calendar years from the starting date`,
+    );
+    emit();
+  });
+  window.addEventListener('pointerup', () => {
+    // Firefox commits the native range's final value after pointerup handlers.
+    // Recenter after that commit so the last input still uses the same anchor.
+    requestAnimationFrame(() => {
+      if (scrubbing === 'pointer') resetScrub();
+    });
+  });
+  window.addEventListener('pointercancel', () => {
+    if (scrubbing === 'pointer') resetScrub();
+  });
+  range.addEventListener('blur', resetScrub);
+  const scrubLabels = element('div', 'scrubber-labels');
+  scrubLabels.append(minLabel, element('span', '', 'scrub · whole calendar years'), maxLabel);
+  scrub.append(range, scrubLabels);
+  root.append(scrub);
+
+  function syncInputs() {
+    if (!dateDraft) {
+      const g = jdToGregorian(state.jd);
+      eraSelect.value = g.year <= 0 ? 'BCE' : 'CE';
+      yearInput.value = String(g.year <= 0 ? 1 - g.year : g.year);
+      yearInput.max = eraSelect.value === 'BCE' ? '5001' : '5000';
+      monthSelect.value = String(g.month);
+      dayInput.value = String(Math.floor(g.day));
+    }
+    nowBtn.textContent = state.live ? 'Ticking now' : 'Return to now';
+    for (const { node, unit, amount } of stepButtons)
+      node.disabled = stepCivil(state.jd, unit, amount) === null;
+    if (!scrubbing) resetScrub();
+  }
+  function emit(updateLink = true) {
+    if (updateLink) {
+      showLinkNote('');
+      history.replaceState(null, '', permalinkHash(state));
+    }
+    for (const listener of listeners) listener({ ...state });
+  }
+  function travel(jd: number) {
+    state.jd = jd;
+    state.live = false;
+    dateDraft = false;
+    clearDateError();
+    resetScrub();
+    syncInputs();
+    emit();
+  }
+  nowBtn.addEventListener('click', () => {
+    state.jd = dateToJD(new Date());
+    state.live = true;
+    dateDraft = false;
+    clearDateError();
+    resetScrub();
     syncInputs();
     emit();
   });
-  const scrubLabels = document.createElement('div');
-  scrubLabels.className = 'scrubber-labels';
-  scrubLabels.innerHTML = '<span>-50 years</span><span>scrub</span><span>+50 years</span>';
-  scrub.append(range, scrubLabels);
-  root.appendChild(scrub);
-
-  function syncInputs() {
-    const g = jdToGregorian(state.jd);
-    const astroYear = Math.floor(g.year);
-    if (astroYear <= 0) {
-      eraSelect.value = 'BCE';
-      yearInput.value = String(1 - astroYear);
-    } else {
-      eraSelect.value = 'CE';
-      yearInput.value = String(astroYear);
+  window.addEventListener('hashchange', () => {
+    const link = readPermalink(location.hash, dateToJD(new Date()));
+    if (link.kind === 'anchor') return;
+    if (link.kind === 'invalid') {
+      showLinkNote(link.error);
+      return;
     }
-    monthSelect.value = String(g.month);
-    dayInput.value = String(Math.floor(g.day));
-    range.value = '0';
-    scrubBaseJD = state.jd;
-  }
+    stopLocate();
+    const place = ANCIENT_CITIES.find((entry) => entry.name === link.time.locationName);
+    if (!place) return;
+    Object.assign(state, link.time, { latDeg: place.latDeg, lonDeg: place.lonDeg });
+    locSelect.value = place.name;
+    privacyNote.hidden = true;
+    locationNote('');
+    dateDraft = false;
+    clearDateError();
+    resetScrub();
+    syncInputs();
+    showLinkNote(link.note);
+    emit(false);
+  });
   syncInputs();
-
   return {
     root,
-    onChange(cb) {
-      listeners.push(cb);
-    },
-    setState(partial) {
-      Object.assign(state, partial);
+    onChange: (callback) => listeners.push(callback),
+    getState: () => ({ ...state }),
+    tick(jd) {
+      if (!state.live) return;
+      state.jd = jd;
       syncInputs();
-      emit();
-    },
-    getState() {
-      return state;
+      emit(false);
     },
   };
 }
-
-function labelEl(text: string): HTMLElement {
-  const l = document.createElement('label');
-  l.textContent = text;
-  return l;
-}
-
-export function formatDateReadout(jd: JulianDay): { primary: string; secondary: string } {
+export function formatDateReadout(jd: number): { primary: string; secondary: string } {
   const g = jdToGregorian(jd);
-  const month = MONTH_NAMES[g.month - 1] ?? '';
   const day = Math.floor(g.day);
-  const frac = g.day - day;
-  const hours = Math.floor(frac * 24);
-  const minutes = Math.floor((frac * 24 - hours) * 60);
-  const time = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')} UTC`;
+  // A JD has only tens of microseconds of precision here. Do not display an
+  // exact minute one minute early because its fractional day rounded down.
+  const precision = Number.EPSILON * Math.abs(jd) * 1440;
+  const minutes = Math.min(
+    1439,
+    Math.floor((jd - gregorianToJD(g.year, g.month, day)) * 1440 + precision),
+  );
+  const time = `${String(Math.floor(minutes / 60)).padStart(2, '0')}:${String(minutes % 60).padStart(2, '0')} UTC`;
   return {
-    primary: `${day} ${month} ${displayYear(Math.floor(g.year))}`,
+    primary: `${day} ${MONTH_NAMES[g.month - 1] ?? ''} ${displayYear(g.year)}`,
     secondary: `${time} · JD ${jd.toFixed(3)}`,
   };
 }

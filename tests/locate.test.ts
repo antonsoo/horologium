@@ -59,6 +59,55 @@ function harness() {
 }
 
 describe('locate', () => {
+  it('cancels pending callbacks and the unanswered watchdog', () => {
+    const h = harness();
+    const cancel = locate(h.source, h.handlers, h.options);
+    cancel();
+    cancel();
+    h.allow(1, 2);
+    h.refuse(1);
+    h.advance(60_000);
+    expect(h.log).toEqual([]);
+    expect(h.pendingTimers()).toBe(0);
+  });
+
+  it('cancels a late answer after the unanswered notice', () => {
+    const h = harness();
+    const cancel = locate(h.source, h.handlers, h.options);
+    h.advance(20_000);
+    cancel();
+    h.allow(1, 2);
+    expect(h.log).toEqual(['failed unanswered']);
+  });
+
+  it.each([
+    [Number.NaN, 0],
+    [0, Number.POSITIVE_INFINITY],
+    [91, 0],
+    [0, -181],
+  ])('rejects invalid coordinates %s,%s', (lat, lon) => {
+    const h = harness();
+    locate(h.source, h.handlers, h.options);
+    h.allow(lat, lon);
+    expect(h.log).toEqual(['failed unavailable']);
+    expect(h.pendingTimers()).toBe(0);
+  });
+
+  it('recovers from a synchronous geolocation service exception', () => {
+    const h = harness();
+    locate(
+      {
+        getCurrentPosition() {
+          throw new Error('disabled service');
+        },
+      },
+      h.handlers,
+      h.options,
+    );
+    expect(h.log).toEqual(['failed unavailable']);
+    expect(h.pendingTimers()).toBe(0);
+  });
+
   it('reports the position and stops waiting', () => {
     const h = harness();
     locate(h.source, h.handlers, h.options);

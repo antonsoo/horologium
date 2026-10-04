@@ -56,10 +56,10 @@ export function locate(
   source: PositionSource | undefined,
   handlers: LocateHandlers,
   options: LocateOptions = {},
-): void {
+): () => void {
   if (!source) {
     handlers.failed('unsupported');
-    return;
+    return () => {};
   }
   const { patienceMs = 20_000 } = options;
   const setTimer = options.setTimer ?? ((fn, ms) => setTimeout(fn, ms));
@@ -75,14 +75,34 @@ export function locate(
     clearTimer(watchdog);
     return true;
   };
-  source.getCurrentPosition(
-    (position) => {
-      if (answer()) handlers.position(position.coords.latitude, position.coords.longitude);
-    },
-    (error) => {
-      if (answer()) handlers.failed(error.code === PERMISSION_DENIED ? 'denied' : 'unavailable');
-    },
-    // A fix from the last ten minutes will do for sunrise and sunset; give up on a new one after 15 s.
-    { timeout: 15_000, maximumAge: 600_000 },
-  );
+  const cancel = (): void => {
+    answered = true;
+    clearTimer(watchdog);
+  };
+  try {
+    source.getCurrentPosition(
+      (position) => {
+        if (!answer()) return;
+        const { latitude, longitude } = position.coords;
+        if (
+          !Number.isFinite(latitude) ||
+          !Number.isFinite(longitude) ||
+          Math.abs(latitude) > 90 ||
+          Math.abs(longitude) > 180
+        ) {
+          handlers.failed('unavailable');
+          return;
+        }
+        handlers.position(latitude, longitude);
+      },
+      (error) => {
+        if (answer()) handlers.failed(error.code === PERMISSION_DENIED ? 'denied' : 'unavailable');
+      },
+      // A fix from the last ten minutes will do for sunrise and sunset; give up on a new one after 15 s.
+      { timeout: 15_000, maximumAge: 600_000 },
+    );
+  } catch {
+    if (answer()) handlers.failed('unavailable');
+  }
+  return cancel;
 }

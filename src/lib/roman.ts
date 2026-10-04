@@ -504,7 +504,7 @@ export interface RomanHour {
   index: number;
   /** Latin label, e.g. "hora sexta" or "vigilia tertia". */
   label: string;
-  /** True if the location has no sunrise/sunset on this day (polar day/night); the result then degenerates to "hora prima". */
+  /** True when surrounding sunrise/sunset boundaries are unavailable (polar conditions); the label and index are then placeholders, not an hour. */
   circumpolar: boolean;
 }
 
@@ -518,25 +518,26 @@ export interface RomanHour {
  * approximate over historical timescales.
  */
 export function romanHour(jd: JulianDay, latDeg: number, lonDeg: number): RomanHour {
-  const times = sunTimes(jd, latDeg, lonDeg);
-  if (times.circumpolar) {
-    return { isDaytime: true, index: 1, label: 'hora prima', circumpolar: true };
-  }
-
-  if (jd >= times.sunriseJD && jd < times.sunsetJD) {
-    const frac = (jd - times.sunriseJD) / (times.sunsetJD - times.sunriseJD);
+  // A solar day can cross the UTC date boundary. Check the neighboring days
+  // before choosing daylight or the sunset..sunrise interval that contains jd.
+  const days = [-1, 0, 1].map((offset) => sunTimes(jd + offset, latDeg, lonDeg));
+  const daylight = days.find((day) => !day.circumpolar && jd >= day.sunriseJD && jd < day.sunsetJD);
+  if (daylight) {
+    const frac = (jd - daylight.sunriseJD) / (daylight.sunsetJD - daylight.sunriseJD);
     const index = Math.min(12, Math.floor(frac * 12) + 1);
     const name = HORA_NAMES[index - 1] ?? HORA_NAMES[11];
     return { isDaytime: true, index, label: `hora ${name}`, circumpolar: false };
   }
 
-  const adjacent =
-    jd < times.sunriseJD ? sunTimes(jd - 1, latDeg, lonDeg) : sunTimes(jd + 1, latDeg, lonDeg);
-  if (adjacent.circumpolar) {
-    return { isDaytime: false, index: 1, label: 'vigilia prima', circumpolar: true };
+  const nightStart = Math.max(
+    ...days.filter((day) => !day.circumpolar && day.sunsetJD <= jd).map((day) => day.sunsetJD),
+  );
+  const nightEnd = Math.min(
+    ...days.filter((day) => !day.circumpolar && day.sunriseJD > jd).map((day) => day.sunriseJD),
+  );
+  if (!Number.isFinite(nightStart) || !Number.isFinite(nightEnd) || nightEnd - nightStart > 1) {
+    return { isDaytime: true, index: 1, label: 'hora prima', circumpolar: true };
   }
-  const nightStart = jd < times.sunriseJD ? adjacent.sunsetJD : times.sunsetJD;
-  const nightEnd = jd < times.sunriseJD ? times.sunriseJD : adjacent.sunriseJD;
   const frac = (jd - nightStart) / (nightEnd - nightStart);
   const index = Math.min(4, Math.max(1, Math.floor(frac * 4) + 1));
   const name = VIGILIA_NAMES[index - 1] ?? VIGILIA_NAMES[3];

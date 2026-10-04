@@ -49,10 +49,13 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.lib.json",
-    "prepare": "npm run build:lib"
+    "prepare": "npm run build:lib",
+    "test:browser": "playwright test"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@biomejs/biome": "^2.5.14",
+    "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2",
     "typescript": "^5.7.3",
     "vite": "^8.3.0",

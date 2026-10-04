@@ -4,6 +4,7 @@ import { dateToJD } from '../lib/core/jd.js';
 import { buildBackDial } from './backdial.js';
 import { buildControls, formatDateReadout } from './controls.js';
 import { buildDial } from './dial.js';
+import { buildSeasonalReadout } from './seasonal.js';
 import { buildTablets } from './tablets.js';
 
 const app = document.getElementById('app');
@@ -24,14 +25,15 @@ app.innerHTML = `
     </section>
     <p class="dial-caption">Sun · Moon · Mercury · Venus · Mars · Jupiter · Saturn · date pointer</p>
     <p class="dial-caption dial-caption-note">
-      Positions are computed, not observed: Sun/Moon accurate to a fraction of a degree; planets
-      use elements valid 1800&ndash;2050 CE and are illustrative outside that range.
+      Positions are computed, not observed. Sun/Moon accuracy is checked for 1900&ndash;2053 CE;
+      planetary elements cover 1800&ndash;2050 CE. Outside those ranges, positions are illustrative.
     </p>
     <div class="readout">
       <div class="primary" id="readout-primary"></div>
       <div class="secondary" id="readout-secondary"></div>
     </div>
     <section id="controls-mount" aria-label="Time and location controls"></section>
+    <div id="seasonal-mount"></div>
     <h2 class="tablets-heading">Calendar tablets</h2>
     <section class="tablets-grid" id="tablets-mount" aria-label="Calendars"></section>
     <section class="backdial-section" aria-label="Back dial: Metonic and Saros cycles">
@@ -68,12 +70,24 @@ const readoutSecondary = document.getElementById('readout-secondary') as HTMLEle
 
 const controls = buildControls();
 controlsMount.appendChild(controls.root);
+// Move keyboard focus without replacing a time permalink with the #main anchor.
+document.querySelector('.skip-link')?.addEventListener('click', (event) => {
+  event.preventDefault();
+  const main = document.getElementById('main');
+  if (!main) return;
+  main.tabIndex = -1;
+  main.focus();
+  main.scrollIntoView();
+});
+const seasonal = buildSeasonalReadout();
+document.getElementById('seasonal-mount')?.appendChild(seasonal.root);
 
 function render() {
   const state = controls.getState();
   updateDial(state.jd);
   updateBackDial(state.jd);
   buildTablets(tabletsMount, state.jd);
+  seasonal.update(state.jd, state.latDeg, state.lonDeg, state.locationName);
   const { primary, secondary } = formatDateReadout(state.jd);
   readoutPrimary.textContent = primary;
   readoutSecondary.textContent = `${secondary} · ${state.locationName}`;
@@ -81,14 +95,14 @@ function render() {
 render();
 controls.onChange(render);
 
-// Live ticking: advance once a minute of wall-clock time while "live".
+// Refresh the live clock every fifteen seconds without changing the permalink mode.
 setInterval(() => {
   const state = controls.getState();
   if (!state.live) return;
-  controls.setState({ jd: dateToJD(new Date()) });
+  controls.tick(dateToJD(new Date()));
 }, 15000);
 
-// Theme toggle (persists only for this tab via a data attribute, no tracking).
+// Theme preference stays in this browser's local storage.
 const themeToggle = document.getElementById('theme-toggle') as HTMLButtonElement;
 function currentTheme(): 'light' | 'dark' {
   const attr = document.documentElement.getAttribute('data-theme');
@@ -116,3 +130,4 @@ try {
   /* ignore */
 }
 applyThemeLabel();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyThemeLabel);

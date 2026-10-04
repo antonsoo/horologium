@@ -37,44 +37,83 @@ function el(tag: string, className: string, text?: string): HTMLElement {
   return e;
 }
 
+interface TabletNodes {
+  card: HTMLElement;
+  name: HTMLElement;
+  reconstruction: HTMLElement;
+  prolepticBadge: HTMLElement;
+  native: HTMLElement;
+  translit: HTMLElement;
+  summary: HTMLElement;
+  proleptic: HTMLElement;
+  method: HTMLElement;
+}
+
+const grids = new WeakMap<HTMLElement, Map<string, TabletNodes>>();
+function setText(node: HTMLElement, text: string): void {
+  if (node.textContent !== text) node.textContent = text;
+}
+
+function createTablet(t: CalendarTablet): TabletNodes {
+  const card = el('article', 'tablet');
+  card.dataset.calendar = t.id;
+  const heading = el('h3', 'tablet-name');
+  const name = el('span', '', t.name);
+  const badges = el('span', 'tablet-badges');
+  const reconstruction = el('span', 'tablet-badge', 'reconstruction');
+  const prolepticBadge = el('span', 'tablet-badge', 'proleptic');
+  badges.append(reconstruction, prolepticBadge);
+  heading.append(name, badges);
+  const native = el('div', 'tablet-native');
+  if (t.id === 'hebrew') {
+    native.dir = 'rtl';
+    native.lang = 'he';
+  }
+  const translit = el('div', 'tablet-translit');
+  const summary = el('p', 'tablet-summary');
+  const proleptic = el('p', 'tablet-proleptic');
+  const details = document.createElement('details');
+  const method = el('p', 'method');
+  details.append(el('summary', '', 'How this is computed'), method);
+  card.append(heading, native, translit, summary, proleptic, details);
+  return {
+    card,
+    name,
+    reconstruction,
+    prolepticBadge,
+    native,
+    translit,
+    summary,
+    proleptic,
+    method,
+  };
+}
+
+/** Update text in place: live ticks retain disclosure state, focus and selection. */
 export function buildTablets(container: HTMLElement, jd: JulianDay): void {
-  container.innerHTML = '';
-  for (const t of collect(jd)) {
-    const card = el('article', 'tablet');
-    card.setAttribute('aria-label', t.name);
-
-    const heading = el('div', 'tablet-name');
-    const nameSpan = el('span', '', t.name);
-    heading.appendChild(nameSpan);
-    const badges = el('span', 'tablet-badges');
-    if (t.isReconstruction) badges.appendChild(el('span', 'tablet-badge', 'reconstruction'));
-    if (t.proleptic) badges.appendChild(el('span', 'tablet-badge', 'proleptic'));
-    if (badges.childElementCount > 0) heading.appendChild(badges);
-    card.appendChild(heading);
-
-    const nativeEl = el('div', 'tablet-native', t.native);
-    // Hebrew is written right-to-left; without an explicit direction the
-    // browser's bidi algorithm can misplace punctuation like the gershayim
-    // (e.g. in a year like תשפ״ז) when it sits next to this page's LTR
-    // surroundings. Islamic transliterations here are Latin-script (this
-    // library doesn't render Arabic), so only Hebrew needs this.
-    if (t.id === 'hebrew') {
-      nativeEl.dir = 'rtl';
-      nativeEl.lang = 'he';
+  const tablets = collect(jd);
+  let nodes = grids.get(container);
+  if (!nodes) {
+    nodes = new Map();
+    grids.set(container, nodes);
+  }
+  for (const t of tablets) {
+    let n = nodes.get(t.id);
+    if (!n) {
+      n = createTablet(t);
+      nodes.set(t.id, n);
+      container.append(n.card);
     }
-    card.appendChild(nativeEl);
-    if (t.transliteration && t.transliteration !== t.native) {
-      card.appendChild(el('div', 'tablet-translit', t.transliteration));
-    }
-    card.appendChild(el('p', 'tablet-summary', t.summary));
-    if (t.proleptic) card.appendChild(el('p', 'tablet-proleptic', t.proleptic));
-
-    const details = document.createElement('details');
-    const summary = el('summary', '', 'How this is computed');
-    details.appendChild(summary);
-    details.appendChild(el('p', 'method', t.method));
-    card.appendChild(details);
-
-    container.appendChild(card);
+    n.card.setAttribute('aria-label', t.name);
+    setText(n.name, t.name);
+    n.reconstruction.hidden = !t.isReconstruction;
+    n.prolepticBadge.hidden = !t.proleptic;
+    setText(n.native, t.native);
+    n.translit.hidden = !t.transliteration || t.transliteration === t.native;
+    setText(n.translit, t.transliteration);
+    setText(n.summary, t.summary);
+    n.proleptic.hidden = !t.proleptic;
+    setText(n.proleptic, t.proleptic ?? '');
+    setText(n.method, t.method);
   }
 }
