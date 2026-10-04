@@ -52,6 +52,7 @@ LC_ALL=de_DE.UTF-8 LANG=de_DE.UTF-8 npm test
 npm run build
 npm run test:browser
 node examples/basic-usage.mjs
+mkdir -p /tmp/horologium-package-check
 npm pack --pack-destination /tmp/horologium-package-check
 ```
 
