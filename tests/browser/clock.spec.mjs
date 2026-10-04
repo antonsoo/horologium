@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { test as base, expect } from '@playwright/test';
 
 const test = base.extend({
-  page: async ({ page }, use) => {
+  page: async ({ page, baseURL }, use) => {
     const errors = [];
     const requests = [];
     page.on('pageerror', (error) => errors.push(error.message));
@@ -10,7 +10,7 @@ const test = base.extend({
       if (message.type() === 'error') errors.push(message.text());
     });
     page.on('request', (request) => {
-      if (new URL(request.url()).origin !== 'http://127.0.0.1:4201') requests.push(request.url());
+      if (new URL(request.url()).origin !== new URL(baseURL).origin) requests.push(request.url());
     });
     await page.addInitScript(() => {
       window.__cspViolations = [];

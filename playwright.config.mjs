@@ -1,4 +1,6 @@
 import { defineConfig } from '@playwright/test';
+
+const hostedURL = process.env.HOROLOGIUM_BASE_URL;
 export default defineConfig({
   testDir: './tests/browser',
   fullyParallel: true,
@@ -6,14 +8,16 @@ export default defineConfig({
   timeout: 30_000,
   expect: { timeout: 5000 },
   reporter: [['list']],
-  use: { baseURL: 'http://127.0.0.1:4201/horologium/', trace: 'retain-on-failure' },
+  use: { baseURL: hostedURL ?? 'http://127.0.0.1:4201/horologium/', trace: 'retain-on-failure' },
   projects: [
     { name: 'chromium', use: { browserName: 'chromium' } },
     { name: 'firefox', use: { browserName: 'firefox' } },
   ],
-  webServer: {
-    command: 'npm run preview -- --host 127.0.0.1 --port 4201 --strictPort',
-    wait: { stdout: /Local:/ },
-    reuseExistingServer: false,
-  },
+  webServer: hostedURL
+    ? undefined
+    : {
+        command: 'npm run preview -- --host 127.0.0.1 --port 4201 --strictPort',
+        wait: { stdout: /Local:/ },
+        reuseExistingServer: false,
+      },
 });
