@@ -2,6 +2,7 @@ import './fonts/fonts.css';
 import './style.css';
 import { dateToJD } from '../lib/core/jd.js';
 import { buildBackDial } from './backdial.js';
+import { buildChineseYear } from './chinese-year.js';
 import { buildControls, formatDateReadout } from './controls.js';
 import { buildDial } from './dial.js';
 import { buildSeasonalReadout } from './seasonal.js';
@@ -36,6 +37,7 @@ app.innerHTML = `
     <div id="seasonal-mount"></div>
     <h2 class="tablets-heading">Calendar tablets</h2>
     <section class="tablets-grid" id="tablets-mount" aria-label="Calendars"></section>
+    <section id="chinese-year-mount" aria-label="Chinese lunar year inspection"></section>
     <section class="backdial-section" aria-label="Back dial: Metonic and Saros cycles">
       <h2 class="tablets-heading">Back dial</h2>
       <figure class="backdial-figure" id="backdial-mount"></figure>
@@ -50,7 +52,7 @@ app.innerHTML = `
     </p>
     <p>
       <a href="https://github.com/antonsoo/horologium">Source on GitHub</a> · MIT licensed ·
-      built by Anton Soloviev
+      built by Anton Soloviev · <a href="./THIRD_PARTY_NOTICES.txt">Third-party notices</a>
     </p>
   </footer>
 `;
@@ -81,12 +83,16 @@ document.querySelector('.skip-link')?.addEventListener('click', (event) => {
 });
 const seasonal = buildSeasonalReadout();
 document.getElementById('seasonal-mount')?.appendChild(seasonal.root);
+const chineseYear = buildChineseYear(controls.travel);
+document.getElementById('chinese-year-mount')?.append(chineseYear.root);
+tabletsMount.addEventListener('inspect-chinese-year', () => chineseYear.open());
 
 function render() {
   const state = controls.getState();
   updateDial(state.jd);
   updateBackDial(state.jd);
   buildTablets(tabletsMount, state.jd);
+  chineseYear.update(state.jd);
   seasonal.update(state.jd, state.latDeg, state.lonDeg, state.locationName);
   const { primary, secondary } = formatDateReadout(state.jd);
   readoutPrimary.textContent = primary;

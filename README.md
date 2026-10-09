@@ -10,20 +10,16 @@
 
 ## Why this exists
 
-Every "world clock" on the web answers one question: what time is it in some
-other *place*. None of them answer the question a historian, a classicist, or
-someone building an ancient-languages app actually asks: what time is it in
-some other *era*, reckoned the way the people living there reckoned it? "24
-September 2026" is meaningless to a Roman, who wants "a.d. III Id. Sept.,
-AUC 2779" (reckoned on the Julian calendar, which by now runs 13 days behind
-ours); to a rabbi of any century, who wants "13 Tishrei 5787"; to a Maya
-astronomer-priest, who wants "13.0.13.17.5, 11 Chikchan, 18 Ch'en".
+A date can change its meaning when its calendar is left unstated. The Ides
+of March, 44 BCE are a Julian date, not a proleptic Gregorian one. In a
+Chinese leap year, a month number can occur twice: 2033 has both a regular
+and a leap month 11.
 
-This project is a small, honest attempt at that: a calendar-conversion
-library with real citations and real tests, driving a museum-quality
-Antikythera-mechanism-style dial. It exists because I build
-[PRAVIEL](https://github.com/antonsoo), an ancient-languages app, and wanted
-to know this kind of thing was computed correctly rather than guessed at.
+Horologium moves one instant through these different reckonings. Each
+calendar names its method and marks projections outside its historical
+era. The Chinese lunar-year inspector shows the month boundaries and
+solar terms behind a leap-month decision. The arithmetic and astronomical
+limits are documented alongside the results.
 
 ## Quickstart
 
@@ -76,13 +72,18 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   historical presets, and live or paused URL permalinks. Impossible dates
   show a recoverable error; live ticks preserve unfinished date edits and
   open calendar explanations.
+- **Chinese lunar-year inspection**: month boundaries, 29/30-day lengths,
+  principal solar terms, and the reason a month is regular or intercalary.
+  Jump to a month, inspect approximate event times, and download the year's
+  evidence as JSON. [Calculation and verification](docs/chinese-calendar.md).
+  These corrections and the inspector are in source, pending release.
 - **Location**: eight ancient cities (Rome, Athens, Alexandria, Babylon,
   Jerusalem, Chang'an, Tikal, Tenochtitlan) plus cancellable geolocation,
   feeding a visible approximate sunrise/sunset and Roman seasonal-hour
   readout. Personal coordinates stay in the current tab; their links
   explicitly fall back to Rome.
 - **Light and dark themes** ("papyrus" and "night sky"), responsive to phone
-  width, keyboard-accessible, no tracking, and a ~24 KB gzipped JS bundle
+  width, keyboard-accessible, no tracking, and a ~29 KB gzipped JS bundle
   (measured with `npm run build`; no framework, no charting library, no
   analytics).
 
@@ -94,7 +95,7 @@ clamping, BCE dates and the browser's 5001 BCE–5000 CE input range.
 ## Usage examples
 
 ```ts
-import { roman, chinese, egyptian, core } from '@antonsoloviev/horologium';
+import { roman, egyptian, core } from '@antonsoloviev/horologium';
 
 // The Roman calendar is Julian, not Gregorian - use julianToJD for a date
 // given in the calendar the Romans themselves used.
@@ -107,11 +108,20 @@ roman.describe(ides);
 //   ...
 // }
 
-chinese.describe(core.dateToJD(new Date()));
-// { native: '丙午年 八月十四 (壬子日)', summary: 'Year of the Horse (Fire), 2026; ...' }
-
 egyptian.sothicCyclePosition(ides);
 // { yearsIntoCycle: 1278, cycleAnchorCE: 139 } - see docs/CALENDARS.md for the caveat
+```
+
+For the corrected Chinese calendar, build this source revision with
+`npm run build:lib`; the registry release does not yet include these changes:
+
+```js
+import { chinese, core } from './dist/lib/index.js';
+
+chinese.describe(core.gregorianToJD(2026, 9, 24)).native;
+// '丙午年 八月十四 (辛丑日)'
+chinese.inspectChineseYear(2033).months.filter((month) => month.isLeapMonth).map((month) => month.month);
+// [11]
 ```
 
 Every calendar's `describe(jd)` returns a `CalendarTablet` — `native`,
@@ -135,11 +145,12 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
 - **Astronomy** follows Jean Meeus, *Astronomical Algorithms*, 2nd ed.
   (Willmann-Bell, 1998) for the Sun/Moon, and E.M. Standish (JPL/Caltech),
   *Keplerian Elements for Approximate Positions of the Major Planets*, for
-  the five naked-eye planets. New moons and solar terms are **root-found**
-  on these same formulas (bisection on solar/lunar longitude), not read
-  from Meeus's separate, more precise periodic-term tables — this keeps
-  every derived quantity (a new moon, a solstice, a Chinese month boundary)
-  internally consistent with everything else the library computes.
+  the five naked-eye planets. The illustrative Sun/Moon
+  pointers and the Greek/Babylonian reconstructions use the shared
+  low-precision longitude formulas. The Chinese calendar uses a separate
+  Meeus chapter 49 new-moon series and an explicit TT-to-UT time conversion
+  before assigning events to UTC+8 civil days. Event times remain
+  approximate; they are not observations.
 - **The full breakdown** — epoch, structure, rules, sources, and measured
   accuracy for all 13 calendars and the astronomy module — is in
   [`docs/CALENDARS.md`](docs/CALENDARS.md).
@@ -162,19 +173,20 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   epoch verification and independent reference-fact checks (e.g. Ethiopian
   New Year's well-known ~11 September date) — see each module's own tests
   and `docs/CALENDARS.md`.
-- The **Chinese**, **Greek (Attic)**, and **Babylonian** lunisolar
-  calendars are explicit reconstructions (real historical calendars were
-  set by observation and, for Babylon and Athens, irregular official
-  decree, not a fixed formula). Chinese is cross-checked against
-  `lunardate` for Chinese New Year every year 2000-2030 (max deviation 0.7
-  days) and for 447 month/leap-month boundaries 2000-2035 (98.2%
-  agreement; the 8 disagreements are understood and documented in
-  `docs/CALENDARS.md`, including a genuinely disputed year, 2033, where
-  real implementations differ from each other). Greek and Babylonian have
-  no independent oracle available, so their tests instead sweep thousands
-  of dates checking internal consistency (valid month/day ranges, no
-  boundary discontinuities) — a real bug caught this way, and fixed, is
-  documented in `babylonian.ts` and its test file.
+- **Chinese calendar**: the source revision matches all 62,821 available
+  daily month/day/year records in Hong Kong Observatory's 1929–2100 tables,
+  checked at local midnight, noon and the final second. The original source
+  disagreed on 1,315 of those dates. This is a modern-rule calculation in
+  UTC+8, not a historical-calendar archive: three pre-1929 months still
+  differ from the published historical dates, and future events close to
+  midnight can change civil day. Ten principal-solar-term dates in the
+  wider 1901–2099 lunar-year inspection differ from HKO; the event model is
+  approximate. [Full study, source gaps and limits](studies/chinese-calendar/README.md).
+- **Greek (Attic)** and **Babylonian** lunisolar dates are explicit
+  reconstructions. Historical calendars were set by observation and
+  official decree. They have no independent oracle here; tests check
+  internal consistency across thousands of dates. That is weaker evidence
+  than comparison with published historical calendars.
 - **Sun/Moon/planet positions** are measured (not just asserted) against
   Skyfield + the JPL DE421 ephemeris over 1900-2053: Sun within 0.006
   degrees, Moon within 0.68 degrees, planets within ~1.5 degrees. Planetary
@@ -210,7 +222,9 @@ your source for any new calendar rule.
 [MIT](LICENSE) © 2026 Anton Soloviev. The clock page's fonts (Cinzel,
 Cormorant Garamond, EB Garamond) are in `src/app/fonts/`, each under the SIL
 Open Font License ([`LICENSE.txt`](src/app/fonts/LICENSE.txt) there); the page
-serves them itself and asks no other host for anything.
+serves them itself and asks no other host for anything. The new-moon
+series adapts MIT-licensed code by Sonia Keys and Commenthol; see
+[third-party notices](THIRD_PARTY_NOTICES.md).
 
 ---
 

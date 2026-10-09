@@ -76,6 +76,17 @@ function createTablet(t: CalendarTablet): TabletNodes {
   const method = el('p', 'method');
   details.append(el('summary', '', 'How this is computed'), method);
   card.append(heading, native, translit, summary, proleptic, details);
+  if (t.id === 'chinese') {
+    native.lang = 'zh-Hans';
+    const inspect = document.createElement('button');
+    inspect.type = 'button';
+    inspect.className = 'tablet-inspect';
+    inspect.textContent = 'Inspect months and leap rule';
+    inspect.addEventListener('click', () => {
+      card.dispatchEvent(new CustomEvent('inspect-chinese-year', { bubbles: true }));
+    });
+    card.append(inspect);
+  }
   return {
     card,
     name,

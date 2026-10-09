@@ -71,6 +71,16 @@ and Delta-T are omitted; ancient-hour drift is unquantified. The new tests
 check interval ownership and display behavior, not independently measured
 sunrise accuracy.
 
+## Chinese lunar year
+
+The Chinese tablet's **Inspect months and leap rule** button opens a
+year ledger with civil month boundaries, leap-month reasoning and
+approximate astronomical events. Month buttons move the clock to local
+noon on their first day and retain the usual time permalink. All Chinese
+date parts use midnight in UTC+8, independently of the selected ancient
+city. See [the inspection guide](chinese-calendar.md) for JSON downloads,
+the 2033 example and the measured limits.
+
 ![Desktop controls and Babylon's seasonal hour in the papyrus theme](assets/time-controls-light-1440.png)
 
 <img src="assets/time-controls-dark-375.png" width="375" alt="Phone controls and Babylon's seasonal hour in the night-sky theme" />

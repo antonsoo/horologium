@@ -4,11 +4,17 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
-Clock-page improvements and a Roman seasonal-hour fix in the source library.
-These library changes are not yet published to npm.
+Clock-page improvements and calendar corrections in the source library.
+The Chinese calendar changes and lunar-year inspector are local source work,
+not yet published to npm or the hosted demo.
 
 ### Added
 
+- `chinese.inspectChineseYear(year)` and a browser lunar-year ledger:
+  civil month boundaries, principal solar terms, leap-rule explanations,
+  month navigation, near-midnight review flags and JSON export.
+- A hash-pinned HKO daily comparison and independent JPL DE440s event
+  comparison, retaining historical disagreements and incomplete source data.
 - A visible seasonal-hour, sunrise and sunset readout for the selected city
   or a private location, with polar conditions shown as unavailable.
 - Production Chromium/Firefox workflow tests, desktop/phone accessibility
@@ -16,6 +22,17 @@ These library changes are not yet published to npm.
 
 ### Fixed
 
+- Chinese leap-month selection uses the solstice's civil day instead of a
+  12-hour allowance. The 2033 leap month is 11, not 7. Meeus chapter 49
+  conjunctions also correct boundary dates including 6 February 2027.
+- Chinese year, month, day and sexagenary day change together at UTC+8
+  midnight. The sexagenary epoch is corrected. `chineseNewYear` now returns
+  the civil midnight as a UTC JD; callers needing the conjunction instant
+  can read the first month of `inspectChineseYear`.
+- Chinese astronomical entry points reject non-finite and out-of-range
+  inputs with `RangeError`; the documented range is Gregorian -5000–5000.
+- `core.jdToDate` rounds to the nearest millisecond so an exact midnight
+  does not format as the preceding millisecond.
 - Roman hours now inspect neighboring UTC dates, so eastern dawns and
   western afternoons are not incorrectly assigned to night watches.
 - Date entry rejects impossible, fractional, empty and out-of-range inputs.

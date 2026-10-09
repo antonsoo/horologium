@@ -526,6 +526,191 @@ select {
   line-height: 1.45;
 }
 
+/* ---------- Chinese lunar-year ledger ---------- */
+
+.tablet-inspect {
+  align-self: start;
+  margin-top: 0.5rem;
+  padding: 0.45rem 0;
+  border: 0;
+  background: none;
+  color: var(--accent-text);
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+.chinese-year {
+  margin: 0 0 2.6rem;
+  border: 1px solid var(--gilt-border);
+  background: var(--card-bg);
+  scroll-margin-top: 1rem;
+}
+.chinese-year-toggle {
+  padding: 1rem 1.2rem;
+  font-family: var(--font-display);
+  color: var(--gilt-text);
+  cursor: pointer;
+}
+.chinese-year-content {
+  padding: 0 1.2rem 1.2rem;
+}
+.chinese-year-content h2 {
+  font-size: 1.6rem;
+  margin: 0.6rem 0;
+  font-weight: 500;
+}
+.chinese-year-intro {
+  max-width: 76ch;
+  margin: 0 0 1rem;
+}
+.chinese-year-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.chinese-year-selected {
+  margin: 1rem 0 0.5rem;
+  color: var(--accent-text);
+  font-weight: 600;
+}
+.chinese-year-note,
+.chinese-year-sources,
+.chinese-year-status {
+  font-size: 0.95rem;
+  color: var(--fg-soft);
+}
+.chinese-year-status:empty {
+  display: none;
+}
+.chinese-months {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 1.5rem 0 1rem;
+}
+.chinese-months caption {
+  text-align: left;
+  padding-bottom: 0.7rem;
+  color: var(--fg-soft);
+  font-size: 0.92rem;
+}
+.chinese-months th,
+.chinese-months td {
+  padding: 0.65rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--card-border);
+  overflow-wrap: break-word;
+}
+.chinese-months thead th {
+  font-weight: 500;
+  border-top: 1px solid var(--gilt-border);
+  border-bottom-color: var(--gilt-border);
+}
+.chinese-months th:first-child {
+  width: 17%;
+}
+.chinese-months th:nth-child(2) {
+  width: 29%;
+}
+.chinese-months tbody th {
+  font-weight: 400;
+  border-left: 3px solid transparent;
+}
+.chinese-months tr[aria-current] th {
+  border-left-color: var(--accent-text);
+}
+.leap-month {
+  background: color-mix(in srgb, var(--accent) 9%, var(--card-bg));
+}
+.month-jump {
+  display: block;
+  border: 0;
+  padding: 0;
+  min-width: 44px;
+  min-height: 44px;
+  background: none;
+  color: var(--accent-text);
+  font: 1.2rem var(--font-body);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-align: left;
+  cursor: pointer;
+}
+.month-jump:disabled {
+  color: var(--fg-soft);
+  cursor: default;
+  text-decoration: none;
+}
+.month-native,
+.month-length,
+.principal-term,
+.month-cycle,
+.midnight-flag {
+  display: block;
+}
+.month-native {
+  font-family: var(--font-native);
+  font-size: 0.93rem;
+}
+.month-length,
+.month-cycle {
+  font-size: 0.85rem;
+  color: var(--fg-soft);
+}
+.month-rule {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.term-absent {
+  color: var(--accent-text);
+  font-weight: 600;
+}
+.month-events {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--fg-soft);
+}
+.month-events summary {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.month-events p {
+  margin: 0.4rem 0;
+}
+.midnight-flag {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--gilt-text);
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .chinese-year-content {
+    padding: 0 0.65rem 0.65rem;
+  }
+  .chinese-year-toggle {
+    padding: 0.85rem 0.65rem;
+    font-size: 0.85rem;
+  }
+  .chinese-months th,
+  .chinese-months td {
+    padding: 0.55rem 0.35rem;
+    font-size: 0.92rem;
+  }
+  .chinese-months th:first-child {
+    width: 23%;
+  }
+  .chinese-months th:nth-child(2) {
+    width: 30%;
+  }
+  .chinese-year-actions .btn {
+    flex: 1 1 42%;
+  }
+}
+
 /* ---------- Back dial ---------- */
 
 .backdial-section {

@@ -167,36 +167,47 @@ cited elsewhere for the start of the current Sothic cycle.
 
 ## Chinese calendar (`src/lib/chinese.ts`)
 
-- **Sexagenary cycle** (year and day): 10 Heavenly Stems x 12 Earthly
-  Branches = 60 combinations, each with a pinyin name, element, yin/yang,
-  and (for branches) zodiac animal. Day: the plain (UT) Julian Day Number
-  mod 60, using the calendrical-literature convention that JD 0 is *jiǎzǐ*.
-  Year: `(nominalYear - 4) mod 60`, verified against the well-known fact
-  that 1984 is a *jiǎzǐ* year.
-- **Lunisolar month/day**: this is an explicit **reconstruction**, computed
-  astronomically in China Standard Time (UTC+8) rather than read from a
-  historical table. Months run new-moon to new-moon; the month containing
-  the December solstice is month 11; when a winter-solstice-to-winter-
-  solstice span needs 13 lunar months, the first month (after month 11)
-  containing no *zhongqi* (major solar term - a multiple-of-30-degree solar
-  longitude crossing) becomes a leap month, repeating the previous month's
-  number. New moons and solar terms are root-found on this project's own
-  Sun/Moon longitude formulas (see Astronomy below), not read from a table.
-  A day-boundary subtlety worth noting: the zhongqi/new-moon comparison is
-  evaluated at the *start* of each civil day (China Standard Time), not at
-  the exact instant of either event, because several real leap months
-  (2014's leap 9th month, 2020's leap 4th month) have a solar term and the
-  bounding new moon landing on the same civil day - see the
-  `zhongqiBucketForLocalDay` comment in `src/lib/chinese.ts`.
-- **Accuracy**: cross-checked against `lunardate` for Chinese New Year every
-  year 2000-2030 (max deviation 0.7 days) and against 447 month/leap-month
-  boundary dates 2000-2035 (agreement on 439/447 = 98.2%). The 8
-  disagreements are of two well-understood kinds, not blind spots: (1)
-  boundary dates within about a day of our new-moon timing's own precision
-  limit, and (2) 2033, a year where real-world Chinese calendar
-  implementations genuinely disagree with each other on where the leap
-  month falls (two candidate zhongqi-less months occur close together that
-  year) - see `tests/oracle-fixtures.test.ts` for the detail and citation.
+- **Day boundary**: every date component changes at midnight in UTC+8,
+  including the sexagenary day and year. `chineseNewYear(year)` returns
+  this midnight as a UTC JD, not the instant of lunar conjunction.
+- **Sexagenary cycle**: 10 stems and 12 branches, with 1984 a *jiǎzǐ* year.
+  Day names use `(localJDN + 49) mod 60`; 27 January 2019 was *jiǎzǐ*.
+  The earlier `JDN mod 60` convention was wrong. See
+  [Y. T. Liu's derivation, equation (1)](https://ytliu0.github.io/ChineseCalendar/sexagenary.html).
+- **Lunar months**: the civil day of a new moon begins a month. The month
+  containing the December-solstice **day** is month 11. A 13-month span
+  between consecutive month 11s gets a leap month at its first month
+  without a principal solar term; that month repeats the preceding number.
+  A 12-month span gets none, even if one month contains no principal term.
+  This distinction resolves 2033: month 8 is regular and month 11 repeats.
+- **Event model**: Meeus (1998) chapter 49 new-moon series, chapter 25
+  apparent solar longitude, and the Espenak–Meeus Delta-T polynomials for
+  conversion from TT to estimated UT. Assign events to civil days *after*
+  the time conversion. The calendar always uses UTC+8; historical Beijing
+  mean/apparent time and earlier calendar reforms are not implemented.
+- **Verification**: all 62,821 available HKO daily records from 1929–2100
+  agree. The wider comparison retains 90 differing dates in three
+  historical months (1914, 1916, 1920), plus a missing HKO source day and
+  19 leading days without a month-start label. Independent JPL DE440s
+  timings over 1900–2100 give maximum TT differences of 17.17 seconds for
+  2,487 new moons and 831.51 seconds for 2,412 principal solar terms.
+  These do not establish future UTC or ancient-calendar accuracy.
+- **Inspection**: `inspectChineseYear(year)` returns civil bounds,
+  approximate conjunction/solar-term instants, month lengths, solstice
+  cycle sizes, leap-rule reasons and flags for events within 15 minutes
+  of local midnight. The flag is a review threshold, not an error bound.
+  Ten principal-term civil dates in the HKO comparison differ; all six
+  differences from 1929 onward are flagged.
+- **Input range**: Chinese conversion and description accept instants
+  within proleptic Gregorian years -5000 through 5000 (UTC). New Year
+  accepts integer nominal years in that range. Year inspection also
+  accepts -5001, whose final months overlap the clock's first year.
+  Outside-range/non-finite inputs throw `RangeError`; this does not limit
+  the other calendars' arithmetic. Ancient results inside this range
+  remain modern-rule projections.
+
+See [the browser/library guide](chinese-calendar.md) and the
+[reproducible primary-source study](../studies/chinese-calendar/README.md).
 
 ## Zoroastrian (Yazdegerdi) calendar (`src/lib/zoroastrian.ts`)
 
@@ -228,11 +239,11 @@ rather than guessing at attested-but-irregular history:
   re-derived.
 - Month names verified against Wikipedia's "Attic calendar" article,
   including the polytonic Greek forms (e.g. Ἑκατομβαιών).
-- New moons and the solstice are root-found the same way as everywhere
-  else in this project (Meeus 1998 formulas); day boundaries use a fixed
+- New moons and the solstice use the shared low-precision longitude
+  root-finders (Meeus 1998 formulas); day boundaries use a fixed
   mean-time offset for Athens's longitude, not the real sunset-to-sunset
-  civil day Greek practice used (the same simplification `chinese.ts`
-  makes for China Standard Time).
+  civil day Greek practice used. This differs from the Chinese calendar's
+  separate conjunction series and midnight convention.
 
 ## Babylonian (Seleucid Era) calendar (`src/lib/babylonian.ts`)
 
@@ -267,6 +278,10 @@ not rendered (same reasoning as Egyptian hieroglyphs, above).
   degrees over 1900-2053. New moon times are found by root-finding on this
   formula (bisection on the Sun-Moon elongation), not read from Meeus's
   separate (and more accurate) ch. 49 periodic-term table for lunar phases.
+- **Chinese calendar events** (`calendar-events.ts`): separate chapter 49
+  conjunctions with TT-to-UT conversion, as described above. The shared
+  illustrative Moon pointer and `astronomy.previousNewMoon` retain their
+  original low-precision model; they do not define Chinese month boundaries.
 - **Sunrise/sunset** (`sunTimes`): the standard low-precision hour-angle
   method (equivalent to the NOAA Solar Calculator). No Delta-T correction;
   treats the civil day as a constant 86400 SI seconds throughout history.

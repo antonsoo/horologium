@@ -13,6 +13,7 @@ import {
   permalinkHash,
   readPermalink,
   stepCivil,
+  supportedJD,
 } from './time-state.js';
 
 export interface AppState extends ClockTime {
@@ -44,6 +45,7 @@ export interface ControlsHandles {
   root: HTMLElement;
   onChange: (cb: (state: AppState) => void) => void;
   tick: (jd: number) => void;
+  travel: (jd: number) => void;
   getState: () => AppState;
 }
 function element<K extends keyof HTMLElementTagNameMap>(
@@ -375,6 +377,10 @@ export function buildControls(): ControlsHandles {
     for (const listener of listeners) listener({ ...state });
   }
   function travel(jd: number) {
+    if (!supportedJD(jd)) {
+      showLinkNote(DATE_LIMIT_TEXT);
+      return;
+    }
     state.jd = jd;
     state.live = false;
     dateDraft = false;
@@ -418,6 +424,7 @@ export function buildControls(): ControlsHandles {
     root,
     onChange: (callback) => listeners.push(callback),
     getState: () => ({ ...state }),
+    travel,
     tick(jd) {
       if (!state.live) return;
       state.jd = jd;
