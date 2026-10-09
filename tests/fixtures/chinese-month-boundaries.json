@@ -7,7 +7,8 @@
     ],
     "chineseYear": 1999,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 25
   },
   {
     "gregorian": [
@@ -17,7 +18,8 @@
     ],
     "chineseYear": 1999,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -27,7 +29,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -37,7 +40,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -47,7 +51,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -57,7 +62,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -67,7 +73,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -77,7 +84,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -87,7 +95,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -97,7 +106,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -107,7 +117,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -117,7 +128,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -127,7 +139,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -137,7 +150,8 @@
     ],
     "chineseYear": 2000,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -147,7 +161,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -157,7 +172,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -167,7 +183,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -177,7 +194,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -187,7 +205,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 4,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -197,7 +216,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -207,7 +227,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -217,7 +238,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -227,7 +249,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -237,7 +260,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -247,7 +271,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -257,7 +282,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -267,7 +293,8 @@
     ],
     "chineseYear": 2001,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -277,7 +304,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -287,7 +315,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -297,7 +326,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -307,7 +337,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -317,7 +348,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -327,7 +359,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -337,7 +370,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -347,7 +381,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -357,7 +392,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -367,7 +403,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -377,7 +414,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -387,7 +425,8 @@
     ],
     "chineseYear": 2002,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -397,7 +436,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -407,7 +447,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -417,7 +458,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -427,7 +469,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -437,7 +480,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -447,7 +491,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -457,7 +502,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -467,7 +513,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -477,7 +524,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -487,7 +535,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -497,7 +546,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -507,7 +557,8 @@
     ],
     "chineseYear": 2003,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -517,7 +568,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -527,7 +579,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -537,7 +590,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 2,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -547,7 +601,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -557,7 +612,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -567,7 +623,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -577,7 +634,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -587,7 +645,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -597,7 +656,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -607,7 +667,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -617,7 +678,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -627,7 +689,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -637,7 +700,8 @@
     ],
     "chineseYear": 2004,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -647,7 +711,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -657,7 +722,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -667,7 +733,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -677,7 +744,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -687,7 +755,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -697,7 +766,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -707,7 +777,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -717,7 +788,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -727,7 +799,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -737,7 +810,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -747,7 +821,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -757,7 +832,8 @@
     ],
     "chineseYear": 2005,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -767,7 +843,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -777,7 +854,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -787,7 +865,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -797,7 +876,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -807,7 +887,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -817,7 +898,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -827,7 +909,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -837,7 +920,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 7,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -847,7 +931,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -857,7 +942,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -867,7 +953,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -877,7 +964,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -887,7 +975,8 @@
     ],
     "chineseYear": 2006,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -897,7 +986,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -907,7 +997,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -917,7 +1008,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -927,7 +1019,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -937,7 +1030,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -947,7 +1041,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -957,7 +1052,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -967,7 +1063,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -977,7 +1074,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -987,7 +1085,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -997,7 +1096,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1007,7 +1107,8 @@
     ],
     "chineseYear": 2007,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1017,7 +1118,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1027,7 +1129,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1037,7 +1140,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1047,7 +1151,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1057,7 +1162,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1067,7 +1173,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1077,7 +1184,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1087,7 +1195,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1097,7 +1206,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1107,7 +1217,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1117,7 +1228,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1127,7 +1239,8 @@
     ],
     "chineseYear": 2008,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1137,7 +1250,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1147,7 +1261,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1157,7 +1272,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1167,7 +1283,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1177,7 +1294,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1187,7 +1305,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 5,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1197,7 +1316,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1207,7 +1327,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1217,7 +1338,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1227,7 +1349,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1237,7 +1360,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1247,7 +1371,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1257,7 +1382,8 @@
     ],
     "chineseYear": 2009,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1267,7 +1393,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1277,7 +1404,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1287,7 +1415,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1297,7 +1426,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1307,7 +1437,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1317,7 +1448,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1327,7 +1459,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1337,7 +1470,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1347,7 +1481,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1357,7 +1492,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1367,7 +1503,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1377,7 +1514,8 @@
     ],
     "chineseYear": 2010,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1387,7 +1525,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1397,7 +1536,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1407,7 +1547,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1417,7 +1558,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1427,7 +1569,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1437,7 +1580,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1447,7 +1591,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1457,7 +1602,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1467,7 +1613,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1477,7 +1624,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1487,7 +1635,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1497,7 +1646,8 @@
     ],
     "chineseYear": 2011,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1507,7 +1657,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1517,7 +1668,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1527,7 +1679,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1537,7 +1690,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1547,7 +1701,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 4,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1557,7 +1712,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1567,7 +1723,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1577,7 +1734,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1587,7 +1745,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1597,7 +1756,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1607,7 +1767,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1617,7 +1778,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1627,7 +1789,8 @@
     ],
     "chineseYear": 2012,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1637,7 +1800,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1647,7 +1811,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1657,7 +1822,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1667,7 +1833,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1677,7 +1844,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1687,7 +1855,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1697,7 +1866,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1707,7 +1877,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1717,7 +1888,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1727,7 +1899,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1737,7 +1910,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1747,7 +1921,8 @@
     ],
     "chineseYear": 2013,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1757,7 +1932,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1767,7 +1943,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1777,7 +1954,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1787,7 +1965,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1797,7 +1976,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1807,7 +1987,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1817,7 +1998,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1827,7 +2009,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1837,7 +2020,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1847,7 +2031,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 9,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1857,7 +2042,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1867,7 +2053,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1877,7 +2064,8 @@
     ],
     "chineseYear": 2014,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1887,7 +2075,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1897,7 +2086,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1907,7 +2097,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1917,7 +2108,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1927,7 +2119,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1937,7 +2130,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1947,7 +2141,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1957,7 +2152,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1967,7 +2163,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1977,7 +2174,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1987,7 +2185,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -1997,7 +2196,8 @@
     ],
     "chineseYear": 2015,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2007,7 +2207,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2017,7 +2218,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2027,7 +2229,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2037,7 +2240,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2047,7 +2251,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2057,7 +2262,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2067,7 +2273,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2077,7 +2284,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2087,7 +2295,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2097,7 +2306,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2107,7 +2317,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2117,7 +2328,8 @@
     ],
     "chineseYear": 2016,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2127,7 +2339,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2137,7 +2350,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2147,7 +2361,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2157,7 +2372,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2167,7 +2383,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2177,7 +2394,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2187,7 +2405,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 6,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2197,7 +2416,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2207,7 +2427,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2217,7 +2438,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2227,7 +2449,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2237,7 +2460,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2247,7 +2471,8 @@
     ],
     "chineseYear": 2017,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2257,7 +2482,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2267,7 +2493,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2277,7 +2504,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2287,7 +2515,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2297,7 +2526,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2307,7 +2537,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2317,7 +2548,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2327,7 +2559,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2337,7 +2570,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2347,7 +2581,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2357,7 +2592,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2367,7 +2603,8 @@
     ],
     "chineseYear": 2018,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2377,7 +2614,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2387,7 +2625,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2397,7 +2636,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2407,7 +2647,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2417,7 +2658,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2427,7 +2669,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2437,7 +2680,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2447,7 +2691,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2457,7 +2702,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2467,7 +2713,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2477,7 +2724,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2487,7 +2735,8 @@
     ],
     "chineseYear": 2019,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2497,7 +2746,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2507,7 +2757,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2517,7 +2768,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2527,7 +2779,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2537,7 +2790,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 4,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2547,7 +2801,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2557,7 +2812,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2567,7 +2823,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2577,7 +2834,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2587,7 +2845,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2597,7 +2856,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2607,7 +2867,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2617,7 +2878,8 @@
     ],
     "chineseYear": 2020,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2627,7 +2889,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2637,7 +2900,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2647,7 +2911,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2657,7 +2922,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2667,7 +2933,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2677,7 +2944,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2687,7 +2955,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2697,7 +2966,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2707,7 +2977,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2717,7 +2988,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2727,7 +2999,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2737,7 +3010,8 @@
     ],
     "chineseYear": 2021,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2747,7 +3021,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2757,7 +3032,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2767,7 +3043,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2777,7 +3054,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2787,7 +3065,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2797,7 +3076,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2807,7 +3087,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2817,7 +3098,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2827,7 +3109,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2837,7 +3120,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2847,7 +3131,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2857,7 +3142,8 @@
     ],
     "chineseYear": 2022,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2867,7 +3153,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2877,7 +3164,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2887,7 +3175,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 2,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2897,7 +3186,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2907,7 +3197,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2917,7 +3208,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2927,7 +3219,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2937,7 +3230,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2947,7 +3241,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2957,7 +3252,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2967,7 +3263,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2977,7 +3274,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2987,7 +3285,8 @@
     ],
     "chineseYear": 2023,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -2997,7 +3296,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3007,7 +3307,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3017,7 +3318,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3027,7 +3329,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3037,7 +3340,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3047,7 +3351,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3057,7 +3362,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3067,7 +3373,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3077,7 +3384,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3087,7 +3395,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3097,7 +3406,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3107,7 +3417,8 @@
     ],
     "chineseYear": 2024,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3117,7 +3428,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3127,7 +3439,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3137,7 +3450,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3147,7 +3461,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3157,7 +3472,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3167,7 +3483,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3177,7 +3494,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 6,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3187,7 +3505,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3197,7 +3516,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3207,7 +3527,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3217,7 +3538,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3227,7 +3549,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3237,7 +3560,8 @@
     ],
     "chineseYear": 2025,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3247,7 +3571,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3257,7 +3582,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3267,7 +3593,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3277,7 +3604,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3287,7 +3615,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3297,7 +3626,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3307,7 +3637,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3317,7 +3648,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3327,7 +3659,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3337,7 +3670,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3347,7 +3681,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3357,7 +3692,8 @@
     ],
     "chineseYear": 2026,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3367,7 +3703,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3377,7 +3714,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3387,7 +3725,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3397,7 +3736,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3407,7 +3747,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3417,7 +3758,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3427,7 +3769,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3437,7 +3780,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3447,7 +3791,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3457,7 +3802,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3467,7 +3813,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3477,7 +3824,8 @@
     ],
     "chineseYear": 2027,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3487,7 +3835,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3497,7 +3846,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3507,7 +3857,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3517,7 +3868,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3527,7 +3879,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3537,7 +3890,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 5,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3547,7 +3901,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3557,7 +3912,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3567,7 +3923,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3577,7 +3934,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3587,7 +3945,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3597,7 +3956,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3607,7 +3967,8 @@
     ],
     "chineseYear": 2028,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3617,7 +3978,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3627,7 +3989,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3637,7 +4000,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3647,7 +4011,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3657,7 +4022,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3667,7 +4033,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3677,7 +4044,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3687,7 +4055,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3697,7 +4066,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3707,7 +4077,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3717,7 +4088,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3727,7 +4099,8 @@
     ],
     "chineseYear": 2029,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3737,7 +4110,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3747,7 +4121,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3757,7 +4132,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3767,7 +4143,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3777,7 +4154,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3787,7 +4165,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3797,7 +4176,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3807,7 +4187,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3817,7 +4198,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3827,7 +4209,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3837,7 +4220,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3847,7 +4231,8 @@
     ],
     "chineseYear": 2030,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3857,7 +4242,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3867,7 +4253,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3877,7 +4264,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3887,7 +4275,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 3,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3897,7 +4286,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3907,7 +4297,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3917,7 +4308,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3927,7 +4319,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3937,7 +4330,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3947,7 +4341,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3957,7 +4352,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3967,7 +4363,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3977,7 +4374,8 @@
     ],
     "chineseYear": 2031,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3987,7 +4385,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -3997,7 +4396,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4007,7 +4407,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4017,7 +4418,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4027,7 +4429,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4037,7 +4440,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4047,7 +4451,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4057,7 +4462,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4067,7 +4473,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4077,7 +4484,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4087,7 +4495,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4097,7 +4506,8 @@
     ],
     "chineseYear": 2032,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4107,7 +4517,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4117,7 +4528,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4127,7 +4539,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4137,7 +4550,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4147,7 +4561,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4157,7 +4572,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4167,7 +4583,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4177,7 +4594,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4187,7 +4605,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4197,7 +4616,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4207,7 +4627,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4217,7 +4638,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 11,
-    "isLeapMonth": true
+    "isLeapMonth": true,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4227,7 +4649,8 @@
     ],
     "chineseYear": 2033,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4237,7 +4660,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4247,7 +4671,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4257,7 +4682,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4267,7 +4693,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4277,7 +4704,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4287,7 +4715,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4297,7 +4726,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4307,7 +4737,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4317,7 +4748,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4327,7 +4759,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4337,7 +4770,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4347,7 +4781,8 @@
     ],
     "chineseYear": 2034,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4357,7 +4792,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 1,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4367,7 +4803,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 2,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4377,7 +4814,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 3,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4387,7 +4825,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 4,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4397,7 +4836,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 5,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4407,7 +4847,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 6,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4417,7 +4858,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 7,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4427,7 +4869,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 8,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4437,7 +4880,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 9,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4447,7 +4891,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 10,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4457,7 +4902,8 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 11,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   },
   {
     "gregorian": [
@@ -4467,6 +4913,7 @@
     ],
     "chineseYear": 2035,
     "chineseMonth": 12,
-    "isLeapMonth": false
+    "isLeapMonth": false,
+    "chineseDay": 1
   }
 ]

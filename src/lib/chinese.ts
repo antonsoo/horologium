@@ -11,10 +11,9 @@
  * longitude boundary) is the leap month, repeating the previous month's
  * number. This structural rule is described in Reingold & Dershowitz,
  * *Calendrical Calculations: The Ultimate Edition* (Cambridge University
- * Press, 2018), ch. 19. New moon and solar-term timings themselves come
- * from this project's own root-finding on the low-precision Sun/Moon
- * longitude formulas in `astronomy/sun-moon.ts` (Meeus 1998), not from a
- * separately-cited table.
+ * Press, 2018), ch. 19. New moons use Meeus's ch. 49 phase series; solar
+ * terms use ch. 25 apparent solar longitude. Both are evaluated in TT and
+ * converted to estimated UT with the Espenak-Meeus Delta-T polynomials.
  *
  * Because it depends on real new-moon and solstice instants, this module
  * is explicitly a *reconstruction*: the historical Chinese calendar was
@@ -23,16 +22,18 @@
  * a different, tropical-year-based mean-solar-term approximation for
  * zhongqi rather than a true (apparent) solar longitude. Treat dates more
  * than a few centuries from the present as illustrative rather than
- * archivally authoritative.
+ * archivally authoritative. UTC+8 is used throughout: this is a projection
+ * of modern rules, not a reconstruction of historical Beijing clock time.
  */
 
 import {
-  findSolarLongitudeCrossing,
-  nextNewMoon,
-  previousNewMoon,
-  solarTermBefore,
-  sunLongitude,
-} from './astronomy/sun-moon.js';
+  calendarNewMoon,
+  calendarSolarCrossing,
+  calendarSunLongitude,
+  lunationBefore,
+  universalToTerrestrial,
+} from './astronomy/calendar-events.js';
+import { solarTermBefore } from './astronomy/sun-moon.js';
 import type { JulianDay } from './core/jd.js';
 import { gregorianToJD, jdToGregorian, mod } from './core/jd.js';
 import type { CalendarTablet } from './types.js';
@@ -94,19 +95,17 @@ function sexagenaryLabel(index60: number): SexagenaryLabel {
 }
 
 /**
- * Sexagenary day. Julian Day Number 0 (1 Jan 4713 BCE proleptic Julian,
- * noon UT) is conventionally jiazi (index 0) in the continuous day count;
- * see Helmer Aslaksen, "The Mathematics of the Chinese Calendar" (National
- * University of Singapore), section on the sexagenary cycle. We use the
- * plain (UT) Julian Day Number here, matching that convention, rather than
- * the China-Standard-Time day used for month/year boundaries below.
+ * Sexagenary day in UTC+8, with the same midnight as the lunar date.
+ * 7 January 2000 is jiazi: local JDN 2451551, not JDN 0.
+ * Y. T. Liu, Sexagenary Cycle, equation (1):
+ * https://ytliu0.github.io/ChineseCalendar/sexagenary.html
  */
 export function sexagenaryDay(jd: JulianDay): SexagenaryLabel {
-  const jdn = Math.floor(jd + 0.5);
-  return sexagenaryLabel(jdn);
+  checkJD(jd);
+  return sexagenaryLabel(localDayNumber(jd) + 49);
 }
 
-/** Sexagenary year, indexed from the Chinese New Year the date falls after/on. 1984 CE is jiajzi (index 0). */
+/** Sexagenary year, indexed from the Chinese New Year the date falls after/on. 1984 CE is jiazi (index 0). */
 export function sexagenaryYear(chineseYearNumber: number): SexagenaryLabel {
   return sexagenaryLabel(mod(chineseYearNumber - 4, 60));
 }
@@ -115,7 +114,7 @@ export function sexagenaryYear(chineseYearNumber: number): SexagenaryLabel {
 
 /** Longitude bucket index (0-11) used to detect zhongqi (major term) crossings between two instants. */
 function zhongqiBucket(jd: JulianDay): number {
-  return Math.floor(mod(sunLongitude(jd) - 270, 360) / 30);
+  return Math.floor(mod(calendarSunLongitude(jd) - 270, 360) / 30);
 }
 
 /**
@@ -139,7 +138,10 @@ function zhongqiBucketForLocalDay(jd: JulianDay): number {
 }
 
 interface MonthSpan {
-  startJD: JulianDay;
+  startJD: JulianDay; // local midnight, expressed as a UTC JD
+  endJD: JulianDay; // exclusive local midnight
+  newMoonJD: JulianDay; // estimated instant, not the start of the civil day
+  nextNewMoonJD: JulianDay;
   number: number; // 1-12
   isLeap: boolean;
 }
@@ -149,62 +151,95 @@ interface YearStructure {
   cycleStartJD: JulianDay;
   /** Start of the *next* cycle's month 11 (i.e. one day past the end of this structure's last span). */
   cycleEndJD: JulianDay;
-  /** The winter solstice that anchors the *next* cycle - a safe re-entry point past both cycleEndJD and its solstice. */
+  solsticeJD: JulianDay;
   nextSolsticeJD: JulianDay;
 }
 
-/**
- * Compute the full set of lunar months for the winter-solstice-to-winter-
- * solstice cycle containing `jd`, per the ch. 19 rule cited at the top of
- * this file.
- *
- * Note the direction of the search: `ws0` is the solstice at or before
- * `jd`, but month 11's new moon can fall *before* the solstice it anchors
- * (by up to ~29 days) - so if `jd` itself lands in that new-moon-to-
- * solstice gap of the *upcoming* cycle, naively searching backward for a
- * solstice still finds last year's, one full cycle too early. Callers must
- * check `jd` against `cycleEndJD` (see {@link chineseFromJD}) and re-anchor
- * using `nextSolsticeJD` when that happens.
- */
-function computeYearStructure(jd: JulianDay): YearStructure {
-  const ws0 = findSolarLongitudeCrossing(jd, 270, -1);
-  const ws1 = findSolarLongitudeCrossing(ws0 + 10, 270, 1);
+const MIN_JD = gregorianToJD(-5000, 1, 1);
+const MAX_JD = gregorianToJD(5001, 1, 1);
 
-  const m11Start = previousNewMoon(ws0 + 0.5);
-  const m11StartNext = previousNewMoon(ws1 + 0.5);
-
-  // Collect new moons from this cycle's month 11 start up to *and including*
-  // the next cycle's month 11 start (the list's final entry is that
-  // terminator, not one of this cycle's own months - see monthCount below).
-  const newMoons: JulianDay[] = [m11Start];
-  while ((newMoons[newMoons.length - 1] as JulianDay) < m11StartNext - 1) {
-    newMoons.push(nextNewMoon((newMoons[newMoons.length - 1] as JulianDay) + 1));
+function checkJD(jd: JulianDay): void {
+  if (!Number.isFinite(jd) || jd < MIN_JD || jd >= MAX_JD) {
+    throw new RangeError('Chinese calendar dates must be within Gregorian years -5000 to 5000');
   }
-  // Real months in this cycle = new moons collected minus the trailing
-  // terminator (next cycle's month 11). 12 for an ordinary year, 13 when
-  // this winter-solstice-to-winter-solstice span needs a leap month.
-  const monthCount = newMoons.length - 1;
+}
+
+function checkYear(year: number, minimum = -5000): void {
+  if (!Number.isInteger(year) || year < minimum || year > 5000) {
+    throw new RangeError(`Chinese year must be an integer from ${minimum} to 5000`);
+  }
+}
+
+function localMidnight(jd: JulianDay): JulianDay {
+  return localDayNumber(jd) - 0.5 - CHINA_UTC_OFFSET_DAYS;
+}
+
+// A small bounded cache avoids recomputing 14 lunar events on every live tick.
+// These structures never leave the module; callers cannot mutate the cache.
+const cycles = new Map<number, YearStructure>();
+
+/** Month 11 to month 11, anchored by the December solstice of `year`. */
+function solsticeCycle(year: number): YearStructure {
+  const cached = cycles.get(year);
+  if (cached) return cached;
+  const ws0 = calendarSolarCrossing(gregorianToJD(year, 12, 1), 270);
+  const ws1 = calendarSolarCrossing(gregorianToJD(year + 1, 12, 1), 270);
+
+  // Month 11 contains the *civil day* of the solstice. A new moon later on
+  // that same day begins month 11; one on tomorrow's day does not. The old
+  // arbitrary '+ 0.5 days' assigned December 2033 to the wrong lunation.
+  const k0 = lunationBefore(localMidnight(ws0) + 1);
+  const k1 = lunationBefore(localMidnight(ws1) + 1);
+  const monthCount = k1 - k0;
+  if (monthCount !== 12 && monthCount !== 13) {
+    throw new RangeError('The astronomical model did not produce a 12- or 13-month solstice cycle');
+  }
 
   const spans: MonthSpan[] = [];
   let current = 11;
   let leapAssigned = false;
   for (let i = 0; i < monthCount; i++) {
-    const start = newMoons[i] as JulianDay;
-    const end = i + 1 < monthCount ? (newMoons[i + 1] as JulianDay) : m11StartNext;
+    const newMoonJD = calendarNewMoon(k0 + i);
+    const start = localMidnight(newMoonJD);
+    const nextNewMoonJD = calendarNewMoon(k0 + i + 1);
+    const end = localMidnight(nextNewMoonJD);
     const hasZhongqi = zhongqiBucketForLocalDay(start) !== zhongqiBucketForLocalDay(end);
     if (monthCount === 13 && !leapAssigned && i > 0 && !hasZhongqi) {
       // A leap month repeats the *preceding* month's number (e.g. a
       // zhongqi-less month right after month 9 is "leap 9", not "leap 10")
       // and does not consume the next regular number.
       const previous = spans[spans.length - 1] as MonthSpan;
-      spans.push({ startJD: start, number: previous.number, isLeap: true });
+      spans.push({
+        startJD: start,
+        endJD: end,
+        newMoonJD,
+        nextNewMoonJD,
+        number: previous.number,
+        isLeap: true,
+      });
       leapAssigned = true;
     } else {
-      spans.push({ startJD: start, number: current, isLeap: false });
+      spans.push({
+        startJD: start,
+        endJD: end,
+        newMoonJD,
+        nextNewMoonJD,
+        number: current,
+        isLeap: false,
+      });
       current = current === 12 ? 1 : current + 1;
     }
   }
-  return { spans, cycleStartJD: m11Start, cycleEndJD: m11StartNext, nextSolsticeJD: ws1 };
+  const structure = {
+    spans,
+    cycleStartJD: localMidnight(calendarNewMoon(k0)),
+    cycleEndJD: localMidnight(calendarNewMoon(k1)),
+    solsticeJD: ws0,
+    nextSolsticeJD: ws1,
+  };
+  if (cycles.size >= 16) cycles.delete(cycles.keys().next().value as number);
+  cycles.set(year, structure);
+  return structure;
 }
 
 export interface ChineseDate {
@@ -218,16 +253,12 @@ export interface ChineseDate {
 }
 
 export function chineseFromJD(jd: JulianDay): ChineseDate {
-  let structure = computeYearStructure(jd);
+  checkJD(jd);
+  const year = jdToGregorian(jd + CHINA_UTC_OFFSET_DAYS).year;
+  let structure = solsticeCycle(year);
   const localDay = localDayNumber(jd);
 
-  // `jd` can fall on or after this cycle's `cycleEndJD` (the *next* cycle's
-  // month-11 new moon) while still being before that cycle's solstice - see
-  // the warning on computeYearStructure. Re-anchor past the solstice itself,
-  // which is always a safe, unambiguous pivot.
-  if (localDay >= localDayNumber(structure.cycleEndJD)) {
-    structure = computeYearStructure(structure.nextSolsticeJD + 1);
-  }
+  if (localDay < localDayNumber(structure.cycleStartJD)) structure = solsticeCycle(year - 1);
   const { spans } = structure;
 
   let spanIndex = 0;
@@ -242,8 +273,9 @@ export function chineseFromJD(jd: JulianDay): ChineseDate {
   // belongs to the Chinese year that is about to end, not the upcoming one.
   const month1 = spans.find((s) => s.number === 1 && !s.isLeap);
   // Gregorian year in which this cycle's Chinese New Year falls.
-  const cnyYear = month1 ? jdToGregorian(month1.startJD).year : 0;
-  const yearNumber = month1 && jd >= month1.startJD ? cnyYear : cnyYear - 1;
+  if (!month1) throw new RangeError('The astronomical model did not produce a first lunar month');
+  const cnyYear = jdToGregorian(month1.startJD + CHINA_UTC_OFFSET_DAYS).year;
+  const yearNumber = localDay >= localDayNumber(month1.startJD) ? cnyYear : cnyYear - 1;
 
   return {
     yearNumber,
@@ -255,18 +287,167 @@ export function chineseFromJD(jd: JulianDay): ChineseDate {
   };
 }
 
-/** JD of Chinese New Year (month 1, day 1) for the given nominal year number. */
+/** UTC JD of the midnight in UTC+8 that starts Chinese New Year's Day.
+ * This is a civil-day boundary, not the instant of the astronomical new moon.
+ */
 export function chineseNewYear(yearNumber: number): JulianDay {
-  // Chinese New Year always falls between 21 Jan and 21 Feb (Gregorian), so
-  // 10 Jan of `yearNumber` is always after the preceding December solstice
-  // (~21 Dec of yearNumber-1, which anchors month 11) and before New Year
-  // itself - i.e. safely inside the correct winter-solstice-to-winter-
-  // solstice cycle for `computeYearStructure` to resolve.
-  const pivot = gregorianToJD(yearNumber, 1, 10);
-  const { spans } = computeYearStructure(pivot);
+  checkYear(yearNumber);
+  const { spans } = solsticeCycle(yearNumber - 1);
   const month1 = spans.find((s) => s.number === 1 && !s.isLeap);
   if (!month1) throw new Error(`could not locate month 1 for Chinese year ${yearNumber}`);
   return month1.startJD;
+}
+
+export interface PrincipalTerm {
+  longitudeDeg: number;
+  name: string;
+  /** Estimated event time, expressed as a UT JD; future UTC is not known. */
+  jd: JulianDay;
+}
+
+export interface ChineseMonth {
+  month: number;
+  isLeapMonth: boolean;
+  /** Inclusive/exclusive UTC+8 midnights, expressed as UTC JD values. */
+  startJD: JulianDay;
+  endJD: JulianDay;
+  days: number;
+  newMoonJD: JulianDay;
+  nextNewMoonJD: JulianDay;
+  principalTerms: PrincipalTerm[];
+  /** Gregorian year of the December solstice anchoring this month-11 cycle. */
+  solsticeYear: number;
+  monthsInSolsticeCycle: 12 | 13;
+  rule:
+    | 'solstice-month'
+    | 'leap-month'
+    | 'has-principal-term'
+    | 'twelve-month-cycle'
+    | 'leap-already-assigned';
+  /** Review flags for computed events within 15 minutes of local midnight.
+   * This is a review threshold, not a certified error bound.
+   */
+  nearMidnight: Array<{ kind: 'new-moon' | 'next-new-moon' | 'principal-term'; jd: JulianDay }>;
+}
+
+export interface ChineseYear {
+  schemaVersion: 1;
+  yearNumber: number;
+  startJD: JulianDay;
+  endJD: JulianDay;
+  clock: 'UTC+8';
+  basis: 'modern-rule-calculation';
+  eventTimeNote: string;
+  nearMidnightThresholdMinutes: 15;
+  /** Date-range limitation, separate from event-specific review flags. */
+  note: string;
+  months: ChineseMonth[];
+}
+
+const PRINCIPAL_TERM_NAMES = [
+  'Spring equinox',
+  'Grain rain',
+  'Grain buds',
+  'Summer solstice',
+  'Major heat',
+  'End of heat',
+  'Autumn equinox',
+  'Frost descent',
+  'Minor snow',
+  'Winter solstice',
+  'Major cold',
+  'Rain water',
+] as const;
+
+function principalTermsBetween(start: JulianDay, end: JulianDay): PrincipalTerm[] {
+  const terms: PrincipalTerm[] = [];
+  const first = Math.ceil(calendarSunLongitude(start) / 30);
+  for (let i = 0; i < 3; i++) {
+    const sector = (first + i) % 12;
+    const jd = calendarSolarCrossing(start, sector * 30);
+    if (jd >= end) break;
+    terms.push({ longitudeDeg: sector * 30, name: PRINCIPAL_TERM_NAMES[sector] as string, jd });
+  }
+  return terms;
+}
+
+function nearMidnight(jd: JulianDay): boolean {
+  const fraction = jd - localMidnight(jd);
+  return Math.min(fraction, 1 - fraction) * 1440 < 15;
+}
+
+/** Inspect the months and event evidence for a New-Year-to-New-Year span.
+ * Returned arrays/records are fresh snapshots, never references to the cache.
+ */
+export function inspectChineseYear(yearNumber: number): ChineseYear {
+  // The first days of Gregorian -5000 belong to the preceding lunar year.
+  checkYear(yearNumber, -5001);
+  const before = solsticeCycle(yearNumber - 1);
+  const after = solsticeCycle(yearNumber);
+  const startJD = before.spans.find((span) => span.number === 1 && !span.isLeap)?.startJD;
+  const endJD = after.spans.find((span) => span.number === 1 && !span.isLeap)?.startJD;
+  if (startJD === undefined || endJD === undefined) {
+    throw new RangeError('The astronomical model did not produce a first lunar month');
+  }
+  const months: ChineseMonth[] = [];
+  for (const [solsticeYear, cycle] of [
+    [yearNumber - 1, before],
+    [yearNumber, after],
+  ] as const) {
+    for (const span of cycle.spans) {
+      if (span.startJD < startJD || span.startJD >= endJD) continue;
+      const principalTerms = principalTermsBetween(span.startJD, span.endJD);
+      const flags: ChineseMonth['nearMidnight'] = [];
+      if (nearMidnight(span.newMoonJD)) flags.push({ kind: 'new-moon', jd: span.newMoonJD });
+      if (nearMidnight(span.nextNewMoonJD))
+        flags.push({ kind: 'next-new-moon', jd: span.nextNewMoonJD });
+      for (const term of principalTerms) {
+        if (nearMidnight(term.jd)) flags.push({ kind: 'principal-term', jd: term.jd });
+      }
+      const rule = span.isLeap
+        ? 'leap-month'
+        : span.number === 11
+          ? 'solstice-month'
+          : principalTerms.length > 0
+            ? 'has-principal-term'
+            : cycle.spans.length === 12
+              ? 'twelve-month-cycle'
+              : 'leap-already-assigned';
+      months.push({
+        month: span.number,
+        isLeapMonth: span.isLeap,
+        startJD: span.startJD,
+        endJD: span.endJD,
+        days: Math.round(span.endJD - span.startJD),
+        newMoonJD: span.newMoonJD,
+        nextNewMoonJD: span.nextNewMoonJD,
+        principalTerms,
+        solsticeYear,
+        monthsInSolsticeCycle: cycle.spans.length as 12 | 13,
+        rule,
+        nearMidnight: flags,
+      });
+    }
+  }
+  const note =
+    yearNumber < 1929
+      ? 'Modern rules projected backward in UTC+8. Historical Beijing time and earlier calendar rules can give different dates.'
+      : yearNumber > 2099
+        ? 'Astronomical projection. The full lunar year extends beyond the 1929–2100 daily comparison with Hong Kong Observatory.'
+        : 'Modern rules in UTC+8. Month/day labels were checked against Hong Kong Observatory for 1929–2100; future events close to midnight can still move to another civil day.';
+  return {
+    schemaVersion: 1,
+    yearNumber,
+    startJD,
+    endJD,
+    clock: 'UTC+8',
+    basis: 'modern-rule-calculation',
+    eventTimeNote:
+      'Approximate event instants from Meeus chapters 25 and 49, converted from TT to estimated UT with Espenak-Meeus Delta-T polynomials. Future UTC civil dates are not guaranteed.',
+    nearMidnightThresholdMinutes: 15,
+    note,
+    months,
+  };
 }
 
 const MONTH_NUMERALS = [
@@ -303,7 +484,7 @@ export function dayLabel(day: number): string {
 
 export function describe(jd: JulianDay): CalendarTablet {
   const d = chineseFromJD(jd);
-  const term = solarTermBefore(jd);
+  const term = solarTermBefore(universalToTerrestrial(jd));
   const native = `${d.yearGanzhi.han}年 ${monthLabel(d.month, d.isLeapMonth)}${dayLabel(d.day)} (${d.dayGanzhi.han}日)`;
   const transliteration = `${d.yearGanzhi.pinyin} year, ${d.isLeapMonth ? 'leap ' : ''}month ${d.month} day ${d.day} (${d.dayGanzhi.pinyin} day)`;
   return {
@@ -313,7 +494,11 @@ export function describe(jd: JulianDay): CalendarTablet {
     transliteration,
     summary: `Year of the ${d.yearGanzhi.branch.animal} (${d.yearGanzhi.stem.element}), ${d.yearNumber}; most recent solar term: ${term.nameEn} (${term.namePinyin}, ${term.nameHan})`,
     method:
-      'Sexagenary day from the Julian Day Number (JD 0 = jiǎzǐ, a convention from calendrical literature). Lunisolar month/day computed astronomically in China Standard Time (UTC+8): months run new-moon to new-moon; the month containing the December solstice is month 11; a 13-lunation winter-solstice cycle gets one leap month, at the first zhongqi-less month after month 11. New moons and solar terms are root-found on this project’s own low-precision Sun/Moon longitude formulas (Meeus 1998), not read from a table — see docs/CALENDARS.md for measured accuracy.',
+      'All date parts change at midnight in UTC+8, including the sexagenary day (27 January 2019 = jiǎzǐ). A month starts on the civil day of a new moon. The month containing the December-solstice day is month 11. A 13-month cycle between consecutive month 11s assigns its first month without a principal solar term as a leap month. New moons use Meeus ch. 49; solar terms use ch. 25; Delta-T estimates convert astronomical time to civil time. This projects modern rules backward, without historical Beijing time or earlier calendar reforms. Inspect the lunar year for event times and limits.',
     isReconstruction: true,
+    proleptic:
+      jdToGregorian(jd + CHINA_UTC_OFFSET_DAYS).year < 1929
+        ? 'Modern rules and UTC+8 projected backward. Historical Beijing time and earlier calendar rules can give different dates.'
+        : undefined,
   };
 }

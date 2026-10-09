@@ -24,9 +24,8 @@ first use, cached by Skyfield after that):
 
 Writes JSON files to tests/fixtures/. These are pure data: the TypeScript
 test suite reads them and asserts our implementation reproduces them
-exactly (Hebrew, Islamic, Coptic, Mayan, gregorian/julian/jd) or within a
-documented tolerance (Chinese New Year, which both sides compute
-astronomically and can legitimately differ by root-finding precision).
+exactly for calendar labels and civil New Year boundaries, or within a
+documented angular tolerance for illustrative astronomical positions.
 """
 
 import datetime
@@ -146,6 +145,7 @@ while d < datetime.date(2036, 1, 1):
                 "gregorian": [d.year, d.month, d.day],
                 "chineseYear": ld.year,
                 "chineseMonth": ld.month,
+                "chineseDay": ld.day,
                 "isLeapMonth": bool(ld.isLeapMonth),
             }
         )

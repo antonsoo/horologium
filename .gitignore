@@ -11,3 +11,5 @@ docs/assets/*.tmp.png
 # scripts/generate_fixtures.py's throwaway Python environment + ephemeris
 .venv-oracle/
 *.bsp
+studies/chinese-calendar/.cache/
+__pycache__/

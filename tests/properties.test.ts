@@ -82,8 +82,18 @@ describe('every calendar, on any day', () => {
       h.zoroastrian.describe,
     ]; // prettier-ignore
     for (const jd of days.filter((_, i) => i % 10 === 0)) {
-      for (const tablet of tablets)
+      for (const tablet of tablets) {
+        // Arithmetic calendars support this very wide sweep. The Chinese
+        // astronomical model has an explicit input range matching the clock.
+        if (
+          tablet === h.chinese.describe &&
+          (jd < h.core.gregorianToJD(-5000, 1, 1) || jd >= h.core.gregorianToJD(5001, 1, 1))
+        ) {
+          expect(() => tablet(jd)).toThrow(RangeError);
+          continue;
+        }
         expect(JSON.stringify(tablet(jd)), `JD ${jd}`).not.toMatch(/NaN|undefined|Infinity/);
+      }
     }
   });
 });

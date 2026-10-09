@@ -37,7 +37,8 @@
   },
   "files": [
     "dist/lib",
-    "!dist/lib/**/*.map"
+    "!dist/lib/**/*.map",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "scripts": {
     "dev": "vite",

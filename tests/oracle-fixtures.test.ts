@@ -114,73 +114,48 @@ describe('oracle: Chinese New Year 2000-2030 (lunardate)', () => {
     loadFixture<Array<{ chineseYear: number; gregorian: [number, number, number] }>>(
       'chinese-new-year.json',
     );
-  it('matches lunardate to within 1 day for every year 2000-2030', () => {
-    // Our astronomical root-finder and lunardate's own tabulated ephemeris
-    // both target "the new moon nearest China Standard Time midnight"; a
-    // 1-day tolerance absorbs legitimate differences in low-precision Sun/
-    // Moon longitude formulas landing a new moon just before/after local
-    // midnight. Document the actual observed max error, don't just assert.
-    let maxErrDays = 0;
+  it('matches the civil date exactly, including the UTC+8 day boundary', () => {
     for (const f of fixtures) {
-      const ourJD = chineseNewYear(f.chineseYear);
-      const oracleJD = gregorianToJD(f.gregorian[0], f.gregorian[1], f.gregorian[2]);
-      maxErrDays = Math.max(maxErrDays, Math.abs(ourJD - oracleJD));
+      const midnight = gregorianToJD(...f.gregorian) - 1 / 3;
+      expect(chineseNewYear(f.chineseYear), `year ${f.chineseYear}`).toBe(midnight);
+      expect(chineseFromJD(midnight)).toMatchObject({
+        yearNumber: f.chineseYear,
+        month: 1,
+        day: 1,
+      });
+      expect(chineseFromJD(midnight - 1 / 86400).yearNumber).toBe(f.chineseYear - 1);
     }
-    // eslint-disable-next-line no-console
-    console.log(
-      `Chinese New Year: max deviation from lunardate over 2000-2030 = ${maxErrDays.toFixed(3)} days`,
-    );
-    expect(maxErrDays).toBeLessThan(1);
   });
 });
 
-describe('oracle: Chinese lunar month/leap-month boundaries 2000-2035 (lunardate)', () => {
-  // 447 first-of-month transitions, including several real leap months where
-  // a solar term and the bounding new moon land on the same civil day (e.g.
-  // 2014's leap 9th month, 2020's leap 4th month - see the comment on
-  // zhongqiBucketForLocalDay in src/lib/chinese.ts for how those are
-  // resolved). We do not require a perfect match: two categories of
-  // disagreement are expected and documented in docs/CALENDARS.md rather
-  // than chased away -
-  //  1. Sub-day timing: our root-found new moons can land up to ~1 day from
-  //     the reference's tabulated ones (measured earlier in this file, in
-  //     the Chinese New Year check), so a boundary date right at a month
-  //     transition can occasionally disagree by one day's worth of month
-  //     number.
-  //  2. 2033 is a *genuinely disputed* year in real-world Chinese calendar
-  //     implementations: its winter-solstice cycle has two candidate
-  //     zhongqi-less months close together, and different published
-  //     algorithms (and different real Chinese/Hong Kong/Taiwanese
-  //     almanacs) place the leap month differently (commonly leap7 vs
-  //     leap11). Disagreeing with one third-party oracle on this specific
-  //     year is not evidence of a bug.
+describe('oracle: Chinese lunar month boundaries 2000-2035 (lunardate)', () => {
   const fixtures = loadFixture<
     Array<{
       gregorian: [number, number, number];
       chineseYear: number;
       chineseMonth: number;
+      chineseDay: number;
       isLeapMonth: boolean;
     }>
   >('chinese-month-boundaries.json');
-  it(`agrees with lunardate's month/leap-month label on at least 98% of ${fixtures.length} boundary dates`, () => {
-    let mismatches = 0;
-    const details: string[] = [];
+  it(`matches all ${fixtures.length} reference dates throughout the local civil day`, () => {
     for (const f of fixtures) {
-      const jd = gregorianToJD(...f.gregorian);
-      const ours = chineseFromJD(jd);
-      const same = ours.month === f.chineseMonth && ours.isLeapMonth === f.isLeapMonth;
-      if (!same) {
-        mismatches++;
-        details.push(
-          `${f.gregorian.join('-')}: oracle month ${f.chineseMonth}${f.isLeapMonth ? ' (leap)' : ''}, ours ${ours.month}${ours.isLeapMonth ? ' (leap)' : ''}`,
-        );
+      const midnight = gregorianToJD(...f.gregorian) - 1 / 3;
+      for (const offset of [0, 0.5, 1 - 1 / 86400]) {
+        expect(
+          chineseFromJD(midnight + offset),
+          `${f.gregorian.join('-')}, offset ${offset}`,
+        ).toMatchObject({
+          yearNumber: f.chineseYear,
+          month: f.chineseMonth,
+          isLeapMonth: f.isLeapMonth,
+          day: f.chineseDay,
+        });
       }
+      // The first row starts the fixture's range on 1 January 2000; it is
+      // lunar day 25. The remaining 446 rows are actual month starts.
+      if (f.chineseDay === 1)
+        expect(chineseFromJD(midnight - 1 / 86400).day).toBeGreaterThanOrEqual(29);
     }
-    const rate = mismatches / fixtures.length;
-    // eslint-disable-next-line no-console
-    console.log(
-      `Chinese month boundaries: ${mismatches}/${fixtures.length} mismatches:\n${details.join('\n')}`,
-    );
-    expect(rate, `mismatch rate ${(rate * 100).toFixed(1)}%`).toBeLessThan(0.02);
   });
 });

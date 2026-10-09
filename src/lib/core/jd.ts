@@ -116,7 +116,9 @@ export function dateToJD(date: Date): JulianDay {
 
 /** JavaScript `Date` (UTC) for a JD. */
 export function jdToDate(jd: JulianDay): Date {
-  return new Date((jd - JD_UNIX_EPOCH) * 86400000);
+  // JD has finite binary precision. Date truncates a fractional millisecond,
+  // which otherwise renders some exact civil midnights one millisecond early.
+  return new Date(Math.round((jd - JD_UNIX_EPOCH) * 86400000));
 }
 
 /**
