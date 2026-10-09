@@ -1,0 +1,1868 @@
+{
+  "sourceFiles": 200,
+  "sourceRows": 73048,
+  "sourceGaps": [
+    "2069-12-30"
+  ],
+  "unlabelledLeadingDays": 19,
+  "checkedDays": 73029,
+  "start": "1901-01-20",
+  "end": "2100-12-31",
+  "dailyInstants": 219087,
+  "checkedMonthStarts": 2474,
+  "mismatchedDays": 90,
+  "calendarMismatchedDays": 90,
+  "modernCheckedDays": 62821,
+  "modernMismatchedDays": 0,
+  "modernCalendarMismatchedDays": 0,
+  "unexpectedMismatchedDays": 0,
+  "inconsistentCivilDays": 0,
+  "inconsistentCalendarCivilDays": 0,
+  "byField": {
+    "year": 1,
+    "month": 3,
+    "leap": 0,
+    "day": 90,
+    "ganzhi": 0
+  },
+  "dayBoundaryMismatches": [],
+  "inspection": {
+    "available": true,
+    "years": 199,
+    "months": 2461,
+    "monthStartDifferences": [
+      {
+        "year": 1914,
+        "expected": [
+          "1914-11-17",
+          1914,
+          10,
+          false
+        ],
+        "actual": [
+          "1914-11-18",
+          1914,
+          10,
+          false
+        ]
+      },
+      {
+        "year": 1916,
+        "expected": [
+          "1916-02-03",
+          1916,
+          1,
+          false
+        ],
+        "actual": [
+          "1916-02-04",
+          1916,
+          1,
+          false
+        ]
+      },
+      {
+        "year": 1920,
+        "expected": [
+          "1920-11-10",
+          1920,
+          10,
+          false
+        ],
+        "actual": [
+          "1920-11-11",
+          1920,
+          10,
+          false
+        ]
+      }
+    ],
+    "solarTermDateDifferences": [
+      {
+        "year": 1912,
+        "term": "Minor snow",
+        "actual": "1912-11-22",
+        "expected": "1912-11-23",
+        "flaggedNearMidnight": false
+      },
+      {
+        "year": 1913,
+        "term": "Autumn equinox",
+        "actual": "1913-09-23",
+        "expected": "1913-09-24",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 1923,
+        "term": "Rain water",
+        "actual": "1923-02-20",
+        "expected": "1923-02-19",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 1928,
+        "term": "Summer solstice",
+        "actual": "1928-06-22",
+        "expected": "1928-06-21",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 1950,
+        "term": "Grain rain",
+        "actual": "1950-04-21",
+        "expected": "1950-04-20",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 1951,
+        "term": "Winter solstice",
+        "actual": "1951-12-22",
+        "expected": "1951-12-23",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 1978,
+        "term": "Major cold",
+        "actual": "1979-01-20",
+        "expected": "1979-01-21",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 2008,
+        "term": "Grain buds",
+        "actual": "2008-05-20",
+        "expected": "2008-05-21",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 2051,
+        "term": "Spring equinox",
+        "actual": "2051-03-21",
+        "expected": "2051-03-20",
+        "flaggedNearMidnight": true
+      },
+      {
+        "year": 2081,
+        "term": "Major cold",
+        "actual": "2082-01-19",
+        "expected": "2082-01-20",
+        "flaggedNearMidnight": true
+      }
+    ],
+    "uncheckedSolarTerms": [],
+    "inconsistentBoundaries": []
+  },
+  "mismatches": [
+    {
+      "civil": "1914-11-17",
+      "source": "T1914e.txt:323",
+      "expected": [
+        1914,
+        10,
+        false,
+        1,
+        43
+      ],
+      "actual": [
+        1914,
+        9,
+        false,
+        30,
+        43
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-18",
+      "source": "T1914e.txt:324",
+      "expected": [
+        1914,
+        10,
+        false,
+        2,
+        44
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        1,
+        44
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-19",
+      "source": "T1914e.txt:325",
+      "expected": [
+        1914,
+        10,
+        false,
+        3,
+        45
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        2,
+        45
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-20",
+      "source": "T1914e.txt:326",
+      "expected": [
+        1914,
+        10,
+        false,
+        4,
+        46
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        3,
+        46
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-21",
+      "source": "T1914e.txt:327",
+      "expected": [
+        1914,
+        10,
+        false,
+        5,
+        47
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        4,
+        47
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-22",
+      "source": "T1914e.txt:328",
+      "expected": [
+        1914,
+        10,
+        false,
+        6,
+        48
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        5,
+        48
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-23",
+      "source": "T1914e.txt:329",
+      "expected": [
+        1914,
+        10,
+        false,
+        7,
+        49
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        6,
+        49
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-24",
+      "source": "T1914e.txt:330",
+      "expected": [
+        1914,
+        10,
+        false,
+        8,
+        50
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        7,
+        50
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-25",
+      "source": "T1914e.txt:331",
+      "expected": [
+        1914,
+        10,
+        false,
+        9,
+        51
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        8,
+        51
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-26",
+      "source": "T1914e.txt:332",
+      "expected": [
+        1914,
+        10,
+        false,
+        10,
+        52
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        9,
+        52
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-27",
+      "source": "T1914e.txt:333",
+      "expected": [
+        1914,
+        10,
+        false,
+        11,
+        53
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        10,
+        53
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-28",
+      "source": "T1914e.txt:334",
+      "expected": [
+        1914,
+        10,
+        false,
+        12,
+        54
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        11,
+        54
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-29",
+      "source": "T1914e.txt:335",
+      "expected": [
+        1914,
+        10,
+        false,
+        13,
+        55
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        12,
+        55
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-11-30",
+      "source": "T1914e.txt:336",
+      "expected": [
+        1914,
+        10,
+        false,
+        14,
+        56
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        13,
+        56
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-01",
+      "source": "T1914e.txt:337",
+      "expected": [
+        1914,
+        10,
+        false,
+        15,
+        57
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        14,
+        57
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-02",
+      "source": "T1914e.txt:338",
+      "expected": [
+        1914,
+        10,
+        false,
+        16,
+        58
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        15,
+        58
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-03",
+      "source": "T1914e.txt:339",
+      "expected": [
+        1914,
+        10,
+        false,
+        17,
+        59
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        16,
+        59
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-04",
+      "source": "T1914e.txt:340",
+      "expected": [
+        1914,
+        10,
+        false,
+        18,
+        0
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        17,
+        0
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-05",
+      "source": "T1914e.txt:341",
+      "expected": [
+        1914,
+        10,
+        false,
+        19,
+        1
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        18,
+        1
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-06",
+      "source": "T1914e.txt:342",
+      "expected": [
+        1914,
+        10,
+        false,
+        20,
+        2
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        19,
+        2
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-07",
+      "source": "T1914e.txt:343",
+      "expected": [
+        1914,
+        10,
+        false,
+        21,
+        3
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        20,
+        3
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-08",
+      "source": "T1914e.txt:344",
+      "expected": [
+        1914,
+        10,
+        false,
+        22,
+        4
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        21,
+        4
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-09",
+      "source": "T1914e.txt:345",
+      "expected": [
+        1914,
+        10,
+        false,
+        23,
+        5
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        22,
+        5
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-10",
+      "source": "T1914e.txt:346",
+      "expected": [
+        1914,
+        10,
+        false,
+        24,
+        6
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        23,
+        6
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-11",
+      "source": "T1914e.txt:347",
+      "expected": [
+        1914,
+        10,
+        false,
+        25,
+        7
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        24,
+        7
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-12",
+      "source": "T1914e.txt:348",
+      "expected": [
+        1914,
+        10,
+        false,
+        26,
+        8
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        25,
+        8
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-13",
+      "source": "T1914e.txt:349",
+      "expected": [
+        1914,
+        10,
+        false,
+        27,
+        9
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        26,
+        9
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-14",
+      "source": "T1914e.txt:350",
+      "expected": [
+        1914,
+        10,
+        false,
+        28,
+        10
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        27,
+        10
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-15",
+      "source": "T1914e.txt:351",
+      "expected": [
+        1914,
+        10,
+        false,
+        29,
+        11
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        28,
+        11
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1914-12-16",
+      "source": "T1914e.txt:352",
+      "expected": [
+        1914,
+        10,
+        false,
+        30,
+        12
+      ],
+      "actual": [
+        1914,
+        10,
+        false,
+        29,
+        12
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-03",
+      "source": "T1916e.txt:36",
+      "expected": [
+        1916,
+        1,
+        false,
+        1,
+        6
+      ],
+      "actual": [
+        1915,
+        12,
+        false,
+        30,
+        6
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-04",
+      "source": "T1916e.txt:37",
+      "expected": [
+        1916,
+        1,
+        false,
+        2,
+        7
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        1,
+        7
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-05",
+      "source": "T1916e.txt:38",
+      "expected": [
+        1916,
+        1,
+        false,
+        3,
+        8
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        2,
+        8
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-06",
+      "source": "T1916e.txt:39",
+      "expected": [
+        1916,
+        1,
+        false,
+        4,
+        9
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        3,
+        9
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-07",
+      "source": "T1916e.txt:40",
+      "expected": [
+        1916,
+        1,
+        false,
+        5,
+        10
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        4,
+        10
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-08",
+      "source": "T1916e.txt:41",
+      "expected": [
+        1916,
+        1,
+        false,
+        6,
+        11
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        5,
+        11
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-09",
+      "source": "T1916e.txt:42",
+      "expected": [
+        1916,
+        1,
+        false,
+        7,
+        12
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        6,
+        12
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-10",
+      "source": "T1916e.txt:43",
+      "expected": [
+        1916,
+        1,
+        false,
+        8,
+        13
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        7,
+        13
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-11",
+      "source": "T1916e.txt:44",
+      "expected": [
+        1916,
+        1,
+        false,
+        9,
+        14
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        8,
+        14
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-12",
+      "source": "T1916e.txt:45",
+      "expected": [
+        1916,
+        1,
+        false,
+        10,
+        15
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        9,
+        15
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-13",
+      "source": "T1916e.txt:46",
+      "expected": [
+        1916,
+        1,
+        false,
+        11,
+        16
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        10,
+        16
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-14",
+      "source": "T1916e.txt:47",
+      "expected": [
+        1916,
+        1,
+        false,
+        12,
+        17
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        11,
+        17
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-15",
+      "source": "T1916e.txt:48",
+      "expected": [
+        1916,
+        1,
+        false,
+        13,
+        18
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        12,
+        18
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-16",
+      "source": "T1916e.txt:49",
+      "expected": [
+        1916,
+        1,
+        false,
+        14,
+        19
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        13,
+        19
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-17",
+      "source": "T1916e.txt:50",
+      "expected": [
+        1916,
+        1,
+        false,
+        15,
+        20
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        14,
+        20
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-18",
+      "source": "T1916e.txt:51",
+      "expected": [
+        1916,
+        1,
+        false,
+        16,
+        21
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        15,
+        21
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-19",
+      "source": "T1916e.txt:52",
+      "expected": [
+        1916,
+        1,
+        false,
+        17,
+        22
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        16,
+        22
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-20",
+      "source": "T1916e.txt:53",
+      "expected": [
+        1916,
+        1,
+        false,
+        18,
+        23
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        17,
+        23
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-21",
+      "source": "T1916e.txt:54",
+      "expected": [
+        1916,
+        1,
+        false,
+        19,
+        24
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        18,
+        24
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-22",
+      "source": "T1916e.txt:55",
+      "expected": [
+        1916,
+        1,
+        false,
+        20,
+        25
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        19,
+        25
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-23",
+      "source": "T1916e.txt:56",
+      "expected": [
+        1916,
+        1,
+        false,
+        21,
+        26
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        20,
+        26
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-24",
+      "source": "T1916e.txt:57",
+      "expected": [
+        1916,
+        1,
+        false,
+        22,
+        27
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        21,
+        27
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-25",
+      "source": "T1916e.txt:58",
+      "expected": [
+        1916,
+        1,
+        false,
+        23,
+        28
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        22,
+        28
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-26",
+      "source": "T1916e.txt:59",
+      "expected": [
+        1916,
+        1,
+        false,
+        24,
+        29
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        23,
+        29
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-27",
+      "source": "T1916e.txt:60",
+      "expected": [
+        1916,
+        1,
+        false,
+        25,
+        30
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        24,
+        30
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-28",
+      "source": "T1916e.txt:61",
+      "expected": [
+        1916,
+        1,
+        false,
+        26,
+        31
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        25,
+        31
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-02-29",
+      "source": "T1916e.txt:62",
+      "expected": [
+        1916,
+        1,
+        false,
+        27,
+        32
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        26,
+        32
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-03-01",
+      "source": "T1916e.txt:63",
+      "expected": [
+        1916,
+        1,
+        false,
+        28,
+        33
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        27,
+        33
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-03-02",
+      "source": "T1916e.txt:64",
+      "expected": [
+        1916,
+        1,
+        false,
+        29,
+        34
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        28,
+        34
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1916-03-03",
+      "source": "T1916e.txt:65",
+      "expected": [
+        1916,
+        1,
+        false,
+        30,
+        35
+      ],
+      "actual": [
+        1916,
+        1,
+        false,
+        29,
+        35
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-10",
+      "source": "T1920e.txt:317",
+      "expected": [
+        1920,
+        10,
+        false,
+        1,
+        8
+      ],
+      "actual": [
+        1920,
+        9,
+        false,
+        30,
+        8
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-11",
+      "source": "T1920e.txt:318",
+      "expected": [
+        1920,
+        10,
+        false,
+        2,
+        9
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        1,
+        9
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-12",
+      "source": "T1920e.txt:319",
+      "expected": [
+        1920,
+        10,
+        false,
+        3,
+        10
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        2,
+        10
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-13",
+      "source": "T1920e.txt:320",
+      "expected": [
+        1920,
+        10,
+        false,
+        4,
+        11
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        3,
+        11
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-14",
+      "source": "T1920e.txt:321",
+      "expected": [
+        1920,
+        10,
+        false,
+        5,
+        12
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        4,
+        12
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-15",
+      "source": "T1920e.txt:322",
+      "expected": [
+        1920,
+        10,
+        false,
+        6,
+        13
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        5,
+        13
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-16",
+      "source": "T1920e.txt:323",
+      "expected": [
+        1920,
+        10,
+        false,
+        7,
+        14
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        6,
+        14
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-17",
+      "source": "T1920e.txt:324",
+      "expected": [
+        1920,
+        10,
+        false,
+        8,
+        15
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        7,
+        15
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-18",
+      "source": "T1920e.txt:325",
+      "expected": [
+        1920,
+        10,
+        false,
+        9,
+        16
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        8,
+        16
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-19",
+      "source": "T1920e.txt:326",
+      "expected": [
+        1920,
+        10,
+        false,
+        10,
+        17
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        9,
+        17
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-20",
+      "source": "T1920e.txt:327",
+      "expected": [
+        1920,
+        10,
+        false,
+        11,
+        18
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        10,
+        18
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-21",
+      "source": "T1920e.txt:328",
+      "expected": [
+        1920,
+        10,
+        false,
+        12,
+        19
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        11,
+        19
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-22",
+      "source": "T1920e.txt:329",
+      "expected": [
+        1920,
+        10,
+        false,
+        13,
+        20
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        12,
+        20
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-23",
+      "source": "T1920e.txt:330",
+      "expected": [
+        1920,
+        10,
+        false,
+        14,
+        21
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        13,
+        21
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-24",
+      "source": "T1920e.txt:331",
+      "expected": [
+        1920,
+        10,
+        false,
+        15,
+        22
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        14,
+        22
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-25",
+      "source": "T1920e.txt:332",
+      "expected": [
+        1920,
+        10,
+        false,
+        16,
+        23
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        15,
+        23
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-26",
+      "source": "T1920e.txt:333",
+      "expected": [
+        1920,
+        10,
+        false,
+        17,
+        24
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        16,
+        24
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-27",
+      "source": "T1920e.txt:334",
+      "expected": [
+        1920,
+        10,
+        false,
+        18,
+        25
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        17,
+        25
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-28",
+      "source": "T1920e.txt:335",
+      "expected": [
+        1920,
+        10,
+        false,
+        19,
+        26
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        18,
+        26
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-29",
+      "source": "T1920e.txt:336",
+      "expected": [
+        1920,
+        10,
+        false,
+        20,
+        27
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        19,
+        27
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-11-30",
+      "source": "T1920e.txt:337",
+      "expected": [
+        1920,
+        10,
+        false,
+        21,
+        28
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        20,
+        28
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-01",
+      "source": "T1920e.txt:338",
+      "expected": [
+        1920,
+        10,
+        false,
+        22,
+        29
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        21,
+        29
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-02",
+      "source": "T1920e.txt:339",
+      "expected": [
+        1920,
+        10,
+        false,
+        23,
+        30
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        22,
+        30
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-03",
+      "source": "T1920e.txt:340",
+      "expected": [
+        1920,
+        10,
+        false,
+        24,
+        31
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        23,
+        31
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-04",
+      "source": "T1920e.txt:341",
+      "expected": [
+        1920,
+        10,
+        false,
+        25,
+        32
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        24,
+        32
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-05",
+      "source": "T1920e.txt:342",
+      "expected": [
+        1920,
+        10,
+        false,
+        26,
+        33
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        25,
+        33
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-06",
+      "source": "T1920e.txt:343",
+      "expected": [
+        1920,
+        10,
+        false,
+        27,
+        34
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        26,
+        34
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-07",
+      "source": "T1920e.txt:344",
+      "expected": [
+        1920,
+        10,
+        false,
+        28,
+        35
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        27,
+        35
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-08",
+      "source": "T1920e.txt:345",
+      "expected": [
+        1920,
+        10,
+        false,
+        29,
+        36
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        28,
+        36
+      ],
+      "explainedByHistoricalClock": true
+    },
+    {
+      "civil": "1920-12-09",
+      "source": "T1920e.txt:346",
+      "expected": [
+        1920,
+        10,
+        false,
+        30,
+        37
+      ],
+      "actual": [
+        1920,
+        10,
+        false,
+        29,
+        37
+      ],
+      "explainedByHistoricalClock": true
+    }
+  ],
+  "elapsedMs": 342
+}

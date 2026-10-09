@@ -38,6 +38,9 @@ npm install
 - If your calendar's month/year boundaries depend on astronomical events
   (new moons, solstices, sighting), set `isReconstruction: true` on its
   `CalendarTablet` and say so in `method`.
+- For Chinese calendar changes, run the pinned [HKO and JPL study](studies/chinese-calendar/README.md).
+  Keep source gaps, historical differences and approximate event times visible;
+  a tolerated percentage of mismatches is not sufficient evidence for a rule.
 
 ## Web app
 

@@ -1,0 +1,31 @@
+{
+  "sourceFiles": 200,
+  "sourceRows": 73048,
+  "sourceGaps": [
+    "2069-12-30"
+  ],
+  "unlabelledLeadingDays": 19,
+  "checkedDays": 73029,
+  "start": "1901-01-20",
+  "end": "2100-12-31",
+  "dailyInstants": 219087,
+  "checkedMonthStarts": 2474,
+  "mismatchedDays": 73029,
+  "calendarMismatchedDays": 1628,
+  "modernCheckedDays": 62821,
+  "modernMismatchedDays": 62821,
+  "modernCalendarMismatchedDays": 1315,
+  "unexpectedMismatchedDays": 73029,
+  "inconsistentCivilDays": 73029,
+  "inconsistentCalendarCivilDays": 201,
+  "byField": {
+    "year": 136,
+    "month": 276,
+    "leap": 175,
+    "day": 1230,
+    "ganzhi": 73029
+  },
+  "elapsedMs": 105626,
+  "sourceCommit": "43d6721",
+  "description": "Original library rebuilt from a detached worktree; same pinned HKO input and verifier, including midnight/noon/last-second sampling."
+}
