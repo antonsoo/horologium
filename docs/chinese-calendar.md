@@ -79,6 +79,8 @@ year numbering, so year 0 is 1 BCE. Invalid inputs throw `RangeError`.
 The [source study](../studies/chinese-calendar/README.md) checks published
 daily labels, local-midnight behavior, complete year exports, and event
 timings against an independently integrated JPL ephemeris.
+The [application and package verification](verification-2026-10-08.md)
+records the clean install, browser workflows and installed-library checks.
 
 Month/day/year labels agree with all 62,821 available HKO daily records
 from 1929–2100. This does not make historical projections authoritative:

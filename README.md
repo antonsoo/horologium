@@ -104,7 +104,7 @@ roman.describe(ides);
 // {
 //   native: 'Id. Mart.',
 //   transliteration: 'Idibus Martiis',
-//   summary: 'The Ides of March, AUC 710',
+//   summary: 'The Ides of March, AUC 710. Julian date 15 March 44 BCE.',
 //   ...
 // }
 

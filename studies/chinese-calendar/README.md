@@ -33,8 +33,8 @@ HKO's daily text files do not themselves provide Ganzhi day names.
 | Wrong Ganzhi day against the stated anchor | 73,029 | 0 |
 | Calendar date changes within one UTC+8 civil day | 201 | 0 |
 
-[baseline.json](baseline.json) records the original library built before
-edits, using the same source files and three daily sample instants.
+[baseline.json](baseline.json) records the original library rebuilt from a
+detached worktree, using the same source files and three daily sample instants.
 Counts are per date, not per failing assertion. The revised report retains
 the 90 mismatches, rather than counting them as matches:
 
