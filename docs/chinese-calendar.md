@@ -1,6 +1,7 @@
 # Inspecting the Chinese lunar year
 
-These corrections and the inspector are in source, pending publication.
+These corrections and the inspector are available from source, pending an
+npm release. See the [fresh source verification](verification-2026-10-10.md).
 
 The Chinese tablet's **Inspect months and leap rule** button opens a year
 ledger. Its dates use UTC+8 even when the astronomical clock's editor shows
