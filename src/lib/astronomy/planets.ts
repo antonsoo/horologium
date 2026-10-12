@@ -10,19 +10,24 @@
  * compute a position (the underlying two-body Keplerian propagation is
  * well-defined for any date), but it should be read as illustrative motion
  * only, not a claim of positional accuracy; the UI must label it as such.
- * Within 1800-2050, Standish states accuracy of a few arcminutes for the
- * inner planets and somewhat more for Jupiter/Saturn.
+ * Standish's nominal error table describes heliocentric coordinates, not the
+ * geocentric dial. Our measured geocentric errors are retained in the study.
  *
  * Method: mean elements -> mean anomaly -> Kepler's equation (Newton's
  * method) -> heliocentric position in the orbital plane -> rotate by
  * (argument of perihelion, inclination, longitude of ascending node) into
  * J2000 ecliptic coordinates -> subtract Earth's own heliocentric position
  * (from the Earth-Moon barycenter's elements) to get a geocentric vector,
- * whose atan2 gives geocentric ecliptic longitude. This is the standard
- * pipeline described in Standish's paper and in Meeus (1998) ch. 33.
+ * then precess the complete geocentric vector to the mean ecliptic and equinox
+ * of date before taking its longitude. The dial's tropical zodiac is referenced
+ * to that moving equinox, not J2000. See precession.ts and studies/planet-frame.
+ * These are geometric positions: light-time, aberration and nutation are not
+ * included. The caller's Julian day is used directly as the dynamical argument;
+ * no UTC-to-TT conversion is made for these illustrative pointers.
  */
 
 import type { JulianDay } from '../core/jd.js';
+import { eclipticOfDate } from './precession.js';
 
 const DEG = Math.PI / 180;
 
@@ -184,13 +189,12 @@ function heliocentricPosition(el: OrbitalElements, t: number): [number, number, 
   return [x, y, z];
 }
 
-/** Geocentric apparent ecliptic longitude of `planet` (degrees, 0-360). See module docs for accuracy/validity. */
+/** Geometric geocentric longitude in the mean ecliptic/equinox of date (0-360 degrees). */
 export function planetLongitude(planet: OrbitalElements, jd: JulianDay): number {
   const t = (jd - 2451545.0) / 36525;
-  const [px, py] = heliocentricPosition(planet, t);
-  const [ex, ey] = heliocentricPosition(EARTH, t);
-  const gx = px - ex;
-  const gy = py - ey;
+  const [px, py, pz] = heliocentricPosition(planet, t);
+  const [ex, ey, ez] = heliocentricPosition(EARTH, t);
+  const [gx, gy] = eclipticOfDate([px - ex, py - ey, pz - ez], t);
   const lon = (Math.atan2(gy, gx) / DEG) % 360;
   return lon < 0 ? lon + 360 : lon;
 }

@@ -1,0 +1,316 @@
+{
+  "node": "v26.7.0",
+  "dates": 2755,
+  "positions": 13775,
+  "fixtureSha256": "9f3fdf4a96fc9e1501d412fe8c03fb5cc3fc643583ca65e089a099c424ea2b4f",
+  "planets": [
+    {
+      "name": "Mercury",
+      "before": {
+        "meanOfDate": {
+          "maxDegrees": 2.1003641847927383,
+          "rmsDegrees": 1.0050130578834902,
+          "differingSectors": 104
+        },
+        "apparentOfDate": {
+          "maxDegrees": 2.111209373546899,
+          "rmsDegrees": 1.0093068655867028,
+          "differingSectors": 106
+        },
+        "j2000": {
+          "maxDegrees": 0.011863925002899123,
+          "rmsDegrees": 0.0030010610324783743,
+          "differingSectors": 0
+        }
+      },
+      "after": {
+        "meanOfDate": {
+          "maxDegrees": 0.011863749239523713,
+          "rmsDegrees": 0.003001059230405186,
+          "differingSectors": 0
+        },
+        "apparentOfDate": {
+          "maxDegrees": 0.025152313818580296,
+          "rmsDegrees": 0.010398950412222151,
+          "differingSectors": 2
+        }
+      },
+      "beforeSha256": "a6dd204ef0275cd01d58d4fff8a2875a606815562b4243c52ad03b7afb5d3022",
+      "afterSha256": "0e2bc04b5f2bf6816710c1d2442028c4d35871e715ab6a75da80a78913ecc666"
+    },
+    {
+      "name": "Venus",
+      "before": {
+        "meanOfDate": {
+          "maxDegrees": 2.0950597867851,
+          "rmsDegrees": 1.005130823396922,
+          "differingSectors": 66
+        },
+        "apparentOfDate": {
+          "maxDegrees": 2.110420850367518,
+          "rmsDegrees": 1.0096286960411436,
+          "differingSectors": 66
+        },
+        "j2000": {
+          "maxDegrees": 0.026843458580287916,
+          "rmsDegrees": 0.004112557817824161,
+          "differingSectors": 0
+        }
+      },
+      "after": {
+        "meanOfDate": {
+          "maxDegrees": 0.026843254960112972,
+          "rmsDegrees": 0.0041125607957170005,
+          "differingSectors": 0
+        },
+        "apparentOfDate": {
+          "maxDegrees": 0.025853342692016668,
+          "rmsDegrees": 0.010022285653026352,
+          "differingSectors": 0
+        }
+      },
+      "beforeSha256": "97fe085137ef9db3818119b61f7a7acb090642d1bf3789a0294d25b79892b150",
+      "afterSha256": "e309046b6ab58f7487514c5beb6b64f09dc3a3885ae61a81997f9f21631c0f6a"
+    },
+    {
+      "name": "Mars",
+      "before": {
+        "meanOfDate": {
+          "maxDegrees": 2.0903885708845564,
+          "rmsDegrees": 1.0051109985365454,
+          "differingSectors": 81
+        },
+        "apparentOfDate": {
+          "maxDegrees": 2.1042418232856335,
+          "rmsDegrees": 1.0086546617873626,
+          "differingSectors": 81
+        },
+        "j2000": {
+          "maxDegrees": 0.0606384956772672,
+          "rmsDegrees": 0.0090679370623154,
+          "differingSectors": 0
+        }
+      },
+      "after": {
+        "meanOfDate": {
+          "maxDegrees": 0.06063825649505361,
+          "rmsDegrees": 0.009067945485390331,
+          "differingSectors": 1
+        },
+        "apparentOfDate": {
+          "maxDegrees": 0.06266980968530333,
+          "rmsDegrees": 0.011379673042372975,
+          "differingSectors": 1
+        }
+      },
+      "beforeSha256": "d22c3bca0d79b145b094a78c8e5bcaf73cbe9dded46ebc6fe3b8ada180fed9f8",
+      "afterSha256": "a95ba7d390dd9ed95cb07e399147487909c6346e383694b061ff9753c79478ee"
+    },
+    {
+      "name": "Jupiter",
+      "before": {
+        "meanOfDate": {
+          "maxDegrees": 2.1341554995144634,
+          "rmsDegrees": 0.9857380089341105,
+          "differingSectors": 73
+        },
+        "apparentOfDate": {
+          "maxDegrees": 2.134952065808534,
+          "rmsDegrees": 0.9876558096713437,
+          "differingSectors": 73
+        },
+        "j2000": {
+          "maxDegrees": 0.17607424769937552,
+          "rmsDegrees": 0.05467183069116379,
+          "differingSectors": 1
+        }
+      },
+      "after": {
+        "meanOfDate": {
+          "maxDegrees": 0.17607373264843318,
+          "rmsDegrees": 0.05467183060397188,
+          "differingSectors": 4
+        },
+        "apparentOfDate": {
+          "maxDegrees": 0.16882052204573483,
+          "rmsDegrees": 0.054633180641113006,
+          "differingSectors": 4
+        }
+      },
+      "beforeSha256": "5dc0531c450a679f5de6b22e505eb3d0e69e8a2121200363a5b5dbc741f9d54f",
+      "afterSha256": "ff0d84f7274c0b8f5dacedef6052409e45295080ab4afb675d2bf8b3a4ee67d0"
+    },
+    {
+      "name": "Saturn",
+      "before": {
+        "meanOfDate": {
+          "maxDegrees": 2.276354571137176,
+          "rmsDegrees": 1.0529700826570303,
+          "differingSectors": 81
+        },
+        "apparentOfDate": {
+          "maxDegrees": 2.2770263246206923,
+          "rmsDegrees": 1.0544043712623408,
+          "differingSectors": 79
+        },
+        "j2000": {
+          "maxDegrees": 0.23013245168158392,
+          "rmsDegrees": 0.09545093832374194,
+          "differingSectors": 12
+        }
+      },
+      "after": {
+        "meanOfDate": {
+          "maxDegrees": 0.2301347775285194,
+          "rmsDegrees": 0.09545105636480275,
+          "differingSectors": 7
+        },
+        "apparentOfDate": {
+          "maxDegrees": 0.2292906014985192,
+          "rmsDegrees": 0.09611349313015619,
+          "differingSectors": 7
+        }
+      },
+      "beforeSha256": "a88858e667a61ca59b08eb93cb39134e553cf701b52da5ee735c7adb380fb62c",
+      "afterSha256": "2bc2f73dddf0f037e747d5c8b8f3180248eddef41b9b2a01554fbc2ea3bf86d5"
+    }
+  ],
+  "examples": [
+    {
+      "name": "Mercury",
+      "date": "2026-01-02",
+      "jd": 2461042.5,
+      "before": 269.8258975584648,
+      "after": 270.1891509126015,
+      "reference": 270.189459171709
+    },
+    {
+      "name": "Venus",
+      "date": "2026-07-10",
+      "jd": 2461231.5,
+      "before": 149.94041121090697,
+      "after": 150.3109688400471,
+      "reference": 150.31078959440933
+    },
+    {
+      "name": "Mars",
+      "date": "2026-03-03",
+      "jd": 2461102.5,
+      "before": 329.95454975128064,
+      "after": 330.3201537252105,
+      "reference": 330.3276489637329
+    },
+    {
+      "name": "Jupiter",
+      "date": "2026-07-01",
+      "jd": 2461222.5,
+      "before": 119.8074791275349,
+      "after": 120.17762896663689,
+      "reference": 120.16683055771794
+    },
+    {
+      "name": "Saturn",
+      "date": "2026-02-14",
+      "jd": 2461085.5,
+      "before": 359.70667902772607,
+      "after": 0.07170108443768455,
+      "reference": 0.003550804311945303
+    }
+  ],
+  "transforms": {
+    "vectors": 588,
+    "maxComponentError": 3.3189750860834755e-12
+  },
+  "unchangedLibraryModules": [
+    {
+      "path": "astronomy/calendar-events.js",
+      "bytes": 7343,
+      "sha256": "b2a055ceb40cacf1d31f8630e69d4a9195db9f3eb6585181cc4d5e49a50b8494"
+    },
+    {
+      "path": "astronomy/sun-moon.js",
+      "bytes": 15408,
+      "sha256": "4f64ddd9346764a2bc4fab7adf4af38ecac6be2e4091adae3433af28af5514cf"
+    },
+    {
+      "path": "babylonian.js",
+      "bytes": 7327,
+      "sha256": "51964f7f30beb00669a6a69492ba8272054d2419e32e254418f4017c5f300a53"
+    },
+    {
+      "path": "byzantine.js",
+      "bytes": 4381,
+      "sha256": "beb6a00841c0b01e9632bce67a2b6b80af53e6733a90b9116e6a02263fb1a8e4"
+    },
+    {
+      "path": "chinese.js",
+      "bytes": 17758,
+      "sha256": "cc87f33c66eac9e9ac7442fb372891d8562acadf7cfce7cedcf315cd6538dadd"
+    },
+    {
+      "path": "coptic.js",
+      "bytes": 6868,
+      "sha256": "02663a7d3221c44befb872028d714cee590d3f46c48a09d4f319f221afd9171b"
+    },
+    {
+      "path": "core/jd.js",
+      "bytes": 4831,
+      "sha256": "faecdf77cf57b14fa11355930be85d0bdf78b7ae2000d7236b709d56ebc8c9d0"
+    },
+    {
+      "path": "egyptian.js",
+      "bytes": 6455,
+      "sha256": "546988a5d7a4375fde1f090f24992b5f0c5f620a830f1f856242de8093f14e69"
+    },
+    {
+      "path": "greek.js",
+      "bytes": 6856,
+      "sha256": "8c418e9e5d216dbed11590585bb243be74e89014d6d4afff98a316ba8b857332"
+    },
+    {
+      "path": "hebrew.js",
+      "bytes": 15053,
+      "sha256": "df3535f9e46489f0a59725fc32c10cdceda858d6949e72c973c77a3e8bfe3be5"
+    },
+    {
+      "path": "index.js",
+      "bytes": 951,
+      "sha256": "3e07ac2527fb525a372b6b2fd7b676f0dab5ee61bf7f79891d1e7b08790decc9"
+    },
+    {
+      "path": "islamic.js",
+      "bytes": 5357,
+      "sha256": "f563ff3c6459a63cce909a8b0f164a139c38ebf42b1693e19fd9a2aae3228388"
+    },
+    {
+      "path": "maya.js",
+      "bytes": 9979,
+      "sha256": "f98f58e81fa67df63fa52e185c4754724d20962ce042c64f792115258d8311ec"
+    },
+    {
+      "path": "roman.js",
+      "bytes": 18110,
+      "sha256": "58b76ca2ab8f6dc29c82126565b80e534946c121af3f6d816d2e82f660c2788a"
+    },
+    {
+      "path": "types.js",
+      "bytes": 196,
+      "sha256": "5f3a4a71726333c329d055940a675d2b30145b8d6f259684079f74274237b7f7"
+    },
+    {
+      "path": "zoroastrian.js",
+      "bytes": 3694,
+      "sha256": "1ae0d9280f1dd514f86e3eb85005fb455c9f6559306ae305ae7dbc662b647b2b"
+    }
+  ],
+  "kernel": {
+    "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp",
+    "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+    "bytes": 32726016
+  },
+  "versions": {
+    "skyfield": "1.54",
+    "pyerfa": "2.0.1.5",
+    "numpy": "2.4.4"
+  }
+}

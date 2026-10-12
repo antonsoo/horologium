@@ -1,0 +1,2102 @@
+[
+  {
+    "engine": "chromium",
+    "version": "153.0.8010.12",
+    "width": 1440,
+    "offline": true,
+    "serverStoppedBeforeNavigation": true,
+    "cases": [
+      {
+        "name": "Mercury 2026",
+        "jd": 2461042.5,
+        "planets": {
+          "mercury": 270.189,
+          "venus": 280.475,
+          "mars": 283.46,
+          "jupiter": 111.222,
+          "saturn": 356.299
+        },
+        "renderedPlanets": {
+          "mercury": 270.1891509,
+          "venus": 280.4747392,
+          "mars": 283.460198,
+          "jupiter": 111.22247850000002,
+          "saturn": 356.2988996
+        },
+        "nonPlanetPointers": [
+          "rotate(281.589deg)",
+          "rotate(81.5203deg)"
+        ],
+        "readout": "\n      2 January 2026 CE\n      00:00 UTC · JD 2461042.500 · Rome\n    ",
+        "calendars": [
+          "13 days before the Kalends of January, AUC 2778. Julian date 20 December 2025 CE.",
+          "Shemu III, day 21 of the season — year 426 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tevet has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.4.0, Tzolk'in 6 Ajaw, Haab' 18 K'ank'in",
+          "Year of the Snake (Wood), 2025; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "14 Poseideon II, Ol. 701.1 (year begins 2025 CE)",
+          "14 Tebetu, SE 2336",
+          "24 Koiak 1742 AM (Era of the Martyrs)",
+          "24 Tahsas 2018 (Ethiopian Anno Mundi)",
+          "December 20 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Shahrivar, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 270.189459171709,
+          "venus": 280.4746712330872,
+          "mars": 283.4633194160177,
+          "jupiter": 111.22191985099579,
+          "saturn": 356.2280964948338
+        }
+      },
+      {
+        "name": "Venus 2026",
+        "jd": 2461231.5,
+        "planets": {
+          "mercury": 112.655,
+          "venus": 150.311,
+          "mars": 67.9149,
+          "jupiter": 122.126,
+          "saturn": 14.5834
+        },
+        "renderedPlanets": {
+          "mercury": 112.65488929999998,
+          "venus": 150.31096880000007,
+          "mars": 67.91486279999998,
+          "jupiter": 122.12592330000001,
+          "saturn": 14.58336840000004
+        },
+        "nonPlanetPointers": [
+          "rotate(107.788deg)",
+          "rotate(46.5584deg)"
+        ],
+        "readout": "\n      10 July 2026 CE\n      00:00 UTC · JD 2461231.500 · Rome\n    ",
+        "calendars": [
+          "5 days before the Kalends of July, AUC 2779. Julian date 27 June 2026 CE.",
+          "Akhet I, day 25 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.9, Tzolk'in 13 Muluk, Haab' 2 Xul",
+          "Year of the Horse (Fire), 2026; most recent solar term: Minor Heat (Xiaoshu, 小暑)",
+          "26 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "26 Simanu, SE 2337",
+          "3 Epip 1742 AM (Era of the Martyrs)",
+          "3 Hamle 2018 (Ethiopian Anno Mundi)",
+          "June 27 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "30 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 112.64878127134187,
+          "venus": 150.31078959440933,
+          "mars": 67.92153001754524,
+          "jupiter": 122.11384672995189,
+          "saturn": 14.508322971951355
+        }
+      },
+      {
+        "name": "Mars 2026",
+        "jd": 2461102.5,
+        "planets": {
+          "mercury": 350.843,
+          "venus": 355.719,
+          "mars": 330.32,
+          "jupiter": 105.192,
+          "saturn": 2.03592
+        },
+        "renderedPlanets": {
+          "mercury": 350.8433864,
+          "venus": 355.7190574,
+          "mars": 330.3201537,
+          "jupiter": 105.1924376,
+          "saturn": 2.0359199000000103
+        },
+        "nonPlanetPointers": [
+          "rotate(342.417deg)",
+          "rotate(156.492deg)"
+        ],
+        "readout": "\n      3 March 2026 CE\n      00:00 UTC · JD 2461102.500 · Rome\n    ",
+        "calendars": [
+          "12 days before the Kalends of March, AUC 2779. Julian date 18 February 2026 CE.",
+          "Shemu III, day 21 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shlishi; Adar has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.7.0, Tzolk'in 1 Ajaw, Haab' 18 K'ayab",
+          "Year of the Horse (Fire), 2026; most recent solar term: Rain Water (Yushui, 雨水)",
+          "15 Anthesterion, Ol. 701.1 (year begins 2025 CE)",
+          "15 Addaru, SE 2336",
+          "24 Meshir 1742 AM (Era of the Martyrs)",
+          "24 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 350.8367506480151,
+          "venus": 355.7156299813954,
+          "mars": 330.3276489637329,
+          "jupiter": 105.19316292289527,
+          "saturn": 1.9684576688896052
+        }
+      },
+      {
+        "name": "Jupiter 2026",
+        "jd": 2461222.5,
+        "planets": {
+          "mercury": 116.196,
+          "venus": 140.195,
+          "mars": 61.5576,
+          "jupiter": 120.178,
+          "saturn": 14.261
+        },
+        "renderedPlanets": {
+          "mercury": 116.19605630000001,
+          "venus": 140.19500770000002,
+          "mars": 61.5576322,
+          "jupiter": 120.1776289,
+          "saturn": 14.261014199999977
+        },
+        "nonPlanetPointers": [
+          "rotate(99.2066deg)",
+          "rotate(289.739deg)"
+        ],
+        "readout": "\n      1 July 2026 CE\n      00:00 UTC · JD 2461222.500 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of July, AUC 2779. Julian date 18 June 2026 CE.",
+          "Akhet I, day 16 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.0, Tzolk'in 4 Ajaw, Haab' 13 Sek",
+          "Year of the Horse (Fire), 2026; most recent solar term: Summer Solstice (Xiazhi, 夏至)",
+          "17 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "17 Simanu, SE 2337",
+          "24 Paoni 1742 AM (Era of the Martyrs)",
+          "24 Sene 2018 (Ethiopian Anno Mundi)",
+          "June 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 116.19323123539712,
+          "venus": 140.19666884976954,
+          "mars": 61.56430716527118,
+          "jupiter": 120.16683055771794,
+          "saturn": 14.186757041454008
+        }
+      },
+      {
+        "name": "Saturn 2026",
+        "jd": 2461085.5,
+        "planets": {
+          "mercury": 341.783,
+          "venus": 334.485,
+          "mars": 316.932,
+          "jupiter": 106.103,
+          "saturn": 0.071701
+        },
+        "renderedPlanets": {
+          "mercury": 341.7828016,
+          "venus": 334.4845959,
+          "mars": 316.9320517,
+          "jupiter": 106.10280219999999,
+          "saturn": 0.07170100000001867
+        },
+        "nonPlanetPointers": [
+          "rotate(325.297deg)",
+          "rotate(283.904deg)"
+        ],
+        "readout": "\n      14 February 2026 CE\n      00:00 UTC · JD 2461085.500 · Rome\n    ",
+        "calendars": [
+          "The Kalends of February, AUC 2779. Julian date 1 February 2026 CE.",
+          "Shemu III, day 4 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Shevat has 30 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.6.3, Tzolk'in 10 Ak'bal, Haab' 1 K'ayab",
+          "Year of the Snake (Wood), 2025; most recent solar term: Start of Spring (Lichun, 立春)",
+          "28 Gamelion, Ol. 701.1 (year begins 2025 CE)",
+          "28 Shabatu, SE 2336",
+          "7 Meshir 1742 AM (Era of the Martyrs)",
+          "7 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 1 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "4 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 341.7785849326867,
+          "venus": 334.48074509596825,
+          "mars": 316.93809716216424,
+          "jupiter": 106.10364248630218,
+          "saturn": 0.003550804311945303
+        }
+      },
+      {
+        "name": "Saturn 1900",
+        "jd": 2415236.5,
+        "planets": {
+          "mercury": 126.043,
+          "venus": 98.136,
+          "mars": 86.6486,
+          "jupiter": 241.06,
+          "saturn": 269.229
+        },
+        "renderedPlanets": {
+          "mercury": 126.04343689999996,
+          "venus": 98.13603210000002,
+          "mars": 86.6486342,
+          "jupiter": 241.06011949999998,
+          "saturn": 269.2285757
+        },
+        "nonPlanetPointers": [
+          "rotate(132.093deg)",
+          "rotate(236.226deg)"
+        ],
+        "readout": "\n      5 August 1900 CE\n      00:00 UTC · JD 2415236.500 · Rome\n    ",
+        "calendars": [
+          "10 days before the Kalends of August, AUC 2653. Julian date 23 July 1900 CE.",
+          "Akhet I, day 20 of the season — year 301 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Rishon; Av has 30 days this year; a regular leap year (13 months), 384 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.14.5.17.14, Tzolk'in 12 Ix, Haab' 17 Sek",
+          "Year of the Rat (Metal), 1900; most recent solar term: Major Heat (Dashu, 大暑)",
+          "11 Metageitnion, Ol. 669.4 (year begins 1900 CE)",
+          "11 Abu, SE 2211",
+          "29 Epip 1616 AM (Era of the Martyrs)",
+          "29 Hamle 1892 (Ethiopian Anno Mundi)",
+          "July 23 (Julian), Byzantine Anno Mundi 7408, 13th Indiction",
+          "25 Esfand, YZ 1269"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 126.04434902177196,
+          "venus": 98.13920669671866,
+          "mars": 86.64532499820852,
+          "jupiter": 241.0831879115081,
+          "saturn": 269.0685534601158
+        },
+        "screenshot": {
+          "file": "chromium-1440.png",
+          "sha256": "f35121eb067bb16a0462a23c27b3af6fd50075ddea39a8d138894681008c2a89"
+        }
+      },
+      {
+        "name": "J2000 unchanged control",
+        "jd": 2451545,
+        "planets": {
+          "mercury": 271.906,
+          "venus": 241.578,
+          "mars": 327.976,
+          "jupiter": 25.3533,
+          "saturn": 40.2396
+        },
+        "renderedPlanets": {
+          "mercury": 271.9064173,
+          "venus": 241.57828949999998,
+          "mars": 327.9760628000001,
+          "jupiter": 25.35325519999998,
+          "saturn": 40.2396215
+        },
+        "nonPlanetPointers": [
+          "rotate(280.373deg)",
+          "rotate(223.705deg)"
+        ],
+        "readout": "\n      1 January 2000 CE\n      12:00 UTC · JD 2451545.000 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of January, AUC 2752. Julian date 19 December 1999 CE.",
+          "Shemu III, day 13 of the season — year 400 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Tevet has 29 days this year; a complete leap year (13 months), 385 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.19.6.15.2, Tzolk'in 11 Ik', Haab' 10 K'ank'in",
+          "Year of the Rabbit (Earth), 1999; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "25 Poseideon, Ol. 694.3 (year begins 1999 CE)",
+          "25 Kislimu, SE 2310",
+          "22 Koiak 1716 AM (Era of the Martyrs)",
+          "22 Tahsas 1992 (Ethiopian Anno Mundi)",
+          "December 19 (Julian), Byzantine Anno Mundi 7508, 8th Indiction",
+          "13 Shahrivar, YZ 1369"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "first supported year",
+        "jd": -105152,
+        "planets": {
+          "mercury": 291.456,
+          "venus": 314.346,
+          "mars": 351.332,
+          "jupiter": 272.862,
+          "saturn": 63.1332
+        },
+        "renderedPlanets": {
+          "mercury": 291.4556284,
+          "venus": 314.34587350000004,
+          "mars": 351.3321175,
+          "jupiter": 272.8615973,
+          "saturn": 63.13315660000001
+        },
+        "nonPlanetPointers": [
+          "rotate(282.245deg)",
+          "rotate(230.466deg)"
+        ],
+        "readout": "\n      1 January 5001 BCE\n      12:00 UTC · JD -105152.000 · Rome\n    ",
+        "calendars": [
+          "4 days before the Ides of February, AUC -4247. Julian date 10 February 5001 BCE.",
+          "Akhet I, day 16 of the season — year 701 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Shevat has 30 days this year; a deficient leap year (13 months), 383 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count -5.4.4.16.5, Tzolk'in 11 Chikchan, Haab' 13 Wo'",
+          "Year of the Pig (Earth), -5001; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "26 Poseideon, Ol. -1056.3 (year begins 5002 BCE)",
+          "26 Kislimu, SE -4690",
+          "15 Meshir -5284 AM (Era of the Martyrs)",
+          "15 Yekatit -5008 (Ethiopian Anno Mundi)",
+          "February 10 (Julian), Byzantine Anno Mundi 508, 13th Indiction",
+          "21 Dey, YZ -5636"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "last supported year",
+        "jd": 3547637,
+        "planets": {
+          "mercury": 280.836,
+          "venus": 257.748,
+          "mars": 243.81,
+          "jupiter": 60.5851,
+          "saturn": 49.7199
+        },
+        "renderedPlanets": {
+          "mercury": 280.8363344,
+          "venus": 257.7480512,
+          "mars": 243.8100405,
+          "jupiter": 60.5851141,
+          "saturn": 49.719897600000024
+        },
+        "nonPlanetPointers": [
+          "rotate(279.478deg)",
+          "rotate(283.455deg)"
+        ],
+        "readout": "\n      31 December 5000 CE\n      12:00 UTC · JD 3547637.000 · Rome\n    ",
+        "calendars": [
+          "7 days before the Kalends of December, AUC 5753. Julian date 25 November 5000 CE.",
+          "Shemu III, day 10 of the season — year 481 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Kislev has 30 days this year; a complete common year (12 months), 355 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 20.11.11.9.14, Tzolk'in 8 Ix, Haab' 7 K'ank'in",
+          "Year of the Dragon (Metal), 5000; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "1 Gamelion, Ol. 1444.4 (year begins 5000 CE)",
+          "1 Tebetu, SE 5311",
+          "29 Hathor 4717 AM (Era of the Martyrs)",
+          "29 Hidar 4993 (Ethiopian Anno Mundi)",
+          "November 25 (Julian), Byzantine Anno Mundi 10509, 9th Indiction",
+          "10 Shahrivar, YZ 4372"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      }
+    ],
+    "served": {
+      "/horologium/index.html": {
+        "bytes": 2400,
+        "sha256": "abdb71726fdc9273d9b7284ddf2eec604311f3d7a33ff4d5ceb0cf2e949eba57"
+      },
+      "/horologium/assets/index-D7hhjio3.js": {
+        "bytes": 74041,
+        "sha256": "55b428397c995bdbd21665167e5538eb127ad16442845ffb163cc990dd9bf7aa"
+      },
+      "/horologium/assets/index-3uSCTewm.css": {
+        "bytes": 21066,
+        "sha256": "24f053ef1bceb7dc62a55d36ceff48ad9f10ea1af511d6e86e62148403f145c3"
+      },
+      "/horologium/assets/cinzel-latin-ext-CG36JvV6.woff2": {
+        "bytes": 14540,
+        "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+      },
+      "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+        "bytes": 25904,
+        "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2": {
+        "bytes": 14828,
+        "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2": {
+        "bytes": 12704,
+        "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+      },
+      "/horologium/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2": {
+        "bytes": 6896,
+        "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2": {
+        "bytes": 20388,
+        "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2": {
+        "bytes": 23924,
+        "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2": {
+        "bytes": 23416,
+        "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2": {
+        "bytes": 21168,
+        "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+      },
+      "/horologium/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2": {
+        "bytes": 11220,
+        "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+      },
+      "/horologium/assets/cormorant-garamond-latin-CUoBjw-S.woff2": {
+        "bytes": 37640,
+        "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+      },
+      "/horologium/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2": {
+        "bytes": 33736,
+        "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2": {
+        "bytes": 17952,
+        "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2": {
+        "bytes": 13572,
+        "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2": {
+        "bytes": 6608,
+        "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-Dqr5KC66.woff2": {
+        "bytes": 10500,
+        "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+      },
+      "/horologium/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2": {
+        "bytes": 6268,
+        "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+        "bytes": 45468,
+        "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2": {
+        "bytes": 33948,
+        "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+        "bytes": 25388,
+        "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-DBa2mnKT.woff2": {
+        "bytes": 26024,
+        "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+      },
+      "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+        "bytes": 19868,
+        "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+      },
+      "/horologium/assets/eb-garamond-vietnamese-DvUmmjCN.woff2": {
+        "bytes": 10952,
+        "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+      },
+      "/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2": {
+        "bytes": 113928,
+        "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+      },
+      "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+        "bytes": 44336,
+        "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+      },
+      "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+        "bytes": 11484,
+        "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+      }
+    },
+    "errors": [],
+    "consoleErrors": [],
+    "lateRequests": []
+  },
+  {
+    "engine": "chromium",
+    "version": "153.0.8010.12",
+    "width": 375,
+    "offline": true,
+    "serverStoppedBeforeNavigation": true,
+    "cases": [
+      {
+        "name": "Mercury 2026",
+        "jd": 2461042.5,
+        "planets": {
+          "mercury": 270.189,
+          "venus": 280.475,
+          "mars": 283.46,
+          "jupiter": 111.222,
+          "saturn": 356.299
+        },
+        "renderedPlanets": {
+          "mercury": 270.18915089999996,
+          "venus": 280.47473919999993,
+          "mars": 283.460198,
+          "jupiter": 111.22247850000002,
+          "saturn": 356.2988996
+        },
+        "nonPlanetPointers": [
+          "rotate(281.589deg)",
+          "rotate(81.5203deg)"
+        ],
+        "readout": "\n      2 January 2026 CE\n      00:00 UTC · JD 2461042.500 · Rome\n    ",
+        "calendars": [
+          "13 days before the Kalends of January, AUC 2778. Julian date 20 December 2025 CE.",
+          "Shemu III, day 21 of the season — year 426 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tevet has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.4.0, Tzolk'in 6 Ajaw, Haab' 18 K'ank'in",
+          "Year of the Snake (Wood), 2025; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "14 Poseideon II, Ol. 701.1 (year begins 2025 CE)",
+          "14 Tebetu, SE 2336",
+          "24 Koiak 1742 AM (Era of the Martyrs)",
+          "24 Tahsas 2018 (Ethiopian Anno Mundi)",
+          "December 20 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Shahrivar, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 270.189459171709,
+          "venus": 280.4746712330872,
+          "mars": 283.4633194160177,
+          "jupiter": 111.22191985099579,
+          "saturn": 356.2280964948338
+        }
+      },
+      {
+        "name": "Venus 2026",
+        "jd": 2461231.5,
+        "planets": {
+          "mercury": 112.655,
+          "venus": 150.311,
+          "mars": 67.9149,
+          "jupiter": 122.126,
+          "saturn": 14.5834
+        },
+        "renderedPlanets": {
+          "mercury": 112.65488929999992,
+          "venus": 150.3109688,
+          "mars": 67.91486280000004,
+          "jupiter": 122.12592330000007,
+          "saturn": 14.583368399999983
+        },
+        "nonPlanetPointers": [
+          "rotate(107.788deg)",
+          "rotate(46.5584deg)"
+        ],
+        "readout": "\n      10 July 2026 CE\n      00:00 UTC · JD 2461231.500 · Rome\n    ",
+        "calendars": [
+          "5 days before the Kalends of July, AUC 2779. Julian date 27 June 2026 CE.",
+          "Akhet I, day 25 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.9, Tzolk'in 13 Muluk, Haab' 2 Xul",
+          "Year of the Horse (Fire), 2026; most recent solar term: Minor Heat (Xiaoshu, 小暑)",
+          "26 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "26 Simanu, SE 2337",
+          "3 Epip 1742 AM (Era of the Martyrs)",
+          "3 Hamle 2018 (Ethiopian Anno Mundi)",
+          "June 27 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "30 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 112.64878127134187,
+          "venus": 150.31078959440933,
+          "mars": 67.92153001754524,
+          "jupiter": 122.11384672995189,
+          "saturn": 14.508322971951355
+        }
+      },
+      {
+        "name": "Mars 2026",
+        "jd": 2461102.5,
+        "planets": {
+          "mercury": 350.843,
+          "venus": 355.719,
+          "mars": 330.32,
+          "jupiter": 105.192,
+          "saturn": 2.03592
+        },
+        "renderedPlanets": {
+          "mercury": 350.8433864,
+          "venus": 355.7190574,
+          "mars": 330.3201537,
+          "jupiter": 105.19243760000006,
+          "saturn": 2.0359199000000103
+        },
+        "nonPlanetPointers": [
+          "rotate(342.417deg)",
+          "rotate(156.492deg)"
+        ],
+        "readout": "\n      3 March 2026 CE\n      00:00 UTC · JD 2461102.500 · Rome\n    ",
+        "calendars": [
+          "12 days before the Kalends of March, AUC 2779. Julian date 18 February 2026 CE.",
+          "Shemu III, day 21 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shlishi; Adar has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.7.0, Tzolk'in 1 Ajaw, Haab' 18 K'ayab",
+          "Year of the Horse (Fire), 2026; most recent solar term: Rain Water (Yushui, 雨水)",
+          "15 Anthesterion, Ol. 701.1 (year begins 2025 CE)",
+          "15 Addaru, SE 2336",
+          "24 Meshir 1742 AM (Era of the Martyrs)",
+          "24 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 350.8367506480151,
+          "venus": 355.7156299813954,
+          "mars": 330.3276489637329,
+          "jupiter": 105.19316292289527,
+          "saturn": 1.9684576688896052
+        }
+      },
+      {
+        "name": "Jupiter 2026",
+        "jd": 2461222.5,
+        "planets": {
+          "mercury": 116.196,
+          "venus": 140.195,
+          "mars": 61.5576,
+          "jupiter": 120.178,
+          "saturn": 14.261
+        },
+        "renderedPlanets": {
+          "mercury": 116.19605629999995,
+          "venus": 140.19500770000002,
+          "mars": 61.5576322,
+          "jupiter": 120.17762890000006,
+          "saturn": 14.261014199999977
+        },
+        "nonPlanetPointers": [
+          "rotate(99.2066deg)",
+          "rotate(289.739deg)"
+        ],
+        "readout": "\n      1 July 2026 CE\n      00:00 UTC · JD 2461222.500 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of July, AUC 2779. Julian date 18 June 2026 CE.",
+          "Akhet I, day 16 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.0, Tzolk'in 4 Ajaw, Haab' 13 Sek",
+          "Year of the Horse (Fire), 2026; most recent solar term: Summer Solstice (Xiazhi, 夏至)",
+          "17 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "17 Simanu, SE 2337",
+          "24 Paoni 1742 AM (Era of the Martyrs)",
+          "24 Sene 2018 (Ethiopian Anno Mundi)",
+          "June 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 116.19323123539712,
+          "venus": 140.19666884976954,
+          "mars": 61.56430716527118,
+          "jupiter": 120.16683055771794,
+          "saturn": 14.186757041454008
+        }
+      },
+      {
+        "name": "Saturn 2026",
+        "jd": 2461085.5,
+        "planets": {
+          "mercury": 341.783,
+          "venus": 334.485,
+          "mars": 316.932,
+          "jupiter": 106.103,
+          "saturn": 0.071701
+        },
+        "renderedPlanets": {
+          "mercury": 341.7828016,
+          "venus": 334.4845959,
+          "mars": 316.9320517,
+          "jupiter": 106.10280220000004,
+          "saturn": 0.07170100000001867
+        },
+        "nonPlanetPointers": [
+          "rotate(325.297deg)",
+          "rotate(283.904deg)"
+        ],
+        "readout": "\n      14 February 2026 CE\n      00:00 UTC · JD 2461085.500 · Rome\n    ",
+        "calendars": [
+          "The Kalends of February, AUC 2779. Julian date 1 February 2026 CE.",
+          "Shemu III, day 4 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Shevat has 30 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.6.3, Tzolk'in 10 Ak'bal, Haab' 1 K'ayab",
+          "Year of the Snake (Wood), 2025; most recent solar term: Start of Spring (Lichun, 立春)",
+          "28 Gamelion, Ol. 701.1 (year begins 2025 CE)",
+          "28 Shabatu, SE 2336",
+          "7 Meshir 1742 AM (Era of the Martyrs)",
+          "7 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 1 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "4 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 341.7785849326867,
+          "venus": 334.48074509596825,
+          "mars": 316.93809716216424,
+          "jupiter": 106.10364248630218,
+          "saturn": 0.003550804311945303
+        }
+      },
+      {
+        "name": "Saturn 1900",
+        "jd": 2415236.5,
+        "planets": {
+          "mercury": 126.043,
+          "venus": 98.136,
+          "mars": 86.6486,
+          "jupiter": 241.06,
+          "saturn": 269.229
+        },
+        "renderedPlanets": {
+          "mercury": 126.04343690000002,
+          "venus": 98.13603209999997,
+          "mars": 86.6486342,
+          "jupiter": 241.0601195,
+          "saturn": 269.22857569999996
+        },
+        "nonPlanetPointers": [
+          "rotate(132.093deg)",
+          "rotate(236.226deg)"
+        ],
+        "readout": "\n      5 August 1900 CE\n      00:00 UTC · JD 2415236.500 · Rome\n    ",
+        "calendars": [
+          "10 days before the Kalends of August, AUC 2653. Julian date 23 July 1900 CE.",
+          "Akhet I, day 20 of the season — year 301 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Rishon; Av has 30 days this year; a regular leap year (13 months), 384 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.14.5.17.14, Tzolk'in 12 Ix, Haab' 17 Sek",
+          "Year of the Rat (Metal), 1900; most recent solar term: Major Heat (Dashu, 大暑)",
+          "11 Metageitnion, Ol. 669.4 (year begins 1900 CE)",
+          "11 Abu, SE 2211",
+          "29 Epip 1616 AM (Era of the Martyrs)",
+          "29 Hamle 1892 (Ethiopian Anno Mundi)",
+          "July 23 (Julian), Byzantine Anno Mundi 7408, 13th Indiction",
+          "25 Esfand, YZ 1269"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 126.04434902177196,
+          "venus": 98.13920669671866,
+          "mars": 86.64532499820852,
+          "jupiter": 241.0831879115081,
+          "saturn": 269.0685534601158
+        }
+      },
+      {
+        "name": "J2000 unchanged control",
+        "jd": 2451545,
+        "planets": {
+          "mercury": 271.906,
+          "venus": 241.578,
+          "mars": 327.976,
+          "jupiter": 25.3533,
+          "saturn": 40.2396
+        },
+        "renderedPlanets": {
+          "mercury": 271.90641730000004,
+          "venus": 241.57828949999998,
+          "mars": 327.9760628,
+          "jupiter": 25.353255200000035,
+          "saturn": 40.2396215
+        },
+        "nonPlanetPointers": [
+          "rotate(280.373deg)",
+          "rotate(223.705deg)"
+        ],
+        "readout": "\n      1 January 2000 CE\n      12:00 UTC · JD 2451545.000 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of January, AUC 2752. Julian date 19 December 1999 CE.",
+          "Shemu III, day 13 of the season — year 400 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Tevet has 29 days this year; a complete leap year (13 months), 385 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.19.6.15.2, Tzolk'in 11 Ik', Haab' 10 K'ank'in",
+          "Year of the Rabbit (Earth), 1999; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "25 Poseideon, Ol. 694.3 (year begins 1999 CE)",
+          "25 Kislimu, SE 2310",
+          "22 Koiak 1716 AM (Era of the Martyrs)",
+          "22 Tahsas 1992 (Ethiopian Anno Mundi)",
+          "December 19 (Julian), Byzantine Anno Mundi 7508, 8th Indiction",
+          "13 Shahrivar, YZ 1369"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "first supported year",
+        "jd": -105152,
+        "planets": {
+          "mercury": 291.456,
+          "venus": 314.346,
+          "mars": 351.332,
+          "jupiter": 272.862,
+          "saturn": 63.1332
+        },
+        "renderedPlanets": {
+          "mercury": 291.4556284000001,
+          "venus": 314.3458735,
+          "mars": 351.3321175,
+          "jupiter": 272.86159729999997,
+          "saturn": 63.13315660000001
+        },
+        "nonPlanetPointers": [
+          "rotate(282.245deg)",
+          "rotate(230.466deg)"
+        ],
+        "readout": "\n      1 January 5001 BCE\n      12:00 UTC · JD -105152.000 · Rome\n    ",
+        "calendars": [
+          "4 days before the Ides of February, AUC -4247. Julian date 10 February 5001 BCE.",
+          "Akhet I, day 16 of the season — year 701 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Shevat has 30 days this year; a deficient leap year (13 months), 383 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count -5.4.4.16.5, Tzolk'in 11 Chikchan, Haab' 13 Wo'",
+          "Year of the Pig (Earth), -5001; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "26 Poseideon, Ol. -1056.3 (year begins 5002 BCE)",
+          "26 Kislimu, SE -4690",
+          "15 Meshir -5284 AM (Era of the Martyrs)",
+          "15 Yekatit -5008 (Ethiopian Anno Mundi)",
+          "February 10 (Julian), Byzantine Anno Mundi 508, 13th Indiction",
+          "21 Dey, YZ -5636"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "last supported year",
+        "jd": 3547637,
+        "planets": {
+          "mercury": 280.836,
+          "venus": 257.748,
+          "mars": 243.81,
+          "jupiter": 60.5851,
+          "saturn": 49.7199
+        },
+        "renderedPlanets": {
+          "mercury": 280.83633439999994,
+          "venus": 257.7480512,
+          "mars": 243.81004049999996,
+          "jupiter": 60.5851141,
+          "saturn": 49.71989759999997
+        },
+        "nonPlanetPointers": [
+          "rotate(279.478deg)",
+          "rotate(283.455deg)"
+        ],
+        "readout": "\n      31 December 5000 CE\n      12:00 UTC · JD 3547637.000 · Rome\n    ",
+        "calendars": [
+          "7 days before the Kalends of December, AUC 5753. Julian date 25 November 5000 CE.",
+          "Shemu III, day 10 of the season — year 481 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Kislev has 30 days this year; a complete common year (12 months), 355 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 20.11.11.9.14, Tzolk'in 8 Ix, Haab' 7 K'ank'in",
+          "Year of the Dragon (Metal), 5000; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "1 Gamelion, Ol. 1444.4 (year begins 5000 CE)",
+          "1 Tebetu, SE 5311",
+          "29 Hathor 4717 AM (Era of the Martyrs)",
+          "29 Hidar 4993 (Ethiopian Anno Mundi)",
+          "November 25 (Julian), Byzantine Anno Mundi 10509, 9th Indiction",
+          "10 Shahrivar, YZ 4372"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      }
+    ],
+    "served": {
+      "/horologium/index.html": {
+        "bytes": 2400,
+        "sha256": "abdb71726fdc9273d9b7284ddf2eec604311f3d7a33ff4d5ceb0cf2e949eba57"
+      },
+      "/horologium/assets/index-D7hhjio3.js": {
+        "bytes": 74041,
+        "sha256": "55b428397c995bdbd21665167e5538eb127ad16442845ffb163cc990dd9bf7aa"
+      },
+      "/horologium/assets/index-3uSCTewm.css": {
+        "bytes": 21066,
+        "sha256": "24f053ef1bceb7dc62a55d36ceff48ad9f10ea1af511d6e86e62148403f145c3"
+      },
+      "/horologium/assets/cinzel-latin-ext-CG36JvV6.woff2": {
+        "bytes": 14540,
+        "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+      },
+      "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+        "bytes": 25904,
+        "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2": {
+        "bytes": 14828,
+        "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2": {
+        "bytes": 12704,
+        "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+      },
+      "/horologium/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2": {
+        "bytes": 6896,
+        "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2": {
+        "bytes": 20388,
+        "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2": {
+        "bytes": 23416,
+        "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2": {
+        "bytes": 23924,
+        "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2": {
+        "bytes": 21168,
+        "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+      },
+      "/horologium/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2": {
+        "bytes": 11220,
+        "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+      },
+      "/horologium/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2": {
+        "bytes": 33736,
+        "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+      },
+      "/horologium/assets/cormorant-garamond-latin-CUoBjw-S.woff2": {
+        "bytes": 37640,
+        "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2": {
+        "bytes": 13572,
+        "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2": {
+        "bytes": 17952,
+        "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2": {
+        "bytes": 6608,
+        "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-Dqr5KC66.woff2": {
+        "bytes": 10500,
+        "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+      },
+      "/horologium/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2": {
+        "bytes": 6268,
+        "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+        "bytes": 45468,
+        "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+        "bytes": 25388,
+        "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2": {
+        "bytes": 33948,
+        "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-DBa2mnKT.woff2": {
+        "bytes": 26024,
+        "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+      },
+      "/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2": {
+        "bytes": 113928,
+        "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+      },
+      "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+        "bytes": 11484,
+        "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+      },
+      "/horologium/assets/eb-garamond-vietnamese-DvUmmjCN.woff2": {
+        "bytes": 10952,
+        "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+      },
+      "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+        "bytes": 19868,
+        "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+      },
+      "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+        "bytes": 44336,
+        "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+      }
+    },
+    "errors": [],
+    "consoleErrors": [],
+    "lateRequests": []
+  },
+  {
+    "engine": "firefox",
+    "version": "155.0",
+    "width": 1440,
+    "offline": true,
+    "serverStoppedBeforeNavigation": true,
+    "cases": [
+      {
+        "name": "Mercury 2026",
+        "jd": 2461042.5,
+        "planets": {
+          "mercury": 270.189,
+          "venus": 280.475,
+          "mars": 283.46,
+          "jupiter": 111.222,
+          "saturn": 356.299
+        },
+        "renderedPlanets": {
+          "mercury": 270.1891479442178,
+          "venus": 280.4747310806319,
+          "mars": 283.460204715813,
+          "jupiter": 111.22248134761514,
+          "saturn": 356.2988890918287
+        },
+        "nonPlanetPointers": [
+          "rotate(281.589deg)",
+          "rotate(81.5203deg)"
+        ],
+        "readout": "\n      2 January 2026 CE\n      00:00 UTC · JD 2461042.500 · Rome\n    ",
+        "calendars": [
+          "13 days before the Kalends of January, AUC 2778. Julian date 20 December 2025 CE.",
+          "Shemu III, day 21 of the season — year 426 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tevet has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.4.0, Tzolk'in 6 Ajaw, Haab' 18 K'ank'in",
+          "Year of the Snake (Wood), 2025; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "14 Poseideon II, Ol. 701.1 (year begins 2025 CE)",
+          "14 Tebetu, SE 2336",
+          "24 Koiak 1742 AM (Era of the Martyrs)",
+          "24 Tahsas 2018 (Ethiopian Anno Mundi)",
+          "December 20 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Shahrivar, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 270.189459171709,
+          "venus": 280.4746712330872,
+          "mars": 283.4633194160177,
+          "jupiter": 111.22191985099579,
+          "saturn": 356.2280964948338
+        }
+      },
+      {
+        "name": "Venus 2026",
+        "jd": 2461231.5,
+        "planets": {
+          "mercury": 112.655,
+          "venus": 150.311,
+          "mars": 67.9149,
+          "jupiter": 122.126,
+          "saturn": 14.5834
+        },
+        "renderedPlanets": {
+          "mercury": 112.65489199997364,
+          "venus": 150.3109738663552,
+          "mars": 67.91486387855394,
+          "jupiter": 122.12592325080317,
+          "saturn": 14.58336788660074
+        },
+        "nonPlanetPointers": [
+          "rotate(107.788deg)",
+          "rotate(46.5584deg)"
+        ],
+        "readout": "\n      10 July 2026 CE\n      00:00 UTC · JD 2461231.500 · Rome\n    ",
+        "calendars": [
+          "5 days before the Kalends of July, AUC 2779. Julian date 27 June 2026 CE.",
+          "Akhet I, day 25 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.9, Tzolk'in 13 Muluk, Haab' 2 Xul",
+          "Year of the Horse (Fire), 2026; most recent solar term: Minor Heat (Xiaoshu, 小暑)",
+          "26 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "26 Simanu, SE 2337",
+          "3 Epip 1742 AM (Era of the Martyrs)",
+          "3 Hamle 2018 (Ethiopian Anno Mundi)",
+          "June 27 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "30 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 112.64878127134187,
+          "venus": 150.31078959440933,
+          "mars": 67.92153001754524,
+          "jupiter": 122.11384672995189,
+          "saturn": 14.508322971951355
+        }
+      },
+      {
+        "name": "Mars 2026",
+        "jd": 2461102.5,
+        "planets": {
+          "mercury": 350.843,
+          "venus": 355.719,
+          "mars": 330.32,
+          "jupiter": 105.192,
+          "saturn": 2.03592
+        },
+        "renderedPlanets": {
+          "mercury": 350.8433843760415,
+          "venus": 355.71905542715626,
+          "mars": 330.32015768852216,
+          "jupiter": 105.19243567582964,
+          "saturn": 2.03592004143718
+        },
+        "nonPlanetPointers": [
+          "rotate(342.417deg)",
+          "rotate(156.492deg)"
+        ],
+        "readout": "\n      3 March 2026 CE\n      00:00 UTC · JD 2461102.500 · Rome\n    ",
+        "calendars": [
+          "12 days before the Kalends of March, AUC 2779. Julian date 18 February 2026 CE.",
+          "Shemu III, day 21 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shlishi; Adar has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.7.0, Tzolk'in 1 Ajaw, Haab' 18 K'ayab",
+          "Year of the Horse (Fire), 2026; most recent solar term: Rain Water (Yushui, 雨水)",
+          "15 Anthesterion, Ol. 701.1 (year begins 2025 CE)",
+          "15 Addaru, SE 2336",
+          "24 Meshir 1742 AM (Era of the Martyrs)",
+          "24 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 350.8367506480151,
+          "venus": 355.7156299813954,
+          "mars": 330.3276489637329,
+          "jupiter": 105.19316292289527,
+          "saturn": 1.9684576688896052
+        }
+      },
+      {
+        "name": "Jupiter 2026",
+        "jd": 2461222.5,
+        "planets": {
+          "mercury": 116.196,
+          "venus": 140.195,
+          "mars": 61.5576,
+          "jupiter": 120.178,
+          "saturn": 14.261
+        },
+        "renderedPlanets": {
+          "mercury": 116.19605094687671,
+          "venus": 140.19500655683237,
+          "mars": 61.5576301230833,
+          "jupiter": 120.1776288072225,
+          "saturn": 14.261013474579386
+        },
+        "nonPlanetPointers": [
+          "rotate(99.2067deg)",
+          "rotate(289.739deg)"
+        ],
+        "readout": "\n      1 July 2026 CE\n      00:00 UTC · JD 2461222.500 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of July, AUC 2779. Julian date 18 June 2026 CE.",
+          "Akhet I, day 16 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.0, Tzolk'in 4 Ajaw, Haab' 13 Sek",
+          "Year of the Horse (Fire), 2026; most recent solar term: Summer Solstice (Xiazhi, 夏至)",
+          "17 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "17 Simanu, SE 2337",
+          "24 Paoni 1742 AM (Era of the Martyrs)",
+          "24 Sene 2018 (Ethiopian Anno Mundi)",
+          "June 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 116.19323123539712,
+          "venus": 140.19666884976954,
+          "mars": 61.56430716527118,
+          "jupiter": 120.16683055771794,
+          "saturn": 14.186757041454008
+        }
+      },
+      {
+        "name": "Saturn 2026",
+        "jd": 2461085.5,
+        "planets": {
+          "mercury": 341.783,
+          "venus": 334.485,
+          "mars": 316.932,
+          "jupiter": 106.103,
+          "saturn": 0.0717011
+        },
+        "renderedPlanets": {
+          "mercury": 341.7828056145901,
+          "venus": 334.48458864348476,
+          "mars": 316.93203703152324,
+          "jupiter": 106.10280563632165,
+          "saturn": 0.07170108814767673
+        },
+        "nonPlanetPointers": [
+          "rotate(325.297deg)",
+          "rotate(283.904deg)"
+        ],
+        "readout": "\n      14 February 2026 CE\n      00:00 UTC · JD 2461085.500 · Rome\n    ",
+        "calendars": [
+          "The Kalends of February, AUC 2779. Julian date 1 February 2026 CE.",
+          "Shemu III, day 4 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Shevat has 30 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.6.3, Tzolk'in 10 Ak'bal, Haab' 1 K'ayab",
+          "Year of the Snake (Wood), 2025; most recent solar term: Start of Spring (Lichun, 立春)",
+          "28 Gamelion, Ol. 701.1 (year begins 2025 CE)",
+          "28 Shabatu, SE 2336",
+          "7 Meshir 1742 AM (Era of the Martyrs)",
+          "7 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 1 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "4 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 341.7785849326867,
+          "venus": 334.48074509596825,
+          "mars": 316.93809716216424,
+          "jupiter": 106.10364248630218,
+          "saturn": 0.003550804311945303
+        }
+      },
+      {
+        "name": "Saturn 1900",
+        "jd": 2415236.5,
+        "planets": {
+          "mercury": 126.043,
+          "venus": 98.136,
+          "mars": 86.6486,
+          "jupiter": 241.06,
+          "saturn": 269.229
+        },
+        "renderedPlanets": {
+          "mercury": 126.04343613438988,
+          "venus": 98.136031596988,
+          "mars": 86.64863582265713,
+          "jupiter": 241.06011829250846,
+          "saturn": 269.22857665788086
+        },
+        "nonPlanetPointers": [
+          "rotate(132.093deg)",
+          "rotate(236.226deg)"
+        ],
+        "readout": "\n      5 August 1900 CE\n      00:00 UTC · JD 2415236.500 · Rome\n    ",
+        "calendars": [
+          "10 days before the Kalends of August, AUC 2653. Julian date 23 July 1900 CE.",
+          "Akhet I, day 20 of the season — year 301 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Rishon; Av has 30 days this year; a regular leap year (13 months), 384 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.14.5.17.14, Tzolk'in 12 Ix, Haab' 17 Sek",
+          "Year of the Rat (Metal), 1900; most recent solar term: Major Heat (Dashu, 大暑)",
+          "11 Metageitnion, Ol. 669.4 (year begins 1900 CE)",
+          "11 Abu, SE 2211",
+          "29 Epip 1616 AM (Era of the Martyrs)",
+          "29 Hamle 1892 (Ethiopian Anno Mundi)",
+          "July 23 (Julian), Byzantine Anno Mundi 7408, 13th Indiction",
+          "25 Esfand, YZ 1269"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 126.04434902177196,
+          "venus": 98.13920669671866,
+          "mars": 86.64532499820852,
+          "jupiter": 241.0831879115081,
+          "saturn": 269.0685534601158
+        }
+      },
+      {
+        "name": "J2000 unchanged control",
+        "jd": 2451545,
+        "planets": {
+          "mercury": 271.906,
+          "venus": 241.578,
+          "mars": 327.976,
+          "jupiter": 25.3533,
+          "saturn": 40.2396
+        },
+        "renderedPlanets": {
+          "mercury": 271.90640272798913,
+          "venus": 241.5782921154949,
+          "mars": 327.9760718262134,
+          "jupiter": 25.353251718542253,
+          "saturn": 40.2396197546704
+        },
+        "nonPlanetPointers": [
+          "rotate(280.373deg)",
+          "rotate(223.705deg)"
+        ],
+        "readout": "\n      1 January 2000 CE\n      12:00 UTC · JD 2451545.000 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of January, AUC 2752. Julian date 19 December 1999 CE.",
+          "Shemu III, day 13 of the season — year 400 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Tevet has 29 days this year; a complete leap year (13 months), 385 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.19.6.15.2, Tzolk'in 11 Ik', Haab' 10 K'ank'in",
+          "Year of the Rabbit (Earth), 1999; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "25 Poseideon, Ol. 694.3 (year begins 1999 CE)",
+          "25 Kislimu, SE 2310",
+          "22 Koiak 1716 AM (Era of the Martyrs)",
+          "22 Tahsas 1992 (Ethiopian Anno Mundi)",
+          "December 19 (Julian), Byzantine Anno Mundi 7508, 8th Indiction",
+          "13 Shahrivar, YZ 1369"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "first supported year",
+        "jd": -105152,
+        "planets": {
+          "mercury": 291.456,
+          "venus": 314.346,
+          "mars": 351.332,
+          "jupiter": 272.862,
+          "saturn": 63.1332
+        },
+        "renderedPlanets": {
+          "mercury": 291.45562842888256,
+          "venus": 314.34588680304256,
+          "mars": 351.332122970354,
+          "jupiter": 272.8616027970244,
+          "saturn": 63.13315700874597
+        },
+        "nonPlanetPointers": [
+          "rotate(282.245deg)",
+          "rotate(230.466deg)"
+        ],
+        "readout": "\n      1 January 5001 BCE\n      12:00 UTC · JD -105152.000 · Rome\n    ",
+        "calendars": [
+          "4 days before the Ides of February, AUC -4247. Julian date 10 February 5001 BCE.",
+          "Akhet I, day 16 of the season — year 701 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Shevat has 30 days this year; a deficient leap year (13 months), 383 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count -5.4.4.16.5, Tzolk'in 11 Chikchan, Haab' 13 Wo'",
+          "Year of the Pig (Earth), -5001; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "26 Poseideon, Ol. -1056.3 (year begins 5002 BCE)",
+          "26 Kislimu, SE -4690",
+          "15 Meshir -5284 AM (Era of the Martyrs)",
+          "15 Yekatit -5008 (Ethiopian Anno Mundi)",
+          "February 10 (Julian), Byzantine Anno Mundi 508, 13th Indiction",
+          "21 Dey, YZ -5636"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "last supported year",
+        "jd": 3547637,
+        "planets": {
+          "mercury": 280.836,
+          "venus": 257.748,
+          "mars": 243.81,
+          "jupiter": 60.5851,
+          "saturn": 49.7199
+        },
+        "renderedPlanets": {
+          "mercury": 280.8363346063222,
+          "venus": 257.74804737826315,
+          "mars": 243.81004466060284,
+          "jupiter": 60.58511434405773,
+          "saturn": 49.719900414130166
+        },
+        "nonPlanetPointers": [
+          "rotate(279.478deg)",
+          "rotate(283.455deg)"
+        ],
+        "readout": "\n      31 December 5000 CE\n      12:00 UTC · JD 3547637.000 · Rome\n    ",
+        "calendars": [
+          "7 days before the Kalends of December, AUC 5753. Julian date 25 November 5000 CE.",
+          "Shemu III, day 10 of the season — year 481 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Kislev has 30 days this year; a complete common year (12 months), 355 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 20.11.11.9.14, Tzolk'in 8 Ix, Haab' 7 K'ank'in",
+          "Year of the Dragon (Metal), 5000; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "1 Gamelion, Ol. 1444.4 (year begins 5000 CE)",
+          "1 Tebetu, SE 5311",
+          "29 Hathor 4717 AM (Era of the Martyrs)",
+          "29 Hidar 4993 (Ethiopian Anno Mundi)",
+          "November 25 (Julian), Byzantine Anno Mundi 10509, 9th Indiction",
+          "10 Shahrivar, YZ 4372"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      }
+    ],
+    "served": {
+      "/horologium/index.html": {
+        "bytes": 2400,
+        "sha256": "abdb71726fdc9273d9b7284ddf2eec604311f3d7a33ff4d5ceb0cf2e949eba57"
+      },
+      "/horologium/assets/index-D7hhjio3.js": {
+        "bytes": 74041,
+        "sha256": "55b428397c995bdbd21665167e5538eb127ad16442845ffb163cc990dd9bf7aa"
+      },
+      "/horologium/assets/index-3uSCTewm.css": {
+        "bytes": 21066,
+        "sha256": "24f053ef1bceb7dc62a55d36ceff48ad9f10ea1af511d6e86e62148403f145c3"
+      },
+      "/horologium/assets/cinzel-latin-ext-CG36JvV6.woff2": {
+        "bytes": 14540,
+        "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+      },
+      "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+        "bytes": 25904,
+        "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2": {
+        "bytes": 20388,
+        "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2": {
+        "bytes": 14828,
+        "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2": {
+        "bytes": 23924,
+        "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2": {
+        "bytes": 23416,
+        "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2": {
+        "bytes": 12704,
+        "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+      },
+      "/horologium/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2": {
+        "bytes": 6896,
+        "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2": {
+        "bytes": 21168,
+        "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+      },
+      "/horologium/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2": {
+        "bytes": 11220,
+        "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+      },
+      "/horologium/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2": {
+        "bytes": 33736,
+        "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+      },
+      "/horologium/assets/cormorant-garamond-latin-CUoBjw-S.woff2": {
+        "bytes": 37640,
+        "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2": {
+        "bytes": 17952,
+        "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2": {
+        "bytes": 13572,
+        "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2": {
+        "bytes": 6608,
+        "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-Dqr5KC66.woff2": {
+        "bytes": 10500,
+        "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+      },
+      "/horologium/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2": {
+        "bytes": 6268,
+        "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+        "bytes": 45468,
+        "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+        "bytes": 25388,
+        "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-DBa2mnKT.woff2": {
+        "bytes": 26024,
+        "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2": {
+        "bytes": 33948,
+        "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+      },
+      "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+        "bytes": 11484,
+        "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+      },
+      "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+        "bytes": 19868,
+        "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+      },
+      "/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2": {
+        "bytes": 113928,
+        "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+      },
+      "/horologium/assets/eb-garamond-vietnamese-DvUmmjCN.woff2": {
+        "bytes": 10952,
+        "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+      },
+      "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+        "bytes": 44336,
+        "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+      }
+    },
+    "errors": [],
+    "consoleErrors": [],
+    "lateRequests": []
+  },
+  {
+    "engine": "firefox",
+    "version": "155.0",
+    "width": 375,
+    "offline": true,
+    "serverStoppedBeforeNavigation": true,
+    "cases": [
+      {
+        "name": "Mercury 2026",
+        "jd": 2461042.5,
+        "planets": {
+          "mercury": 270.189,
+          "venus": 280.475,
+          "mars": 283.46,
+          "jupiter": 111.222,
+          "saturn": 356.299
+        },
+        "renderedPlanets": {
+          "mercury": 270.1891479433286,
+          "venus": 280.4747314740325,
+          "mars": 283.4602048606964,
+          "jupiter": 111.22248234847518,
+          "saturn": 356.2988890035269
+        },
+        "nonPlanetPointers": [
+          "rotate(281.589deg)",
+          "rotate(81.5203deg)"
+        ],
+        "readout": "\n      2 January 2026 CE\n      00:00 UTC · JD 2461042.500 · Rome\n    ",
+        "calendars": [
+          "13 days before the Kalends of January, AUC 2778. Julian date 20 December 2025 CE.",
+          "Shemu III, day 21 of the season — year 426 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tevet has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.4.0, Tzolk'in 6 Ajaw, Haab' 18 K'ank'in",
+          "Year of the Snake (Wood), 2025; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "14 Poseideon II, Ol. 701.1 (year begins 2025 CE)",
+          "14 Tebetu, SE 2336",
+          "24 Koiak 1742 AM (Era of the Martyrs)",
+          "24 Tahsas 2018 (Ethiopian Anno Mundi)",
+          "December 20 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Shahrivar, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 270.189459171709,
+          "venus": 280.4746712330872,
+          "mars": 283.4633194160177,
+          "jupiter": 111.22191985099579,
+          "saturn": 356.2280964948338
+        }
+      },
+      {
+        "name": "Venus 2026",
+        "jd": 2461231.5,
+        "planets": {
+          "mercury": 112.655,
+          "venus": 150.311,
+          "mars": 67.9149,
+          "jupiter": 122.126,
+          "saturn": 14.5834
+        },
+        "renderedPlanets": {
+          "mercury": 112.65489041111618,
+          "venus": 150.31097422046247,
+          "mars": 67.91486335051155,
+          "jupiter": 122.12592290333981,
+          "saturn": 14.583367453252038
+        },
+        "nonPlanetPointers": [
+          "rotate(107.788deg)",
+          "rotate(46.5584deg)"
+        ],
+        "readout": "\n      10 July 2026 CE\n      00:00 UTC · JD 2461231.500 · Rome\n    ",
+        "calendars": [
+          "5 days before the Kalends of July, AUC 2779. Julian date 27 June 2026 CE.",
+          "Akhet I, day 25 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shishi; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.9, Tzolk'in 13 Muluk, Haab' 2 Xul",
+          "Year of the Horse (Fire), 2026; most recent solar term: Minor Heat (Xiaoshu, 小暑)",
+          "26 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "26 Simanu, SE 2337",
+          "3 Epip 1742 AM (Era of the Martyrs)",
+          "3 Hamle 2018 (Ethiopian Anno Mundi)",
+          "June 27 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "30 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 112.64878127134187,
+          "venus": 150.31078959440933,
+          "mars": 67.92153001754524,
+          "jupiter": 122.11384672995189,
+          "saturn": 14.508322971951355
+        }
+      },
+      {
+        "name": "Mars 2026",
+        "jd": 2461102.5,
+        "planets": {
+          "mercury": 350.843,
+          "venus": 355.719,
+          "mars": 330.32,
+          "jupiter": 105.192,
+          "saturn": 2.03592
+        },
+        "renderedPlanets": {
+          "mercury": 350.8433840463249,
+          "venus": 355.71905539565347,
+          "mars": 330.3201582972056,
+          "jupiter": 105.19243559768336,
+          "saturn": 2.0359198746724587
+        },
+        "nonPlanetPointers": [
+          "rotate(342.417deg)",
+          "rotate(156.492deg)"
+        ],
+        "readout": "\n      3 March 2026 CE\n      00:00 UTC · JD 2461102.500 · Rome\n    ",
+        "calendars": [
+          "12 days before the Kalends of March, AUC 2779. Julian date 18 February 2026 CE.",
+          "Shemu III, day 21 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Shlishi; Adar has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.7.0, Tzolk'in 1 Ajaw, Haab' 18 K'ayab",
+          "Year of the Horse (Fire), 2026; most recent solar term: Rain Water (Yushui, 雨水)",
+          "15 Anthesterion, Ol. 701.1 (year begins 2025 CE)",
+          "15 Addaru, SE 2336",
+          "24 Meshir 1742 AM (Era of the Martyrs)",
+          "24 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 350.8367506480151,
+          "venus": 355.7156299813954,
+          "mars": 330.3276489637329,
+          "jupiter": 105.19316292289527,
+          "saturn": 1.9684576688896052
+        }
+      },
+      {
+        "name": "Jupiter 2026",
+        "jd": 2461222.5,
+        "planets": {
+          "mercury": 116.196,
+          "venus": 140.195,
+          "mars": 61.5576,
+          "jupiter": 120.178,
+          "saturn": 14.261
+        },
+        "renderedPlanets": {
+          "mercury": 116.1960512993358,
+          "venus": 140.1950056967836,
+          "mars": 61.55763127556048,
+          "jupiter": 120.17762695478524,
+          "saturn": 14.261013595216411
+        },
+        "nonPlanetPointers": [
+          "rotate(99.2067deg)",
+          "rotate(289.739deg)"
+        ],
+        "readout": "\n      1 July 2026 CE\n      00:00 UTC · JD 2461222.500 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of July, AUC 2779. Julian date 18 June 2026 CE.",
+          "Akhet I, day 16 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Tammuz has 29 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.13.0, Tzolk'in 4 Ajaw, Haab' 13 Sek",
+          "Year of the Horse (Fire), 2026; most recent solar term: Summer Solstice (Xiazhi, 夏至)",
+          "17 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "17 Simanu, SE 2337",
+          "24 Paoni 1742 AM (Era of the Martyrs)",
+          "24 Sene 2018 (Ethiopian Anno Mundi)",
+          "June 18 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "21 Esfand, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 116.19323123539712,
+          "venus": 140.19666884976954,
+          "mars": 61.56430716527118,
+          "jupiter": 120.16683055771794,
+          "saturn": 14.186757041454008
+        }
+      },
+      {
+        "name": "Saturn 2026",
+        "jd": 2461085.5,
+        "planets": {
+          "mercury": 341.783,
+          "venus": 334.485,
+          "mars": 316.932,
+          "jupiter": 106.103,
+          "saturn": 0.0717011
+        },
+        "renderedPlanets": {
+          "mercury": 341.7828068776543,
+          "venus": 334.48458858521485,
+          "mars": 316.93203785196727,
+          "jupiter": 106.10280636745603,
+          "saturn": 0.07170108924236729
+        },
+        "nonPlanetPointers": [
+          "rotate(325.297deg)",
+          "rotate(283.904deg)"
+        ],
+        "readout": "\n      14 February 2026 CE\n      00:00 UTC · JD 2461085.500 · Rome\n    ",
+        "calendars": [
+          "The Kalends of February, AUC 2779. Julian date 1 February 2026 CE.",
+          "Shemu III, day 4 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Shevat has 30 days this year; a regular common year (12 months), 354 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 13.0.13.6.3, Tzolk'in 10 Ak'bal, Haab' 1 K'ayab",
+          "Year of the Snake (Wood), 2025; most recent solar term: Start of Spring (Lichun, 立春)",
+          "28 Gamelion, Ol. 701.1 (year begins 2025 CE)",
+          "28 Shabatu, SE 2336",
+          "7 Meshir 1742 AM (Era of the Martyrs)",
+          "7 Yekatit 2018 (Ethiopian Anno Mundi)",
+          "February 1 (Julian), Byzantine Anno Mundi 7534, 4th Indiction",
+          "4 Aban, YZ 1395"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 341.7785849326867,
+          "venus": 334.48074509596825,
+          "mars": 316.93809716216424,
+          "jupiter": 106.10364248630218,
+          "saturn": 0.003550804311945303
+        }
+      },
+      {
+        "name": "Saturn 1900",
+        "jd": 2415236.5,
+        "planets": {
+          "mercury": 126.043,
+          "venus": 98.136,
+          "mars": 86.6486,
+          "jupiter": 241.06,
+          "saturn": 269.229
+        },
+        "renderedPlanets": {
+          "mercury": 126.04343668522858,
+          "venus": 98.13603203928068,
+          "mars": 86.64863571625773,
+          "jupiter": 241.06011908024266,
+          "saturn": 269.22857669661437
+        },
+        "nonPlanetPointers": [
+          "rotate(132.093deg)",
+          "rotate(236.226deg)"
+        ],
+        "readout": "\n      5 August 1900 CE\n      00:00 UTC · JD 2415236.500 · Rome\n    ",
+        "calendars": [
+          "10 days before the Kalends of August, AUC 2653. Julian date 23 July 1900 CE.",
+          "Akhet I, day 20 of the season — year 301 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Rishon; Av has 30 days this year; a regular leap year (13 months), 384 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.14.5.17.14, Tzolk'in 12 Ix, Haab' 17 Sek",
+          "Year of the Rat (Metal), 1900; most recent solar term: Major Heat (Dashu, 大暑)",
+          "11 Metageitnion, Ol. 669.4 (year begins 1900 CE)",
+          "11 Abu, SE 2211",
+          "29 Epip 1616 AM (Era of the Martyrs)",
+          "29 Hamle 1892 (Ethiopian Anno Mundi)",
+          "July 23 (Julian), Byzantine Anno Mundi 7408, 13th Indiction",
+          "25 Esfand, YZ 1269"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative.",
+        "referenceMeanOfDate": {
+          "mercury": 126.04434902177196,
+          "venus": 98.13920669671866,
+          "mars": 86.64532499820852,
+          "jupiter": 241.0831879115081,
+          "saturn": 269.0685534601158
+        },
+        "screenshot": {
+          "file": "firefox-375.png",
+          "sha256": "c339c34b959e69cc1b039455d555ebfc900285bd5c4d76c832f2fd3d5911e39f"
+        }
+      },
+      {
+        "name": "J2000 unchanged control",
+        "jd": 2451545,
+        "planets": {
+          "mercury": 271.906,
+          "venus": 241.578,
+          "mars": 327.976,
+          "jupiter": 25.3533,
+          "saturn": 40.2396
+        },
+        "renderedPlanets": {
+          "mercury": 271.9064027191598,
+          "venus": 241.57829065228628,
+          "mars": 327.9760734584783,
+          "jupiter": 25.35325413336102,
+          "saturn": 40.239620546748824
+        },
+        "nonPlanetPointers": [
+          "rotate(280.373deg)",
+          "rotate(223.705deg)"
+        ],
+        "readout": "\n      1 January 2000 CE\n      12:00 UTC · JD 2451545.000 · Rome\n    ",
+        "calendars": [
+          "14 days before the Kalends of January, AUC 2752. Julian date 19 December 1999 CE.",
+          "Shemu III, day 13 of the season — year 400 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Shabbat; Tevet has 29 days this year; a complete leap year (13 months), 385 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 12.19.6.15.2, Tzolk'in 11 Ik', Haab' 10 K'ank'in",
+          "Year of the Rabbit (Earth), 1999; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "25 Poseideon, Ol. 694.3 (year begins 1999 CE)",
+          "25 Kislimu, SE 2310",
+          "22 Koiak 1716 AM (Era of the Martyrs)",
+          "22 Tahsas 1992 (Ethiopian Anno Mundi)",
+          "December 19 (Julian), Byzantine Anno Mundi 7508, 8th Indiction",
+          "13 Shahrivar, YZ 1369"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "first supported year",
+        "jd": -105152,
+        "planets": {
+          "mercury": 291.456,
+          "venus": 314.346,
+          "mars": 351.332,
+          "jupiter": 272.862,
+          "saturn": 63.1332
+        },
+        "renderedPlanets": {
+          "mercury": 291.4556274667039,
+          "venus": 314.3458866051218,
+          "mars": 351.33212288704874,
+          "jupiter": 272.8616028910926,
+          "saturn": 63.13315527509445
+        },
+        "nonPlanetPointers": [
+          "rotate(282.245deg)",
+          "rotate(230.466deg)"
+        ],
+        "readout": "\n      1 January 5001 BCE\n      12:00 UTC · JD -105152.000 · Rome\n    ",
+        "calendars": [
+          "4 days before the Ides of February, AUC -4247. Julian date 10 February 5001 BCE.",
+          "Akhet I, day 16 of the season — year 701 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Shevat has 30 days this year; a deficient leap year (13 months), 383 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count -5.4.4.16.5, Tzolk'in 11 Chikchan, Haab' 13 Wo'",
+          "Year of the Pig (Earth), -5001; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "26 Poseideon, Ol. -1056.3 (year begins 5002 BCE)",
+          "26 Kislimu, SE -4690",
+          "15 Meshir -5284 AM (Era of the Martyrs)",
+          "15 Yekatit -5008 (Ethiopian Anno Mundi)",
+          "February 10 (Julian), Byzantine Anno Mundi 508, 13th Indiction",
+          "21 Dey, YZ -5636"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      },
+      {
+        "name": "last supported year",
+        "jd": 3547637,
+        "planets": {
+          "mercury": 280.836,
+          "venus": 257.748,
+          "mars": 243.81,
+          "jupiter": 60.5851,
+          "saturn": 49.7199
+        },
+        "renderedPlanets": {
+          "mercury": 280.8363339307972,
+          "venus": 257.74804729334454,
+          "mars": 243.81004338313866,
+          "jupiter": 60.58511472717038,
+          "saturn": 49.71989914656518
+        },
+        "nonPlanetPointers": [
+          "rotate(279.478deg)",
+          "rotate(283.455deg)"
+        ],
+        "readout": "\n      31 December 5000 CE\n      12:00 UTC · JD 3547637.000 · Rome\n    ",
+        "calendars": [
+          "7 days before the Kalends of December, AUC 5753. Julian date 25 November 5000 CE.",
+          "Shemu III, day 10 of the season — year 481 of the 1460-year Sothic cycle since the 139 CE anchor.",
+          "Yom Revi'i; Kislev has 30 days this year; a complete common year (12 months), 355 days total.",
+          "Tabular/arithmetical reckoning -- the moon-sighting calendar actually used for religious observance can differ from this date by a day or two in either direction.",
+          "Long Count 20.11.11.9.14, Tzolk'in 8 Ix, Haab' 7 K'ank'in",
+          "Year of the Dragon (Metal), 5000; most recent solar term: Winter Solstice (Dongzhi, 冬至)",
+          "1 Gamelion, Ol. 1444.4 (year begins 5000 CE)",
+          "1 Tebetu, SE 5311",
+          "29 Hathor 4717 AM (Era of the Martyrs)",
+          "29 Hidar 4993 (Ethiopian Anno Mundi)",
+          "November 25 (Julian), Byzantine Anno Mundi 10509, 9th Indiction",
+          "10 Shahrivar, YZ 4372"
+        ],
+        "noOverflow": true,
+        "limitations": "Positions are computed, not observed. Sun/Moon accuracy is checked for 1900–2053 CE;\n      planetary elements cover 1800–2050 CE. Outside those ranges, positions are illustrative."
+      }
+    ],
+    "served": {
+      "/horologium/index.html": {
+        "bytes": 2400,
+        "sha256": "abdb71726fdc9273d9b7284ddf2eec604311f3d7a33ff4d5ceb0cf2e949eba57"
+      },
+      "/horologium/assets/index-D7hhjio3.js": {
+        "bytes": 74041,
+        "sha256": "55b428397c995bdbd21665167e5538eb127ad16442845ffb163cc990dd9bf7aa"
+      },
+      "/horologium/assets/index-3uSCTewm.css": {
+        "bytes": 21066,
+        "sha256": "24f053ef1bceb7dc62a55d36ceff48ad9f10ea1af511d6e86e62148403f145c3"
+      },
+      "/horologium/assets/cinzel-latin-ext-CG36JvV6.woff2": {
+        "bytes": 14540,
+        "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+      },
+      "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+        "bytes": 25904,
+        "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2": {
+        "bytes": 14828,
+        "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+      },
+      "/horologium/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2": {
+        "bytes": 12704,
+        "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+      },
+      "/horologium/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2": {
+        "bytes": 6896,
+        "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2": {
+        "bytes": 20388,
+        "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+      },
+      "/horologium/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2": {
+        "bytes": 23924,
+        "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2": {
+        "bytes": 23416,
+        "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+      },
+      "/horologium/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2": {
+        "bytes": 21168,
+        "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+      },
+      "/horologium/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2": {
+        "bytes": 11220,
+        "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+      },
+      "/horologium/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2": {
+        "bytes": 33736,
+        "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+      },
+      "/horologium/assets/cormorant-garamond-latin-CUoBjw-S.woff2": {
+        "bytes": 37640,
+        "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2": {
+        "bytes": 17952,
+        "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+      },
+      "/horologium/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2": {
+        "bytes": 13572,
+        "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2": {
+        "bytes": 6608,
+        "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+      },
+      "/horologium/assets/eb-garamond-italic-greek-Dqr5KC66.woff2": {
+        "bytes": 10500,
+        "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+      },
+      "/horologium/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2": {
+        "bytes": 6268,
+        "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+        "bytes": 45468,
+        "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+      },
+      "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+        "bytes": 25388,
+        "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2": {
+        "bytes": 33948,
+        "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+      },
+      "/horologium/assets/eb-garamond-cyrillic-DBa2mnKT.woff2": {
+        "bytes": 26024,
+        "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+      },
+      "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+        "bytes": 11484,
+        "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+      },
+      "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+        "bytes": 19868,
+        "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+      },
+      "/horologium/assets/eb-garamond-vietnamese-DvUmmjCN.woff2": {
+        "bytes": 10952,
+        "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+      },
+      "/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2": {
+        "bytes": 113928,
+        "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+      },
+      "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+        "bytes": 44336,
+        "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+      }
+    },
+    "errors": [],
+    "consoleErrors": [],
+    "lateRequests": []
+  }
+]

@@ -51,12 +51,12 @@ describe('astronomy: geocentric ecliptic longitudes vs Skyfield/DE421', () => {
   });
 
   for (const planet of PLANETS) {
-    it(`${planet.name} longitude within 2 deg (Standish 1800-2050 low-order fit, two-body only)`, () => {
+    it(`${planet.name} longitude within 0.3 deg after precessing the geometric vector to date`, () => {
       const key = planet.name.toLowerCase();
       const err = maxError((jd) => planetLongitude(planet, jd), key);
       // eslint-disable-next-line no-console
       console.log(`${planet.name} max error over ${fixtures.length} dates: ${err.toFixed(4)} deg`);
-      expect(err).toBeLessThan(2);
+      expect(err).toBeLessThan(0.3);
     });
   }
 });

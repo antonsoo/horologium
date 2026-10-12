@@ -306,9 +306,20 @@ not rendered (same reasoning as Egyptian hieroglyphs, above).
   propagation with no perturbation corrections. **Only valid 1800-2050**;
   outside that range the underlying orbital propagation still runs, but
   accuracy is unverified and it should be read as illustrative motion, not
-  a positional claim. Measured against Skyfield + DE421 within its valid
-  range: max error 1.3-1.5 degrees per planet (consistent with a two-body
-  model omitting mutual gravitational perturbations).
+  a positional claim. The full geocentric vector is rotated from the J2000
+  mean ecliptic/equinox to the mean ecliptic/equinox of date using P03
+  precession. Previously, using J2000 longitude directly on the tropical dial
+  introduced up to 2.28 degrees of error in the retained DE440s grid; the
+  corrected maximum is 0.23 degrees. The [frame study](../studies/planet-frame/README.md)
+  covers 13,775 planet positions at 2,755 dates from 1850 through 2050 and
+  compares 588 independent ERFA rotation vectors. These are geometric
+  directions: nutation, light travel time and aberration are omitted. The
+  same grid's apparent-longitude comparison also stays within 0.23 degrees,
+  but that is a measured result for this grid, not a universal bound. The
+  formula uses the supplied Julian day directly as its dynamical argument;
+  it does not convert UTC to TT. The reference grid uses the same nominal TT
+  argument to isolate frame/orbital errors. Sector boundaries remain uncertain
+  within the model's residual error.
 - **Back-dial cycles**: Metonic (235 synodic months ~= 19 tropical years),
   Callippic (4 Metonic cycles minus 1 day = 76 years), Saros (223 synodic
   months, ~6585.32 days), Exeligmos (3 Saros cycles). These are period

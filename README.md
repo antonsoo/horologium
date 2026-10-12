@@ -194,9 +194,15 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   official decree. They have no independent oracle here; tests check
   internal consistency across thousands of dates. That is weaker evidence
   than comparison with published historical calendars.
-- **Sun/Moon/planet positions** are measured (not just asserted) against
-  Skyfield + the JPL DE421 ephemeris over 1900-2053: Sun within 0.006
-  degrees, Moon within 0.68 degrees, planets within ~1.5 degrees. Planetary
+- **Sun/Moon positions** are measured against Skyfield + the JPL DE421
+  ephemeris over 1900-2053: Sun within 0.006 degrees, Moon within 0.68 degrees.
+  **Planet pointers (unreleased source correction)** now precess their J2000
+  vectors to the selected date's ecliptic and equinox. Against JPL DE440s at
+  2,755 dates from 1850 through 2050, the largest geometric longitude error
+  falls from 2.28 to 0.23 degrees. Twelve of 13,775 positions still differ in
+  zodiac sector near a boundary; these remain approximate pointers. The
+  [frame study](studies/planet-frame/README.md) separates geometric and apparent
+  comparisons and retains the independent reference data. Planetary
   elements are only valid 1800-2050 CE by their source's own statement;
   outside that (and for all astronomy across the project's full ±5000-year
   date range) treat positions as illustrative, not precise — this is stated

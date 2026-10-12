@@ -22,6 +22,11 @@ not yet published to npm or the hosted demo.
 
 ### Fixed
 
+- Planet pointers rotate their complete geocentric vectors from the J2000
+  ecliptic/equinox to the selected date's mean ecliptic/equinox. On an independent
+  JPL DE440s grid, maximum longitude error falls from 2.28 to 0.23 degrees.
+  This removes a coordinate-frame mismatch, not the remaining two-body-model
+  error; near a zodiac boundary the sector can still differ from the reference.
 - Calendar navigation and opening explanations retain their bundled fonts
   offline. Startup loads all 26 faces (632,660 font bytes), and repeated
   declarations for the same variable font are consolidated.
