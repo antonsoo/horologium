@@ -4,9 +4,8 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
-Clock-page improvements and calendar corrections in the source library.
-The Chinese calendar changes and lunar-year inspector are local source work,
-not yet published to npm or the hosted demo.
+Clock-page improvements, calendar corrections and a planetary coordinate-frame
+correction in source, not yet released to npm or the hosted demo.
 
 ### Added
 

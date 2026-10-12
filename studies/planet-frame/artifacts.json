@@ -1,0 +1,1231 @@
+{
+  "sourceCommit": "56c4384004582f4d8f4feba3bb5d491f5ec7a9d2",
+  "baselineCommit": "26e8bbdf28e668cf034dd2277eab9b03d93f6e5d",
+  "environment": "Linux/WSL2; clean Node 24.21.0; installed Node 20.0.0 and 24.21.0",
+  "checks": {
+    "unitTests": 229,
+    "commaDecimalLocaleUnitTests": 229,
+    "browserWorkflows": 58,
+    "separateOfflineDateChanges": 72,
+    "renderedPlanetDirections": 360
+  },
+  "checkLogs": [
+    {
+      "path": "clean-install.log",
+      "bytes": 326,
+      "sha256": "e5f447a2e67fabd9fcd0d565d32ec5eb4f1d2baa84ee109dcbe14ec02a56b8d1"
+    },
+    {
+      "path": "clean-lint.log",
+      "bytes": 125,
+      "sha256": "fe8fb47cdf541b4771515f99bbfa2f48925cc2d46e9868b6c37193af9ada31b7"
+    },
+    {
+      "path": "clean-types.log",
+      "bytes": 139,
+      "sha256": "de45d4c3f1a54ba0cf2a308f04942df43628e816f43e9ed72be976a4cc0b4bdc"
+    },
+    {
+      "path": "clean-tests.log",
+      "bytes": 545,
+      "sha256": "6e2909e9ba32f728451ec2c60f277ffdaef971dd09e9116222417951b29c0275"
+    },
+    {
+      "path": "clean-tests-de.log",
+      "bytes": 545,
+      "sha256": "8bbe090a0f3eadaee37a9423724d2a6739986ae6131c645400c75a897631e301"
+    },
+    {
+      "path": "clean-build.log",
+      "bytes": 2778,
+      "sha256": "21ce740c49679f9a19736a4e475baeb9884388fd99dfad1def52a4fba8c19f79"
+    },
+    {
+      "path": "clean-browser-suite.log",
+      "bytes": 9486,
+      "sha256": "d595779b7cd7e18ec2d5556136aba7efb62fc02d3d81cab58d7ecfa2568ec437"
+    },
+    {
+      "path": "installed.log",
+      "bytes": 26,
+      "sha256": "a5ab8b5cf8a7b2b3ef3b93fa0513ff9180bca6e8ef3f2bfbcf7684f04b0c86a3"
+    }
+  ],
+  "sourceInputs": [
+    {
+      "path": "biome.json",
+      "bytes": 865,
+      "sha256": "c4d424224387ac8814d0c22f8e8fcea97f2c230fb30b5bd6d45dd5e5e8d3f17d"
+    },
+    {
+      "path": "examples/basic-usage.mjs",
+      "bytes": 1221,
+      "sha256": "c85fd911bddf4cdbb133a7131369dc343b1a91b3fa7be352c818665907eb6996"
+    },
+    {
+      "path": "examples/chinese-year.mjs",
+      "bytes": 1650,
+      "sha256": "8dd1299992fd964399d1747aeb2c66d8ac869f21112db51b06b8ab203de5b22a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2003,
+      "sha256": "8a15b6210f7517199e901b5471d0900b02507a522e6b21b3a8d8c52d35b21f75"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 44886,
+      "sha256": "f6ea7f71766be30e1110900d214f70bd988f63ff706daec548616284944e3e55"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1819,
+      "sha256": "44de3ade5aa0b96fda1f6c38dd73d8606afd619fc0e1cc6d085b246ccf749e91"
+    },
+    {
+      "path": "playwright.config.mjs",
+      "bytes": 718,
+      "sha256": "f58427c54d329ab83cdd54a1b9632661cfa9b8c952532c4cdcd5db26b41c8880"
+    },
+    {
+      "path": "scripts/generate_fixtures.py",
+      "bytes": 7191,
+      "sha256": "bd2acadb63240509864231c41369f0a070be52e6c35308be6f9b64c841235dd5"
+    },
+    {
+      "path": "src/app/backdial.ts",
+      "bytes": 3631,
+      "sha256": "7950451b0ef9f6468fc361be8eb8c2a541731301666be3d7a76102a982c57d1f"
+    },
+    {
+      "path": "src/app/chinese-year.ts",
+      "bytes": 9819,
+      "sha256": "5980a7329a01c179aa51e7da563001913b4c6ad4644fb20ea7141001d3396dfc"
+    },
+    {
+      "path": "src/app/controls.ts",
+      "bytes": 15167,
+      "sha256": "62bee0f46aaab5b7809c7a1c993b98d6603954f799ca913bc423dc326bbb8012"
+    },
+    {
+      "path": "src/app/dial.ts",
+      "bytes": 10094,
+      "sha256": "1581fe086d883b7c9a2e3d1033cab88c7e77b19c8ab5746f2f4c5f4903afe1e9"
+    },
+    {
+      "path": "src/app/fonts/LICENSE.txt",
+      "bytes": 13923,
+      "sha256": "7088e78e5bbae3a6bfb42e21e4b5c8481995497a5468779106fd73ac2b43fac6"
+    },
+    {
+      "path": "src/app/fonts/cinzel-latin-ext.woff2",
+      "bytes": 14540,
+      "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+    },
+    {
+      "path": "src/app/fonts/cinzel-latin.woff2",
+      "bytes": 25904,
+      "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-cyrillic-ext.woff2",
+      "bytes": 23416,
+      "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-cyrillic.woff2",
+      "bytes": 21168,
+      "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-italic-cyrillic-ext.woff2",
+      "bytes": 14828,
+      "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-italic-cyrillic.woff2",
+      "bytes": 12704,
+      "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-italic-latin-ext.woff2",
+      "bytes": 20388,
+      "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-italic-latin.woff2",
+      "bytes": 23924,
+      "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-italic-vietnamese.woff2",
+      "bytes": 6896,
+      "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-latin-ext.woff2",
+      "bytes": 33736,
+      "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-latin.woff2",
+      "bytes": 37640,
+      "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+    },
+    {
+      "path": "src/app/fonts/cormorant-garamond-vietnamese.woff2",
+      "bytes": 11220,
+      "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-cyrillic-ext.woff2",
+      "bytes": 33948,
+      "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-cyrillic.woff2",
+      "bytes": 26024,
+      "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-greek-ext.woff2",
+      "bytes": 11484,
+      "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-greek.woff2",
+      "bytes": 19868,
+      "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-cyrillic-ext.woff2",
+      "bytes": 17952,
+      "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-cyrillic.woff2",
+      "bytes": 13572,
+      "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-greek-ext.woff2",
+      "bytes": 6608,
+      "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-greek.woff2",
+      "bytes": 10500,
+      "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-latin-ext.woff2",
+      "bytes": 45468,
+      "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-latin.woff2",
+      "bytes": 25388,
+      "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-italic-vietnamese.woff2",
+      "bytes": 6268,
+      "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-latin-ext.woff2",
+      "bytes": 113928,
+      "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-latin.woff2",
+      "bytes": 44336,
+      "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+    },
+    {
+      "path": "src/app/fonts/eb-garamond-vietnamese.woff2",
+      "bytes": 10952,
+      "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+    },
+    {
+      "path": "src/app/fonts/fonts.css",
+      "bytes": 8729,
+      "sha256": "ed8d1c7471941f9eb19a1d95e6791d5d06e39426cc50d68152ffd6dab3fef546"
+    },
+    {
+      "path": "src/app/locate.ts",
+      "bytes": 3931,
+      "sha256": "968c7e05b1e86b9c9ed202ceab0783315b897dfb56cf878a162c6885e27adf92"
+    },
+    {
+      "path": "src/app/main.ts",
+      "bytes": 6390,
+      "sha256": "bba12e8f5c34dec177a47323633479121367fe983598365b3aed62fdb76111fa"
+    },
+    {
+      "path": "src/app/seasonal.ts",
+      "bytes": 3529,
+      "sha256": "7b9b2182e3ccaf59fb740c497534990babfce122b3ac1e824f583b9044746086"
+    },
+    {
+      "path": "src/app/style.css",
+      "bytes": 18127,
+      "sha256": "e6464c544c7b88839eb170caa866eedd4de00d5e9427e0608048f5edc508f477"
+    },
+    {
+      "path": "src/app/tablets.ts",
+      "bytes": 4218,
+      "sha256": "8e20472be8a42deb85640179785327b47782dae7f8200008218084112aac0696"
+    },
+    {
+      "path": "src/app/time-state.ts",
+      "bytes": 5062,
+      "sha256": "28967209ed7f4f0574ab094c553773152bbec28b98459389d26ec7eb1957b474"
+    },
+    {
+      "path": "src/lib/astronomy/calendar-events.ts",
+      "bytes": 7030,
+      "sha256": "6d5519dd3f78c3ee890db8901493355fe153b5fe5fa0c3f4cfd8cc7aafea53fe"
+    },
+    {
+      "path": "src/lib/astronomy/planets.ts",
+      "bytes": 6245,
+      "sha256": "3154782644beb2343f61b574dd347c37dac100d29e46e6af458a55c6912a0a08"
+    },
+    {
+      "path": "src/lib/astronomy/precession.ts",
+      "bytes": 2107,
+      "sha256": "71aa43e5da5f4403ee5b651cec7b7803169904c3bb43b010870971a210c5a169"
+    },
+    {
+      "path": "src/lib/astronomy/sun-moon.ts",
+      "bytes": 16449,
+      "sha256": "c977c36f71d61065b18fc3fa343751bb1e8d18d5a7c46f1adb3db1d7aa47e51f"
+    },
+    {
+      "path": "src/lib/babylonian.ts",
+      "bytes": 7627,
+      "sha256": "67746bc9628a9a6e8785412bddaa4b425fdb8a8b8463bbb7f7106034f191dd19"
+    },
+    {
+      "path": "src/lib/byzantine.ts",
+      "bytes": 4827,
+      "sha256": "64df476d14ee88434d197d79b771c9b05bb672c7e79b0a0929e0418a67ee3d17"
+    },
+    {
+      "path": "src/lib/chinese.ts",
+      "bytes": 19960,
+      "sha256": "8496f4d9ed3721ce6959c27813b4dee7b0d5731c49e0a16b378e43a182cf7a72"
+    },
+    {
+      "path": "src/lib/coptic.ts",
+      "bytes": 7272,
+      "sha256": "691c7494624b4f8659c7a0dfa254e8d4e62d7af2ba139690b82c9e9e22bf6986"
+    },
+    {
+      "path": "src/lib/core/jd.ts",
+      "bytes": 5410,
+      "sha256": "6fbea6781f20f8fdcda6605724c8f091670ab694cd76a550ef076fab5a65d233"
+    },
+    {
+      "path": "src/lib/egyptian.ts",
+      "bytes": 7600,
+      "sha256": "e03c65878861517c4e6f1ffb9c4e20927c6dafaf2bcbcee9e75987e6ddd7fb19"
+    },
+    {
+      "path": "src/lib/greek.ts",
+      "bytes": 7504,
+      "sha256": "00b05cae5eb112b72f779d0b7203b932d057bc7b9da48c60b1430dec71312871"
+    },
+    {
+      "path": "src/lib/hebrew.ts",
+      "bytes": 16006,
+      "sha256": "bd24c45174a332dc4546053797b99fcb3dd5db96fada3539a3d0a739f46d8e42"
+    },
+    {
+      "path": "src/lib/index.ts",
+      "bytes": 1002,
+      "sha256": "5a074fe38167370e4252ad79b393042a4a39374da448e50b1068e62c310087ed"
+    },
+    {
+      "path": "src/lib/islamic.ts",
+      "bytes": 5556,
+      "sha256": "dbb317fe18de4217c46b8ed3cf2801e481df5a1761308949ab9b5bf87632dc67"
+    },
+    {
+      "path": "src/lib/maya.ts",
+      "bytes": 10807,
+      "sha256": "f9b10c141aab3a6bbd7c6515c4c98e70f2001c8fdf55644b5013591e5ee4ef06"
+    },
+    {
+      "path": "src/lib/roman.ts",
+      "bytes": 19504,
+      "sha256": "40040af1de860942251652bb86a2a6fec478243c975847f9a113d7a76525fc3e"
+    },
+    {
+      "path": "src/lib/types.ts",
+      "bytes": 1489,
+      "sha256": "d17790cdfb7d99e1f34e33952b83a1bb223e80d0a61c46ead7c06ad5f99234d9"
+    },
+    {
+      "path": "src/lib/zoroastrian.ts",
+      "bytes": 4025,
+      "sha256": "feada177441746ad2c75a7cad35ab593fb1511f53650ef6cd970eda2b83ce629"
+    },
+    {
+      "path": "studies/planet-frame/browser.mjs",
+      "bytes": 8901,
+      "sha256": "81b598d58667959028cbef2357f1d66b9bfc9b46df89c415ad5ef29133b50388"
+    },
+    {
+      "path": "studies/planet-frame/oracle.py",
+      "bytes": 3576,
+      "sha256": "cac416e543ec3e4030b4e2044720057a4a9a44468a958c5e1f83d80acdd943a5"
+    },
+    {
+      "path": "studies/planet-frame/verify.mjs",
+      "bytes": 4869,
+      "sha256": "c64643be0f6c4d9021205ed6498ddc3d99b75281084a0fbe4796019d2b78455a"
+    },
+    {
+      "path": "tests/astronomy.test.ts",
+      "bytes": 2572,
+      "sha256": "195ac40c9004785af7827a8cf8a9a87fb2239715ef33f1939cca8a5bd1934159"
+    },
+    {
+      "path": "tests/babylonian.test.ts",
+      "bytes": 1860,
+      "sha256": "5cdbdb453cd66213fc795005ae3d0fbc312c16ea3905a4b7eada8ab376de2866"
+    },
+    {
+      "path": "tests/browser/chinese-year.spec.mjs",
+      "bytes": 8412,
+      "sha256": "e4f17985290957b779abcc9c8dd3d8fa08033991e9138b7ac69df1806f717899"
+    },
+    {
+      "path": "tests/browser/clock.spec.mjs",
+      "bytes": 15105,
+      "sha256": "37cd08fcc43949fb20c22b337c4cb927fbd1b8193f8107aeaf6d1a1ae15d4ac1"
+    },
+    {
+      "path": "tests/byzantine.test.ts",
+      "bytes": 2212,
+      "sha256": "56a9be6530a04ee3ec75dbc81c12564d8ea4660d1db78c4a5950bca5e591efc1"
+    },
+    {
+      "path": "tests/calendar-events.test.ts",
+      "bytes": 1306,
+      "sha256": "ef306091d185fadb97fda7620c1883ea2072ac926f6fee82a0b10e3df7d45c8e"
+    },
+    {
+      "path": "tests/chinese.test.ts",
+      "bytes": 6663,
+      "sha256": "989cdf85629c1cfe04c5909464a65102507edb865a00d4623233ce16ceee6ff7"
+    },
+    {
+      "path": "tests/coptic.test.ts",
+      "bytes": 3608,
+      "sha256": "2cfd8788feb1e820f689d577585dc4b68cc9bf0747a569c6896ca3274f27722a"
+    },
+    {
+      "path": "tests/egyptian.test.ts",
+      "bytes": 4088,
+      "sha256": "44ff5e5158f1896ceeb2b2fd2ee2d50629505d846ca280d17c97ca3d0f0e344e"
+    },
+    {
+      "path": "tests/fixtures/astronomy-longitudes.json",
+      "bytes": 21193,
+      "sha256": "837dfede8e6f2b0a472fe4800c900a2bc3504c81b4028ac511cf72ee3cd912f7"
+    },
+    {
+      "path": "tests/fixtures/chinese-month-boundaries.json",
+      "bytes": 71151,
+      "sha256": "3e77376426ef92faa6532b564e22298a44f24d351271a0786f260a3abdde2d28"
+    },
+    {
+      "path": "tests/fixtures/chinese-new-year.json",
+      "bytes": 2752,
+      "sha256": "917749a85ae5bc2fd98aad2da5467acf09821e4392d725fc151592805a9d4715"
+    },
+    {
+      "path": "tests/fixtures/coptic.json",
+      "bytes": 27391,
+      "sha256": "0192f1f4521271f966fc0ca9b6ee3a3a72701948397ac83178e1b33af4174e6b"
+    },
+    {
+      "path": "tests/fixtures/gregorian-jd.json",
+      "bytes": 11626,
+      "sha256": "7418aeff21a882065aa621a3e633d3a9cefa335db04a32e7c846f1feff43fbcd"
+    },
+    {
+      "path": "tests/fixtures/hebrew.json",
+      "bytes": 27482,
+      "sha256": "dbd4100d3ae1961b318397a74bd7d41f337b2c82e4187f9e0b894c6df9413250"
+    },
+    {
+      "path": "tests/fixtures/islamic.json",
+      "bytes": 27554,
+      "sha256": "497133fdf554b52f9595965ea2fb1aace459c13f3c80bdec3d9ea67d24a90fb1"
+    },
+    {
+      "path": "tests/fixtures/julian-jd.json",
+      "bytes": 11630,
+      "sha256": "4d6180f4f43435cde30fb5a5fb36a5449d4d2e376a0f1bb3154cf4bcf38dc7a6"
+    },
+    {
+      "path": "tests/fixtures/mayan.json",
+      "bytes": 39856,
+      "sha256": "42d9ba6ac57a4fafee9c85939d8fd648e242395027c9ed6c0b6eebca282fc6a1"
+    },
+    {
+      "path": "tests/greek.test.ts",
+      "bytes": 2869,
+      "sha256": "a3667a897cfe690539c0a859320d8b89702df1637e85275f87df78f9e9b438d7"
+    },
+    {
+      "path": "tests/hebrew.test.ts",
+      "bytes": 3192,
+      "sha256": "df8fb12cebe8219c71015347fe1f066f9f5cd8d70c3260bb7828a31a81adbe96"
+    },
+    {
+      "path": "tests/islamic.test.ts",
+      "bytes": 2842,
+      "sha256": "8fbb3974ca240152e64e1ff6ef09ea507a1977273c5853032c364af7f527ff2c"
+    },
+    {
+      "path": "tests/locate.test.ts",
+      "bytes": 5131,
+      "sha256": "d6bc8d3578f139a46ec3391b778c91669446b21a33c62203a604626aa93d10e4"
+    },
+    {
+      "path": "tests/lunar-boundaries.test.ts",
+      "bytes": 3315,
+      "sha256": "5326e1c2f77aa77be778a8d578145b0ff64587e370d544973cbf7ce917078cb4"
+    },
+    {
+      "path": "tests/maya.test.ts",
+      "bytes": 3449,
+      "sha256": "ffd1c9f65ead6c365bf40501235a95066ddae326ed1144c5d230cd84d39a0259"
+    },
+    {
+      "path": "tests/oracle-fixtures.test.ts",
+      "bytes": 5969,
+      "sha256": "38c455d57d34dd436c54f7b1906a34a739bd7316f7fe37975b806ac36027f55f"
+    },
+    {
+      "path": "tests/planet-frame.test.ts",
+      "bytes": 2275,
+      "sha256": "4e06b5bec5464030ca472785db76f25648f551290ca9603b28d7b0d91fe8ccf0"
+    },
+    {
+      "path": "tests/proleptic.test.ts",
+      "bytes": 2622,
+      "sha256": "e889b2a142ca4932031b15db9fea4c90795526a12761be51bcabb83c99a9f682"
+    },
+    {
+      "path": "tests/properties.test.ts",
+      "bytes": 4617,
+      "sha256": "0c35140d72f2fd079f5a3abc2a8f7f339e641065775dfc20df76d59a01a8d972"
+    },
+    {
+      "path": "tests/roman.test.ts",
+      "bytes": 5695,
+      "sha256": "99ca4f746a7f61b315ec79bd68f7a045e2abdd012cb87b36de5bf86c003032c2"
+    },
+    {
+      "path": "tests/seasonal.test.ts",
+      "bytes": 2924,
+      "sha256": "13153365d5f9454ba7687b0d7c0c09396c8dd86b2431c9a16c8ef427015dfce3"
+    },
+    {
+      "path": "tests/time-state.test.ts",
+      "bytes": 6223,
+      "sha256": "2061fe80052348c803136424f75899e7a564bb35d1067fc1e230cf8f858512c4"
+    },
+    {
+      "path": "tests/zoroastrian.test.ts",
+      "bytes": 1305,
+      "sha256": "f6275e49a9824e2c2e6301cbb7850d0a1a56a7c0c18412d4736a628c30b50575"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 541,
+      "sha256": "f627252094327fbe1855896d9a8981f4622ec6189a6ddb005a4e6c79f78e26ae"
+    },
+    {
+      "path": "tsconfig.lib.json",
+      "bytes": 538,
+      "sha256": "1f54b13e9363cbb7f173cabcbb6f90c0fbd86cd69124266db5201c3c136d49de"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 1067,
+      "sha256": "45c7c5f671c70d14bde59356e54fdac29b0af02f0acc0c7d8d62428afe1f9823"
+    },
+    {
+      "path": "studies/planet-frame/oracle.json",
+      "bytes": 919330,
+      "sha256": "9f3fdf4a96fc9e1501d412fe8c03fb5cc3fc643583ca65e089a099c424ea2b4f"
+    }
+  ],
+  "buildFiles": [
+    {
+      "path": "dist/app/THIRD_PARTY_NOTICES.txt",
+      "bytes": 1549,
+      "sha256": "104027571c4311f4800d6f966b0573bdf312cd8023e91dfde959f122b5948186"
+    },
+    {
+      "path": "dist/app/assets/cinzel-latin-DMUuCU8H.woff2",
+      "bytes": 25904,
+      "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+    },
+    {
+      "path": "dist/app/assets/cinzel-latin-ext-CG36JvV6.woff2",
+      "bytes": 14540,
+      "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2",
+      "bytes": 21168,
+      "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2",
+      "bytes": 23416,
+      "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2",
+      "bytes": 12704,
+      "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2",
+      "bytes": 14828,
+      "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2",
+      "bytes": 23924,
+      "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2",
+      "bytes": 20388,
+      "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2",
+      "bytes": 6896,
+      "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-latin-CUoBjw-S.woff2",
+      "bytes": 37640,
+      "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2",
+      "bytes": 33736,
+      "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+    },
+    {
+      "path": "dist/app/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2",
+      "bytes": 11220,
+      "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-cyrillic-DBa2mnKT.woff2",
+      "bytes": 26024,
+      "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2",
+      "bytes": 33948,
+      "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-greek-DCPER7xl.woff2",
+      "bytes": 19868,
+      "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-greek-ext-CW-BywWH.woff2",
+      "bytes": 11484,
+      "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2",
+      "bytes": 13572,
+      "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2",
+      "bytes": 17952,
+      "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-greek-Dqr5KC66.woff2",
+      "bytes": 10500,
+      "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2",
+      "bytes": 6608,
+      "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-latin-DSEbMgZu.woff2",
+      "bytes": 25388,
+      "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2",
+      "bytes": 45468,
+      "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2",
+      "bytes": 6268,
+      "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-latin-CRpggXlh.woff2",
+      "bytes": 44336,
+      "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-latin-ext-B6IpcvL2.woff2",
+      "bytes": 113928,
+      "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+    },
+    {
+      "path": "dist/app/assets/eb-garamond-vietnamese-DvUmmjCN.woff2",
+      "bytes": 10952,
+      "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+    },
+    {
+      "path": "dist/app/assets/index-3uSCTewm.css",
+      "bytes": 21066,
+      "sha256": "24f053ef1bceb7dc62a55d36ceff48ad9f10ea1af511d6e86e62148403f145c3"
+    },
+    {
+      "path": "dist/app/assets/index-D7hhjio3.js",
+      "bytes": 74041,
+      "sha256": "55b428397c995bdbd21665167e5538eb127ad16442845ffb163cc990dd9bf7aa"
+    },
+    {
+      "path": "dist/app/index.html",
+      "bytes": 2400,
+      "sha256": "abdb71726fdc9273d9b7284ddf2eec604311f3d7a33ff4d5ceb0cf2e949eba57"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.d.ts",
+      "bytes": 1673,
+      "sha256": "9011a02cf67666b428207f537840970f04081500e7f6dd21435aff5ecb328238"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.d.ts.map",
+      "bytes": 620,
+      "sha256": "c274748bd411edc4c6c1782b228461385af00522e17c6dbe1662c7df65c5a702"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.js",
+      "bytes": 7343,
+      "sha256": "b2a055ceb40cacf1d31f8630e69d4a9195db9f3eb6585181cc4d5e49a50b8494"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.d.ts",
+      "bytes": 2327,
+      "sha256": "7a8e96e674388729ad40ac3e7c93f3bf955b4b922af596ab56075d9cfda893df"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.d.ts.map",
+      "bytes": 686,
+      "sha256": "7eff3764ec9d02c37bc995e413535136c3247fd0e5216c9eaa4b82bc5e1e93f8"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.js",
+      "bytes": 6225,
+      "sha256": "2fd8977c31dc2827cb84a70418cef57cae4826e722da33692ec256cd7133c980"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.d.ts",
+      "bytes": 248,
+      "sha256": "df2465fa928e9c69bc10944bb0f95f1581192b89eff6d976ce313207ae4cff1a"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.d.ts.map",
+      "bytes": 286,
+      "sha256": "b47103d548bdb125711603b051e8141bb446608e12e47836a51f5ceca2ad0f92"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.js",
+      "bytes": 2114,
+      "sha256": "b8b514ff8863bc28197c25e5d51131f2cd510aeed0d008148f51b727330ac97e"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.d.ts",
+      "bytes": 6046,
+      "sha256": "d019efa115d120ccb642642b2caa4718c5baf11a9f3750b6aedadb0aa0846f00"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.d.ts.map",
+      "bytes": 2155,
+      "sha256": "d8b2e83ed3ec78b26dbedc0702514cd4689688a0c964276feefadde523a1bc66"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.js",
+      "bytes": 15408,
+      "sha256": "4f64ddd9346764a2bc4fab7adf4af38ecac6be2e4091adae3433af28af5514cf"
+    },
+    {
+      "path": "dist/lib/babylonian.d.ts",
+      "bytes": 3585,
+      "sha256": "4fb05cd811386eb64c9bd52683a7ea9018531e2160d0f4663a36e0a918546556"
+    },
+    {
+      "path": "dist/lib/babylonian.d.ts.map",
+      "bytes": 631,
+      "sha256": "f0da36a3591908306e30ad414732d385ae98edf66e39ead460e44c9cf1a9f7bc"
+    },
+    {
+      "path": "dist/lib/babylonian.js",
+      "bytes": 7327,
+      "sha256": "51964f7f30beb00669a6a69492ba8272054d2419e32e254418f4017c5f300a53"
+    },
+    {
+      "path": "dist/lib/byzantine.d.ts",
+      "bytes": 2535,
+      "sha256": "c5456d3cda60a1ecd9cfea7faf54382693dca799fb8b2dca8ac663887ef49a7e"
+    },
+    {
+      "path": "dist/lib/byzantine.d.ts.map",
+      "bytes": 667,
+      "sha256": "f4919ee09b9bf04cb405206827f76e0aa1582e3ba0a29b6462831623ba9d1247"
+    },
+    {
+      "path": "dist/lib/byzantine.js",
+      "bytes": 4381,
+      "sha256": "beb6a00841c0b01e9632bce67a2b6b80af53e6733a90b9116e6a02263fb1a8e4"
+    },
+    {
+      "path": "dist/lib/chinese.d.ts",
+      "bytes": 7320,
+      "sha256": "14dd94f58dac71abc1edcc787945155a11857f4b2b630641559b9fd496433820"
+    },
+    {
+      "path": "dist/lib/chinese.d.ts.map",
+      "bytes": 2263,
+      "sha256": "cc1a02793d201f0d4737657f14039590d25d4cfd7529a4ae698381b82656c89f"
+    },
+    {
+      "path": "dist/lib/chinese.js",
+      "bytes": 17758,
+      "sha256": "cc87f33c66eac9e9ac7442fb372891d8562acadf7cfce7cedcf315cd6538dadd"
+    },
+    {
+      "path": "dist/lib/coptic.d.ts",
+      "bytes": 3156,
+      "sha256": "1c61c884628961caf6515fee11a087882b70c53c9999d15671171eae794fd92f"
+    },
+    {
+      "path": "dist/lib/coptic.d.ts.map",
+      "bytes": 941,
+      "sha256": "40e36400c21602e719d44f037f5a9c78cf93100bd7acc2c17f27841a62ac7ee0"
+    },
+    {
+      "path": "dist/lib/coptic.js",
+      "bytes": 6868,
+      "sha256": "02663a7d3221c44befb872028d714cee590d3f46c48a09d4f319f221afd9171b"
+    },
+    {
+      "path": "dist/lib/core/jd.d.ts",
+      "bytes": 3551,
+      "sha256": "ff43ee95b09859d9d2150f23cb0088636643f8cfc10b07196da9362dbc5581fe"
+    },
+    {
+      "path": "dist/lib/core/jd.d.ts.map",
+      "bytes": 1444,
+      "sha256": "4f19b41da87c157ef4bed4eb41c164c60ece3410339c5d64c3e45d8493cfd7eb"
+    },
+    {
+      "path": "dist/lib/core/jd.js",
+      "bytes": 4831,
+      "sha256": "faecdf77cf57b14fa11355930be85d0bdf78b7ae2000d7236b709d56ebc8c9d0"
+    },
+    {
+      "path": "dist/lib/egyptian.d.ts",
+      "bytes": 4343,
+      "sha256": "3b04d6cb061bb0e2e07018e9aaf7ffb2d3caf9da18bbdbd7491948d0e95ac9da"
+    },
+    {
+      "path": "dist/lib/egyptian.d.ts.map",
+      "bytes": 1118,
+      "sha256": "7d5f7a2828beca8cf17bc6dce59562103fbf4008490bc16ee0450869c9ca3bc6"
+    },
+    {
+      "path": "dist/lib/egyptian.js",
+      "bytes": 6455,
+      "sha256": "546988a5d7a4375fde1f090f24992b5f0c5f620a830f1f856242de8093f14e69"
+    },
+    {
+      "path": "dist/lib/greek.d.ts",
+      "bytes": 2119,
+      "sha256": "8af8e68e08ac725c6504bac7d3032e88deba1d2a3293a2d5e41e35519b58932c"
+    },
+    {
+      "path": "dist/lib/greek.d.ts.map",
+      "bytes": 769,
+      "sha256": "70d8248bb755f68c7f88b1a1e148b62e4c17c1efc0aa0c21164e8e1bd5f66817"
+    },
+    {
+      "path": "dist/lib/greek.js",
+      "bytes": 6856,
+      "sha256": "8c418e9e5d216dbed11590585bb243be74e89014d6d4afff98a316ba8b857332"
+    },
+    {
+      "path": "dist/lib/hebrew.d.ts",
+      "bytes": 6308,
+      "sha256": "c64b4ba0aeb2c716a6677883c507f5c6e344bc89eae845a4ee8dc3d59eef31f5"
+    },
+    {
+      "path": "dist/lib/hebrew.d.ts.map",
+      "bytes": 1901,
+      "sha256": "e30fd1133a17dba0668be4277e66934d4d9c83d4acb50ec24c9b6ae48464b20f"
+    },
+    {
+      "path": "dist/lib/hebrew.js",
+      "bytes": 15053,
+      "sha256": "df3535f9e46489f0a59725fc32c10cdceda858d6949e72c973c77a3e8bfe3be5"
+    },
+    {
+      "path": "dist/lib/index.d.ts",
+      "bytes": 1036,
+      "sha256": "edd8ecfe2008332df4144b582f0212e88e6a4aa09e5afb1eea4ce1a8f1c69e5b"
+    },
+    {
+      "path": "dist/lib/index.d.ts.map",
+      "bytes": 678,
+      "sha256": "0bb2afc28d65552ad3ff58910ed5eb0c59ada6c4835a64c35ee0b040a35a7986"
+    },
+    {
+      "path": "dist/lib/index.js",
+      "bytes": 951,
+      "sha256": "3e07ac2527fb525a372b6b2fd7b676f0dab5ee61bf7f79891d1e7b08790decc9"
+    },
+    {
+      "path": "dist/lib/islamic.d.ts",
+      "bytes": 3477,
+      "sha256": "6f63760b3c3cb9c01c6500caa0453917b437bdacb634dbaabc1ff7ba1a66123c"
+    },
+    {
+      "path": "dist/lib/islamic.d.ts.map",
+      "bytes": 821,
+      "sha256": "27b5d8688580aab1744709cbbd2ec92e9b96ca0714ff5290796806ee4e012d8c"
+    },
+    {
+      "path": "dist/lib/islamic.js",
+      "bytes": 5357,
+      "sha256": "f563ff3c6459a63cce909a8b0f164a139c38ebf42b1693e19fd9a2aae3228388"
+    },
+    {
+      "path": "dist/lib/maya.d.ts",
+      "bytes": 3788,
+      "sha256": "9b7dd60b2b9e50149d1ae199ce95b194741454d7e44ffa0a6f2bc68cf303c79b"
+    },
+    {
+      "path": "dist/lib/maya.d.ts.map",
+      "bytes": 1726,
+      "sha256": "20f29dfeef9967095f085d40cd5bb9a93e196570daad6e189d5d2a2b60eab797"
+    },
+    {
+      "path": "dist/lib/maya.js",
+      "bytes": 9979,
+      "sha256": "f98f58e81fa67df63fa52e185c4754724d20962ce042c64f792115258d8311ec"
+    },
+    {
+      "path": "dist/lib/roman.d.ts",
+      "bytes": 6489,
+      "sha256": "febd27566576a93e87259f24f6107053f59a78a3a9f0fe63fa9663d6fee6924d"
+    },
+    {
+      "path": "dist/lib/roman.d.ts.map",
+      "bytes": 1586,
+      "sha256": "5463627d8c454e33386efa813d8a34d404c09878090b63bd90e4d2ea43601894"
+    },
+    {
+      "path": "dist/lib/roman.js",
+      "bytes": 18110,
+      "sha256": "58b76ca2ab8f6dc29c82126565b80e534946c121af3f6d816d2e82f660c2788a"
+    },
+    {
+      "path": "dist/lib/types.d.ts",
+      "bytes": 1485,
+      "sha256": "bdf1ac6be322efa4a4cafcfa98483201e618a7167cab7f3775ed9c5081b40663"
+    },
+    {
+      "path": "dist/lib/types.d.ts.map",
+      "bytes": 561,
+      "sha256": "6f32baeeeeded53a80305278f6b22cdfc06aa490d2a72aa7f4835402369b875c"
+    },
+    {
+      "path": "dist/lib/types.js",
+      "bytes": 196,
+      "sha256": "5f3a4a71726333c329d055940a675d2b30145b8d6f259684079f74274237b7f7"
+    },
+    {
+      "path": "dist/lib/zoroastrian.d.ts",
+      "bytes": 2269,
+      "sha256": "bc8348acd63b1c5a71ffc3e48f64a1575cd7ed8ad908c1fd8f85ead95d8387e0"
+    },
+    {
+      "path": "dist/lib/zoroastrian.d.ts.map",
+      "bytes": 707,
+      "sha256": "1b002c501c501bc9f469361721c61a67fda12e05a24a7c2946c6c9e8322c2f48"
+    },
+    {
+      "path": "dist/lib/zoroastrian.js",
+      "bytes": 3694,
+      "sha256": "1ae0d9280f1dd514f86e3eb85005fb455c9f6559306ae305ae7dbc662b647b2b"
+    }
+  ],
+  "packageFiles": [
+    {
+      "path": "LICENSE",
+      "bytes": 1071,
+      "sha256": "e26144be8673d69c175126ad8dcd9ed78431464f0b97120b799dc75ec7edb647"
+    },
+    {
+      "path": "dist/lib/babylonian.js",
+      "bytes": 7327,
+      "sha256": "51964f7f30beb00669a6a69492ba8272054d2419e32e254418f4017c5f300a53"
+    },
+    {
+      "path": "dist/lib/byzantine.js",
+      "bytes": 4381,
+      "sha256": "beb6a00841c0b01e9632bce67a2b6b80af53e6733a90b9116e6a02263fb1a8e4"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.js",
+      "bytes": 7343,
+      "sha256": "b2a055ceb40cacf1d31f8630e69d4a9195db9f3eb6585181cc4d5e49a50b8494"
+    },
+    {
+      "path": "dist/lib/chinese.js",
+      "bytes": 17758,
+      "sha256": "cc87f33c66eac9e9ac7442fb372891d8562acadf7cfce7cedcf315cd6538dadd"
+    },
+    {
+      "path": "dist/lib/coptic.js",
+      "bytes": 6868,
+      "sha256": "02663a7d3221c44befb872028d714cee590d3f46c48a09d4f319f221afd9171b"
+    },
+    {
+      "path": "dist/lib/egyptian.js",
+      "bytes": 6455,
+      "sha256": "546988a5d7a4375fde1f090f24992b5f0c5f620a830f1f856242de8093f14e69"
+    },
+    {
+      "path": "dist/lib/greek.js",
+      "bytes": 6856,
+      "sha256": "8c418e9e5d216dbed11590585bb243be74e89014d6d4afff98a316ba8b857332"
+    },
+    {
+      "path": "dist/lib/hebrew.js",
+      "bytes": 15053,
+      "sha256": "df3535f9e46489f0a59725fc32c10cdceda858d6949e72c973c77a3e8bfe3be5"
+    },
+    {
+      "path": "dist/lib/index.js",
+      "bytes": 951,
+      "sha256": "3e07ac2527fb525a372b6b2fd7b676f0dab5ee61bf7f79891d1e7b08790decc9"
+    },
+    {
+      "path": "dist/lib/islamic.js",
+      "bytes": 5357,
+      "sha256": "f563ff3c6459a63cce909a8b0f164a139c38ebf42b1693e19fd9a2aae3228388"
+    },
+    {
+      "path": "dist/lib/core/jd.js",
+      "bytes": 4831,
+      "sha256": "faecdf77cf57b14fa11355930be85d0bdf78b7ae2000d7236b709d56ebc8c9d0"
+    },
+    {
+      "path": "dist/lib/maya.js",
+      "bytes": 9979,
+      "sha256": "f98f58e81fa67df63fa52e185c4754724d20962ce042c64f792115258d8311ec"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.js",
+      "bytes": 6225,
+      "sha256": "2fd8977c31dc2827cb84a70418cef57cae4826e722da33692ec256cd7133c980"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.js",
+      "bytes": 2114,
+      "sha256": "b8b514ff8863bc28197c25e5d51131f2cd510aeed0d008148f51b727330ac97e"
+    },
+    {
+      "path": "dist/lib/roman.js",
+      "bytes": 18110,
+      "sha256": "58b76ca2ab8f6dc29c82126565b80e534946c121af3f6d816d2e82f660c2788a"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.js",
+      "bytes": 15408,
+      "sha256": "4f64ddd9346764a2bc4fab7adf4af38ecac6be2e4091adae3433af28af5514cf"
+    },
+    {
+      "path": "dist/lib/types.js",
+      "bytes": 196,
+      "sha256": "5f3a4a71726333c329d055940a675d2b30145b8d6f259684079f74274237b7f7"
+    },
+    {
+      "path": "dist/lib/zoroastrian.js",
+      "bytes": 3694,
+      "sha256": "1ae0d9280f1dd514f86e3eb85005fb455c9f6559306ae305ae7dbc662b647b2b"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1819,
+      "sha256": "44de3ade5aa0b96fda1f6c38dd73d8606afd619fc0e1cc6d085b246ccf749e91"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12753,
+      "sha256": "b4e0345c900037cbdb2b13edf0e631a91ee879188567aae631d1c4eb7ea24d99"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1549,
+      "sha256": "104027571c4311f4800d6f966b0573bdf312cd8023e91dfde959f122b5948186"
+    },
+    {
+      "path": "dist/lib/babylonian.d.ts",
+      "bytes": 3585,
+      "sha256": "4fb05cd811386eb64c9bd52683a7ea9018531e2160d0f4663a36e0a918546556"
+    },
+    {
+      "path": "dist/lib/byzantine.d.ts",
+      "bytes": 2535,
+      "sha256": "c5456d3cda60a1ecd9cfea7faf54382693dca799fb8b2dca8ac663887ef49a7e"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.d.ts",
+      "bytes": 1673,
+      "sha256": "9011a02cf67666b428207f537840970f04081500e7f6dd21435aff5ecb328238"
+    },
+    {
+      "path": "dist/lib/chinese.d.ts",
+      "bytes": 7320,
+      "sha256": "14dd94f58dac71abc1edcc787945155a11857f4b2b630641559b9fd496433820"
+    },
+    {
+      "path": "dist/lib/coptic.d.ts",
+      "bytes": 3156,
+      "sha256": "1c61c884628961caf6515fee11a087882b70c53c9999d15671171eae794fd92f"
+    },
+    {
+      "path": "dist/lib/egyptian.d.ts",
+      "bytes": 4343,
+      "sha256": "3b04d6cb061bb0e2e07018e9aaf7ffb2d3caf9da18bbdbd7491948d0e95ac9da"
+    },
+    {
+      "path": "dist/lib/greek.d.ts",
+      "bytes": 2119,
+      "sha256": "8af8e68e08ac725c6504bac7d3032e88deba1d2a3293a2d5e41e35519b58932c"
+    },
+    {
+      "path": "dist/lib/hebrew.d.ts",
+      "bytes": 6308,
+      "sha256": "c64b4ba0aeb2c716a6677883c507f5c6e344bc89eae845a4ee8dc3d59eef31f5"
+    },
+    {
+      "path": "dist/lib/index.d.ts",
+      "bytes": 1036,
+      "sha256": "edd8ecfe2008332df4144b582f0212e88e6a4aa09e5afb1eea4ce1a8f1c69e5b"
+    },
+    {
+      "path": "dist/lib/islamic.d.ts",
+      "bytes": 3477,
+      "sha256": "6f63760b3c3cb9c01c6500caa0453917b437bdacb634dbaabc1ff7ba1a66123c"
+    },
+    {
+      "path": "dist/lib/core/jd.d.ts",
+      "bytes": 3551,
+      "sha256": "ff43ee95b09859d9d2150f23cb0088636643f8cfc10b07196da9362dbc5581fe"
+    },
+    {
+      "path": "dist/lib/maya.d.ts",
+      "bytes": 3788,
+      "sha256": "9b7dd60b2b9e50149d1ae199ce95b194741454d7e44ffa0a6f2bc68cf303c79b"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.d.ts",
+      "bytes": 2327,
+      "sha256": "7a8e96e674388729ad40ac3e7c93f3bf955b4b922af596ab56075d9cfda893df"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.d.ts",
+      "bytes": 248,
+      "sha256": "df2465fa928e9c69bc10944bb0f95f1581192b89eff6d976ce313207ae4cff1a"
+    },
+    {
+      "path": "dist/lib/roman.d.ts",
+      "bytes": 6489,
+      "sha256": "febd27566576a93e87259f24f6107053f59a78a3a9f0fe63fa9663d6fee6924d"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.d.ts",
+      "bytes": 6046,
+      "sha256": "d019efa115d120ccb642642b2caa4718c5baf11a9f3750b6aedadb0aa0846f00"
+    },
+    {
+      "path": "dist/lib/types.d.ts",
+      "bytes": 1485,
+      "sha256": "bdf1ac6be322efa4a4cafcfa98483201e618a7167cab7f3775ed9c5081b40663"
+    },
+    {
+      "path": "dist/lib/zoroastrian.d.ts",
+      "bytes": 2269,
+      "sha256": "bc8348acd63b1c5a71ffc3e48f64a1575cd7ed8ad908c1fd8f85ead95d8387e0"
+    }
+  ],
+  "tarball": {
+    "path": "antonsoloviev-horologium-0.2.3.tgz",
+    "bytes": 73248,
+    "sha256": "05f9385def112be69f26716560b8d529b2621c0452300aacf8d5b231b118082e"
+  },
+  "pairedBrowserViews": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "unchangedViews": 9
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "unchangedViews": 9
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "unchangedViews": 9
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "unchangedViews": 9
+    }
+  ],
+  "servedAssetsMatchCleanBuild": true,
+  "allReplayRecordsEqualExceptNodeVersion": true,
+  "freshJplKernel": {
+    "path": "de440s.bsp",
+    "bytes": 32726016,
+    "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+  },
+  "sourceOnly": true,
+  "packageVersion": "0.2.3"
+}

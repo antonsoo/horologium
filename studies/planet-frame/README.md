@@ -116,3 +116,31 @@ Playwright dependencies and installed Chromium/Firefox binaries.
 
 Machine-readable evidence: [reference](oracle.json), [comparison](results.json),
 [browser before](browser-before.json), [browser after](browser-after.json).
+
+## Clean and installed artifacts
+
+A clean archive of production commit
+`56c4384004582f4d8f4feba3bb5d491f5ec7a9d2`, installed offline under Node
+24.21.0, passes lint, both TypeScript checks, 229 tests in each of the default
+and comma-decimal locales, the production build and all 58 existing browser
+workflows. The documented library example runs from that archive and from a
+separate package installation; the README's Maya, Hebrew and Roman examples
+also reproduce their stated results.
+
+The packed 0.2.3 artifact is **73,248 bytes**, SHA-256
+`05f9385def112be69f26716560b8d529b2621c0452300aacf8d5b231b118082e`.
+All 40 package files match both the clean build and separate offline npm
+installation. The full ephemeris/rotation replay under installed Node 20.0.0
+and 24.21.0 yields the same records as the working and clean builds, apart
+from the recorded Node version. All 103 selected source/test/replay inputs
+and all 84 build files (951,937 bytes) match the exercised checkout. The 29
+served browser assets match the clean build byte-for-byte.
+
+A fresh download from JPL is byte-identical to the 32,726,016-byte kernel used
+for the oracle, SHA-256
+`c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2`.
+Validation runs on Linux/WSL2; this is not physical observation or a guarantee
+of planetary accuracy outside the sampled dates.
+
+Receipts: [artifacts](artifacts.json), [installed Node 20](installed-node20.json),
+[installed Node 24](installed-node24.json), [README examples](installed-quickstart.json).
