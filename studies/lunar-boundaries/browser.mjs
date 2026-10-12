@@ -90,8 +90,12 @@ for (const [engine, launcher] of Object.entries({ chromium, firefox })) {
       try {
         const page = await context.newPage();
         const errors = [],
+          consoleErrors = [],
           lateRequests = [];
         page.on('pageerror', (error) => errors.push(error.message));
+        page.on('console', (message) => {
+          if (message.type() === 'error') consoleErrors.push(message.text());
+        });
         page.on('request', (request) => {
           if (stopped && /^https?:/.test(request.url())) lateRequests.push(request.url());
         });
@@ -104,6 +108,18 @@ for (const [engine, launcher] of Object.entries({ chromium, firefox })) {
         await page.goto(`${origin}/horologium/#jd=2460341&loc=Babylon`);
         await page.locator('[data-calendar=babylonian]').waitFor();
         await page.evaluate(() => document.fonts.ready);
+        const fontFaces = await page.evaluate(() =>
+          Array.from(document.fonts, (face) => ({
+            family: face.family,
+            weight: face.weight,
+            style: face.style,
+            status: face.status,
+          })),
+        );
+        if (mode === 'verify') {
+          assert.equal(fontFaces.length, 26);
+          assert.ok(fontFaces.every((face) => face.status === 'loaded'));
+        }
         await context.setOffline(true);
         await stop();
         const records = [];
@@ -155,7 +171,10 @@ for (const [engine, launcher] of Object.entries({ chromium, firefox })) {
         const policyViolations = await page.evaluate(() => window.policyViolations);
         assert.deepEqual(errors, []);
         assert.deepEqual(policyViolations, []);
-        if (mode === 'verify') assert.deepEqual(lateRequests, []);
+        if (mode === 'verify') {
+          assert.deepEqual(lateRequests, []);
+          assert.deepEqual(consoleErrors, []);
+        }
         results.push({
           engine,
           browserVersion: browser.version(),
@@ -166,6 +185,8 @@ for (const [engine, launcher] of Object.entries({ chromium, firefox })) {
           cases: records,
           served: Object.fromEntries(served),
           errors,
+          consoleErrors,
+          fontFaces,
           lateRequests,
           policyViolations,
           axeViolations: 0,

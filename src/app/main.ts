@@ -8,6 +8,11 @@ import { buildDial } from './dial.js';
 import { buildSeasonalReadout } from './seasonal.js';
 import { buildTablets } from './tablets.js';
 
+// Calendar names and open explanations can need a different script, subset or
+// style after time travel. Load the bundled faces while the page is online so
+// those later updates keep their fonts offline. Failure leaves system fallbacks.
+void Promise.allSettled(Array.from(document.fonts, (face) => face.load()));
+
 const app = document.getElementById('app');
 if (!app) throw new Error('missing #app mount point');
 

@@ -22,6 +22,9 @@ not yet published to npm or the hosted demo.
 
 ### Fixed
 
+- Calendar navigation and opening explanations retain their bundled fonts
+  offline. Startup loads all 26 faces (632,660 font bytes), and repeated
+  declarations for the same variable font are consolidated.
 - New-moon searches keep crossings within 14.4 minutes of the requested
   instant. `nextNewMoon` includes its boundary, `previousNewMoon` excludes
   it, and moon age is zero at the modeled crossing.

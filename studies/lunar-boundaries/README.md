@@ -79,6 +79,18 @@ horizontal overflow. Screenshots show the actual calendar cards, including
 their reconstruction labels. An additional post-conjunction date is an
 unchanged control.
 
+This replay also reproduced deferred font requests in both engines, including
+a duplicate variable-font face request in Firefox. The corrected startup loads
+all 26 bundled font faces (632,660 bytes), and 49 declarations are consolidated
+to one per file, retaining each file's style and supported weight range.
+`fc-scan` confirms that every merged file is variable. Font file bytes are
+unchanged. This deliberately increases initial font loading so later scripts,
+weights and transliteration characters remain available after going offline.
+The replay checks all faces are loaded before disconnecting, then requires no
+HTTP requests during subsequent navigation. See the CSS Font Loading
+[load method](https://drafts.csswg.org/css-font-loading/#font-face-load) and
+[readiness semantics](https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet/ready).
+
 ```sh
 node studies/lunar-boundaries/browser.mjs /path/to/dist/app browser.json verify /path/to/screenshots
 ```
