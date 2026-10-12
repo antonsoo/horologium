@@ -90,7 +90,7 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   readout. Personal coordinates stay in the current tab; their links
   explicitly fall back to Rome.
 - **Light and dark themes** ("papyrus" and "night sky"), responsive to phone
-  width, keyboard-accessible, no tracking, and a ~29 KB gzipped JS bundle
+  width, keyboard-accessible, no tracking, and a ~30 KB gzipped JS bundle
   (measured with `npm run build`; no framework, no charting library, no
   analytics).
 

@@ -136,6 +136,29 @@ Babylonian and 5,015 Attic interval assignments, plus a 10,001-year sweep and
 10,001 reusable crossings. All agree. The wrapper in `intervals.json` explicitly
 labels this as model-consistency validation, not a before/after accuracy gain.
 
+## Clean archive and installed package
+
+A clean archive of production commit
+`c0d07d34178bb5d6c2a2fa613fcf85e4cce8901c` passes offline installation,
+lint, TypeScript checks, 235 tests in each of two locales, the production build,
+the runnable example and 58 existing browser workflows. All 108 selected
+source/test/replay inputs and 87 built files (957,405 bytes) match the tested
+checkout. All 29 assets served in each corrected browser run match that build.
+Fifteen compiled JavaScript modules outside the changed astronomy/calendar
+modules remain byte-identical to baseline.
+
+The archive's npm tarball is 74,735 bytes, SHA-256
+`7f0ba627e1e33530783dc24a2d3e36683ed93a2c217470d32f4f354e63e173f2`.
+All 42 package files match the clean archive and the separate offline install.
+The full numerical replay matches under Node 20.0.0 and 24.21.0, with identical
+records apart from the runtime version. Installed Maya, Hebrew, Roman, Egyptian
+and Chinese README examples reproduce their stated outputs. These checks run
+on Linux/WSL2. Package version 0.2.3 is unchanged; no registry release or hosted
+deployment is included.
+
+See [artifact hashes](artifacts.json), [Node 20 replay](installed-node20.json),
+[Node 24 replay](installed-node24.json) and [installed examples](installed-quickstart.json).
+
 ## Reproduce
 
 ```sh

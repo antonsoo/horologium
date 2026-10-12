@@ -1,0 +1,23 @@
+{
+  "node": "v24.21.0",
+  "jd": 2456282.5,
+  "maya": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in",
+  "hebrew": "ח׳ טבת תשע״ג",
+  "ides": {
+    "id": "roman",
+    "name": "Roman (Julian) Calendar",
+    "native": "Id. Mart.",
+    "transliteration": "Idibus Martiis",
+    "summary": "The Ides of March, AUC 710. Julian date 15 March 44 BCE.",
+    "method": "Post-45 BCE Julian civil calendar. Days are named by inclusive counting back from the next Kalends, Nones, or Ides (the pre-reform Republican calendar with its irregular intercalary Mercedonius is out of scope). AUC year = astronomical year + 753 (Varronian epoch, 753 BCE = AUC 1). The leap day is modeled as the historical doubled \"a.d. VI Kalendas Martias\", not a bolted-on 29th of February. Leap years follow the every-fourth-year rule throughout; in practice the pontifices intercalated every third year from 45 BCE until Augustus suspended leap years to correct it (Macrobius, Saturnalia 1.14.13-15), so a date between 45 BCE and about 8 CE can differ by a day or two from the civil date used in Rome, depending on the reconstruction.",
+    "isReconstruction": false
+  },
+  "sothic": {
+    "yearsIntoCycle": 1278,
+    "cycleAnchorCE": 139
+  },
+  "chinese2026": "丙午年 八月十四 (辛丑日)",
+  "chinese2033Leap": [
+    11
+  ]
+}
