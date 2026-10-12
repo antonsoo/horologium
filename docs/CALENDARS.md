@@ -240,6 +240,19 @@ All five dates already matched before the description correction. Calendar
 arithmetic is unchanged; these checks do not validate every historical use of
 the calendar or the timing of religious observances within a day.
 
+Verification on 2026-10-12: a fresh locked install passed lint, type checking,
+235 unit checks, build and 58 Chromium/Firefox workflows. A locally packed
+library installed under Node 20.0.0 and 24.21.0 matched the five dates above;
+both conversion functions match their baseline function bodies exactly.
+Eight offline before/after browser captures at 1440 and 375 pixels retain the
+same date while showing the corrected description; all were visually inspected.
+See [before](assets/qadimi-label/before-chromium-375.png),
+[after](assets/qadimi-label/after-chromium-375.png) and the
+[verification receipt](qadimi-verification.json), including the reference PDF
+hash, package hash and matching hashes for 30 served web files. All 87 files
+in the independently built library and app agree. The correction is in source;
+it has not been deployed or published as a package release.
+
 ## Greek (Attic) calendar and Olympiad reckoning (`src/lib/greek.ts`)
 
 An explicit **reconstruction**. Real Athenian practice decreed
