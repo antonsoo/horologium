@@ -21,6 +21,9 @@ correction in source, not yet released to npm or the hosted demo.
 
 ### Fixed
 
+- Identify the Zoroastrian tablet as Qadimi and correct its account of
+  Shahanshahi: both use wandering 365-day years, unlike the seasonally corrected
+  Fasli variant. Calendar arithmetic is unchanged.
 - Lunar longitude uses the complete Meeus chapter 47 longitude series, replacing
   incorrect signs, arguments and omitted major terms in the old truncation.
   Independent conjunction comparisons improve from up to 85.09 minutes to

@@ -8,19 +8,17 @@
  *
  * This is the traditional (Qadimi) reckoning: a fixed, unadjusted 365-day
  * year that drifts against the solar year by about 1 day every 4 years,
- * the same way the Egyptian civil year does. Other Zoroastrian communities
- * use the Shahanshahi or Fasli variants, which apply different periodic
- * corrections to stay aligned with the seasons; those are not implemented
- * here.
+ * the same way the Egyptian civil year does. Shahanshahi also uses a
+ * wandering 365-day year; its modern dates fall 30 days later than Qadimi.
+ * Fasli uses leap days to keep seasonal alignment. Neither alternative
+ * is calculated here. See Rohinton Erach Kadva's Compendium of Kadmi
+ * Zoroastrian Calendars 1379-1400 AY (2009), pp. 3-4, cited in
+ * docs/CALENDARS.md.
  *
  * Each of the 30 days within a month also has its own traditional name
- * (several of which repeat the 12 month names, since both cycles are
- * named after the same Zoroastrian divinities/qualities - e.g. day 1 and
- * the first month are both "Hormazd"). That per-day name list is not
- * rendered here: it is a genuinely obscure list to get exactly right from
- * memory, and getting it wrong would be worse than showing a plain day
- * number - see the project's ground rule against guessing at unverified
- * data.
+ * (several of which repeat month names, since both cycles name
+ * Zoroastrian divinities/qualities). This module numbers the days and names
+ * the five Gatha days at the end of the year.
  */
 
 import { type JulianDay, julianToJD, mod } from './core/jd.js';
@@ -88,16 +86,17 @@ export function describe(jd: JulianDay): CalendarTablet {
       : `${date.day} ${monthName}, YZ ${date.year}`;
   return {
     id: 'zoroastrian',
-    name: 'Zoroastrian (Yazdegerdi) Calendar',
+    name: 'Zoroastrian (Qadimi) Calendar',
     native: label,
     transliteration: label,
     summary: label,
     method:
-      'Traditional (Qadimi) reckoning: a fixed 365-day year (12 months of 30 days + 5 Gatha days), ' +
+      'Qadimi (Kadmi) reckoning: a fixed 365-day year (12 months of 30 days + 5 Gatha days), ' +
       'no leap day, epoch 16 June 632 CE Julian (accession of Yazdegerd III). Like the Egyptian civil ' +
-      'calendar, this wanders against the solar year by about 1 day every 4 years; the Fasli and ' +
-      'Shahanshahi variants (which apply corrections to stay seasonally aligned) are not implemented. ' +
-      'Per-day names within the month are not shown (see source comment for why).',
+      'calendar, this wanders against the solar year by about 1 day every 4 years. Shahanshahi also ' +
+      'uses a wandering 365-day year; its modern dates fall 30 days later than Qadimi. Fasli uses ' +
+      'leap days to keep seasonal alignment. Those two variants are not calculated here. ' +
+      'Days within each month are numbered; the five year-end Gatha days are named.',
     isReconstruction: false,
     proleptic: date.year < 1 ? beforeEra('the Yazdegerdi era', '632 CE') : undefined,
   };

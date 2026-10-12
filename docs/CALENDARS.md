@@ -209,15 +209,36 @@ cited elsewhere for the start of the current Sothic cycle.
 See [the browser/library guide](chinese-calendar.md) and the
 [reproducible primary-source study](../studies/chinese-calendar/README.md).
 
-## Zoroastrian (Yazdegerdi) calendar (`src/lib/zoroastrian.ts`)
+## Zoroastrian Qadimi calendar, Yazdegerdi era (`src/lib/zoroastrian.ts`)
 
 The traditional (Qadimi) reckoning: the same 12x30+5, no-leap-day
 structure as the Egyptian civil calendar, epoch 16 June 632 CE (Julian) -
-Yazdegerd III's accession. Not a reconstruction (attested arithmetic), but
-per-day names within each month (a real, separate 30-name tradition,
-several of which repeat the 12 month names) are deliberately not rendered:
-this project could not verify the exact name/order list with confidence
-in the time available, and a wrong name is worse than a plain number.
+Yazdegerd III's accession. The tablet explicitly identifies Qadimi (also called
+Kadmi): Yazdegerdi identifies the era, not which calendar variant is in use.
+Days within each month are numbered; the five Gatha days are named.
+
+Shahanshahi also uses a wandering 365-day year. Its modern dates fall 30 days
+later than Qadimi; it does **not** retain seasonal alignment through recurring
+corrections. Fasli uses leap days for seasonal alignment. Neither alternative
+is calculated by this module. The previous tablet explanation incorrectly
+grouped Shahanshahi with Fasli as seasonally aligned.
+
+Primary reference: Rohinton Erach Kadva,
+[Compendium of Kadmi Zoroastrian Calendars 1379 AY through 1400 AY](https://zoroastrians.net/wp-content/uploads/2009/09/zoroastrian-calendars-1379-ay-1400-ay-kadmi.pdf)
+(7 September 2009), printed pp. 3-4 for the variant descriptions and pp. 110-111
+for these independently checked dates:
+
+| Gregorian date | Qadimi year | Month | Day |
+| --- | ---: | ---: | ---: |
+| 2026-07-10 | 1395 | 12 | 30 |
+| 2026-07-11 | 1395 | 13 (Gatha days) | 1 |
+| 2026-07-15 | 1395 | 13 (Gatha days) | 5 |
+| 2026-07-16 | 1396 | 1 | 1 |
+| 2026-08-15 | 1396 | 2 | 1 |
+
+All five dates already matched before the description correction. Calendar
+arithmetic is unchanged; these checks do not validate every historical use of
+the calendar or the timing of religious observances within a day.
 
 ## Greek (Attic) calendar and Olympiad reckoning (`src/lib/greek.ts`)
 

@@ -65,7 +65,7 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   arithmetic), Egyptian civil (+ Sothic cycle), Maya (Long Count/Tzolk'in/
   Haab'/Lord of the Night, with SVG bar-and-dot numerals), Chinese
   (sexagenary cycle + astronomically-computed lunisolar calendar),
-  Zoroastrian (Yazdegerdi), Greek (Attic months + Olympiad reckoning, with
+  Zoroastrian (Qadimi, Yazdegerdi era), Greek (Attic months + Olympiad reckoning, with
   polytonic Greek month names), and Babylonian (Seleucid Era).
 - **Astronomy**: Sun/Moon position and phase, the tropical zodiac, the five
   naked-eye planets (Standish/JPL Keplerian elements), and the Metonic/
