@@ -1,0 +1,1622 @@
+{
+  "mode": "baseline",
+  "results": [
+    {
+      "engine": "chromium",
+      "browserVersion": "153.0.8010.12",
+      "width": 1440,
+      "serverStoppedBeforeNavigation": true,
+      "cacheControl": "no-store",
+      "offline": true,
+      "cases": [
+        {
+          "id": "greek-gap",
+          "jd": 2461224.396031973,
+          "calendar": "greek",
+          "before": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "after": "18 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "actual": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "chromium-1440-greek-gap.png",
+          "screenshotSha256": "e98f6a4fba2059ba425cb29d5a45c361c9e527b297145c83582b5416706c9d69"
+        },
+        {
+          "id": "babylonian-midnight",
+          "jd": 2461147.376601852,
+          "calendar": "babylonian",
+          "before": "30 Addaru II, SE 2336",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "30 Addaru II, SE 2336",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "chromium-1440-babylonian-midnight.png",
+          "screenshotSha256": "2b5ebbb61be902e24f9ed4b9e3d7d00625deef78438ab652630c45798f92d3f5"
+        },
+        {
+          "id": "ancient-year",
+          "jd": -105060.12340972222,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE -4688",
+          "after": "1 Nisannu, SE -4689",
+          "actual": "1 Nisannu, SE -4688",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "chromium-1440-ancient-year.png",
+          "screenshotSha256": "caa967566af68dc2dfbd349cfd4ddea24f4afbb4d71f470b8c9a83e21df30206"
+        },
+        {
+          "id": "unchanged-after-new-moon",
+          "jd": 2461147.936773862,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE 2337",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "1 Nisannu, SE 2337",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true
+        }
+      ],
+      "served": {
+        "/horologium/index.html": {
+          "bytes": 2400,
+          "sha256": "36a3a5912ad00f735a280ff016c56b68475cf49b2588352a22e24178ff30d6b5"
+        },
+        "/horologium/assets/index-10oavIHd.js": {
+          "bytes": 72656,
+          "sha256": "bde68380c2d0b7a7de3ba977fd5f29c2d0dd64739a5cc8167af57c8fe1429a05"
+        },
+        "/horologium/assets/index-GYWQX2Hb.css": {
+          "bytes": 27502,
+          "sha256": "7125c678ff99690f05d04f5124a9afc5b5ed29613e5cf9b8a5303e10e5662723"
+        },
+        "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+          "bytes": 44336,
+          "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+        },
+        "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+          "bytes": 25904,
+          "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+          "bytes": 25388,
+          "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+          "bytes": 45468,
+          "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+        },
+        "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+          "bytes": 11484,
+          "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+        },
+        "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+          "bytes": 19868,
+          "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+        }
+      },
+      "errors": [],
+      "consoleErrors": ["Failed to load resource: net::ERR_INTERNET_DISCONNECTED"],
+      "fontFaces": [
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "lateRequests": [
+        "http://127.0.0.1:57290/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2"
+      ],
+      "policyViolations": [],
+      "axeViolations": 0,
+      "horizontalOverflow": false
+    },
+    {
+      "engine": "chromium",
+      "browserVersion": "153.0.8010.12",
+      "width": 375,
+      "serverStoppedBeforeNavigation": true,
+      "cacheControl": "no-store",
+      "offline": true,
+      "cases": [
+        {
+          "id": "greek-gap",
+          "jd": 2461224.396031973,
+          "calendar": "greek",
+          "before": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "after": "18 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "actual": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "chromium-375-greek-gap.png",
+          "screenshotSha256": "14974e48bbe29d971fcbd3acfa86b78dfc2ab15a0866ce5ac271d8c2d3496d59"
+        },
+        {
+          "id": "babylonian-midnight",
+          "jd": 2461147.376601852,
+          "calendar": "babylonian",
+          "before": "30 Addaru II, SE 2336",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "30 Addaru II, SE 2336",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "chromium-375-babylonian-midnight.png",
+          "screenshotSha256": "31682faca9d347d90a96a65e30a2ad999a571797795e69ac1f6cb1b8a1fa9e07"
+        },
+        {
+          "id": "ancient-year",
+          "jd": -105060.12340972222,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE -4688",
+          "after": "1 Nisannu, SE -4689",
+          "actual": "1 Nisannu, SE -4688",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "chromium-375-ancient-year.png",
+          "screenshotSha256": "e26c2b413f2c7541ffea5f24475104d783425f7404feabd9791f1df84057d754"
+        },
+        {
+          "id": "unchanged-after-new-moon",
+          "jd": 2461147.936773862,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE 2337",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "1 Nisannu, SE 2337",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true
+        }
+      ],
+      "served": {
+        "/horologium/index.html": {
+          "bytes": 2400,
+          "sha256": "36a3a5912ad00f735a280ff016c56b68475cf49b2588352a22e24178ff30d6b5"
+        },
+        "/horologium/assets/index-10oavIHd.js": {
+          "bytes": 72656,
+          "sha256": "bde68380c2d0b7a7de3ba977fd5f29c2d0dd64739a5cc8167af57c8fe1429a05"
+        },
+        "/horologium/assets/index-GYWQX2Hb.css": {
+          "bytes": 27502,
+          "sha256": "7125c678ff99690f05d04f5124a9afc5b5ed29613e5cf9b8a5303e10e5662723"
+        },
+        "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+          "bytes": 44336,
+          "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+          "bytes": 25388,
+          "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+        },
+        "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+          "bytes": 25904,
+          "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+          "bytes": 45468,
+          "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+        },
+        "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+          "bytes": 19868,
+          "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+        },
+        "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+          "bytes": 11484,
+          "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+        }
+      },
+      "errors": [],
+      "consoleErrors": ["Failed to load resource: net::ERR_INTERNET_DISCONNECTED"],
+      "fontFaces": [
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "lateRequests": [
+        "http://127.0.0.1:57326/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2"
+      ],
+      "policyViolations": [],
+      "axeViolations": 0,
+      "horizontalOverflow": false
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "155.0",
+      "width": 1440,
+      "serverStoppedBeforeNavigation": true,
+      "cacheControl": "no-store",
+      "offline": true,
+      "cases": [
+        {
+          "id": "greek-gap",
+          "jd": 2461224.396031973,
+          "calendar": "greek",
+          "before": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "after": "18 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "actual": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "firefox-1440-greek-gap.png",
+          "screenshotSha256": "f67500d65009a5ff9ee716c2219d81e61f4896befe67dd7a4c6051a966249af2"
+        },
+        {
+          "id": "babylonian-midnight",
+          "jd": 2461147.376601852,
+          "calendar": "babylonian",
+          "before": "30 Addaru II, SE 2336",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "30 Addaru II, SE 2336",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "firefox-1440-babylonian-midnight.png",
+          "screenshotSha256": "8d5b4ff33066f203e5feb9292ba42be71421386a3bd7a4d385b108c755206e59"
+        },
+        {
+          "id": "ancient-year",
+          "jd": -105060.12340972222,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE -4688",
+          "after": "1 Nisannu, SE -4689",
+          "actual": "1 Nisannu, SE -4688",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "firefox-1440-ancient-year.png",
+          "screenshotSha256": "95feb7affce8e36bb68134a7f3cd26a886f1482af41babc8b45ab3c005fb2fef"
+        },
+        {
+          "id": "unchanged-after-new-moon",
+          "jd": 2461147.936773862,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE 2337",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "1 Nisannu, SE 2337",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true
+        }
+      ],
+      "served": {
+        "/horologium/index.html": {
+          "bytes": 2400,
+          "sha256": "36a3a5912ad00f735a280ff016c56b68475cf49b2588352a22e24178ff30d6b5"
+        },
+        "/horologium/assets/index-10oavIHd.js": {
+          "bytes": 72656,
+          "sha256": "bde68380c2d0b7a7de3ba977fd5f29c2d0dd64739a5cc8167af57c8fe1429a05"
+        },
+        "/horologium/assets/index-GYWQX2Hb.css": {
+          "bytes": 27502,
+          "sha256": "7125c678ff99690f05d04f5124a9afc5b5ed29613e5cf9b8a5303e10e5662723"
+        },
+        "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+          "bytes": 25904,
+          "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+        },
+        "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+          "bytes": 44336,
+          "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+        },
+        "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+          "bytes": 19868,
+          "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+        },
+        "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+          "bytes": 11484,
+          "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+          "bytes": 25388,
+          "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+          "bytes": 45468,
+          "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+        }
+      },
+      "errors": [],
+      "consoleErrors": [
+        "[JavaScript Error: \"downloadable font: download failed (font-family: \"EB Garamond\" style:normal weight:500 width:100 src index:0): status=2152398864 source: http://127.0.0.1:58088/horologium/assets/eb-garamond-latin-CRpggXlh.woff2\"]",
+        "[JavaScript Error: \"downloadable font: download failed (font-family: \"EB Garamond\" style:normal weight:400 width:100 src index:0): status=2152398864 source: http://127.0.0.1:58088/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2\"]"
+      ],
+      "fontFaces": [
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "lateRequests": [
+        "http://127.0.0.1:58088/horologium/assets/eb-garamond-latin-CRpggXlh.woff2",
+        "http://127.0.0.1:58088/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2"
+      ],
+      "policyViolations": [],
+      "axeViolations": 0,
+      "horizontalOverflow": false
+    },
+    {
+      "engine": "firefox",
+      "browserVersion": "155.0",
+      "width": 375,
+      "serverStoppedBeforeNavigation": true,
+      "cacheControl": "no-store",
+      "offline": true,
+      "cases": [
+        {
+          "id": "greek-gap",
+          "jd": 2461224.396031973,
+          "calendar": "greek",
+          "before": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "after": "18 Skirophorion, Ol. 701.1 (year begins 2025 CE)",
+          "actual": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "firefox-375-greek-gap.png",
+          "screenshotSha256": "2e7dbaffecf5a9d4a14e92e00eb90bbb0c2ef4a2492171ffc6bc887b2692b0a6"
+        },
+        {
+          "id": "babylonian-midnight",
+          "jd": 2461147.376601852,
+          "calendar": "babylonian",
+          "before": "30 Addaru II, SE 2336",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "30 Addaru II, SE 2336",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "firefox-375-babylonian-midnight.png",
+          "screenshotSha256": "d60047c5e6ff0beafa584fa46ccb1add30cf7d142b25ce7dbdf189b5eac2760d"
+        },
+        {
+          "id": "ancient-year",
+          "jd": -105060.12340972222,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE -4688",
+          "after": "1 Nisannu, SE -4689",
+          "actual": "1 Nisannu, SE -4688",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true,
+          "screenshot": "firefox-375-ancient-year.png",
+          "screenshotSha256": "f25fea1c87b1c80166eda309cc0244806d37b275fcf9c4bb7bd29b6c3a8b254e"
+        },
+        {
+          "id": "unchanged-after-new-moon",
+          "jd": 2461147.936773862,
+          "calendar": "babylonian",
+          "before": "1 Nisannu, SE 2337",
+          "after": "1 Nisannu, SE 2337",
+          "actual": "1 Nisannu, SE 2337",
+          "reconstructionVisible": true,
+          "disclosureKeyboardOpened": true,
+          "focusRetained": true
+        }
+      ],
+      "served": {
+        "/horologium/index.html": {
+          "bytes": 2400,
+          "sha256": "36a3a5912ad00f735a280ff016c56b68475cf49b2588352a22e24178ff30d6b5"
+        },
+        "/horologium/assets/index-10oavIHd.js": {
+          "bytes": 72656,
+          "sha256": "bde68380c2d0b7a7de3ba977fd5f29c2d0dd64739a5cc8167af57c8fe1429a05"
+        },
+        "/horologium/assets/index-GYWQX2Hb.css": {
+          "bytes": 27502,
+          "sha256": "7125c678ff99690f05d04f5124a9afc5b5ed29613e5cf9b8a5303e10e5662723"
+        },
+        "/horologium/assets/eb-garamond-latin-CRpggXlh.woff2": {
+          "bytes": 44336,
+          "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+        },
+        "/horologium/assets/cinzel-latin-DMUuCU8H.woff2": {
+          "bytes": 25904,
+          "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-DSEbMgZu.woff2": {
+          "bytes": 25388,
+          "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+        },
+        "/horologium/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2": {
+          "bytes": 45468,
+          "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+        },
+        "/horologium/assets/eb-garamond-greek-DCPER7xl.woff2": {
+          "bytes": 19868,
+          "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+        },
+        "/horologium/assets/eb-garamond-greek-ext-CW-BywWH.woff2": {
+          "bytes": 11484,
+          "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+        }
+      },
+      "errors": [],
+      "consoleErrors": [
+        "[JavaScript Error: \"downloadable font: download failed (font-family: \"EB Garamond\" style:normal weight:500 width:100 src index:0): status=2152398864 source: http://127.0.0.1:57750/horologium/assets/eb-garamond-latin-CRpggXlh.woff2\"]",
+        "[JavaScript Error: \"downloadable font: download failed (font-family: \"EB Garamond\" style:normal weight:400 width:100 src index:0): status=2152398864 source: http://127.0.0.1:57750/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2\"]"
+      ],
+      "fontFaces": [
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "600",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cinzel",
+          "weight": "700",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "italic",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "EB Garamond",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "lateRequests": [
+        "http://127.0.0.1:57750/horologium/assets/eb-garamond-latin-CRpggXlh.woff2",
+        "http://127.0.0.1:57750/horologium/assets/eb-garamond-latin-ext-B6IpcvL2.woff2"
+      ],
+      "policyViolations": [],
+      "axeViolations": 0,
+      "horizontalOverflow": false
+    }
+  ],
+  "scope": "Production clock navigating to retained numerical counterexamples after the HTTP server was stopped. These remain declared reconstructions."
+}

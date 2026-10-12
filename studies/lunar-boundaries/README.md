@@ -106,3 +106,35 @@ crescent observation, historical sunset boundaries, actual Athenian decisions
 or Babylonian Ululu II. A consistent reconstructed date can still differ from
 an attested date. The Chinese calendar uses a separate conjunction series;
 its numerical model is unchanged.
+
+## Retained verification
+
+The library was built from a clean archive of `efc38d3`, packed, and installed
+in a separate directory. Node 20.0.0 and 24.21.0 produced identical complete
+[interval receipts](installed-oracle-node24.json), including all disagreement
+counts and result hashes. The source archive passed lint, typechecking, 223
+unit tests in each of two locales, build, and the runnable README example.
+The installed package also passed the README's imports and example outputs.
+
+The font correction was then built from a clean archive of `e9752bb`.
+All 17 library source files and all 34 installed JavaScript/declaration files
+match both builds exactly. That archive passed lint, typechecking, production
+build and all 58 Chromium/Firefox workflows.
+
+The [before](browser-before.json) and [after](browser-after.json) replays each
+cover four offline contexts and 16 calendar navigations. The baseline attempts
+six late HTTP requests and logs six failed-load errors; the correction has
+zero. All 24 retained card screenshots were opened and inspected. Their
+labels, reconstruction notices and keyboard focus are readable at both widths.
+
+| Before | After |
+| --- | --- |
+| ![Old Greek tablet: Attic year 2025 but Olympiad 701.2](../../docs/assets/lunar-boundaries/before/chromium-375-greek-gap.png) | ![Corrected Greek tablet: Attic year 2025 and Olympiad 701.1](../../docs/assets/lunar-boundaries/after/chromium-375-greek-gap.png) |
+| ![Old Babylonian tablet: previous year on the modeled new-year day](../../docs/assets/lunar-boundaries/before/firefox-375-babylonian-midnight.png) | ![Corrected Babylonian tablet: 1 Nisannu throughout the same modeled civil day](../../docs/assets/lunar-boundaries/after/firefox-375-babylonian-midnight.png) |
+
+[artifacts.json](artifacts.json) records the archive and package hashes,
+98 build/check inputs per archive, installed-file equality, and served asset
+hashes checked against the builds (nine baseline assets, 29 corrected assets).
+`font-faces.json` records each bundled font's hash and variable-face check.
+These are source and local-artifact checks, not evidence of a package release
+or a hosted deployment.

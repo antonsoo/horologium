@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent daily-grid crossing and civil-interval oracle for the unchanged low-precision reconstruction. Not ephemeris accuracy or historical attestation.",
+  "years": [
+    -5000, -4750, -4500, -4250, -4000, -3750, -3500, -3250, -3000, -2750, -2500, -2250, -2000,
+    -1750, -1500, -1250, -1000, -776, -775, -774, -750, -500, -311, -310, -250, -1, 0, 1, 250, 500,
+    750, 1000, 1250, 1500, 1750, 1900, 1905, 1910, 1915, 1920, 1925, 1930, 1935, 1940, 1945, 1950,
+    1955, 1960, 1965, 1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2026,
+    2030, 2035, 2040, 2045, 2050, 2250, 2500, 2750, 3000, 3250, 3500, 3750, 4000, 4250, 4500, 4750,
+    4999, 5000
+  ],
+  "cases": {
+    "lunar": 5964,
+    "babylonian": 5035,
+    "greek": 5015
+  },
+  "inputSha256": "a4f71cae87585cef84ddffd64b256d1709c8403a80430bf3b425116efd0808b0",
+  "modelFunctionsUnchanged": ["sunLongitude", "moonLongitude", "moonElongation"],
+  "verifierSha256": "53072a3400e144effcc3eb8b84e66aa337ecfee09c44c36b1ce69b7d1f633b55",
+  "before": {
+    "failures": {
+      "lunar": 3976,
+      "babylonian": 276,
+      "greek": 158
+    },
+    "examples": [
+      {
+        "year": -5000,
+        "jd": -105177.48637530296,
+        "seconds": -300,
+        "expected": {
+          "previous": -105206.96050749229,
+          "next": -105177.48290308075,
+          "ageDays": 29.474132189323427
+        },
+        "actual": {
+          "previous": -105206.9605074923,
+          "next": -105148.09463828173,
+          "ageDays": 29.47413218933798
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105177.48291465481,
+        "seconds": -1,
+        "expected": {
+          "previous": -105206.96050749229,
+          "next": -105177.48290308075,
+          "ageDays": 29.477592837472912
+        },
+        "actual": {
+          "previous": -105206.9605074923,
+          "next": -105148.09463828173,
+          "ageDays": 29.477592837487464
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105177.48289150668,
+        "seconds": 1,
+        "expected": {
+          "previous": -105177.48290308075,
+          "next": -105148.09463828173,
+          "ageDays": 0.000011574069503694773
+        },
+        "actual": {
+          "previous": -105206.9605074923,
+          "next": -105148.09463828173,
+          "ageDays": 29.47761598562647
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105177.47943085853,
+        "seconds": 300,
+        "expected": {
+          "previous": -105177.48290308075,
+          "next": -105148.09463828173,
+          "ageDays": 0.0034722222189884633
+        },
+        "actual": {
+          "previous": -105206.9605074923,
+          "next": -105148.09463828173,
+          "ageDays": 29.481076633775956
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105148.09811050395,
+        "seconds": -300,
+        "expected": {
+          "previous": -105177.48290308075,
+          "next": -105148.09463828173,
+          "ageDays": 29.38479257679137
+        },
+        "actual": {
+          "previous": -105177.48290308076,
+          "next": -105118.75978358486,
+          "ageDays": 29.38479257680592
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105148.0946498558,
+        "seconds": -1,
+        "expected": {
+          "previous": -105177.48290308075,
+          "next": -105148.09463828173,
+          "ageDays": 29.388253224940854
+        },
+        "actual": {
+          "previous": -105177.48290308076,
+          "next": -105118.75978358486,
+          "ageDays": 29.388253224955406
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105148.09462670767,
+        "seconds": 1,
+        "expected": {
+          "previous": -105148.09463828173,
+          "next": -105118.75978358486,
+          "ageDays": 0.000011574069503694773
+        },
+        "actual": {
+          "previous": -105177.48290308076,
+          "next": -105118.75978358486,
+          "ageDays": 29.388276373094413
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105148.09116605952,
+        "seconds": 300,
+        "expected": {
+          "previous": -105148.09463828173,
+          "next": -105118.75978358486,
+          "ageDays": 0.0034722222189884633
+        },
+        "actual": {
+          "previous": -105177.48290308076,
+          "next": -105118.75978358486,
+          "ageDays": 29.391737021243898
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105118.76325580708,
+        "seconds": -300,
+        "expected": {
+          "previous": -105148.09463828173,
+          "next": -105118.75978358486,
+          "ageDays": 29.331382474658312
+        },
+        "actual": {
+          "previous": -105148.09463828173,
+          "next": -105089.44872104679,
+          "ageDays": 29.331382474658312
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105118.75979515893,
+        "seconds": -1,
+        "expected": {
+          "previous": -105148.09463828173,
+          "next": -105118.75978358486,
+          "ageDays": 29.334843122807797
+        },
+        "actual": {
+          "previous": -105148.09463828173,
+          "next": -105089.44872104679,
+          "ageDays": 29.334843122807797
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105118.75977201079,
+        "seconds": 1,
+        "expected": {
+          "previous": -105118.75978358486,
+          "next": -105089.44872104679,
+          "ageDays": 0.000011574069503694773
+        },
+        "actual": {
+          "previous": -105148.09463828173,
+          "next": -105089.44872104679,
+          "ageDays": 29.334866270946804
+        }
+      },
+      {
+        "year": -5000,
+        "jd": -105118.75631136264,
+        "seconds": 300,
+        "expected": {
+          "previous": -105118.75978358486,
+          "next": -105089.44872104679,
+          "ageDays": 0.0034722222189884633
+        },
+        "actual": {
+          "previous": -105148.09463828173,
+          "next": -105089.44872104679,
+          "ageDays": 29.33832691909629
+        }
+      },
+      {
+        "calendar": "babylonian",
+        "year": -5000,
+        "jd": -105065.34112906503,
+        "expected": {
+          "seYear": -4690,
+          "month": 12,
+          "isIntercalary": false,
+          "day": 25
+        },
+        "actual": {
+          "seYear": -4689,
+          "month": 12,
+          "isIntercalary": false,
+          "day": 25
+        }
+      },
+      {
+        "calendar": "babylonian",
+        "year": -5000,
+        "jd": -105060.62342129629,
+        "expected": {
+          "seYear": -4690,
+          "month": 12,
+          "isIntercalary": false,
+          "day": 29
+        },
+        "actual": {
+          "seYear": -4689,
+          "month": 12,
+          "isIntercalary": false,
+          "day": 29
+        }
+      },
+      {
+        "calendar": "babylonian",
+        "year": -5000,
+        "jd": -105060.62339814815,
+        "expected": {
+          "seYear": -4689,
+          "month": 1,
+          "isIntercalary": false,
+          "day": 1
+        },
+        "actual": {
+          "seYear": -4689,
+          "month": 12,
+          "isIntercalary": false,
+          "day": 30
+        }
+      },
+      {
+        "calendar": "babylonian",
+        "year": -5000,
+        "jd": -105060.12340972222,
+        "expected": {
+          "seYear": -4689,
+          "month": 1,
+          "isIntercalary": false,
+          "day": 1
+        },
+        "actual": {
+          "seYear": -4688,
+          "month": 1,
+          "isIntercalary": false,
+          "day": 1
+        }
+      },
+      {
+        "calendar": "babylonian",
+        "year": -5000,
+        "jd": -105060.13592580409,
+        "expected": {
+          "seYear": -4689,
+          "month": 1,
+          "isIntercalary": false,
+          "day": 1
+        },
+        "actual": {
+          "seYear": -4689,
+          "month": 12,
+          "isIntercalary": false,
+          "day": 30
+        }
+      },
+      {
+        "calendar": "babylonian",
+        "year": -5000,
+        "jd": -105060.13590265595,
+        "expected": {
+          "seYear": -4689,
+          "month": 1,
+          "isIntercalary": false,
+          "day": 1
+        },
+        "actual": {
+          "seYear": -4688,
+          "month": 1,
+          "isIntercalary": false,
+          "day": 1
+        }
+      },
+      {
+        "calendar": "greek",
+        "year": -5000,
+        "jd": -104974.78114711726,
+        "expected": {
+          "attic": {
+            "yearStartsIn": -5001,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 27
+          },
+          "olympiad": {
+            "number": -1056,
+            "year": 3
+          }
+        },
+        "actual": {
+          "attic": {
+            "yearStartsIn": -5001,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 27
+          },
+          "olympiad": {
+            "number": -1056,
+            "year": 4
+          }
+        }
+      },
+      {
+        "calendar": "greek",
+        "year": -5000,
+        "jd": -104972.5659212963,
+        "expected": {
+          "attic": {
+            "yearStartsIn": -5001,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -1056,
+            "year": 3
+          }
+        },
+        "actual": {
+          "attic": {
+            "yearStartsIn": -5001,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -1056,
+            "year": 4
+          }
+        }
+      },
+      {
+        "calendar": "greek",
+        "year": -4750,
+        "jd": -13664.99921626062,
+        "expected": {
+          "attic": {
+            "yearStartsIn": -4751,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 28
+          },
+          "olympiad": {
+            "number": -993,
+            "year": 1
+          }
+        },
+        "actual": {
+          "attic": {
+            "yearStartsIn": -4751,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 28
+          },
+          "olympiad": {
+            "number": -993,
+            "year": 2
+          }
+        }
+      },
+      {
+        "calendar": "greek",
+        "year": -4750,
+        "jd": -13663.565921296296,
+        "expected": {
+          "attic": {
+            "yearStartsIn": -4751,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -993,
+            "year": 1
+          }
+        },
+        "actual": {
+          "attic": {
+            "yearStartsIn": -4751,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -993,
+            "year": 2
+          }
+        }
+      },
+      {
+        "calendar": "greek",
+        "year": -4500,
+        "jd": 77644.82351409434,
+        "expected": {
+          "attic": {
+            "yearStartsIn": -4501,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -931,
+            "year": 3
+          }
+        },
+        "actual": {
+          "attic": {
+            "yearStartsIn": -4501,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -931,
+            "year": 4
+          }
+        }
+      },
+      {
+        "calendar": "greek",
+        "year": -4500,
+        "jd": 77645.4340787037,
+        "expected": {
+          "attic": {
+            "yearStartsIn": -4501,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -931,
+            "year": 3
+          }
+        },
+        "actual": {
+          "attic": {
+            "yearStartsIn": -4501,
+            "month": 12,
+            "isIntercalary": false,
+            "day": 29
+          },
+          "olympiad": {
+            "number": -931,
+            "year": 4
+          }
+        }
+      }
+    ],
+    "outputSha256": "95077b108b0f8b49d9b7a81626cb3579447d73c5b8ec01b3f78431201c98dc60"
+  },
+  "after": {
+    "failures": {
+      "lunar": 0,
+      "babylonian": 0,
+      "greek": 0
+    },
+    "examples": [],
+    "outputSha256": "290f4215f5687fe68c960303c2a6895ab4f27060d018c9f3cbda29b2b4976906"
+  },
+  "yearSweep": {
+    "years": 10001,
+    "beforeWrongYears": 165,
+    "afterWrongYears": 0,
+    "reusableCrossings": 10001
+  },
+  "unchangedCalendars": {
+    "methods": [
+      ["roman", "describe"],
+      ["egyptian", "describe"],
+      ["hebrew", "describe"],
+      ["islamic", "describe"],
+      ["maya", "describe"],
+      ["chinese", "describe"],
+      ["coptic", "describeCoptic"],
+      ["coptic", "describeEthiopian"],
+      ["byzantine", "describe"],
+      ["zoroastrian", "describe"]
+    ],
+    "cases": 800,
+    "outputSha256": "a211a7824d7ac1976249e69441d1c47f07906072bdcbceb2ec4792acd9b87424"
+  }
+}
