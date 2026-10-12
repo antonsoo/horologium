@@ -15,8 +15,7 @@
  *
  * New moons and solstices are root-found on this project's own low-
  * precision Sun/Moon longitude formulas (Meeus 1998); day boundaries use a
- * fixed mean-time offset for Athens's longitude (23.7275 deg E), the same
- * simplification `chinese.ts` uses for China Standard Time, rather than
+ * fixed mean-time offset for Athens's longitude (23.7275 deg E), rather than
  * modeling the sunset-to-sunset civil day Greek practice actually used.
  */
 
@@ -104,7 +103,7 @@ function computeYearStructure(jd: JulianDay): YearStructure {
   };
 }
 
-export function atticFromJD(jd: JulianDay): AtticDate {
+function yearStructureContaining(jd: JulianDay): YearStructure {
   let structure = computeYearStructure(jd);
   const localDay = localDayNumber(jd);
   // `jd` can land in the gap between a solstice and *that* solstice's own
@@ -117,8 +116,12 @@ export function atticFromJD(jd: JulianDay): AtticDate {
   } else if (localDay >= localDayNumber(structure.cycleEndJD)) {
     structure = computeYearStructure(structure.nextSolsticeJD + 1);
   }
+  return structure;
+}
 
-  const { monthStarts, yearStartsIn } = structure;
+export function atticFromJD(jd: JulianDay): AtticDate {
+  const { monthStarts, yearStartsIn } = yearStructureContaining(jd);
+  const localDay = localDayNumber(jd);
   let idx = 0;
   for (let i = 0; i < monthStarts.length; i++) {
     if (localDayNumber(monthStarts[i] as JulianDay) <= localDay) idx = i;
@@ -151,14 +154,17 @@ export interface OlympiadDate {
 const FIRST_OLYMPIAD_YEAR = -775;
 
 export function olympiadFromJD(jd: JulianDay): OlympiadDate {
-  const { yearStartsIn } = computeYearStructure(jd);
+  return olympiadForYear(yearStructureContaining(jd).yearStartsIn);
+}
+
+function olympiadForYear(yearStartsIn: number): OlympiadDate {
   const yearsSince = yearStartsIn - FIRST_OLYMPIAD_YEAR;
   return { number: Math.floor(yearsSince / 4) + 1, year: mod(yearsSince, 4) + 1 };
 }
 
 export function describe(jd: JulianDay): CalendarTablet {
   const attic = atticFromJD(jd);
-  const ol = olympiadFromJD(jd);
+  const ol = olympiadForYear(attic.yearStartsIn);
   const monthNameEn = attic.isIntercalary
     ? `${ATTIC_MONTH_NAMES[POSEIDEON_INDEX]} II`
     : (ATTIC_MONTH_NAMES[attic.month - 1] ?? '');
@@ -178,7 +184,9 @@ export function describe(jd: JulianDay): CalendarTablet {
       'second Poseideon (the most commonly attested choice, though real Athenian practice ' +
       'intercalated other months too and did not follow a fixed rule). Olympiad numbering: ' +
       '776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and ' +
-      'the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998).',
+      'the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). ' +
+      'Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); ' +
+      'the historical sunset boundary is not modeled.',
     isReconstruction: true,
     proleptic: ol.number < 1 ? beforeEra('the Olympiad count', '776 BCE') : undefined,
   };

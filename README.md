@@ -8,6 +8,13 @@
 
 ![Horologium: a bronze Antikythera-inspired dial, date controls and the seasonal hour in Babylon for 4 October 2026 CE](docs/assets/hero.png)
 
+**Corrected in source, unreleased:** the Greek tablet keeps its Olympiad
+and Attic years together; the Babylonian tablet changes year, month and
+day at one modeled midnight. New-moon searches also retain events close
+to the requested instant instead of skipping a month. The
+[before/after boundary study](studies/lunar-boundaries/README.md) explains
+the failures and checks the existing reconstruction's rules.
+
 ## Why this exists
 
 A date can change its meaning when its calendar is left unstated. The Ides

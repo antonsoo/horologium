@@ -22,6 +22,15 @@ not yet published to npm or the hosted demo.
 
 ### Fixed
 
+- New-moon searches keep crossings within 14.4 minutes of the requested
+  instant. `nextNewMoon` includes its boundary, `previousNewMoon` excludes
+  it, and moon age is zero at the modeled crossing.
+- Babylonian year, month and day use one mean-midnight boundary. The
+  equinox search also handles the clock's earliest years, when May 1 Julian
+  precedes the modeled equinox, without assigning the previous year's event.
+- Greek Olympiad years now change with the Attic year, including the gap
+  between solstice and the first new moon. Both tablets explain their
+  simplified day boundary. These remain astronomical reconstructions.
 - Chinese leap-month selection uses the solstice's civil day instead of a
   12-hour allowance. The 2033 leap month is 11, not 7. Meeus chapter 49
   conjunctions also correct boundary dates including 6 February 2027.

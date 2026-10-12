@@ -324,3 +324,27 @@ test('light/dark desktop and mobile views remain accessible without overflow', a
     }
   }
 });
+
+test('reconstructed year labels stay on the same civil boundary', async ({ page }) => {
+  await load(page, '#jd=2461224.396031973&loc=Athens');
+  await expect(page.locator('[data-calendar=greek] .tablet-summary')).toHaveText(
+    '18 Skirophorion, Ol. 701.1 (year begins 2025 CE)',
+  );
+  await page.evaluate(() => {
+    location.hash = 'jd=2461147.376601852&loc=Babylon';
+  });
+  const babylonian = page.locator('[data-calendar=babylonian]');
+  await expect(babylonian.locator('.tablet-summary')).toHaveText('1 Nisannu, SE 2337');
+  await babylonian.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(babylonian.locator('.method')).toContainText('mean midnight');
+  await page.evaluate(() => {
+    location.hash = 'jd=2461147.936773862&loc=Babylon';
+  });
+  await expect(babylonian.locator('.tablet-summary')).toHaveText('1 Nisannu, SE 2337');
+  await expect(babylonian.locator('summary')).toBeFocused();
+  await page.evaluate(() => {
+    location.hash = 'jd=-105060.12340972222&loc=Babylon';
+  });
+  await expect(babylonian.locator('.tablet-summary')).toHaveText('1 Nisannu, SE -4689');
+});

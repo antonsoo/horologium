@@ -120,7 +120,8 @@ export function moonPhase(jd: JulianDay): MoonPhase {
   const elongationDeg = moonElongation(jd);
   const elongationRad = elongationDeg * DEG;
   const illuminatedFraction = (1 - Math.cos(elongationRad)) / 2;
-  const lastNew = previousNewMoon(jd);
+  // Age is zero at a crossing; the public previousNewMoon search is strict.
+  const lastNew = findElongationCrossing(jd, -1);
   const ageDays = jd - lastNew;
 
   let label: string;
@@ -158,58 +159,66 @@ export function zodiacSign(longitudeDeg: number): string {
 }
 
 /**
- * Root-find the JD nearest `jd` where `elongation(x) - target` crosses zero,
- * by walking backward/forward from a mean-synodic-month estimate and then
- * refining with bisection. `direction` picks the nearest crossing before
- * (-1) or after (+1) `jd`.
+ * The adjacent floating-point instant before `jd`, without shifting the
+ * requested interval by an arbitrary number of seconds or minutes.
  */
-function findElongationCrossing(jd: JulianDay, targetDeg: number, direction: -1 | 1): JulianDay {
+function previousInstant(jd: JulianDay): JulianDay {
+  if (jd === 0) return -Number.MIN_VALUE;
+  const bits = new DataView(new ArrayBuffer(8));
+  bits.setFloat64(0, jd);
+  bits.setBigUint64(0, bits.getBigUint64(0) + (jd > 0 ? -1n : 1n));
+  return bits.getFloat64(0);
+}
+
+/** Inclusive search for the nearest modeled new moon in the given direction.
+ * Return the first representable JD on the nonnegative side of the crossing.
+ * This makes a returned event reusable as an inclusive search boundary.
+ */
+function findElongationCrossing(jd: JulianDay, direction: -1 | 1): JulianDay {
+  if (!Number.isFinite(jd)) throw new RangeError('Julian Day must be finite.');
   const f = (x: JulianDay) => {
-    const e = moonElongation(x) - targetDeg;
+    const e = moonElongation(x);
     return ((((e + 180) % 360) + 360) % 360) - 180;
   };
+  const phase = f(jd);
+  const before = f(previousInstant(jd));
+  if (before < 0 && phase >= 0 && phase - before < 180) return jd;
+
   // Coarse step in the requested direction until the sign flips.
   const step = direction * (SYNODIC_MONTH / 24); // ~1.23 days, safely under half a lunation
   let a = jd;
-  let fa = f(a);
-  let b = a;
-  let fb = fa;
+  let fa = phase;
   for (let i = 0; i < 40; i++) {
-    b = a + step;
-    fb = f(b);
-    // A real root has fa/fb close together with opposite signs; the +-180
-    // wrap point (target+180 away) also flips Math.sign but jumps by ~360,
-    // so exclude that case or we'll "find" a root 6 lunar months off target.
-    if (fb === 0 || (Math.sign(fa) !== Math.sign(fb) && Math.abs(fa - fb) < 180)) break;
+    const b = a + step;
+    const fb = f(b);
+    let lo = Math.min(a, b);
+    let hi = Math.max(a, b);
+    const flo = direction === 1 ? fa : fb;
+    const fhi = direction === 1 ? fb : fa;
+    // The full-moon wrap also changes sign, but in the opposite direction.
+    if (flo < 0 && fhi >= 0 && fhi - flo < 180) {
+      for (let j = 0; j < 64; j++) {
+        const mid = (lo + hi) / 2;
+        if (mid === lo || mid === hi) return hi;
+        if (f(mid) < 0) lo = mid;
+        else hi = mid;
+      }
+      return hi;
+    }
     a = b;
     fa = fb;
   }
-  // Bisection refinement to sub-minute precision.
-  let lo = Math.min(a, b);
-  let hi = Math.max(a, b);
-  let flo = f(lo);
-  for (let i = 0; i < 60; i++) {
-    const mid = (lo + hi) / 2;
-    const fmid = f(mid);
-    if (fmid === 0) return mid;
-    if (Math.sign(fmid) === Math.sign(flo)) {
-      lo = mid;
-      flo = fmid;
-    } else {
-      hi = mid;
-    }
-  }
-  return (lo + hi) / 2;
+  throw new RangeError('Could not bracket a new moon near this Julian Day.');
 }
 
 /** JD of the new moon (elongation 0) immediately before `jd`. */
 export function previousNewMoon(jd: JulianDay): JulianDay {
-  return findElongationCrossing(jd - 0.01, 0, -1);
+  return findElongationCrossing(previousInstant(jd), -1);
 }
 
 /** JD of the new moon (elongation 0) immediately at or after `jd`. */
 export function nextNewMoon(jd: JulianDay): JulianDay {
-  return findElongationCrossing(jd + 0.01, 0, 1);
+  return findElongationCrossing(jd, 1);
 }
 
 /**

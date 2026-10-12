@@ -85,15 +85,11 @@ export const SELEUCID_EPOCH_JD: JulianDay = julianToJD(-310, 4, 3);
  */
 function nisannu1(seYear: number): JulianDay {
   const approxJulianYear = jdToJulian(SELEUCID_EPOCH_JD).year + (seYear - 1);
-  // The Julian calendar's slightly-too-long year (365.25d vs the ~365.2422d
-  // tropical year) makes the equinox drift to *later* Julian-calendar dates
-  // the further back in time we go (about 1 day later per ~125 years) -
-  // empirically around 25-26 March by 311 BCE, and further still for the
-  // more ancient dates this project covers. May 1 stays safely after the
-  // true equinox across this project's full +/-5000 year range, so the
-  // backward search below always lands on the *current* year's equinox
-  // rather than accidentally undershooting into the previous year's.
-  const pivot = julianToJD(approxJulianYear, 5, 1);
+  // The equinox drifts across Julian month boundaries. May 1 precedes it
+  // at year -5000. July 1 follows it across the clock's -5000..5000 range,
+  // checked for every year in studies/lunar-boundaries. Farther extrapolation
+  // of the astronomical model remains unverified.
+  const pivot = julianToJD(approxJulianYear, 7, 1);
   const equinox = findSolarLongitudeCrossing(pivot, 0, -1);
   return nextNewMoon(equinox);
 }
@@ -108,15 +104,18 @@ export interface BabylonianDate {
 }
 
 export function fromJD(jd: JulianDay): BabylonianDate {
+  const localDay = localDayNumber(jd);
   const approxYear = Math.round((jd - SELEUCID_EPOCH_JD) / 365.2425) + 1;
   let seYear = approxYear;
   let thisYearStart = nisannu1(seYear);
-  while (thisYearStart > jd) {
+  // Year, month and day all turn over at the same modeled civil midnight,
+  // including the hours before that day's astronomical new moon.
+  while (localDayNumber(thisYearStart) > localDay) {
     seYear -= 1;
     thisYearStart = nisannu1(seYear);
   }
   let nextYearStart = nisannu1(seYear + 1);
-  while (nextYearStart <= jd) {
+  while (localDayNumber(nextYearStart) <= localDay) {
     seYear += 1;
     thisYearStart = nextYearStart;
     nextYearStart = nisannu1(seYear + 1);
@@ -130,7 +129,6 @@ export function fromJD(jd: JulianDay): BabylonianDate {
     monthStarts.push(nextNewMoon((monthStarts[i - 1] as JulianDay) + 1));
   }
 
-  const localDay = localDayNumber(jd);
   let idx = 0;
   for (let i = 0; i < monthStarts.length; i++) {
     if (localDayNumber(monthStarts[i] as JulianDay) <= localDay) idx = i;
@@ -162,7 +160,9 @@ export function describe(jd: JulianDay): CalendarTablet {
       'historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested ' +
       'exception where a second Ululu was intercalated mid-year instead is not modeled. New moons ' +
       'and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see ' +
-      'docs/CALENDARS.md.',
+      'docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon ' +
+      '(44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries ' +
+      'are not modeled.',
     isReconstruction: true,
     proleptic: d.seYear < 1 ? beforeEra('the Seleucid Era', '311 BCE') : undefined,
   };

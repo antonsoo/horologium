@@ -236,7 +236,9 @@ rather than guessing at attested-but-irregular history:
   occasion).
 - **Olympiad**: 776 BCE (Julian) = Ol. 1.1, incrementing every 4 years from
   the same year-start; this is the traditional epoch, not independently
-  re-derived.
+  re-derived. The source checkout uses the same selected Attic year for
+  both labels, including the interval after solstice but before that
+  year's first month. Both advance on the new moon's modeled civil day.
 - Month names verified against Wikipedia's "Attic calendar" article,
   including the polytonic Greek forms (e.g. Ἑκατομβαιών).
 - New moons and the solstice use the shared low-precision longitude
@@ -251,6 +253,19 @@ An explicit **reconstruction**, epoch 1 Nisannu SE 1 = 3 April 311 BCE
 (Julian) - Seleucus I's Babylonian-reckoning return to Babylon. Nisannu 1
 is the first new moon at/after the vernal equinox each year; a year
 needing a 13th lunar month intercalates Addaru II at year-end.
+
+Year, month and day use the same fixed mean-midnight boundary at Babylon's
+longitude (44.4275 degrees east), on the civil day containing the modeled
+new moon. The year does not change again at the conjunction instant.
+The equinox search starts at July 1 and looks backward, covering the
+earliest clock dates where the modeled equinox occurs after May 1 Julian.
+The resulting year assignment is checked for every year -5000 through
+5000; farther astronomical extrapolation remains unverified.
+
+The [boundary study](../studies/lunar-boundaries/README.md) checks these
+internal rules and the Greek year labels against a separate event-grid
+and interval calculation. It does not test historical attestation or
+improve the low-precision longitude formulas.
 
 Richard A. Parker & Waldo H. Dubberstein's *Babylonian Chronology 626
 B.C.-A.D. 75* documents that regularized Babylonian practice (attested

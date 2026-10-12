@@ -1,0 +1,75 @@
+{
+  "source": "43fd938bb2e1bbd9ed8965da44984e631505d2be",
+  "moon": {
+    "root": 2461059.3697396033,
+    "cases": [
+      {
+        "minutes": -20,
+        "jd": 2461059.3558507143,
+        "next": 2461059.3697396033,
+        "previous": 2461029.6090931073,
+        "ageDays": 29.746757606975734
+      },
+      {
+        "minutes": -5,
+        "jd": 2461059.3662673812,
+        "next": 2461089.004511296,
+        "previous": 2461029.6090931073,
+        "ageDays": 29.75717427395284
+      },
+      {
+        "minutes": 0,
+        "jd": 2461059.3697396033,
+        "next": 2461089.004511296,
+        "previous": 2461029.6090931073,
+        "ageDays": 29.760646495968103
+      },
+      {
+        "minutes": 5,
+        "jd": 2461059.3732118253,
+        "next": 2461089.004511296,
+        "previous": 2461029.6090931073,
+        "ageDays": 29.764118717983365
+      },
+      {
+        "minutes": 20,
+        "jd": 2461059.3836284922,
+        "next": 2461089.004511296,
+        "previous": 2461059.3697396033,
+        "ageDays": 0.013888888992369175
+      }
+    ]
+  },
+  "babylonian": {
+    "moon": 2461147.936762288,
+    "midnight": 2461147.376590278,
+    "early": {
+      "seYear": 2336,
+      "month": 12,
+      "isIntercalary": true,
+      "day": 30
+    },
+    "late": {
+      "seYear": 2337,
+      "month": 1,
+      "isIntercalary": false,
+      "day": 1
+    }
+  },
+  "greek": {
+    "jd": 2461224.396031973,
+    "solstice": 2461212.8476534793,
+    "next": 2461235.9444104666,
+    "attic": {
+      "yearStartsIn": 2025,
+      "month": 12,
+      "isIntercalary": false,
+      "day": 18
+    },
+    "olympiad": {
+      "number": 701,
+      "year": 2
+    },
+    "summary": "18 Skirophorion, Ol. 701.2 (year begins 2025 CE)"
+  }
+}
