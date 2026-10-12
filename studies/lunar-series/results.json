@@ -1,0 +1,141 @@
+{
+  "node": "v26.7.0",
+  "fixtureSha256": "c604811e9062861c51d7644c7907dbc20e269f60183b7853ca5a06685d1afc4c",
+  "positions": 10801,
+  "conjunctions": 2487,
+  "results": {
+    "before": {
+      "meanLongitudeDegrees": {
+        "max": 0.9657560461644152,
+        "rms": 0.36360759346194893
+      },
+      "apparentLongitudeDegrees": {
+        "max": 0.9609581375972311,
+        "rms": 0.3636060175113187
+      },
+      "conjunctionMinutes": {
+        "max": 85.09044706821442,
+        "rms": 36.392484812246025
+      },
+      "clock2026Degrees": {
+        "max": 0.8029982594479179,
+        "rms": 0.3955729996234853
+      },
+      "modernUTCConjunctionMinutes": {
+        "max": 82.86627285182476,
+        "rms": 50.044067665403155
+      },
+      "positionsSha256": "001bd737de51e4cc2f6feee8bed74b93ad34e0283c4dfd312c6d20359834a1c5",
+      "conjunctionsSha256": "afc529a633039ede0092fd21a92bf76c0b9984ece494f6e94c236853f83d4abf",
+      "nominalConjunctionDayDifferences": {
+        "babylonian": 62,
+        "greek": 41
+      }
+    },
+    "after": {
+      "meanLongitudeDegrees": {
+        "max": 0.003845830370210024,
+        "rms": 0.0007861061167445891
+      },
+      "apparentLongitudeDegrees": {
+        "max": 0.00762361260376565,
+        "rms": 0.0034229599357736653
+      },
+      "conjunctionMinutes": {
+        "max": 1.6508185118436813,
+        "rms": 0.5624038747363257
+      },
+      "clock2026Degrees": {
+        "max": 0.01671885048153854,
+        "rms": 0.012942349016526206
+      },
+      "modernUTCConjunctionMinutes": {
+        "max": 2.3653321713209152,
+        "rms": 1.7315281178813733
+      },
+      "positionsSha256": "3d4e905406bc13f4c7354cdf82805479a89e9348fd2ff72a10e8147060e5bace",
+      "conjunctionsSha256": "85715ae363b923614e8dc354f79c856322a9caab046baf45e2f8c54729eec1df",
+      "nominalConjunctionDayDifferences": {
+        "babylonian": 1,
+        "greek": 1
+      }
+    }
+  },
+  "cache": {
+    "comparisons": 1512,
+    "returnedRecordsMutatedAndRechecked": 1512,
+    "outputSha256": "0244f75585574d6e17cdab3226ce49d41996e2f525f4f14daf162da4ce990051",
+    "referenceModules": [
+      {
+        "name": "babylonian",
+        "sha256": "51964f7f30beb00669a6a69492ba8272054d2419e32e254418f4017c5f300a53"
+      },
+      {
+        "name": "greek",
+        "sha256": "8c418e9e5d216dbed11590585bb243be74e89014d6d4afff98a316ba8b857332"
+      }
+    ]
+  },
+  "unchangedCalendarDescriptions": {
+    "cases": 1680,
+    "outputSha256": "d2f666411839f2d4370e1d5df72f3626baf0c0f71cc3e2bbd0878cdaa479734d"
+  },
+  "boundaryCases": [
+    {
+      "id": "babylonian-2020",
+      "calendar": "babylonian",
+      "jd": 2458873.876590278,
+      "before": "2 Shabatu, SE 2330",
+      "after": "1 Shabatu, SE 2330"
+    },
+    {
+      "id": "greek-2022",
+      "calendar": "greek",
+      "jd": 2459848.9340902776,
+      "before": "1 Pyanepsion, Ol. 700.2 (year begins 2022 CE)",
+      "after": "2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)"
+    }
+  ],
+  "civilEvidence": [
+    {
+      "id": "babylonian-2020",
+      "referenceConjunction": {
+        "jdTT": 2458873.404963975,
+        "jdUTC": 2458873.404163234,
+        "utc": "2020-01-24T21:41:59.703426+00:00"
+      },
+      "expectedStartDay": 2458874,
+      "actualStartDay": 2458874,
+      "expectedDay": 1
+    },
+    {
+      "id": "greek-2022",
+      "referenceConjunction": {
+        "jdTT": 2459848.4136966085,
+        "jdUTC": 2459848.4128958676,
+        "utc": "2022-09-25T21:54:34.202975+00:00"
+      },
+      "expectedStartDay": 2459848,
+      "actualStartDay": 2459848,
+      "expectedDay": 2
+    }
+  ],
+  "ageCase": {
+    "jd": 2461147.9663565955,
+    "referenceNewMoonTT": 2461147.995109052,
+    "beforeEvent": 2461147.936762288,
+    "afterEvent": 2461147.995950903,
+    "beforeAgeDays": 0.02959430729970336,
+    "afterAgeDays": 29.40676279226318
+  },
+  "kernel": {
+    "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp",
+    "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+    "bytes": 32726016
+  },
+  "versions": {
+    "skyfield": "1.54",
+    "numpy": "2.4.4",
+    "pyerfa": "2.0.1.5"
+  }
+}

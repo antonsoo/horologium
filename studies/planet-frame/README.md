@@ -2,6 +2,10 @@
 
 Baseline: `26e8bbdf28e668cf034dd2277eab9b03d93f6e5d`. This corrects source
 and the locally built clock; it is not an npm release or a hosted deployment.
+The retained before/after replay uses candidate
+`a2ce92063118165d009612512ecbb6109fdd4b63`. Later lunar-model changes have a
+[separate study](../lunar-series/README.md); use the pinned candidate when
+reproducing this study's unchanged-module checks.
 
 The orbital calculation returned longitude in the **J2000 mean ecliptic and
 equinox**, then placed it directly on a **tropical zodiac of date**. The mismatch

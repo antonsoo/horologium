@@ -21,6 +21,13 @@ correction in source, not yet released to npm or the hosted demo.
 
 ### Fixed
 
+- Lunar longitude uses the complete Meeus chapter 47 longitude series, replacing
+  incorrect signs, arguments and omitted major terms in the old truncation.
+  Independent conjunction comparisons improve from up to 85.09 minutes to
+  1.65 minutes at equal TT; separate UTC-clock errors remain documented.
+  Greek/Babylonian reconstructions inherit the corrected conjunction days.
+- Repeated Greek/Babylonian calculations reuse at most eight private year
+  structures, preserving uncached results without recomputing every lunation.
 - Planet pointers rotate their complete geocentric vectors from the J2000
   ecliptic/equinox to the selected date's mean ecliptic/equinox. On an independent
   JPL DE440s grid, maximum longitude error falls from 2.28 to 0.23 degrees.

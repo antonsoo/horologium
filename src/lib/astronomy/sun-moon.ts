@@ -5,25 +5,25 @@
  *
  * Formulas follow Jean Meeus, *Astronomical Algorithms*, 2nd ed.
  * (Willmann-Bell, 1998):
- *  - Sun: ch. 25, "Solar Coordinates" (the low-precision geometric method,
- *    accurate to about 0'.01 in longitude for a few centuries around 2000,
- *    degrading gracefully outside that span).
- *  - Moon: ch. 47's mean elements, truncated to the ten largest periodic
- *    terms of Table 47.A (the terms in D, M, M', F with coefficients
- *    >= 0.04 degrees). Full ELP2000-82B has ~60 terms; measured against
- *    Skyfield + JPL DE421 over 1900-2053 (tests/astronomy.test.ts), this
- *    truncation's worst error is about 0.68 degrees, well under 1 degree.
- *    Expect it to degrade further over the +/-5000 year range the rest of
- *    this project covers, where it is unverified (DE421 doesn't reach that
- *    far) and should be read as illustrative, not precise.
+ *  - Sun: ch. 25, "Solar Coordinates" (low-precision mean elements and
+ *    equation of center, with the apparent-longitude correction).
+ *  - Moon: ch. 47's full longitude series and additive terms, with the
+ *    eccentricity factors and complete argument polynomials. The old ten-term
+ *    table contained wrong signs and arguments, not just truncation error.
+ *    See moon-longitude.ts and studies/lunar-series for JPL comparisons.
  *
- * New moon and solstice/equinox/solar-term times are *not* looked up from a
- * periodic-term table (Meeus ch. 49 has ~14 correction terms we do not
- * reproduce); instead we root-find directly on these same longitude
- * formulas, which keeps every derived quantity internally consistent.
+ * These illustrative functions use the supplied Julian day directly as their
+ * dynamical argument; they do not convert UT to TT. Moon longitude is relative
+ * to the mean equinox of date; the Sun includes its low-precision apparent
+ * correction. Lunar age and the Greek/Babylonian reconstructions root-find this
+ * approximate elongation. The Chinese calendar has separate event formulas in
+ * calendar-events.ts, including its own estimate of TT minus UT.
  */
 
 import type { JulianDay } from '../core/jd.js';
+import { moonLongitude } from './moon-longitude.js';
+
+export { moonLongitude };
 
 const DEG = Math.PI / 180;
 
@@ -61,43 +61,7 @@ export function sunLongitude(jd: JulianDay): number {
   return normalizeDegrees(apparent);
 }
 
-/**
- * Geocentric ecliptic longitude of the Moon (truncated periodic series).
- * Meeus (1998) ch. 47, mean elements (47.1-47.5) plus the ten largest
- * longitude periodic terms of Table 47.A.
- */
-export function moonLongitude(jd: JulianDay): number {
-  const t = centuriesSinceJ2000(jd);
-  const lp = normalizeDegrees(218.3164477 + 481267.88123421 * t - 0.0015786 * t * t);
-  const d = normalizeDegrees(297.8501921 + 445267.1114034 * t - 0.0018819 * t * t);
-  const m = normalizeDegrees(357.5291092 + 35999.0502909 * t - 0.0001536 * t * t);
-  const mp = normalizeDegrees(134.9633964 + 477198.8675055 * t + 0.008997 * t * t);
-  const f = normalizeDegrees(93.272095 + 483202.0175233 * t - 0.0036539 * t * t);
-
-  const [dR, mR, mpR, fR] = [d * DEG, m * DEG, mp * DEG, f * DEG];
-
-  const terms = [
-    { coeff: 6.28875, d: 0, m: 0, mp: 1, f: 0 },
-    { coeff: 1.274, d: 2, m: 0, mp: -1, f: 0 },
-    { coeff: 0.658, d: 2, m: 0, mp: 0, f: 0 },
-    { coeff: -0.214, d: 0, m: 0, mp: 2, f: 0 },
-    { coeff: -0.11, d: 1, m: 0, mp: 0, f: 0 },
-    { coeff: -0.0573, d: 2, m: -1, mp: -1, f: 0 },
-    { coeff: 0.0533, d: 2, m: 0, mp: 1, f: 0 },
-    { coeff: 0.0459, d: 2, m: -1, mp: 0, f: 0 },
-    { coeff: 0.0397, d: 0, m: 1, mp: -1, f: 0 },
-    { coeff: -0.0347, d: 1, m: 1, mp: 0, f: 0 },
-  ];
-
-  let sum = 0;
-  for (const term of terms) {
-    const arg = term.d * dR + term.m * mR + term.mp * mpR + term.f * fR;
-    sum += term.coeff * Math.sin(arg);
-  }
-  return normalizeDegrees(lp + sum);
-}
-
-/** Mean elongation of the Moon from the Sun, degrees, used for phase. */
+/** Approximate ecliptic elongation, degrees, used for phase; see the time/frame limits above. */
 export function moonElongation(jd: JulianDay): number {
   return normalizeDegrees(moonLongitude(jd) - sunLongitude(jd));
 }

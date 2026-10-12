@@ -1,0 +1,27 @@
+{
+  "node": "v26.7.0",
+  "repository": "https://github.com/commenthol/astronomia",
+  "commit": "71e16c942b143a1a5a067b6aab2d8532064704ae",
+  "files": [
+    {
+      "path": "src/moonposition.js",
+      "bytes": 8325,
+      "sha256": "9722fe206cbf61d010302cbc67a3536cc2a5c0834c2183b67f64bbb7c5dd3e7c"
+    },
+    {
+      "path": "src/base.js",
+      "bytes": 10292,
+      "sha256": "f172d92c259ddbfca373bed5a0d9d0875700e0f7b2d8d97bffb81a3437256cca"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1107,
+      "sha256": "cbbbb9d4a989c03eccd056006f3a4d3aabb74c5281b47c2e66d802d4ec0be2ef"
+    }
+  ],
+  "cases": 11202,
+  "ancientComputationalProbes": 401,
+  "maxDifferenceDegrees": 1.250816694664536e-8,
+  "outputSha256": "22097dd09f2dabd55dfb13ceee02017a46c4a8899b4bce5da385280088e1c485",
+  "scope": "Transcription parity only. Ancient dates are not validated against an ephemeris or physical observations."
+}

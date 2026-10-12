@@ -10,7 +10,8 @@
       "!**/tests/fixtures",
       "!**/fonts",
       "!**/studies/chinese-calendar/*.json",
-      "!**/studies/planet-frame/*.json"
+      "!**/studies/planet-frame/*.json",
+      "!**/studies/lunar-series/*.json"
     ]
   },
   "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },

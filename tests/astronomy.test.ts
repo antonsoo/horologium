@@ -43,11 +43,11 @@ describe('astronomy: geocentric ecliptic longitudes vs Skyfield/DE421', () => {
     expect(err).toBeLessThan(0.02);
   });
 
-  it('Moon longitude within 1 deg (10-term truncated series; measured max ~0.68 deg over 1900-2053)', () => {
+  it('Moon mean-equinox longitude within 0.01 deg of the retained apparent DE421 positions', () => {
     const err = maxError(moonLongitude, 'moon');
     // eslint-disable-next-line no-console
     console.log(`Moon max error over ${fixtures.length} dates: ${err.toFixed(4)} deg`);
-    expect(err).toBeLessThan(1);
+    expect(err).toBeLessThan(0.01);
   });
 
   for (const planet of PLANETS) {

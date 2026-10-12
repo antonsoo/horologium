@@ -4,6 +4,10 @@ This study compares source baseline `43fd938bb2e1bbd9ed8965da44984e631505d2be`
 with the corrected library. It tests consistency with the existing model,
 not astronomical accuracy or historically observed Greek/Babylonian dates.
 The source changes are unreleased; no npm package or hosted site is updated.
+For this historical before/after replay, candidate
+`a2ce92063118165d009612512ecbb6109fdd4b63` retains the longitude model used
+here. The later [lunar-series correction](../lunar-series/README.md) has its own
+ephemeris comparison and reruns the interval checks on the corrected model.
 
 ## Reproduced failures
 

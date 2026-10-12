@@ -81,7 +81,16 @@ interface YearStructure {
   nextSolsticeJD: JulianDay;
 }
 
+// The input selects a solstice interval, not an exact instant-specific year.
+// Retaining both sides of the solstice/new-year gap avoids recalculating all
+// lunations on every live tick. Cached structures never escape this module.
+const recentStructures: YearStructure[] = [];
+
 function computeYearStructure(jd: JulianDay): YearStructure {
+  const cached = recentStructures.find(
+    (year) => jd >= year.cycleStartSolsticeJD && jd < year.nextSolsticeJD,
+  );
+  if (cached) return cached;
   const ws0 = findSolarLongitudeCrossing(jd, 90, -1);
   const ws1 = findSolarLongitudeCrossing(ws0 + 10, 90, 1);
   const yearStart0 = nextNewMoon(ws0);
@@ -94,13 +103,16 @@ function computeYearStructure(jd: JulianDay): YearStructure {
   // Drop the trailing terminator (next year's month 1), same convention as chinese.ts.
   const monthStarts = newMoons.slice(0, -1);
 
-  return {
+  const structure = {
     monthStarts,
     yearStartsIn: jdToJulian(yearStart0).year,
     cycleStartSolsticeJD: ws0,
     cycleEndJD: yearStart1,
     nextSolsticeJD: ws1,
   };
+  recentStructures.unshift(structure);
+  if (recentStructures.length > 8) recentStructures.pop();
+  return structure;
 }
 
 function yearStructureContaining(jd: JulianDay): YearStructure {

@@ -1,0 +1,136 @@
+{
+  "machine": "14-vCPU Linux/WSL2; serial local observations, not a portable performance guarantee",
+  "method": "Each implementation runs in its own Node process. Three consecutive passes per grid; later passes and later grids reuse prior calculations. Outputs of the corrected cached and uncached implementations must be identical.",
+  "baseline": {
+    "node": "v24.21.0",
+    "cases": {
+      "liveSeconds": {
+        "calls": 240,
+        "milliseconds": [
+          105.486682,
+          91.89459499999998,
+          87.84121899999997
+        ],
+        "sha256": [
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90",
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90",
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90"
+        ]
+      },
+      "dailySteps": {
+        "calls": 730,
+        "milliseconds": [
+          270.392038,
+          268.986315,
+          258.6949279999999
+        ],
+        "sha256": [
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a",
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a",
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a"
+        ]
+      },
+      "solsticeGap": {
+        "calls": 240,
+        "milliseconds": [
+          129.09180000000015,
+          134.30566199999998,
+          129.4324220000001
+        ],
+        "sha256": [
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92",
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92",
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92"
+        ]
+      }
+    }
+  },
+  "uncached": {
+    "node": "v24.21.0",
+    "cases": {
+      "liveSeconds": {
+        "calls": 240,
+        "milliseconds": [
+          295.126572,
+          282.36477299999996,
+          265.11343899999997
+        ],
+        "sha256": [
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90",
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90",
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90"
+        ]
+      },
+      "dailySteps": {
+        "calls": 730,
+        "milliseconds": [
+          811.114576,
+          816.137283,
+          813.0193949999998
+        ],
+        "sha256": [
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a",
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a",
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a"
+        ]
+      },
+      "solsticeGap": {
+        "calls": 240,
+        "milliseconds": [
+          408.40900399999964,
+          386.0206629999998,
+          376.3000010000005
+        ],
+        "sha256": [
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92",
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92",
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92"
+        ]
+      }
+    }
+  },
+  "corrected": {
+    "node": "v24.21.0",
+    "cases": {
+      "liveSeconds": {
+        "calls": 240,
+        "milliseconds": [
+          10.672813999999995,
+          0.15613400000000155,
+          0.09435299999999813
+        ],
+        "sha256": [
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90",
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90",
+          "1db0ba2ea19ff47560956d38a4595a1458ab1013c8998670b25ae41c809a3d90"
+        ]
+      },
+      "dailySteps": {
+        "calls": 730,
+        "milliseconds": [
+          2.888836999999995,
+          0.6602120000000014,
+          0.5998670000000033
+        ],
+        "sha256": [
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a",
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a",
+          "f4faad91de3c45f4fbd5252be63e651faeb60836f27b5f3f6ddaa6c4af809d4a"
+        ]
+      },
+      "solsticeGap": {
+        "calls": 240,
+        "milliseconds": [
+          0.06056800000000351,
+          0.050166999999994744,
+          0.046289999999999054
+        ],
+        "sha256": [
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92",
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92",
+          "b006195205c5159fae28c362240b31e2dadfe4390281b159a831ef4e42f0ab92"
+        ]
+      }
+    }
+  }
+}

@@ -191,11 +191,18 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   approximate. [Full study, source gaps and limits](studies/chinese-calendar/README.md).
 - **Greek (Attic)** and **Babylonian** lunisolar dates are explicit
   reconstructions. Historical calendars were set by observation and
-  official decree. They have no independent oracle here; tests check
-  internal consistency across thousands of dates. That is weaker evidence
-  than comparison with published historical calendars.
-- **Sun/Moon positions** are measured against Skyfield + the JPL DE421
-  ephemeris over 1900-2053: Sun within 0.006 degrees, Moon within 0.68 degrees.
+  official decree. Their event model is compared with JPL ephemerides, and
+  tests check internal date consistency, but there is no independent historical
+  calendar oracle here. This does not verify dates used by ancient observers.
+- **Sun/Moon positions:** Sun error stays within 0.006 degrees on the retained
+  DE421 grid. The **lunar-series source correction (unreleased)** replaces
+  wrong signs/arguments and missing terms with the complete Meeus longitude
+  series. On 10,801 independent DE440s positions from 1900 through 2100, maximum
+  mean-equinox error falls from 0.966 to 0.00385 degrees. For the actual UTC
+  clock at 365 dates in 2026, the remaining error reaches 0.0168 degrees:
+  nutation and UT-to-TT conversion are still omitted. The
+  [lunar study](studies/lunar-series/README.md) separates these comparisons,
+  checks new-moon times and retains changed reconstructed-calendar examples.
   **Planet pointers (unreleased source correction)** now precess their J2000
   vectors to the selected date's ecliptic and equinox. Against JPL DE440s at
   2,755 dates from 1850 through 2050, the largest geometric longitude error

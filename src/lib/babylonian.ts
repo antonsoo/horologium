@@ -78,12 +78,19 @@ const ADDARU_INDEX = 11; // 0-based
 /** 1 Nisannu, SE 1 = 3 April 311 BCE (Julian). */
 export const SELEUCID_EPOCH_JD: JulianDay = julianToJD(-310, 4, 3);
 
+// A live clock and adjacent day steps reuse the same lunations. Keep only
+// eight calculated years; arbitrary date navigation must not grow a history.
+// These arrays stay private: callers receive fresh scalar date records.
+const yearCache = new Map<number, { start: JulianDay; monthStarts?: JulianDay[] }>();
+
 /**
  * 1 Nisannu of `seYear`: the first new moon at/after the vernal equinox
  * nearest that year, per Parker & Dubberstein's finding that regularized
  * intercalation kept Nisannu starting on/after the equinox.
  */
 function nisannu1(seYear: number): JulianDay {
+  const cached = yearCache.get(seYear);
+  if (cached) return cached.start;
   const approxJulianYear = jdToJulian(SELEUCID_EPOCH_JD).year + (seYear - 1);
   // The equinox drifts across Julian month boundaries. May 1 precedes it
   // at year -5000. July 1 follows it across the clock's -5000..5000 range,
@@ -91,7 +98,13 @@ function nisannu1(seYear: number): JulianDay {
   // of the astronomical model remains unverified.
   const pivot = julianToJD(approxJulianYear, 7, 1);
   const equinox = findSolarLongitudeCrossing(pivot, 0, -1);
-  return nextNewMoon(equinox);
+  const start = nextNewMoon(equinox);
+  if (yearCache.size >= 8) {
+    const oldest = yearCache.keys().next().value;
+    if (oldest !== undefined) yearCache.delete(oldest);
+  }
+  yearCache.set(seYear, { start });
+  return start;
 }
 
 export interface BabylonianDate {
@@ -124,9 +137,14 @@ export function fromJD(jd: JulianDay): BabylonianDate {
   // Determined astronomically (see module docs), not from an assumed cycle phase.
   const monthCount = Math.round((nextYearStart - thisYearStart) / SYNODIC_MONTH);
 
-  const monthStarts: JulianDay[] = [thisYearStart];
-  for (let i = 1; i < monthCount; i++) {
-    monthStarts.push(nextNewMoon((monthStarts[i - 1] as JulianDay) + 1));
+  const cached = yearCache.get(seYear);
+  let monthStarts = cached?.monthStarts;
+  if (!monthStarts) {
+    monthStarts = [thisYearStart];
+    for (let i = 1; i < monthCount; i++) {
+      monthStarts.push(nextNewMoon((monthStarts[i - 1] as JulianDay) + 1));
+    }
+    if (cached) cached.monthStarts = monthStarts;
   }
 
   let idx = 0;

@@ -5,7 +5,11 @@ the Meeus chapter 49 implementation by Sonia Keys and Commenthol in
 [astronomia](https://github.com/commenthol/astronomia/blob/master/src/moonphase.js).
 The first and seventh additional angular constants and the first angle's
 quadratic term follow the chapter 49 values (299.77, 207.14, and degrees).
-No other astronomia modules are included.
+The longitude terms, mean arguments and additive corrections in
+`src/lib/astronomy/moon-longitude.ts` adapt the longitude portion of their
+[`moonposition.js` implementation](https://github.com/commenthol/astronomia/blob/71e16c942b143a1a5a067b6aab2d8532064704ae/src/moonposition.js).
+Its latitude and distance series are not included. These adaptations add no
+runtime package dependency.
 
 The MIT License (MIT)
 

@@ -288,15 +288,27 @@ not rendered (same reasoning as Egyptian hieroglyphs, above).
 - **Sun** (`sunLongitude`): Meeus (1998) ch. 25 low-precision method.
   Measured against Skyfield + JPL DE421 over 1900-2053: max error 0.006
   degrees.
-- **Moon** (`moonLongitude`, `moonPhase`): Meeus ch. 47 mean elements, the
-  ten largest periodic terms of Table 47.A. Measured: max error 0.68
-  degrees over 1900-2053. New moon times are found by root-finding on this
-  formula (bisection on the Sun-Moon elongation), not read from Meeus's
-  separate (and more accurate) ch. 49 periodic-term table for lunar phases.
+- **Moon** (`moonLongitude`, `moonPhase`): Meeus ch. 47's 59 nonzero longitude
+  terms, complete mean-argument polynomials, eccentricity factors and additive
+  corrections. The old ten-term table had wrong signs/arguments and omitted
+  major terms. The [lunar study](../studies/lunar-series/README.md) measures
+  maximum mean-equinox error 0.00385 degrees on 10,801 DE440s positions over
+  1900-2100. Nutation and UT-to-TT conversion are not applied: actual UTC clock
+  inputs in the 2026 grid have up to 0.0168 degree error against apparent
+  positions. The 2,487 new-moon comparisons at equal nominal TT differ by at
+  most 1.65 minutes; 14 selected modern UTC conjunctions differ by up to 2.37
+  minutes. These are grid measurements, not universal bounds. Lunar age still
+  uses bisection on the approximate Sun-Moon elongation, and illuminated
+  fraction remains an ecliptic-elongation approximation that omits latitude.
+- **Reconstructed calendar reuse:** private caches retain at most eight recent
+  calculated years per Greek/Babylonian calendar. This avoids recomputing every
+  lunation for live ticks or nearby day navigation. Returned date objects do not
+  expose cached structures; bounded-cache execution is checked against the
+  original uncached calendar algorithms using the corrected lunar model.
 - **Chinese calendar events** (`calendar-events.ts`): separate chapter 49
   conjunctions with TT-to-UT conversion, as described above. The shared
-  illustrative Moon pointer and `astronomy.previousNewMoon` retain their
-  original low-precision model; they do not define Chinese month boundaries.
+  illustrative Moon pointer and `astronomy.previousNewMoon` use the corrected
+  chapter 47 longitude model; they do not define Chinese month boundaries.
 - **Sunrise/sunset** (`sunTimes`): the standard low-precision hour-angle
   method (equivalent to the NOAA Solar Calculator). No Delta-T correction;
   treats the civil day as a constant 86400 SI seconds throughout history.
