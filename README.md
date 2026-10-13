@@ -175,11 +175,13 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   Maya) are cross-checked against an independent third-party
   implementation (Python's `convertdate`) across hundreds of dates each;
   see `tests/oracle-fixtures.test.ts` and `scripts/generate_fixtures.py`.
-  `convertdate` has no Roman, Byzantine, Ethiopian, Egyptian-civil, or
-  Zoroastrian module to check against, so those instead get hand-derived
-  epoch verification and independent reference-fact checks (e.g. Ethiopian
-  New Year's well-known ~11 September date) — see each module's own tests
-  and `docs/CALENDARS.md`.
+  Ethiopian conversions also match ICU's `ethiopic` and `ethioaa` calendars
+  for [26 retained boundary dates](studies/ethiopian-era/README.md). The
+  source now correctly labels its Ethiopian year as **Era of Incarnation
+  (Amete Mihret)**; Amete Alem (Anno Mundi) years are 5500 greater.
+  Roman, Byzantine, Egyptian-civil and Zoroastrian instead get hand-derived
+  epoch verification and independent reference-fact checks — see each
+  module's own tests and `docs/CALENDARS.md`.
 - **Chinese calendar**: the source revision matches all 62,821 available
   daily month/day/year records in Hong Kong Observatory's 1929–2100 tables,
   checked at local midnight, noon and the final second. The original source

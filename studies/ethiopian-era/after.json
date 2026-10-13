@@ -1,0 +1,765 @@
+{
+  "node": "v24.21.0",
+  "icu": "78.3",
+  "cldr": "48.0",
+  "dates": 26,
+  "mismatches": 0,
+  "note": "ICU uses Amete Alem before Amete Mihret year 1. Horologium explicitly continues its Incarnation-era arithmetic proleptically; subtract 5500 from Amete Alem for this comparison. This checks date conversion, not historical usage or religious observance.",
+  "cases": [
+    {
+      "input": "-005000-01-01",
+      "jd": -105152.5,
+      "actual": {
+        "year": -5008,
+        "month": 6,
+        "day": 15
+      },
+      "references": {
+        "ethiopic": {
+          "year": 492,
+          "month": 6,
+          "day": 15,
+          "era": "AA"
+        },
+        "ethioaa": {
+          "year": 492,
+          "month": 6,
+          "day": 15,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": -5284,
+        "month": 6,
+        "day": 15
+      }
+    },
+    {
+      "input": "-000001-12-31",
+      "jd": 1721058.5,
+      "actual": {
+        "year": -8,
+        "month": 5,
+        "day": 6
+      },
+      "references": {
+        "ethiopic": {
+          "year": 5492,
+          "month": 5,
+          "day": 6,
+          "era": "AA"
+        },
+        "ethioaa": {
+          "year": 5492,
+          "month": 5,
+          "day": 6,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": -284,
+        "month": 5,
+        "day": 6
+      }
+    },
+    {
+      "input": "0000-01-01",
+      "jd": 1721059.5,
+      "actual": {
+        "year": -8,
+        "month": 5,
+        "day": 7
+      },
+      "references": {
+        "ethiopic": {
+          "year": 5492,
+          "month": 5,
+          "day": 7,
+          "era": "AA"
+        },
+        "ethioaa": {
+          "year": 5492,
+          "month": 5,
+          "day": 7,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": -284,
+        "month": 5,
+        "day": 7
+      }
+    },
+    {
+      "input": "0008-08-26",
+      "jd": 1724219.5,
+      "actual": {
+        "year": 0,
+        "month": 13,
+        "day": 5
+      },
+      "references": {
+        "ethiopic": {
+          "year": 5500,
+          "month": 13,
+          "day": 5,
+          "era": "AA"
+        },
+        "ethioaa": {
+          "year": 5500,
+          "month": 13,
+          "day": 5,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": -276,
+        "month": 13,
+        "day": 5
+      }
+    },
+    {
+      "input": "0008-08-27",
+      "jd": 1724220.5,
+      "actual": {
+        "year": 1,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 1,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 5501,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": -275,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "0008-08-28",
+      "jd": 1724221.5,
+      "actual": {
+        "year": 1,
+        "month": 1,
+        "day": 2
+      },
+      "references": {
+        "ethiopic": {
+          "year": 1,
+          "month": 1,
+          "day": 2,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 5501,
+          "month": 1,
+          "day": 2,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": -275,
+        "month": 1,
+        "day": 2
+      }
+    },
+    {
+      "input": "0284-08-29",
+      "jd": 1825029.5,
+      "actual": {
+        "year": 277,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 277,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 5777,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "1900-02-28",
+      "jd": 2415078.5,
+      "actual": {
+        "year": 1892,
+        "month": 6,
+        "day": 21
+      },
+      "references": {
+        "ethiopic": {
+          "year": 1892,
+          "month": 6,
+          "day": 21,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7392,
+          "month": 6,
+          "day": 21,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1616,
+        "month": 6,
+        "day": 21
+      }
+    },
+    {
+      "input": "1900-03-01",
+      "jd": 2415079.5,
+      "actual": {
+        "year": 1892,
+        "month": 6,
+        "day": 22
+      },
+      "references": {
+        "ethiopic": {
+          "year": 1892,
+          "month": 6,
+          "day": 22,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7392,
+          "month": 6,
+          "day": 22,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1616,
+        "month": 6,
+        "day": 22
+      }
+    },
+    {
+      "input": "2000-02-29",
+      "jd": 2451603.5,
+      "actual": {
+        "year": 1992,
+        "month": 6,
+        "day": 21
+      },
+      "references": {
+        "ethiopic": {
+          "year": 1992,
+          "month": 6,
+          "day": 21,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7492,
+          "month": 6,
+          "day": 21,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1716,
+        "month": 6,
+        "day": 21
+      }
+    },
+    {
+      "input": "2022-09-10",
+      "jd": 2459832.5,
+      "actual": {
+        "year": 2014,
+        "month": 13,
+        "day": 5
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2014,
+          "month": 13,
+          "day": 5,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7514,
+          "month": 13,
+          "day": 5,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1738,
+        "month": 13,
+        "day": 5
+      }
+    },
+    {
+      "input": "2022-09-11",
+      "jd": 2459833.5,
+      "actual": {
+        "year": 2015,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2015,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7515,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1739,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "2023-09-10",
+      "jd": 2460197.5,
+      "actual": {
+        "year": 2015,
+        "month": 13,
+        "day": 5
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2015,
+          "month": 13,
+          "day": 5,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7515,
+          "month": 13,
+          "day": 5,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1739,
+        "month": 13,
+        "day": 5
+      }
+    },
+    {
+      "input": "2023-09-11",
+      "jd": 2460198.5,
+      "actual": {
+        "year": 2015,
+        "month": 13,
+        "day": 6
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2015,
+          "month": 13,
+          "day": 6,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7515,
+          "month": 13,
+          "day": 6,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1739,
+        "month": 13,
+        "day": 6
+      }
+    },
+    {
+      "input": "2023-09-12",
+      "jd": 2460199.5,
+      "actual": {
+        "year": 2016,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2016,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7516,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1740,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "2024-02-29",
+      "jd": 2460369.5,
+      "actual": {
+        "year": 2016,
+        "month": 6,
+        "day": 21
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2016,
+          "month": 6,
+          "day": 21,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7516,
+          "month": 6,
+          "day": 21,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1740,
+        "month": 6,
+        "day": 21
+      }
+    },
+    {
+      "input": "2024-09-10",
+      "jd": 2460563.5,
+      "actual": {
+        "year": 2016,
+        "month": 13,
+        "day": 5
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2016,
+          "month": 13,
+          "day": 5,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7516,
+          "month": 13,
+          "day": 5,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1740,
+        "month": 13,
+        "day": 5
+      }
+    },
+    {
+      "input": "2024-09-11",
+      "jd": 2460564.5,
+      "actual": {
+        "year": 2017,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2017,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7517,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1741,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "2025-09-11",
+      "jd": 2460929.5,
+      "actual": {
+        "year": 2018,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2018,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7518,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1742,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "2026-09-10",
+      "jd": 2461293.5,
+      "actual": {
+        "year": 2018,
+        "month": 13,
+        "day": 5
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2018,
+          "month": 13,
+          "day": 5,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7518,
+          "month": 13,
+          "day": 5,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1742,
+        "month": 13,
+        "day": 5
+      }
+    },
+    {
+      "input": "2026-09-11",
+      "jd": 2461294.5,
+      "actual": {
+        "year": 2019,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2019,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7519,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1743,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "2026-10-12",
+      "jd": 2461325.5,
+      "actual": {
+        "year": 2019,
+        "month": 2,
+        "day": 2
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2019,
+          "month": 2,
+          "day": 2,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7519,
+          "month": 2,
+          "day": 2,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1743,
+        "month": 2,
+        "day": 2
+      }
+    },
+    {
+      "input": "2027-09-11",
+      "jd": 2461659.5,
+      "actual": {
+        "year": 2019,
+        "month": 13,
+        "day": 6
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2019,
+          "month": 13,
+          "day": 6,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7519,
+          "month": 13,
+          "day": 6,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1743,
+        "month": 13,
+        "day": 6
+      }
+    },
+    {
+      "input": "2027-09-12",
+      "jd": 2461660.5,
+      "actual": {
+        "year": 2020,
+        "month": 1,
+        "day": 1
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2020,
+          "month": 1,
+          "day": 1,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7520,
+          "month": 1,
+          "day": 1,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1744,
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "input": "2100-03-01",
+      "jd": 2488128.5,
+      "actual": {
+        "year": 2092,
+        "month": 6,
+        "day": 21
+      },
+      "references": {
+        "ethiopic": {
+          "year": 2092,
+          "month": 6,
+          "day": 21,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 7592,
+          "month": 6,
+          "day": 21,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 1816,
+        "month": 6,
+        "day": 21
+      }
+    },
+    {
+      "input": "5000-12-31",
+      "jd": 3547636.5,
+      "actual": {
+        "year": 4993,
+        "month": 3,
+        "day": 29
+      },
+      "references": {
+        "ethiopic": {
+          "year": 4993,
+          "month": 3,
+          "day": 29,
+          "era": "AM"
+        },
+        "ethioaa": {
+          "year": 10493,
+          "month": 3,
+          "day": 29,
+          "era": "AA"
+        }
+      },
+      "coptic": {
+        "year": 4717,
+        "month": 3,
+        "day": 29
+      }
+    }
+  ],
+  "examples": [
+    {
+      "input": "0008-08-26",
+      "tablet": {
+        "id": "ethiopian",
+        "name": "Ethiopian Calendar",
+        "native": "5 Pagume 0",
+        "transliteration": "5 Pagume 0",
+        "summary": "5 Pagume 0 (Era of Incarnation, Amete Mihret)",
+        "method": "Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction.",
+        "isReconstruction": false,
+        "proleptic": "Before the Ethiopian Era of Incarnation year 1 (8 CE): this year is counted backward from it."
+      }
+    },
+    {
+      "input": "2026-10-12",
+      "tablet": {
+        "id": "ethiopian",
+        "name": "Ethiopian Calendar",
+        "native": "2 Tikimt 2019",
+        "transliteration": "2 Tikimt 2019",
+        "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)",
+        "method": "Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction.",
+        "isReconstruction": false
+      }
+    }
+  ]
+}

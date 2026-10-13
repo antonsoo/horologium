@@ -1,5 +1,5 @@
 /**
- * The Coptic (Era of the Martyrs) and Ethiopian (Anno Mundi) calendars.
+ * The Coptic (Era of the Martyrs) and Ethiopian (Era of Incarnation) calendars.
  *
  * Both share one structure -- 12 months of 30 days plus a short 13th
  * "epagomenal" month of 5 days (6 in a leap year) -- differing only in
@@ -19,8 +19,9 @@
  *   persecutions the era commemorates.
  *
  * - Ethiopian epoch: 1 Meskerem year 1 = 29 August 8 CE (Julian), the
- *   conventional Ethiopian Anno Mundi epoch (roughly 276 years before the
- *   Coptic epoch, from a different Annunciation-era reckoning). Sanity
+ *   Ethiopian Era of Incarnation (Amete Mihret), 276 Julian years before
+ *   the Coptic epoch. Amete Alem (Era of the World) adds 5500 to this year
+ *   count; it is a different era, not the one returned here. Sanity
  *   check performed during development: stepping this epoch forward with
  *   the shared leap arithmetic to Ethiopian years 2015-2018 lands their
  *   New Year (1 Meskerem) on Gregorian 2022-09-11, 2023-09-12, 2024-09-11,
@@ -41,6 +42,7 @@ export interface ThirteenMonthDate {
 }
 
 export type CopticDate = ThirteenMonthDate;
+/** Year is counted in the Era of Incarnation (Amete Mihret), continued proleptically before year 1. */
 export type EthiopianDate = ThirteenMonthDate;
 
 /**
@@ -138,7 +140,7 @@ export function describeCoptic(jd: JulianDay): CalendarTablet {
 
 // --- Ethiopian -----------------------------------------------------------
 
-/** JD of 1 Meskerem year 1 (29 August 8 CE, Julian) -- the conventional Ethiopian AM epoch. */
+/** JD of 1 Meskerem Amete Mihret 1 (Era of Incarnation): 29 August 8 CE, Julian. */
 export const ETHIOPIAN_EPOCH_JD: JulianDay = julianToJD(8, 8, 29);
 
 export const ETHIOPIAN_MONTH_NAMES = [
@@ -174,16 +176,16 @@ export function describeEthiopian(jd: JulianDay): CalendarTablet {
     name: 'Ethiopian Calendar',
     native: transliteration,
     transliteration,
-    summary: `${transliteration} (Ethiopian Anno Mundi)`,
+    summary: `${transliteration} (Era of Incarnation, Amete Mihret)`,
     method:
-      'Ethiopian civil/liturgical calendar: 12 months of 30 days plus a 5-day epagomenal month ' +
+      'Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of ' +
+      '30 days plus a 5-day epagomenal month ' +
       '(6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE ' +
-      '(Julian), roughly 7-8 years after the Coptic Era-of-Martyrs epoch due to a different ' +
-      'Annunciation-era reckoning; verified during development by reproducing the well-known ' +
-      'modern-date fact that Ethiopian New Year falls around 11 September (12 September in the ' +
-      'Ethiopian year preceding a Gregorian leap year). Documented historical/liturgical dating ' +
+      '(Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem ' +
+      '(Era of the World, Anno Mundi) would add 5500 to the year shown here. ' +
+      'Documented historical/liturgical dating ' +
       'system, not a reconstruction.',
     isReconstruction: false,
-    proleptic: date.year < 1 ? beforeEra('the Ethiopian era', '8 CE') : undefined,
+    proleptic: date.year < 1 ? beforeEra('the Ethiopian Era of Incarnation', '8 CE') : undefined,
   };
 }

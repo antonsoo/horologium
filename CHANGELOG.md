@@ -21,6 +21,9 @@ correction in source, not yet released to npm or the hosted demo.
 
 ### Fixed
 
+- Label Ethiopian years as Era of Incarnation (Amete Mihret), correcting
+  the earlier Anno Mundi label. Amete Alem years are 5500 greater. Correct
+  the Coptic-epoch comparison to 276 Julian years; date arithmetic is unchanged.
 - Identify the Zoroastrian tablet as Qadimi and correct its account of
   Shahanshahi: both use wandering 365-day years, unlike the seasonally corrected
   Fasli variant. Calendar arithmetic is unchanged.

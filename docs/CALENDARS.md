@@ -87,17 +87,24 @@ Both: 12 months of 30 days + a 5-day (6 in a leap year) epagomenal 13th
 month, on the same leap-year cycle as the Julian calendar.
 
 - **Coptic**: Era of the Martyrs, 1 Thout AM 1 = 29 August 284 CE (Julian).
-- **Ethiopian**: Anno Mundi, 1 Meskerem year 1 = 29 August 8 CE (Julian) - a
-  ~7.5-year offset from the Coptic epoch, reflecting a different
-  Annunciation-era reckoning. Verified against the well-known modern fact
-  that Ethiopian New Year falls around 11 September (12 September in the
-  Gregorian year before a Gregorian leap year).
+- **Ethiopian**: Era of Incarnation (Amete Mihret), 1 Meskerem year 1 =
+  29 August 8 CE (Julian), 276 Julian years before the Coptic epoch.
+  The [Ethiopian Orthodox Tewahedo Church's calendar account](https://www.ethiopianorthodox.org/english/calendar.html)
+  distinguishes the Incarnation and world eras. The 7-8-year difference is
+  between Ethiopian and Gregorian year numbers, not between the Ethiopian
+  and Coptic epochs. **Amete Alem (Era of the World, Anno Mundi) adds 5500**
+  to the Incarnation year: 2 Tikimt 2019 is Amete Alem 7519, for example.
+  The library returns Incarnation years and continues that count before
+  year 1 with an explicit proleptic note; it does not switch eras.
 
 Both are checked by internal brute-force month enumeration (independently
 recomputing the calendar month by month and comparing); Coptic is
 additionally cross-checked against `convertdate`'s Coptic module (which has
-no separate Ethiopian module to check against). Purely arithmetic, no
-accuracy caveats beyond that.
+no separate Ethiopian module to check against). The
+[Ethiopian-era comparison](../studies/ethiopian-era/README.md) also checks
+both conversion directions against ICU's separate `ethiopic` and `ethioaa`
+calendars, including the epoch and leap-month boundaries. These checks
+verify arithmetic conventions, not historical usage or religious observance.
 
 ## Hebrew calendar (`src/lib/hebrew.ts`)
 

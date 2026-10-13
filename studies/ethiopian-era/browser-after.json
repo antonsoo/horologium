@@ -1,0 +1,120 @@
+{
+  "phase": "after",
+  "offline": true,
+  "errors": [],
+  "externalRequests": [],
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "input": "2026-10-12",
+      "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "input": "2023-09-11",
+      "summary": "6 Pagume 2015 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "input": "2023-09-12",
+      "summary": "1 Meskerem 2016 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "input": "0008-08-26",
+      "summary": "5 Pagume 0 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "input": "2026-10-12",
+      "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "input": "2023-09-11",
+      "summary": "6 Pagume 2015 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "input": "2023-09-12",
+      "summary": "1 Meskerem 2016 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "input": "0008-08-26",
+      "summary": "5 Pagume 0 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "input": "2026-10-12",
+      "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "input": "2023-09-11",
+      "summary": "6 Pagume 2015 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "input": "2023-09-12",
+      "summary": "1 Meskerem 2016 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "input": "0008-08-26",
+      "summary": "5 Pagume 0 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "input": "2026-10-12",
+      "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "input": "2023-09-11",
+      "summary": "6 Pagume 2015 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "input": "2023-09-12",
+      "summary": "1 Meskerem 2016 (Era of Incarnation, Amete Mihret)"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "input": "0008-08-26",
+      "summary": "5 Pagume 0 (Era of Incarnation, Amete Mihret)"
+    }
+  ]
+}
