@@ -1,0 +1,133 @@
+{
+  "implementation": "1c3a78297f29e6001f9e54b71ca5606f7d8cccf3",
+  "checks": [
+    {
+      "check": "install",
+      "exit": 0,
+      "seconds": 3.28
+    },
+    {
+      "check": "lint",
+      "exit": 0,
+      "seconds": 0.21
+    },
+    {
+      "check": "types",
+      "exit": 0,
+      "seconds": 2.45
+    },
+    {
+      "check": "unit",
+      "exit": 0,
+      "seconds": 4.21
+    },
+    {
+      "check": "build",
+      "exit": 0,
+      "seconds": 1.49
+    },
+    {
+      "check": "browser",
+      "exit": 0,
+      "seconds": 55.12
+    },
+    {
+      "check": "oracle",
+      "exit": 0,
+      "seconds": 0.04
+    },
+    {
+      "check": "era-browser",
+      "exit": 0,
+      "seconds": 5.59
+    },
+    {
+      "check": "pack",
+      "exit": 0,
+      "seconds": 0.44
+    },
+    {
+      "check": "node20-install",
+      "exit": 0,
+      "seconds": 0.55
+    },
+    {
+      "check": "node20-oracle",
+      "exit": 0,
+      "seconds": 0.05
+    },
+    {
+      "check": "node20-public-import",
+      "exit": 0,
+      "seconds": 0.06
+    },
+    {
+      "check": "node24-install",
+      "exit": 0,
+      "seconds": 0.41
+    },
+    {
+      "check": "node24-oracle",
+      "exit": 0,
+      "seconds": 0.04
+    },
+    {
+      "check": "node24-public-import",
+      "exit": 0,
+      "seconds": 0.03
+    }
+  ],
+  "unchanged_archive_files": 233,
+  "served_files": 30,
+  "installed": [
+    {
+      "runtime": "v20.0.0",
+      "icu": "72.1",
+      "cldr": "42.0",
+      "dates": 26,
+      "mismatches": 0,
+      "identical_library_files": 38
+    },
+    {
+      "runtime": "v24.21.0",
+      "icu": "78.3",
+      "cldr": "48.0",
+      "dates": 26,
+      "mismatches": 0,
+      "identical_library_files": 38
+    }
+  ],
+  "package": {
+    "filename": "antonsoloviev-horologium-0.2.3.tgz",
+    "bytes": 74827,
+    "sha256": "8ce9aeaf907536e42cc19a96ba8f9979af488f3f29655cef042a9bf45519093b"
+  },
+  "harness_note": "The installed public-import probe was corrected to use the documented core.gregorianToJD namespace. No package changes were required; the corrected probe passes on both runtimes.",
+  "baseline": "2ce803e4a78f31f57be013f4d21de4834052daad",
+  "unit_tests": 235,
+  "existing_browser_tests": 58,
+  "era_browser_sessions": 4,
+  "era_browser_date_entries": 16,
+  "dates_numerically_unchanged": 26,
+  "screenshots_created_and_inspected": 4,
+  "published_screenshot": "docs/assets/ethiopian-era-firefox-375.png",
+  "scope": "Clean implementation archive, local production preview and installed package only; no registry release or hosted deployment.",
+  "screenshots": {
+    "chromium-1440.png": {
+      "bytes": 26059,
+      "sha256": "2b8c0a2c31c9dd144a0f95e1e7ebbc344d01f2e7481d9ad489320104439e7696"
+    },
+    "chromium-375.png": {
+      "bytes": 25962,
+      "sha256": "66da1470183c81da2744c9918c1d3ff0d98c87b44a7550d85674e9fd6e3da670"
+    },
+    "firefox-1440.png": {
+      "bytes": 41415,
+      "sha256": "72f533558c732e901d1b2c1c0383dc7a5c4667ec0e3821f6e13739ca364d54e2"
+    },
+    "firefox-375.png": {
+      "bytes": 40587,
+      "sha256": "bd6f78474356e639d7a1022dcc1b532875aab55889b5cb6e8703bdc3ff1cc561"
+    }
+  }
+}

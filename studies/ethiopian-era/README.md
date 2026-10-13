@@ -67,3 +67,25 @@ horizontal fit and absence of page errors or external requests.
 
 This is a source change. Package publication and hosted-site deployment are
 separate from these local checks.
+
+## Clean build and installed library
+
+[Verification receipt](verification.json): a clean archive of implementation
+`1c3a78297f29e6001f9e54b71ca5606f7d8cccf3` passed `npm ci`, lint, type checks,
+235 existing tests, the production build and 58 existing Chromium/Firefox
+tests. The dedicated era replay also passed its four offline browser sessions
+(16 date entries). All 233 archive files remained unchanged, and all 30 files
+served by the local production preview matched the built files exactly.
+All four screenshots were inspected; the phone view above is retained.
+
+The packed library was installed into separate empty projects:
+
+| Runtime | ICU / CLDR | Dates checked | Mismatches | Library files matching the clean build |
+|---|---|---:|---:|---:|
+| Node 20.0.0 | 72.1 / 42.0 | 26 | 0 | 38 |
+| Node 24.21.0 | 78.3 / 48.0 | 26 | 0 | 38 |
+
+Both also pass a public-package import of the corrected tablet. The package
+is 74,827 bytes, SHA-256
+`8ce9aeaf907536e42cc19a96ba8f9979af488f3f29655cef042a9bf45519093b`.
+Version remains 0.2.3. These checks do not publish that artifact.
