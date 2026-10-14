@@ -101,10 +101,10 @@ export const HAAB_MONTH_NAMES: readonly string[] = [
 ];
 
 /**
- * The 9-day Lord of the Night cycle, G1-G9. Which mod-9 residue maps to
- * which G-number is a widely-used epigraphic convention (G1 conventionally
- * at the Long Count creation epoch), not a settled fact -- some epigraphers
- * debate the correspondence. See `describe`'s `method` string.
+ * The 9-day Lord of the Night cycle, G1-G9. Period endings fall on G9:
+ * Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99 (FAMSI).
+ * Those pages also provide an interpreted inscription and a dated table;
+ * see studies/calendar-coordinates for the independently checked anchors.
  */
 export const LORD_OF_NIGHT_NAMES: readonly string[] = [
   'G1',
@@ -202,8 +202,12 @@ export function lordOfNightFromJD(
   jd: JulianDay,
   correlation: number = GMT_CORRELATION_STANDARD,
 ): string {
-  const d = daysSinceCreation(jd, correlation);
-  return LORD_OF_NIGHT_NAMES[mod(d, 9)] ?? 'G1';
+  return lordOfNightFromDays(daysSinceCreation(jd, correlation));
+}
+
+function lordOfNightFromDays(days: number): string {
+  // A completed 9-day cycle ends at G9; the following day begins at G1.
+  return LORD_OF_NIGHT_NAMES[amod(days, 9) - 1] ?? 'G9';
 }
 
 export function fromJD(jd: JulianDay, correlation: number = GMT_CORRELATION_STANDARD): MayaDate {
@@ -212,7 +216,7 @@ export function fromJD(jd: JulianDay, correlation: number = GMT_CORRELATION_STAN
     longCount: longCountFromDays(d),
     tzolkin: tzolkinFromDays(d),
     haab: haabFromDays(d),
-    lordOfNight: LORD_OF_NIGHT_NAMES[mod(d, 9)] ?? 'G1',
+    lordOfNight: lordOfNightFromDays(d),
   };
 }
 
@@ -246,8 +250,8 @@ export function describe(
     name: 'Maya Calendar',
     native,
     transliteration: native,
-    summary: `Long Count ${lcString}, Tzolk'in ${tzolkinString}, Haab' ${haabString}`,
-    method: `Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant ${correlation} (${correlationNote}). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The G1-G9 Lord of the Night label is a widely-used epigraphic convention, not settled fact. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.`,
+    summary: `Long Count ${lcString}, Tzolk'in ${tzolkinString}, Haab' ${haabString}; Lord of the Night ${date.lordOfNight}`,
+    method: `Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant ${correlation} (${correlationNote}). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.`,
     isReconstruction: false,
     proleptic: lcString.startsWith('-')
       ? 'Before the 13.0.0.0.0 base date (3114 BCE): shown as a negative Long Count, a modern convention; Maya inscriptions reached back with higher cycles instead.'

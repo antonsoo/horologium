@@ -15,6 +15,13 @@ to the requested instant instead of skipping a month. The
 [before/after boundary study](studies/lunar-boundaries/README.md) explains
 the failures and checks the existing reconstruction's rules.
 
+The source also corrects Egyptian season coordinates and the Maya nine-day
+G cycle. Athyr 13 reads **III Akhet, day 73 of the season**; the documented
+Piedras Negras date `9.12.2.0.16` returns **G7**, and period endings return **G9**.
+The Maya tablet now shows that label. [Published anchors and before/after
+checks](studies/calendar-coordinates/README.md) retain the evidence. These
+changes are pending a package release and hosted deployment.
+
 ## Why this exists
 
 A date can change its meaning when its calendar is left unstated. The Ides
@@ -49,7 +56,7 @@ npm install @antonsoloviev/horologium
 import { maya, hebrew, core } from '@antonsoloviev/horologium';
 
 const jd = core.gregorianToJD(2012, 12, 21);
-maya.describe(jd).summary; // "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in"
+maya.describe(jd).summary; // "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9"
 hebrew.describe(jd).native; // "ח׳ טבת תשע״ג" (8 Tevet 5773)
 ```
 

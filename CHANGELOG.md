@@ -21,6 +21,11 @@ correction in source, not yet released to npm or the hosted demo.
 
 ### Fixed
 
+- Egyptian tablets number months I-IV within each season and count days 1-120
+  across its four months. Epagomenal days remain outside the seasons.
+- Maya Lord of the Night results use the published G9 period-ending anchor,
+  correcting the previous one-day rotation. The tablet now includes the G label.
+
 - Label Ethiopian years as Era of Incarnation (Amete Mihret), correcting
   the earlier Anno Mundi label. Amete Alem years are 5500 greater. Correct
   the Coptic-epoch comparison to 276 Julian years; date arithmetic is unchanged.

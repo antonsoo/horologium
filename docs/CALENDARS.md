@@ -141,6 +141,12 @@ computation lands at JD 1448637.5 (the commonly-cited figure, JD 1448638,
 uses a noon-referenced JDN convention rather than this library's midnight
 reference - not a discrepancy in the date itself). Month names are the
 Greek-derived forms used by ancient astronomers (Thoth, Phaophi, ...).
+Month ordinals I-IV restart in each season, following the
+[UCL Digital Egypt month table](https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/calendar.html).
+The tablet also counts days 1-120 within that season: Athyr 13 is III Akhet,
+day 73. The table's modern Alexandrian/Julian dates are not used for this
+wandering calendar. Epagomenal days remain outside the seasons.
+
 Egyptian hieroglyphic season signs are **not** rendered: getting a
 Gardiner-sign-to-Unicode mapping wrong would be worse than omitting it, and
 this project didn't have a way to verify one with confidence in the time
@@ -164,9 +170,14 @@ cited elsewhere for the start of the current Sothic cycle.
   **584283** (the modern scholarly consensus), with **584285** selectable.
 - **Tzolk'in**: 260-day cycle, 13 numbers x 20 named days.
 - **Haab'**: 365-day "vague year", 18 months of 20 days + 5-day Wayeb'.
-- **Lord of the Night (G1-G9)**: a 9-day repeating cycle; the correspondence
-  of specific residues to G1..G9 is a widely-used convention, not a
-  universally settled one among epigraphers.
+- **Lord of the Night (G1-G9)**: a nine-day repeating cycle ending at G9
+  on tun, katun and baktun boundaries; G1 follows the next day. The source
+  corrects an earlier one-day rotation in both `lordOfNightFromJD` and
+  `fromJD`, and includes the label in the tablet summary. Mark Pitts's
+  [FAMSI book](https://www.famsi.org/research/pitts/MayaGlyphsBook2.pdf),
+  pages 88, 92 and 99, supplies period-ending, inscription and dated-table
+  anchors. [The study](../studies/calendar-coordinates/README.md) distinguishes
+  those published facts from constructed arithmetic controls.
 - **Verified against** the two canonical reference points: 13.0.0.0.0 = 4
   Ajaw 3 K'ank'in = 21 December 2012 (Gregorian), and the creation date
   0.0.0.0.0 = 4 Ajaw 8 Kumk'u - both exact - plus 200 dates cross-checked

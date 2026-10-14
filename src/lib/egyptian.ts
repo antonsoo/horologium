@@ -135,7 +135,7 @@ export function sothicCyclePosition(jd: JulianDay): SothicCyclePosition {
   return { yearsIntoCycle, cycleAnchorCE: SOTHIC_CENSORINUS_ANCHOR_CE };
 }
 
-const SEASON_ROMAN = ['I', 'II', 'III', 'IV'];
+const SEASON_MONTH_ROMAN = ['I', 'II', 'III', 'IV'];
 
 export function describe(jd: JulianDay): CalendarTablet {
   const date = fromJD(jd);
@@ -151,8 +151,11 @@ export function describe(jd: JulianDay): CalendarTablet {
   // where this date sits in the Sothic cycle, rather than repeating the date.
   const season = seasonForMonth(date.month);
   const sothic = sothicCyclePosition(jd);
+  // Months are I-IV within each season, not I-III for the seasons themselves.
+  // UCL's Digital Egypt month table: chronology/calendar.html.
+  const seasonMonthIndex = mod(date.month - 1, 4);
   const seasonPart = season
-    ? `${season.name} ${SEASON_ROMAN[Math.floor((date.month - 1) / 4)] ?? 'I'}, day ${date.day} of the season`
+    ? `${SEASON_MONTH_ROMAN[seasonMonthIndex]} ${season.name}, day ${seasonMonthIndex * 30 + date.day} of the season`
     : 'the 5 epagomenal days, outside all three seasons';
   const summary = `${seasonPart} — year ${sothic.yearsIntoCycle} of the ${SOTHIC_CYCLE_YEARS}-year Sothic cycle since the ${sothic.cycleAnchorCE} CE anchor.`;
 
