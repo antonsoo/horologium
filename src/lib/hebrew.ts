@@ -21,6 +21,7 @@
  */
 
 import { type JulianDay, jdWeekday, julianToJD, mod } from './core/jd.js';
+import { bracketYear, checkJulianDay } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface HebrewDate {
@@ -165,8 +166,17 @@ function monthsElapsedBeforeYear(year: number): number {
 
 /** The mean lunar conjunction (molad) of Tishrei for `hebrewYear`, chained from BaHaRaD. */
 export function moladTishrei(hebrewYear: number): Molad {
-  const totalParts =
-    BAHARAD_PARTS_AFTER_EPOCH_DAY + monthsElapsedBeforeYear(hebrewYear) * MOLAD_INTERVAL_PARTS;
+  if (!Number.isSafeInteger(hebrewYear))
+    throw new RangeError('Hebrew year must be a safe integer.');
+  const months = monthsElapsedBeforeYear(hebrewYear);
+  const elapsedParts = months * MOLAD_INTERVAL_PARTS;
+  const totalParts = BAHARAD_PARTS_AFTER_EPOCH_DAY + elapsedParts;
+  if (
+    !Number.isSafeInteger(months) ||
+    !Number.isSafeInteger(elapsedParts) ||
+    !Number.isSafeInteger(totalParts)
+  )
+    throw new RangeError('Hebrew year exceeds exact molad arithmetic.');
   const days = Math.floor(totalParts / PARTS_PER_DAY);
   const remainder = totalParts - days * PARTS_PER_DAY;
   const hour = Math.floor(remainder / PARTS_PER_HOUR);
@@ -306,12 +316,16 @@ export function toJD(date: HebrewDate): JulianDay {
 }
 
 export function fromJD(jd: JulianDay): HebrewDate {
+  checkJulianDay(jd);
   // Mean Hebrew year length (235 months/19 years, in days) gives a good
   // first estimate; roshHashanah brackets it exactly from there.
   const meanYearLength = (MOLAD_INTERVAL_PARTS * 235) / 19 / PARTS_PER_DAY;
-  let year = Math.floor((jd - HEBREW_EPOCH_JD) / meanYearLength) + 1;
-  while (roshHashanah(year) > jd) year -= 1;
-  while (roshHashanah(year + 1) <= jd) year += 1;
+  const year = bracketYear(
+    jd,
+    Math.floor((jd - HEBREW_EPOCH_JD) / meanYearLength) + 1,
+    roshHashanah,
+    [353, 354, 355, 383, 384, 385],
+  );
 
   // Floor to a whole day: `jd` usually carries a time-of-day fraction (e.g.
   // "now"), but a Hebrew calendar date is day-granular.
@@ -323,9 +337,7 @@ export function fromJD(jd: JulianDay): HebrewDate {
     }
     elapsed += length;
   }
-  // Unreachable if yearShape/roshHashanah are self-consistent; fall back to
-  // the last day of Elul rather than throwing on floating-point edge noise.
-  return { year, month: 6, day: 29 };
+  throw new RangeError('Cannot locate a Hebrew month within the calculated year.');
 }
 
 const HEBREW_NUMERAL_VALUES: ReadonlyArray<readonly [number, string]> = [

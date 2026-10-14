@@ -22,6 +22,11 @@ The Maya tablet now shows that label. [Published anchors and before/after
 checks](studies/calendar-coordinates/README.md) retain the evidence. These
 changes are pending a package release and hosted deployment.
 
+Invalid library dates now raise `RangeError` instead of blocking a Node process
+or acquiring fallback calendar fields. Year searches are bounded and reject
+unreliable arithmetic. [Installed-process reproduction and valid-date controls](studies/date-inputs/README.md)
+cover this source correction; it is unreleased.
+
 ## Why this exists
 
 A date can change its meaning when its calendar is left unstated. The Ides

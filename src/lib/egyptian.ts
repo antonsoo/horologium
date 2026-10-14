@@ -15,6 +15,7 @@
  */
 
 import { type JulianDay, jdToJulian, julianToJD, mod } from './core/jd.js';
+import { checkElapsedDays, checkJulianDay } from './core/validation.js';
 import type { CalendarTablet } from './types.js';
 
 export interface EgyptianDate {
@@ -83,7 +84,9 @@ export interface EgyptianSeason {
 export const EGYPTIAN_EPOCH_JD: JulianDay = julianToJD(-746, 2, 26);
 
 export function fromJD(jd: JulianDay): EgyptianDate {
+  checkJulianDay(jd);
   const daysSinceEpoch = Math.floor(jd - EGYPTIAN_EPOCH_JD);
+  checkElapsedDays(daysSinceEpoch);
   const yearIndex = Math.floor(daysSinceEpoch / 365);
   const dayOfYear = mod(daysSinceEpoch, 365);
   // month/day fall out of one uniform division: for the epagomenal days

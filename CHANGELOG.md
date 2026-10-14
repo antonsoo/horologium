@@ -21,6 +21,10 @@ correction in source, not yet released to npm or the hosted demo.
 
 ### Fixed
 
+- Inverse calendar conversions reject invalid Julian days, bound year searches
+  and refuse unsupported arithmetic precision. Date bridges reject invalid
+  Date objects and unsupported instants instead of returning NaN/Invalid Date.
+
 - Egyptian tablets number months I-IV within each season and count days 1-120
   across its four months. Epagomenal days remain outside the seasons.
 - Maya Lord of the Night results use the published G9 period-ending anchor,

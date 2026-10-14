@@ -31,6 +31,7 @@
  */
 
 import { type JulianDay, julianToJD } from './core/jd.js';
+import { bracketYear, checkJulianDay } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface ThirteenMonthDate {
@@ -71,11 +72,15 @@ function thirteenMonthToJD(epochJD: JulianDay, date: ThirteenMonthDate): JulianD
  * exact boundary, guaranteeing consistency with the forward formula.
  */
 function thirteenMonthFromJD(epochJD: JulianDay, jd: JulianDay): ThirteenMonthDate {
+  checkJulianDay(jd);
   const dateInt = Math.floor(jd - 0.5) + 0.5;
 
-  let year = Math.floor((4 * (dateInt - epochJD) + 1463) / 1461);
-  while (thirteenMonthToJD(epochJD, { year: year + 1, month: 1, day: 1 }) <= dateInt) year++;
-  while (thirteenMonthToJD(epochJD, { year, month: 1, day: 1 }) > dateInt) year--;
+  const year = bracketYear(
+    dateInt,
+    Math.floor((4 * (dateInt - epochJD) + 1463) / 1461),
+    (year) => thirteenMonthToJD(epochJD, { year, month: 1, day: 1 }),
+    [365, 366],
+  );
 
   let month = Math.min(
     13,

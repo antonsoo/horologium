@@ -17,6 +17,8 @@
  * human-facing BCE/CE label.
  */
 
+import { checkJulianDay } from './validation.js';
+
 /** A Julian Day Number, fractional, referenced to UTC noon. */
 export type JulianDay = number;
 
@@ -76,6 +78,7 @@ export function jdToJulian(jd: JulianDay): CalendarDate {
 }
 
 function jdToCalendar(jd: JulianDay, gregorian: boolean): CalendarDate {
+  checkJulianDay(jd);
   const jdShifted = jd + 0.5;
   const z = Math.floor(jdShifted);
   const f = jdShifted - z;
@@ -97,6 +100,18 @@ function jdToCalendar(jd: JulianDay, gregorian: boolean): CalendarDate {
   const month = e < 14 ? e - 1 : e - 13;
   const year = month > 2 ? c - 4716 : c - 4715;
 
+  if (
+    !Number.isSafeInteger(year) ||
+    !Number.isInteger(month) ||
+    month < 1 ||
+    month > 12 ||
+    !Number.isFinite(day) ||
+    day < 1 ||
+    day >= 32
+  ) {
+    throw new RangeError('Julian Day exceeds reliable civil-date arithmetic.');
+  }
+
   return { year, month, day };
 }
 
@@ -111,14 +126,20 @@ export function mjdToJD(mjd: number): JulianDay {
 
 /** JD for a JavaScript `Date` (interpreted in UTC). */
 export function dateToJD(date: Date): JulianDay {
-  return date.getTime() / 86400000 + JD_UNIX_EPOCH;
+  const milliseconds = date.getTime();
+  if (!Number.isFinite(milliseconds)) throw new RangeError('Date must represent a valid instant.');
+  return milliseconds / 86400000 + JD_UNIX_EPOCH;
 }
 
 /** JavaScript `Date` (UTC) for a JD. */
 export function jdToDate(jd: JulianDay): Date {
+  checkJulianDay(jd);
   // JD has finite binary precision. Date truncates a fractional millisecond,
   // which otherwise renders some exact civil midnights one millisecond early.
-  return new Date(Math.round((jd - JD_UNIX_EPOCH) * 86400000));
+  const date = new Date(Math.round((jd - JD_UNIX_EPOCH) * 86400000));
+  if (!Number.isFinite(date.getTime()))
+    throw new RangeError('Julian Day is outside the JavaScript Date range.');
+  return date;
 }
 
 /**
@@ -126,6 +147,7 @@ export function jdToDate(jd: JulianDay): Date {
  * Meeus (1998) ch. 7. JD 2451545.0 (2000-01-01 12:00 UTC) was a Saturday.
  */
 export function jdWeekday(jd: JulianDay): number {
+  checkJulianDay(jd);
   // `mod`, not `%`: before JD 0 (1 January 4713 BCE) the remainder would be negative, which
   // is no weekday at all, and the Hebrew postponement rules compare against it.
   return mod(Math.floor(jd + 1.5), 7);

@@ -409,3 +409,17 @@ xiuhpohualli, and Hindu (Kali Yuga ahargana, tithi, nakshatra) calendars.
   and nakshatra need sidereal positions with a specific ayanamsa, i.e.
   more astronomy than this project's Sun/Moon module currently offers)
   would need more time than remained.
+
+## Library input failures (source correction)
+
+Inverse calendar converters raise `RangeError` for non-finite Julian days.
+Coptic/Ethiopian, Islamic and Hebrew year searches are bounded; an unreliable
+integer-day bracket cannot establish a date. Hebrew molad parts, elapsed-day
+counts and civil-date fields also have explicit arithmetic checks.
+`core.dateToJD` requires a valid Date; `core.jdToDate` requires an instant
+representable by JavaScript Date. These checks do not impose the Chinese
+calendar's date range on the other calendars.
+
+[Native process replay and scope](../studies/date-inputs/README.md) include
+calculation timeouts, same-process recovery and unchanged valid outputs.
+Build this source revision before using these unreleased corrections.

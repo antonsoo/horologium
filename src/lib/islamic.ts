@@ -27,6 +27,7 @@
  */
 
 import { type JulianDay, mod } from './core/jd.js';
+import { bracketYear, checkJulianDay } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 /** JD of 1 Muharram AH 1 (16 July 622 CE, Julian calendar); see the module doc comment for the verification. */
@@ -92,11 +93,15 @@ export function toJD(date: IslamicDate): JulianDay {
  * consistent with {@link toJD} by construction.
  */
 export function fromJD(jd: JulianDay): IslamicDate {
+  checkJulianDay(jd);
   const dateInt = Math.floor(jd - 0.5) + 0.5;
 
-  let year = Math.floor((30 * (dateInt - ISLAMIC_EPOCH_JD) + 10646) / 10631);
-  while (toJD({ year: year + 1, month: 1, day: 1 }) <= dateInt) year++;
-  while (toJD({ year, month: 1, day: 1 }) > dateInt) year--;
+  const year = bracketYear(
+    dateInt,
+    Math.floor((30 * (dateInt - ISLAMIC_EPOCH_JD) + 10646) / 10631),
+    (year) => toJD({ year, month: 1, day: 1 }),
+    [354, 355],
+  );
 
   let month = Math.min(12, Math.ceil((dateInt - toJD({ year, month: 1, day: 1 }) + 1) / 29.5));
   while (month < 12 && toJD({ year, month: month + 1, day: 1 }) <= dateInt) month++;

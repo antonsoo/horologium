@@ -22,6 +22,7 @@
  */
 
 import { type JulianDay, julianToJD, mod } from './core/jd.js';
+import { checkElapsedDays, checkJulianDay } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface ZoroastrianDate {
@@ -61,7 +62,9 @@ export const GATHA_DAY_NAMES: readonly string[] = [
 export const ZOROASTRIAN_EPOCH_JD: JulianDay = julianToJD(632, 6, 16);
 
 export function fromJD(jd: JulianDay): ZoroastrianDate {
+  checkJulianDay(jd);
   const daysSinceEpoch = Math.floor(jd - ZOROASTRIAN_EPOCH_JD);
+  checkElapsedDays(daysSinceEpoch);
   const yearIndex = Math.floor(daysSinceEpoch / 365);
   const dayOfYear = mod(daysSinceEpoch, 365);
   const month = Math.floor(dayOfYear / 30) + 1;

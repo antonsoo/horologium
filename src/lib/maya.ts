@@ -17,6 +17,7 @@
  */
 
 import { amod, type JulianDay, mod } from './core/jd.js';
+import { checkElapsedDays, checkJulianDay } from './core/validation.js';
 import type { CalendarTablet } from './types.js';
 
 export interface MayaLongCount {
@@ -167,7 +168,12 @@ function haabFromDays(d: number): HaabDate {
  * Kumk'u).
  */
 function daysSinceCreation(jd: JulianDay, correlation: number): number {
-  return Math.floor(jd - correlation + 0.5);
+  checkJulianDay(jd);
+  if (!Number.isFinite(correlation))
+    throw new RangeError('Maya correlation must be a finite number.');
+  const days = Math.floor(jd - correlation + 0.5);
+  checkElapsedDays(days);
+  return days;
 }
 
 export function longCountFromJD(
