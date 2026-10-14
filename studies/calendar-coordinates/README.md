@@ -69,3 +69,47 @@ Egyptian year/month/day, native labels, Sothic arithmetic and proleptic flags
 remain unchanged. Maya Long Count, Tzolk'in and Haab' controls remain unchanged.
 The study does not revalidate the Nabonassar epoch, Sirius observations, ancient
 day-boundary practice, alternative correlations, or identities of night deities.
+
+## Installed library and clock page
+
+Code commit `14ce652` was extracted with `git archive` into a fresh directory.
+The locked install passed lint, strict types, 249 unit tests, the library/site
+build, the runnable basic-usage example and 58 Chromium/Firefox browser tests.
+Checks ran on Node 24.21.0; a Node 26.7.0 build produces exactly the same 57
+library files and 30 site files. All 102 tracked source, test and build inputs
+match the tested archive.
+
+The packed `@antonsoloviev/horologium` 0.2.3 artifact is 75,308 bytes with SHA-256
+`8e5624036ca4db62a09548c34865fe182550772fc98945e0a59dd27ae7f28626`.
+Separate installs pass all 442 cases on [Node 24](results/installed-node24.json)
+and [Node 26](results/installed-node26.json). All 38 shipped library JavaScript
+and declaration files match both installations and the tested clean build.
+An installed consumer imports the package by its exported name and obtains
+the same G7 inscription and corrected season positions. The version was not
+published to npm; this is verification of the locally packed source artifact.
+
+[`browser.mjs`](browser.mjs) changes actual clock dates and opens explanations
+while disconnected, in Chromium and Firefox at 1440 and 375 pixels. The
+[before](results/browser-before/browser.json) and
+[after](results/browser-after/browser.json) captures retain 48 total date and
+explanation workflows. Each phase checks all 30 served files against its
+build and verifies the 29 files actually loaded by each browser context.
+Offline interactions make no requests and preserve the existing tablet DOM
+nodes. Native date labels and Sothic text match between phases. The ten
+screenshots were visually inspected; the added G label wraps within the
+existing mobile card without page overflow.
+
+```sh
+node studies/calendar-coordinates/browser.mjs --source . --phase after \
+  --out /tmp/coordinate-browser --shots /tmp/coordinate-shots
+```
+
+The [verification receipt](results/verification.json) retains artifact, source,
+build, runtime and local check-log hashes. Browser startup loads the bundled
+fonts before disconnection. This checks the current UTC-based calendar model;
+it does not establish historical sunset boundaries or additional epigraphic
+claims. No hosted deployment, registry release or remote CI result is claimed.
+
+![Corrected Egyptian season coordinates on the 375px clock](../../docs/assets/calendar-coordinates/after/firefox-athyr-375.png)
+
+![The interpreted Piedras Negras date includes its G7 night-cycle label](../../docs/assets/calendar-coordinates/after/chromium-piedras-negras-1440.png)
