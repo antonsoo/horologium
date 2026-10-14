@@ -77,7 +77,9 @@ The locked install passed lint, strict types, 249 unit tests, the library/site
 build, the runnable basic-usage example and 58 Chromium/Firefox browser tests.
 Checks ran on Node 24.21.0; a Node 26.7.0 build produces exactly the same 57
 library files and 30 site files. All 102 tracked source, test and build inputs
-match the tested archive.
+match the tested archive. The printed-reference-title metadata was subsequently
+corrected in `07a2236`; its fresh archive passes the same native checks and
+produces identical library/site bytes. Numerical expectations are unchanged.
 
 The packed `@antonsoloviev/horologium` 0.2.3 artifact is 75,308 bytes with SHA-256
 `8e5624036ca4db62a09548c34865fe182550772fc98945e0a59dd27ae7f28626`.

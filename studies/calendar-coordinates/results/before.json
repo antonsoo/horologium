@@ -1,7 +1,7 @@
 {
   "label": "before-7166a0b",
   "node": "v26.7.0",
-  "referenceSha256": "289b80f30f96ff83a50682ee981ad9ac382fb8c59768db0d6658d16d8e695b1f",
+  "referenceSha256": "3f78831d64f4136fe3a8adabde3360fa5329288862e708e3020ca5c81e4f97e5",
   "runtime": {
     "egyptian.js": "546988a5d7a4375fde1f090f24992b5f0c5f620a830f1f856242de8093f14e69",
     "maya.js": "f98f58e81fa67df63fa52e185c4754724d20962ce042c64f792115258d8311ec",

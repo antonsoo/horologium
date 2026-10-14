@@ -1,7 +1,7 @@
 {
   "label": "installed-node24",
   "node": "v24.21.0",
-  "referenceSha256": "289b80f30f96ff83a50682ee981ad9ac382fb8c59768db0d6658d16d8e695b1f",
+  "referenceSha256": "3f78831d64f4136fe3a8adabde3360fa5329288862e708e3020ca5c81e4f97e5",
   "runtime": {
     "egyptian.js": "0a6bb922fd80bde284a2aa0c4659ec4bbd9c860a792b928104d1d6c41ce485c1",
     "maya.js": "8e43063c633061867c317501573e2f93fdc39158b14f01c6d5bf2a38dfa4a17d",

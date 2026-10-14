@@ -69,7 +69,7 @@
     "src/lib/roman.ts": "40040af1de860942251652bb86a2a6fec478243c975847f9a113d7a76525fc3e",
     "src/lib/types.ts": "d17790cdfb7d99e1f34e33952b83a1bb223e80d0a61c46ead7c06ad5f99234d9",
     "src/lib/zoroastrian.ts": "b7665f7c073c3c15d8f19af7735b23eafeb1180a24ca1d818fef9d50049db2df",
-    "studies/calendar-coordinates/reference.json": "289b80f30f96ff83a50682ee981ad9ac382fb8c59768db0d6658d16d8e695b1f",
+    "studies/calendar-coordinates/reference.json": "3f78831d64f4136fe3a8adabde3360fa5329288862e708e3020ca5c81e4f97e5",
     "studies/calendar-coordinates/replay.mjs": "3c6dcd5b1b707ee7499fc84f669294e6970ba9627905f920cd34de032771d5ac",
     "tests/astronomy.test.ts": "5aa6e9d853990aa261a540348ccbf9f8d6ea82947d4457354cd824dec4272c1a",
     "tests/babylonian.test.ts": "5cdbdb453cd66213fc795005ae3d0fbc312c16ea3905a4b7eada8ab376de2866",
@@ -264,6 +264,26 @@
       "sha256": "9cdc6177e740bcafdf04f7fe58238a576f5719d3c9a64bd8091e9913321b6a5a",
       "bytes": 2754
     },
+    "final-build.log": {
+      "sha256": "a374cc09dd4aa75d882f9b05b8146906ef075d2881257f0b874c63e1b65946a3",
+      "bytes": 2754
+    },
+    "final-install.log": {
+      "sha256": "e8757786c689b310ae2a20f722b476c30bc6f9380d219381371dd2559e45776d",
+      "bytes": 141
+    },
+    "final-lint.log": {
+      "sha256": "42dd8666b81a4f5cacb8b57e8b58d40bd467cc3fa465574b83bbf90dea28e80c",
+      "bytes": 102
+    },
+    "final-typecheck.log": {
+      "sha256": "ccc6f996b56fd3880cde627bf27c9ffd56bd8252f3ce018c5e74d8e83a9bfaa5",
+      "bytes": 115
+    },
+    "final-unit.log": {
+      "sha256": "ab2acf4ff76085860538e0314edf7ab12f440d42f736cdadde0b0ed9a221bdae",
+      "bytes": 536
+    },
     "install-node24.log": {
       "sha256": "a941066d38162d18c88ea4b096d8cf11d19b0d46b973f6d916e2f9b8794e1f36",
       "bytes": 23
@@ -302,11 +322,13 @@
     "workingBuild": "Node 26.7.0 library and app bytes match Node 24 build",
     "installed": "442 cases and all runtime files match clean archive on Node 24.21.0 and 26.7.0",
     "targetBrowser": "48 offline date/explanation workflows across two phases, Chromium/Firefox and 1440/375px; 30 served files match each build, 29 browser-loaded files match",
-    "screenshots": "10 inspected"
+    "screenshots": "10 inspected",
+    "referenceMetadata": "Printed book title corrected in 07a2236; all numerical/reference expectations unchanged. Fresh Node 24 archive passes lint, types, 249 tests and build; all library/site bytes match the previously browser-verified build."
   },
   "limits": [
     "Ten published Maya dates; constructed cases are not additional observed inscriptions.",
     "Egyptian season positions only; epoch and Sothic arithmetic not revalidated.",
     "Source change; no npm release, hosted deployment or remote CI verification."
-  ]
+  ],
+  "verificationArchive": "07a22369df0af2530af7dba7f39885a06eb29a5a"
 }
