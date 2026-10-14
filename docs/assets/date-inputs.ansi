@@ -1,0 +1,9 @@
+Calendar input errors (source correction, unreleased)
+Invalid JavaScript Date: RangeError: Date must represent a valid instant.
+Coptic / Infinity: RangeError: Julian Day must be a finite number.
+Islamic / finite 1e20: RangeError: Cannot determine a calendar year with reliable integer-day arithmetic.
+Hebrew / NaN: RangeError: Julian Day must be a finite number.
+Maya / invalid correlation: RangeError: Maya correlation must be a finite number.
+Recovery in the same process:
+22 Koiak 1716 AM
+23 Tevet 5760

@@ -70,3 +70,37 @@ the same driver with `--observe-only`. Module hashes and the valid-output digest
 identify each capture. The source tests also isolate formerly unbounded
 conversions in disposable child processes, so a regression cannot lock the test
 runner's main thread.
+
+## Clean builds and installed package
+
+Code `2aac6bc` was exported with `git archive` and installed from the lockfile
+on Node 24.21.0. Lint, strict types, 256 tests in the default locale and 256 in
+the configured German locale, both runnable examples, the package/site build
+and 58 production Chromium/Firefox workflows pass. Node 26.7.0 produces the
+same 60 library files and 30 site files. The receipt identifies 104 selected
+tracked source, test and build inputs that match the clean archive.
+
+Separate [Node 24](results/installed-node24.json) and
+[Node 26](results/installed-node26.json) installations each run all 90 malformed
+requests in real child processes, reject them before the deadline and recover
+with a valid date in the same process. Both reproduce all 843 baseline valid
+outputs. The public package export also runs the demonstration script directly;
+its output is identical between the two versions.
+
+The local 0.2.3 tarball is 76,595 bytes, SHA-256
+`79dfc8311fcbb610641a148d2a2598cb16acc98d160d6d0089b2b4049e4cc529`.
+All 40 shipped JavaScript/declaration files match the clean build and both
+installations. [`verification.json`](results/verification.json) retains the
+artifact, source, build, runtime and local check-log hashes. The tarball is not
+an npm release; no registry version, tag or hosted deployment is claimed.
+
+The existing clock replay also verifies 24 offline date/explanation workflows
+in both engines at 1440 and 375px. All 30 served files match the clean build,
+and the 29 files actually loaded by each browser match those hashes. The clock
+already limits user dates; this library correction preserves its displayed
+coordinates. Six actual browser screenshots and the installed terminal image
+were visually inspected. The [browser receipt](results/browser/browser.json)
+records the checks. The [terminal capture](../../docs/assets/date-inputs.ansi)
+is unedited stdout from `node date-inputs.mjs` in the installed consumer.
+
+![Installed library rejects invalid inputs and recovers](../../docs/assets/date-inputs.png)
