@@ -11,7 +11,9 @@
       "!**/fonts",
       "!**/studies/chinese-calendar/*.json",
       "!**/studies/planet-frame/*.json",
-      "!**/studies/lunar-series/*.json"
+      "!**/studies/lunar-series/*.json",
+      "!**/studies/forward-dates/*.json",
+      "!**/studies/forward-dates/results/*.json"
     ]
   },
   "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },

@@ -17,7 +17,7 @@
  * human-facing BCE/CE label.
  */
 
-import { checkJulianDay } from './validation.js';
+import { calendarDayToJD, checkJulianDay, checkYearMonth } from './validation.js';
 
 /** A Julian Day Number, fractional, referenced to UTC noon. */
 export type JulianDay = number;
@@ -40,8 +40,13 @@ export const MJD_OFFSET = 2400000.5;
 /**
  * Julian Day for a proleptic Gregorian calendar date.
  * Meeus (1998) ch. 7, eq. 7.1, applied for all years (proleptic).
+ * Fractional days within the named month retain their time of day.
+ * @throws RangeError for invalid fields or unreliable integer-day arithmetic.
  */
 export function gregorianToJD(year: number, month: number, day: number): JulianDay {
+  checkYearMonth(year, month, 12);
+  const monthLength =
+    month === 2 ? (isGregorianLeapYear(year) ? 29 : 28) : [4, 6, 9, 11].includes(month) ? 30 : 31;
   let y = year;
   let m = month;
   if (m <= 2) {
@@ -50,21 +55,34 @@ export function gregorianToJD(year: number, month: number, day: number): JulianD
   }
   const a = Math.floor(y / 100);
   const b = 2 - a + Math.floor(a / 4);
-  return Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + day + b - 1524.5;
+  return calendarDayToJD(
+    day,
+    monthLength,
+    (d) => Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + d + b - 1524.5,
+  );
 }
 
 /**
  * Julian Day for a proleptic Julian calendar date.
  * Meeus (1998) ch. 7, eq. 7.1, with the Gregorian correction B omitted.
+ * Fractional days within the named month retain their time of day.
+ * @throws RangeError for invalid fields or unreliable integer-day arithmetic.
  */
 export function julianToJD(year: number, month: number, day: number): JulianDay {
+  checkYearMonth(year, month, 12);
+  const monthLength =
+    month === 2 ? (isJulianLeapYear(year) ? 29 : 28) : [4, 6, 9, 11].includes(month) ? 30 : 31;
   let y = year;
   let m = month;
   if (m <= 2) {
     y -= 1;
     m += 12;
   }
-  return Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + day - 1524.5;
+  return calendarDayToJD(
+    day,
+    monthLength,
+    (d) => Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + d - 1524.5,
+  );
 }
 
 /** Inverse of {@link gregorianToJD}: proleptic Gregorian date for a JD. */

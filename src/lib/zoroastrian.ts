@@ -22,7 +22,12 @@
  */
 
 import { type JulianDay, julianToJD, mod } from './core/jd.js';
-import { checkElapsedDays, checkJulianDay } from './core/validation.js';
+import {
+  calendarDayToJD,
+  checkElapsedDays,
+  checkJulianDay,
+  checkYearMonth,
+} from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface ZoroastrianDate {
@@ -73,8 +78,11 @@ export function fromJD(jd: JulianDay): ZoroastrianDate {
 }
 
 export function toJD(date: ZoroastrianDate): JulianDay {
-  const daysSinceEpoch = (date.year - 1) * 365 + (date.month - 1) * 30 + (date.day - 1);
-  return ZOROASTRIAN_EPOCH_JD + daysSinceEpoch;
+  checkYearMonth(date.year, date.month, 13);
+  return calendarDayToJD(date.day, date.month === 13 ? 5 : 30, (day) => {
+    const daysSinceEpoch = (date.year - 1) * 365 + (date.month - 1) * 30 + (day - 1);
+    return ZOROASTRIAN_EPOCH_JD + daysSinceEpoch;
+  });
 }
 
 export function describe(jd: JulianDay): CalendarTablet {

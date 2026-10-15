@@ -26,6 +26,11 @@ Invalid library dates now raise `RangeError` instead of blocking a Node process
 or acquiring fallback calendar fields. Year searches are bounded and reject
 unreliable arithmetic. [Installed-process reproduction and valid-date controls](studies/date-inputs/README.md)
 cover this source correction; it is unreleased.
+Forward month/day conversion also rejects impossible dates, such as Cheshvan 30
+in a 29-day Cheshvan, while preserving valid fractional days. The
+[month-boundary and installed-package study](studies/forward-dates/README.md)
+records this further source correction. Callers doing date arithmetic should
+add days to a valid JD rather than supply overflow fields.
 
 ## Why this exists
 

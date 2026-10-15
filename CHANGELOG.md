@@ -21,6 +21,13 @@ correction in source, not yet released to npm or the hosted demo.
 
 ### Fixed
 
+- Forward month/day conversions reject nonexistent dates instead of silently
+  selecting another month or year. Check safe integer years, month membership,
+  leap/variable month lengths and representable midnight arithmetic across ten
+  entry points. Valid fractional days retain the original formulas and results.
+  Callers using overflow fields for arithmetic must add an offset to a valid JD.
+  [Independent boundaries and installed-package replay](studies/forward-dates/README.md).
+
 - Inverse calendar conversions reject invalid Julian days, bound year searches
   and refuse unsupported arithmetic precision. Date bridges reject invalid
   Date objects and unsupported instants instead of returning NaN/Invalid Date.

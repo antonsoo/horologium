@@ -27,7 +27,7 @@
  */
 
 import { type JulianDay, mod } from './core/jd.js';
-import { bracketYear, checkJulianDay } from './core/validation.js';
+import { bracketYear, calendarDayToJD, checkJulianDay, checkYearMonth } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 /** JD of 1 Muharram AH 1 (16 July 622 CE, Julian calendar); see the module doc comment for the verification. */
@@ -76,13 +76,17 @@ export function islamicMonthLength(year: number, month: number): number {
  * the two agree exactly everywhere checked.
  */
 export function toJD(date: IslamicDate): JulianDay {
-  return (
-    date.day +
-    Math.ceil(29.5 * (date.month - 1)) +
-    (date.year - 1) * 354 +
-    Math.floor((3 + 11 * date.year) / 30) +
-    ISLAMIC_EPOCH_JD -
-    1
+  checkYearMonth(date.year, date.month, 12);
+  return calendarDayToJD(
+    date.day,
+    islamicMonthLength(date.year, date.month),
+    (day) =>
+      day +
+      Math.ceil(29.5 * (date.month - 1)) +
+      (date.year - 1) * 354 +
+      Math.floor((3 + 11 * date.year) / 30) +
+      ISLAMIC_EPOCH_JD -
+      1,
   );
 }
 

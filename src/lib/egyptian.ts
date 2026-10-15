@@ -15,7 +15,12 @@
  */
 
 import { type JulianDay, jdToJulian, julianToJD, mod } from './core/jd.js';
-import { checkElapsedDays, checkJulianDay } from './core/validation.js';
+import {
+  calendarDayToJD,
+  checkElapsedDays,
+  checkJulianDay,
+  checkYearMonth,
+} from './core/validation.js';
 import type { CalendarTablet } from './types.js';
 
 export interface EgyptianDate {
@@ -98,8 +103,11 @@ export function fromJD(jd: JulianDay): EgyptianDate {
 }
 
 export function toJD(date: EgyptianDate): JulianDay {
-  const daysSinceEpoch = (date.year - 1) * 365 + (date.month - 1) * 30 + (date.day - 1);
-  return EGYPTIAN_EPOCH_JD + daysSinceEpoch;
+  checkYearMonth(date.year, date.month, 13);
+  return calendarDayToJD(date.day, date.month === 13 ? 5 : 30, (day) => {
+    const daysSinceEpoch = (date.year - 1) * 365 + (date.month - 1) * 30 + (day - 1);
+    return EGYPTIAN_EPOCH_JD + daysSinceEpoch;
+  });
 }
 
 /** Season for a civil month (1-12); `null` for the epagomenal days (month 13), which fall outside all three seasons. */

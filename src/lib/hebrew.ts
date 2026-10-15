@@ -21,7 +21,7 @@
  */
 
 import { type JulianDay, jdWeekday, julianToJD, mod } from './core/jd.js';
-import { bracketYear, checkJulianDay } from './core/validation.js';
+import { bracketYear, calendarDayToJD, checkJulianDay, checkYearMonth } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface HebrewDate {
@@ -304,11 +304,16 @@ export function monthNameHebrew(year: number, monthNumber: number): string {
 }
 
 export function toJD(date: HebrewDate): JulianDay {
+  checkYearMonth(date.year, date.month, 13);
   const months = hebrewMonthsInYear(date.year);
   let elapsed = 0;
   for (const { month, length } of months) {
     if (month === date.month) {
-      return roshHashanah(date.year) + elapsed + (date.day - 1);
+      return calendarDayToJD(
+        date.day,
+        length,
+        (day) => roshHashanah(date.year) + elapsed + (day - 1),
+      );
     }
     elapsed += length;
   }

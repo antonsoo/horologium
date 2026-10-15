@@ -38,6 +38,8 @@ calendar's Gregorian -5000 through 5000 range.
 These checks establish input and arithmetic boundaries, not ephemeris accuracy
 or historical attestation of distant projections. Forward date-field arithmetic
 has not become a complete validator for every supplied month/day tuple.
+The later [forward-date correction](../forward-dates/README.md) adds month/day
+validation while retaining valid fractional-day arithmetic.
 
 ## Real process replay
 

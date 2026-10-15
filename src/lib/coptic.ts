@@ -31,7 +31,7 @@
  */
 
 import { type JulianDay, julianToJD } from './core/jd.js';
-import { bracketYear, checkJulianDay } from './core/validation.js';
+import { bracketYear, calendarDayToJD, checkJulianDay, checkYearMonth } from './core/validation.js';
 import { beforeEra, type CalendarTablet } from './types.js';
 
 export interface ThirteenMonthDate {
@@ -56,13 +56,13 @@ export type EthiopianDate = ThirteenMonthDate;
  * negative years; the two agree exactly everywhere checked.
  */
 function thirteenMonthToJD(epochJD: JulianDay, date: ThirteenMonthDate): JulianDay {
-  return (
-    epochJD -
-    1 +
-    365 * (date.year - 1) +
-    Math.floor(date.year / 4) +
-    30 * (date.month - 1) +
-    date.day
+  checkYearMonth(date.year, date.month, 13);
+  const monthLength = date.month === 13 ? ((date.year + 1) % 4 === 0 ? 6 : 5) : 30;
+  return calendarDayToJD(
+    date.day,
+    monthLength,
+    (day) =>
+      epochJD - 1 + 365 * (date.year - 1) + Math.floor(date.year / 4) + 30 * (date.month - 1) + day,
   );
 }
 
