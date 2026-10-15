@@ -1,0 +1,7 @@
+Gregorian 2025-02-29: RangeError
+Julian 1900-02-30: RangeError
+Hebrew 5784, Cheshvan 30: RangeError
+Coptic 1740, month 13 day 6: RangeError
+Islamic 1445, Safar 30: RangeError
+Valid leap day at noon: JD 2460370
+Recovered date: {"year":2024,"month":2,"day":29.5}

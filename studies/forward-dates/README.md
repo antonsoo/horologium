@@ -100,3 +100,36 @@ the original package's installed `dist/lib/index.js`. Regenerate the reference
 with `convertdate==2.4.0` and
 `python studies/forward-dates/oracle.py > studies/forward-dates/months.json`;
 the normal package has no Python/reference-library dependency.
+
+## Built artifact and existing clock
+
+Code `025aedf2b35f261ac01dd0b36394cb92dc59c7d2` was exported with `git archive`.
+All 277 archived files remain unchanged after a fresh Node 24.21.0 install,
+lint, strict type checks, 268 tests in each configured locale, all three runnable
+examples and 58 production Chromium/Firefox workflows. Node 26.7.0 produces the
+same 60 library files and 30 site files.
+
+The local 0.2.3 package is 77,632 bytes, SHA-256
+`84f4a66740e7f74ae62d09c4d91e323256e353b8c2fa4ba6d8558eb7c02a1517`.
+Separate installed [Node 20.0.0](results/installed-node20.json) and
+[Node 24.21.0](results/installed-node24.json) consumers reproduce every forward
+request and all valid-output digests. All 40 shipped JavaScript/declaration files
+match the clean build and both installations. The new example runs through the
+actual package export with identical stdout, and a separate strict TypeScript
+consumer resolves the public declarations.
+
+The existing coordinate-browser driver runs its current `after` expectations
+against both builds. Their [before](results/clock-before.json) and
+[after](results/clock-after.json) captures retain 24 offline date/explanation
+workflows each, at desktop and 375 px. Every readout and method matches exactly.
+All 30 served files and the 29 loaded in each browser view match their tested
+builds. No extra requests occur while changing dates offline. The twelve browser
+QA images and this actual installed-consumer terminal capture were inspected.
+
+![Installed package rejects invalid dates and recovers](../../docs/assets/forward-dates.png)
+
+The earlier inverse replay also retains zero disagreements/timeouts across its
+90 invalid requests and the same 843 valid outputs. The
+[verification receipt](results/verification.json) identifies the commands,
+artifacts, source revisions and limits. No registry release, tag or manual hosted
+deployment was performed.
