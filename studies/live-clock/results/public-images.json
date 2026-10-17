@@ -1,0 +1,30 @@
+{
+  "selectedScreenshots": [
+    {
+      "file": "firefox-375-chinese.png",
+      "sha256": "4915b8d6f14e1109db46205d95e7a561c05313695a88155fdaa5c40e4435f328",
+      "byteIdenticalToReviewedLocal": true
+    },
+    {
+      "file": "chromium-1440-athyr.png",
+      "sha256": "7fa6d231d13445093013be76f5da2cdd6978e942cbc55d9968317ff17c09b192",
+      "byteIdenticalToReviewedLocal": true
+    },
+    {
+      "file": "chromium-375-babylonian-2020.png",
+      "sha256": "21b9b554e6d22bdfc34a9177905df0b134ddbd7409a86844f8c4e47ef2802b31",
+      "byteIdenticalToReviewedLocal": true
+    },
+    {
+      "file": "firefox-375-ethiopian.png",
+      "sha256": "f524651a332d214d2ce28341455b000b0c09ec5bf3f94ec41d65bd67a93bff5b",
+      "byteIdenticalToReviewedLocal": true
+    },
+    {
+      "file": "firefox-1440-piedras-negras.png",
+      "sha256": "2b3ef4a425b20422bb88f11842ccbc3cd94967c3d9b9021cfcb00121d634de26",
+      "byteIdenticalToReviewedLocal": true
+    }
+  ],
+  "note": "All five selected public after images are byte-identical to the locally opened and inspected images retained in docs/assets/live-clock."
+}

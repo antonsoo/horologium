@@ -1,0 +1,394 @@
+[
+  {
+    "base": "https://antonsoo.github.io/horologium/",
+    "phase": "after",
+    "engine": "chromium",
+    "browserVersion": "153.0.8010.12",
+    "width": 1440,
+    "assets": [
+      "https://antonsoo.github.io/horologium/assets/index-CsO7CQV6.js",
+      "https://antonsoo.github.io/horologium/assets/index-3uSCTewm.css"
+    ],
+    "flows": [
+      {
+        "id": "athyr",
+        "jd": 2460489.5,
+        "calendar": "egyptian",
+        "before": "Akhet I, day 13",
+        "after": "III Akhet, day 73",
+        "summary": "III Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.",
+        "native": "13 Athyr, year 2773 of Nabonassar",
+        "method": "Ptolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "chromium-1440-athyr.png",
+        "text": "EGYPTIAN CIVIL CALENDAR\n13 Athyr, year 2773 of Nabonassar\n\nIII Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.\n\nHOW THIS IS COMPUTED\n\nPtolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "maya",
+        "jd": 2456282.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G9",
+        "summary": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9",
+        "native": "13.0.0.0.0 4 Ajaw 3 K'ank'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "chromium-1440-maya.png",
+        "text": "MAYA CALENDAR\n13.0.0.0.0 4 Ajaw 3 K'ank'in\n\nLong Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "piedras-negras",
+        "jd": 1967418.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G7",
+        "summary": "Long Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7",
+        "native": "9.12.2.0.16 5 Kib' 14 Yaxk'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "chromium-1440-piedras-negras.png",
+        "text": "MAYA CALENDAR\n9.12.2.0.16 5 Kib' 14 Yaxk'in\n\nLong Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "ethiopian",
+        "jd": 2461325.5,
+        "calendar": "ethiopian",
+        "before": "Ethiopian Anno Mundi",
+        "after": "Amete Mihret",
+        "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)",
+        "native": "2 Tikimt 2019",
+        "method": "Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction.",
+        "screenshot": "chromium-1440-ethiopian.png",
+        "text": "ETHIOPIAN CALENDAR\n2 Tikimt 2019\n\n2 Tikimt 2019 (Era of Incarnation, Amete Mihret)\n\nHOW THIS IS COMPUTED\n\nEthiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction."
+      },
+      {
+        "id": "babylonian-2020",
+        "jd": 2458873.876590278,
+        "calendar": "babylonian",
+        "before": "2 Shabatu",
+        "after": "1 Shabatu",
+        "summary": "1 Shabatu, SE 2330",
+        "native": "1 Shabatu, SE 2330",
+        "method": "Reconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled.",
+        "screenshot": "chromium-1440-babylonian-2020.png",
+        "text": "BABYLONIAN (SELEUCID ERA) CALENDAR\nreconstruction\n1 Shabatu, SE 2330\n\n1 Shabatu, SE 2330\n\nHOW THIS IS COMPUTED\n\nReconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled."
+      },
+      {
+        "id": "greek-2022",
+        "jd": 2459848.9340902776,
+        "calendar": "greek",
+        "before": "1 Pyanepsion",
+        "after": "2 Pyanepsion",
+        "summary": "2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)",
+        "native": "2 Πυανεψιών, Ὀλ. 700.2",
+        "method": "Reconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled.",
+        "screenshot": "chromium-1440-greek-2022.png",
+        "text": "GREEK (ATTIC) CALENDAR\nreconstruction\n2 Πυανεψιών, Ὀλ. 700.2\n2 Pyanepsion, Ol. 700.2\n\n2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)\n\nHOW THIS IS COMPUTED\n\nReconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled."
+      }
+    ],
+    "lunarYear": {
+      "available": true,
+      "download": "chromium-1440-chinese-2033.json",
+      "sha256": "5690763b2fad533b4ee9e564616f96434a1f751a4e01d81a698b88e40dca9f27",
+      "completeLibraryParity": true,
+      "keyboardMonthJump": true,
+      "nextDay": true
+    },
+    "errors": [],
+    "requestsAfterDisconnect": [],
+    "externalRequests": [],
+    "axeViolations": [],
+    "noPageOverflow": true
+  },
+  {
+    "base": "https://antonsoo.github.io/horologium/",
+    "phase": "after",
+    "engine": "chromium",
+    "browserVersion": "153.0.8010.12",
+    "width": 375,
+    "assets": [
+      "https://antonsoo.github.io/horologium/assets/index-CsO7CQV6.js",
+      "https://antonsoo.github.io/horologium/assets/index-3uSCTewm.css"
+    ],
+    "flows": [
+      {
+        "id": "athyr",
+        "jd": 2460489.5,
+        "calendar": "egyptian",
+        "before": "Akhet I, day 13",
+        "after": "III Akhet, day 73",
+        "summary": "III Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.",
+        "native": "13 Athyr, year 2773 of Nabonassar",
+        "method": "Ptolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "chromium-375-athyr.png",
+        "text": "EGYPTIAN CIVIL CALENDAR\n13 Athyr, year 2773 of Nabonassar\n\nIII Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.\n\nHOW THIS IS COMPUTED\n\nPtolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "maya",
+        "jd": 2456282.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G9",
+        "summary": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9",
+        "native": "13.0.0.0.0 4 Ajaw 3 K'ank'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "chromium-375-maya.png",
+        "text": "MAYA CALENDAR\n13.0.0.0.0 4 Ajaw 3 K'ank'in\n\nLong Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "piedras-negras",
+        "jd": 1967418.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G7",
+        "summary": "Long Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7",
+        "native": "9.12.2.0.16 5 Kib' 14 Yaxk'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "chromium-375-piedras-negras.png",
+        "text": "MAYA CALENDAR\n9.12.2.0.16 5 Kib' 14 Yaxk'in\n\nLong Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "ethiopian",
+        "jd": 2461325.5,
+        "calendar": "ethiopian",
+        "before": "Ethiopian Anno Mundi",
+        "after": "Amete Mihret",
+        "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)",
+        "native": "2 Tikimt 2019",
+        "method": "Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction.",
+        "screenshot": "chromium-375-ethiopian.png",
+        "text": "ETHIOPIAN CALENDAR\n2 Tikimt 2019\n\n2 Tikimt 2019 (Era of Incarnation, Amete Mihret)\n\nHOW THIS IS COMPUTED\n\nEthiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction."
+      },
+      {
+        "id": "babylonian-2020",
+        "jd": 2458873.876590278,
+        "calendar": "babylonian",
+        "before": "2 Shabatu",
+        "after": "1 Shabatu",
+        "summary": "1 Shabatu, SE 2330",
+        "native": "1 Shabatu, SE 2330",
+        "method": "Reconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled.",
+        "screenshot": "chromium-375-babylonian-2020.png",
+        "text": "BABYLONIAN (SELEUCID ERA) CALENDAR\nreconstruction\n1 Shabatu, SE 2330\n\n1 Shabatu, SE 2330\n\nHOW THIS IS COMPUTED\n\nReconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled."
+      },
+      {
+        "id": "greek-2022",
+        "jd": 2459848.9340902776,
+        "calendar": "greek",
+        "before": "1 Pyanepsion",
+        "after": "2 Pyanepsion",
+        "summary": "2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)",
+        "native": "2 Πυανεψιών, Ὀλ. 700.2",
+        "method": "Reconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled.",
+        "screenshot": "chromium-375-greek-2022.png",
+        "text": "GREEK (ATTIC) CALENDAR\nreconstruction\n2 Πυανεψιών, Ὀλ. 700.2\n2 Pyanepsion, Ol. 700.2\n\n2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)\n\nHOW THIS IS COMPUTED\n\nReconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled."
+      }
+    ],
+    "lunarYear": {
+      "available": true,
+      "download": "chromium-375-chinese-2033.json",
+      "sha256": "5690763b2fad533b4ee9e564616f96434a1f751a4e01d81a698b88e40dca9f27",
+      "completeLibraryParity": true,
+      "keyboardMonthJump": true,
+      "nextDay": true
+    },
+    "errors": [],
+    "requestsAfterDisconnect": [],
+    "externalRequests": [],
+    "axeViolations": [],
+    "noPageOverflow": true
+  },
+  {
+    "base": "https://antonsoo.github.io/horologium/",
+    "phase": "after",
+    "engine": "firefox",
+    "browserVersion": "155.0",
+    "width": 1440,
+    "assets": [
+      "https://antonsoo.github.io/horologium/assets/index-CsO7CQV6.js",
+      "https://antonsoo.github.io/horologium/assets/index-3uSCTewm.css"
+    ],
+    "flows": [
+      {
+        "id": "athyr",
+        "jd": 2460489.5,
+        "calendar": "egyptian",
+        "before": "Akhet I, day 13",
+        "after": "III Akhet, day 73",
+        "summary": "III Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.",
+        "native": "13 Athyr, year 2773 of Nabonassar",
+        "method": "Ptolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "firefox-1440-athyr.png",
+        "text": "EGYPTIAN CIVIL CALENDAR\n13 Athyr, year 2773 of Nabonassar\n\nIII Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.\n\nHOW THIS IS COMPUTED\n\nPtolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "maya",
+        "jd": 2456282.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G9",
+        "summary": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9",
+        "native": "13.0.0.0.0 4 Ajaw 3 K'ank'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "firefox-1440-maya.png",
+        "text": "MAYA CALENDAR\n13.0.0.0.0 4 Ajaw 3 K'ank'in\n\nLong Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "piedras-negras",
+        "jd": 1967418.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G7",
+        "summary": "Long Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7",
+        "native": "9.12.2.0.16 5 Kib' 14 Yaxk'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "firefox-1440-piedras-negras.png",
+        "text": "MAYA CALENDAR\n9.12.2.0.16 5 Kib' 14 Yaxk'in\n\nLong Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "ethiopian",
+        "jd": 2461325.5,
+        "calendar": "ethiopian",
+        "before": "Ethiopian Anno Mundi",
+        "after": "Amete Mihret",
+        "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)",
+        "native": "2 Tikimt 2019",
+        "method": "Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction.",
+        "screenshot": "firefox-1440-ethiopian.png",
+        "text": "ETHIOPIAN CALENDAR\n2 Tikimt 2019\n\n2 Tikimt 2019 (Era of Incarnation, Amete Mihret)\n\nHOW THIS IS COMPUTED\n\nEthiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction."
+      },
+      {
+        "id": "babylonian-2020",
+        "jd": 2458873.876590278,
+        "calendar": "babylonian",
+        "before": "2 Shabatu",
+        "after": "1 Shabatu",
+        "summary": "1 Shabatu, SE 2330",
+        "native": "1 Shabatu, SE 2330",
+        "method": "Reconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled.",
+        "screenshot": "firefox-1440-babylonian-2020.png",
+        "text": "BABYLONIAN (SELEUCID ERA) CALENDAR\nreconstruction\n1 Shabatu, SE 2330\n\n1 Shabatu, SE 2330\n\nHOW THIS IS COMPUTED\n\nReconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled."
+      },
+      {
+        "id": "greek-2022",
+        "jd": 2459848.9340902776,
+        "calendar": "greek",
+        "before": "1 Pyanepsion",
+        "after": "2 Pyanepsion",
+        "summary": "2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)",
+        "native": "2 Πυανεψιών, Ὀλ. 700.2",
+        "method": "Reconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled.",
+        "screenshot": "firefox-1440-greek-2022.png",
+        "text": "GREEK (ATTIC) CALENDAR\nreconstruction\n2 Πυανεψιών, Ὀλ. 700.2\n2 Pyanepsion, Ol. 700.2\n\n2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)\n\nHOW THIS IS COMPUTED\n\nReconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled."
+      }
+    ],
+    "lunarYear": {
+      "available": true,
+      "download": "firefox-1440-chinese-2033.json",
+      "sha256": "5690763b2fad533b4ee9e564616f96434a1f751a4e01d81a698b88e40dca9f27",
+      "completeLibraryParity": true,
+      "keyboardMonthJump": true,
+      "nextDay": true
+    },
+    "errors": [],
+    "requestsAfterDisconnect": [],
+    "externalRequests": [],
+    "axeViolations": [],
+    "noPageOverflow": true
+  },
+  {
+    "base": "https://antonsoo.github.io/horologium/",
+    "phase": "after",
+    "engine": "firefox",
+    "browserVersion": "155.0",
+    "width": 375,
+    "assets": [
+      "https://antonsoo.github.io/horologium/assets/index-CsO7CQV6.js",
+      "https://antonsoo.github.io/horologium/assets/index-3uSCTewm.css"
+    ],
+    "flows": [
+      {
+        "id": "athyr",
+        "jd": 2460489.5,
+        "calendar": "egyptian",
+        "before": "Akhet I, day 13",
+        "after": "III Akhet, day 73",
+        "summary": "III Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.",
+        "native": "13 Athyr, year 2773 of Nabonassar",
+        "method": "Ptolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "firefox-375-athyr.png",
+        "text": "EGYPTIAN CIVIL CALENDAR\n13 Athyr, year 2773 of Nabonassar\n\nIII Akhet, day 73 of the season — year 425 of the 1460-year Sothic cycle since the 139 CE anchor.\n\nHOW THIS IS COMPUTED\n\nPtolemy’s Era of Nabonassar epoch (1 Thoth, Year 1 = 26 Feb 747 BCE Julian). 12 months of 30 days across 3 seasons (Akhet/Peret/Shemu) plus 5 epagomenal days, with no leap day ever -- the wandering year drifts about 1 day every 4 years against the solar year, completing a Sothic cycle (Censorinus’s 139 CE anchor) in about 1460 years. Season hieroglyphs are omitted pending a confidently verified Gardiner-sign-to-Unicode mapping. This is Ptolemy’s own attested civil-calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "maya",
+        "jd": 2456282.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G9",
+        "summary": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9",
+        "native": "13.0.0.0.0 4 Ajaw 3 K'ank'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "firefox-375-maya.png",
+        "text": "MAYA CALENDAR\n13.0.0.0.0 4 Ajaw 3 K'ank'in\n\nLong Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "piedras-negras",
+        "jd": 1967418.5,
+        "calendar": "maya-long-count",
+        "before": null,
+        "after": "Lord of the Night G7",
+        "summary": "Long Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7",
+        "native": "9.12.2.0.16 5 Kib' 14 Yaxk'in",
+        "method": "Base-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction.",
+        "screenshot": "firefox-375-piedras-negras.png",
+        "text": "MAYA CALENDAR\n9.12.2.0.16 5 Kib' 14 Yaxk'in\n\nLong Count 9.12.2.0.16, Tzolk'in 5 Kib', Haab' 14 Yaxk'in; Lord of the Night G7\n\nHOW THIS IS COMPUTED\n\nBase-20 positional Long Count (base-18 at the winal-to-tun place) from the Maya creation epoch, correlated to JD via the Goodman-Martinez-Thompson constant 584283 (modern consensus). Tzolk'in (260-day) and Haab' (365-day, no leap day) are derived by direct modular arithmetic against the same day count. The nine-day G cycle ends at G9 on tun, katun and baktun boundaries (Mark Pitts, Maya Numbers & the Maya Calendar, pp. 88, 92, 99); G1 follows on the next day. G1-G9 are epigraphic labels for positions in that cycle. This is the Maya's own attested calendar arithmetic, not a modern reconstruction."
+      },
+      {
+        "id": "ethiopian",
+        "jd": 2461325.5,
+        "calendar": "ethiopian",
+        "before": "Ethiopian Anno Mundi",
+        "after": "Amete Mihret",
+        "summary": "2 Tikimt 2019 (Era of Incarnation, Amete Mihret)",
+        "native": "2 Tikimt 2019",
+        "method": "Ethiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction.",
+        "screenshot": "firefox-375-ethiopian.png",
+        "text": "ETHIOPIAN CALENDAR\n2 Tikimt 2019\n\n2 Tikimt 2019 (Era of Incarnation, Amete Mihret)\n\nHOW THIS IS COMPUTED\n\nEthiopian civil/liturgical calendar, Era of Incarnation (Amete Mihret): 12 months of 30 days plus a 5-day epagomenal month (6 in a leap year, when (year+1) mod 4 == 0). Epoch 1 Meskerem year 1 = 29 August 8 CE (Julian), 276 Julian years before the Coptic Era-of-Martyrs epoch. Amete Alem (Era of the World, Anno Mundi) would add 5500 to the year shown here. Documented historical/liturgical dating system, not a reconstruction."
+      },
+      {
+        "id": "babylonian-2020",
+        "jd": 2458873.876590278,
+        "calendar": "babylonian",
+        "before": "2 Shabatu",
+        "after": "1 Shabatu",
+        "summary": "1 Shabatu, SE 2330",
+        "native": "1 Shabatu, SE 2330",
+        "method": "Reconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled.",
+        "screenshot": "firefox-375-babylonian-2020.png",
+        "text": "BABYLONIAN (SELEUCID ERA) CALENDAR\nreconstruction\n1 Shabatu, SE 2330\n\n1 Shabatu, SE 2330\n\nHOW THIS IS COMPUTED\n\nReconstruction: Seleucid Era year from epoch 1 Nisannu SE 1 = 3 April 311 BCE (Julian). Nisannu 1 is the first new moon at/after the vernal equinox each year; other months follow new-moon to new-moon. Whether a year gets a 13th month (intercalary Addaru II) is determined from this project’s own new-moon/equinox arithmetic, not an assumed phase within the historically-attested 19-year cycle (Parker & Dubberstein) - so the real, well-attested exception where a second Ululu was intercalated mid-year instead is not modeled. New moons and the equinox are root-found on this project’s own Sun/Moon formulas (Meeus 1998) - see docs/CALENDARS.md. Year, month and day change together at mean midnight for Babylon (44.4275° E) on the modeled new moon’s day. First visible crescents and sunset boundaries are not modeled."
+      },
+      {
+        "id": "greek-2022",
+        "jd": 2459848.9340902776,
+        "calendar": "greek",
+        "before": "1 Pyanepsion",
+        "after": "2 Pyanepsion",
+        "summary": "2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)",
+        "native": "2 Πυανεψιών, Ὀλ. 700.2",
+        "method": "Reconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled.",
+        "screenshot": "firefox-375-greek-2022.png",
+        "text": "GREEK (ATTIC) CALENDAR\nreconstruction\n2 Πυανεψιών, Ὀλ. 700.2\n2 Pyanepsion, Ol. 700.2\n\n2 Pyanepsion, Ol. 700.2 (year begins 2022 CE)\n\nHOW THIS IS COMPUTED\n\nReconstruction: the Attic year starts at the first new moon after the summer solstice; months run new-moon to new-moon; a year needing a 13th lunation always intercalates a second Poseideon (the most commonly attested choice, though real Athenian practice intercalated other months too and did not follow a fixed rule). Olympiad numbering: 776 BCE = Ol. 1.1, incrementing every 4 years from the same year-start. New moons and the solstice are root-found on this project’s own Sun/Moon formulas (Meeus 1998). Month, day and Olympiad year change together at mean midnight for Athens (23.7275° E); the historical sunset boundary is not modeled."
+      }
+    ],
+    "lunarYear": {
+      "available": true,
+      "download": "firefox-375-chinese-2033.json",
+      "sha256": "5690763b2fad533b4ee9e564616f96434a1f751a4e01d81a698b88e40dca9f27",
+      "completeLibraryParity": true,
+      "keyboardMonthJump": true,
+      "nextDay": true
+    },
+    "errors": [],
+    "requestsAfterDisconnect": [],
+    "externalRequests": [],
+    "axeViolations": [],
+    "noPageOverflow": true
+  }
+]

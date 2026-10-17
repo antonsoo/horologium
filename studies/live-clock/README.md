@@ -134,3 +134,23 @@ node studies/live-clock/consumer.mjs /path/to/registry-package /path/to/source-p
 The existing forward-date replay also passes 16,884 valid outputs, 2,623 invalid
 refusals/recoveries, and 984 native ICU comparisons. It checks the installed/source
 input contract; a hosted static page does not publish the library package.
+
+## Public deployment verified
+
+The reviewed runtime `48adbe3a063a13c16474515370bbbcfc79b8b3f1` and new
+source/evidence commit `624e703` are now published. The live Pages deployment is
+`55563e1f4ee560b482fb449c25526480231024c9`: all **30 canonical files** match the
+tested archive, including the index, app bundle and bundled fonts.
+[Served-file hashes](results/hosted-bytes.json).
+
+The [actual public browser replay](results/browser-public.json) repeats all
+24 date views and four inspector/download workflows after disconnecting. It
+confirms the six corrected labels/dates, actual 2033 lunar-year JSON snapshots,
+keyboard month jumps and the next day, with no page errors, post-disconnection
+requests, external requests, accessibility violations or page overflow.
+[Selected public image comparisons](results/public-images.json) retain their
+relationship to the locally inspected screenshots.
+
+No npm version or release tag was created. The README now keeps the purpose and
+setup ahead of this detailed correction history, and its registry example was
+checked against both the older package and pinned corrected Git installation.
