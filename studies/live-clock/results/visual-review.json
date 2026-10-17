@@ -1,0 +1,52 @@
+{
+  "selectedScreenshots": [
+    {
+      "file": "after-chromium-1440-athyr.png",
+      "bytes": 33899,
+      "sha256": "7fa6d231d13445093013be76f5da2cdd6978e942cbc55d9968317ff17c09b192",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "after-chromium-375-babylonian-2020.png",
+      "bytes": 40158,
+      "sha256": "21b9b554e6d22bdfc34a9177905df0b134ddbd7409a86844f8c4e47ef2802b31",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "after-firefox-1440-piedras-negras.png",
+      "bytes": 55939,
+      "sha256": "2b3ef4a425b20422bb88f11842ccbc3cd94967c3d9b9021cfcb00121d634de26",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "after-firefox-375-chinese.png",
+      "bytes": 234638,
+      "sha256": "4915b8d6f14e1109db46205d95e7a561c05313695a88155fdaa5c40e4435f328",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "after-firefox-375-ethiopian.png",
+      "bytes": 40587,
+      "sha256": "f524651a332d214d2ce28341455b000b0c09ec5bf3f94ec41d65bd67a93bff5b",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "before-chromium-1440-athyr.png",
+      "bytes": 33628,
+      "sha256": "4f6846a23ae2ee66fcc2fef0b5e9db9da2ea1c59494d8e936eeee6e0ac48471a",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "before-chromium-375-babylonian-2020.png",
+      "bytes": 34366,
+      "sha256": "3a563e700b53f55fea14b0fa162a584b2ac36330dbfa108fb807bb9c8d839ad1",
+      "visuallyReviewed": true
+    },
+    {
+      "file": "before-firefox-375-ethiopian.png",
+      "bytes": 46386,
+      "sha256": "e5ea67d69c7312da34482f9860eec454b5e41e008560437094e26e41da71660b",
+      "visuallyReviewed": true
+    }
+  ]
+}

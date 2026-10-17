@@ -1,0 +1,42 @@
+{
+  "sourceCommit": "48adbe3a063a13c16474515370bbbcfc79b8b3f1",
+  "archiveInstallNode": "v24.21.0",
+  "lint": true,
+  "typecheck": true,
+  "unitTests": 268,
+  "browserWorkflows": 58,
+  "productionBuild": true,
+  "basicUsageExample": true,
+  "pinnedGitCompiledFileParity": 40,
+  "coordinateCases": 442,
+  "coordinateDisagreements": 0,
+  "icuEraCases": 26,
+  "icuEraMismatches": 0,
+  "forwardReplay": {
+    "node": "v26.7.0",
+    "validCases": 16884,
+    "validMatches": 16884,
+    "oracleCases": 8920,
+    "validOutputsSha256": "f7b06f1faa15a3b8524bbec955edd6dde789eaa3b5db3af6195f0f01b44553a1",
+    "invalidCases": 2623,
+    "refused": 2623,
+    "recoveries": 2623,
+    "icuCases": 984,
+    "icuMatches": 984
+  },
+  "replayOutputHashes": {
+    "coordinates.json": {
+      "sha256": "7d4e27106f3f4dfbe8871e0f1da7629f603148ff0fc1b0f7c45b5b432e12c2f9",
+      "bytes": 283469
+    },
+    "ethiopian.json": {
+      "sha256": "fab7a15ec1514d76d84c172e1df76880dca04cae3ebc7bc62f41baa5e8e270d3",
+      "bytes": 15258
+    },
+    "forward-dates.json": {
+      "sha256": "10b22f24c86133a5b1113cecca8822fc258926477d4dbd864187eebbb0597875",
+      "bytes": 465418
+    }
+  },
+  "registryReleased": false
+}

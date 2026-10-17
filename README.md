@@ -8,30 +8,6 @@
 
 ![Horologium: a bronze Antikythera-inspired dial, date controls and the seasonal hour in Babylon for 4 October 2026 CE](docs/assets/hero.png)
 
-**Corrected in source, unreleased:** the Greek tablet keeps its Olympiad
-and Attic years together; the Babylonian tablet changes year, month and
-day at one modeled midnight. New-moon searches also retain events close
-to the requested instant instead of skipping a month. The
-[before/after boundary study](studies/lunar-boundaries/README.md) explains
-the failures and checks the existing reconstruction's rules.
-
-The source also corrects Egyptian season coordinates and the Maya nine-day
-G cycle. Athyr 13 reads **III Akhet, day 73 of the season**; the documented
-Piedras Negras date `9.12.2.0.16` returns **G7**, and period endings return **G9**.
-The Maya tablet now shows that label. [Published anchors and before/after
-checks](studies/calendar-coordinates/README.md) retain the evidence. These
-changes are pending a package release and hosted deployment.
-
-Invalid library dates now raise `RangeError` instead of blocking a Node process
-or acquiring fallback calendar fields. Year searches are bounded and reject
-unreliable arithmetic. [Installed-process reproduction and valid-date controls](studies/date-inputs/README.md)
-cover this source correction; it is unreleased.
-Forward month/day conversion also rejects impossible dates, such as Cheshvan 30
-in a 29-day Cheshvan, while preserving valid fractional days. The
-[month-boundary and installed-package study](studies/forward-dates/README.md)
-records this further source correction. Callers doing date arithmetic should
-add days to a valid JD rather than supply overflow fields.
-
 ## Why this exists
 
 A date can change its meaning when its calendar is left unstated. The Ides
@@ -66,9 +42,31 @@ npm install @antonsoloviev/horologium
 import { maya, hebrew, core } from '@antonsoloviev/horologium';
 
 const jd = core.gregorianToJD(2012, 12, 21);
-maya.describe(jd).summary; // "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9"
+const lc = maya.fromJD(jd).longCount;
+`${lc.baktun}.${lc.katun}.${lc.tun}.${lc.winal}.${lc.kin}`; // "13.0.0.0.0"
 hebrew.describe(jd).native; // "ח׳ טבת תשע״ג" (8 Tevet 5773)
 ```
+
+The example above works with the registry release and current source. The
+[publication and compatibility record](studies/live-clock/README.md) distinguishes
+the surfaces:
+
+| Surface | Calendar behavior |
+| --- | --- |
+| Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing and Chinese-year inspector |
+| npm `0.2.3` | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, and unchecked forward-date overflow |
+
+For the corrected library, a pinned public Git install builds the same API used
+by the current demo. This has been verified from a clean consumer project:
+
+```sh
+npm install git+https://github.com/antonsoo/horologium.git#48adbe3a063a13c16474515370bbbcfc79b8b3f1
+```
+
+Invalid dates now raise `RangeError`; callers doing arithmetic should add days
+to a valid Julian Day instead of overflowing month/day fields. The
+[library input contract](studies/forward-dates/README.md) gives the boundaries.
+No new npm version is implied by this Git installation or hosted deployment.
 
 See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable version (`npm run build:lib && node examples/basic-usage.mjs`).
 
@@ -100,7 +98,7 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   principal solar terms, and the reason a month is regular or intercalary.
   Jump to a month, inspect approximate event times, and download the year's
   evidence as JSON. [Calculation and verification](docs/chinese-calendar.md).
-  These corrections and the inspector are in source, pending release.
+  The inspector is in source and the live demo; npm 0.2.3 predates it.
 - **Location**: eight ancient cities (Rome, Athens, Alexandria, Babylon,
   Jerusalem, Chang'an, Tikal, Tenochtitlan) plus cancellable geolocation,
   feeding a visible approximate sunrise/sunset and Roman seasonal-hour
@@ -214,7 +212,7 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   tests check internal date consistency, but there is no independent historical
   calendar oracle here. This does not verify dates used by ancient observers.
 - **Sun/Moon positions:** Sun error stays within 0.006 degrees on the retained
-  DE421 grid. The **lunar-series source correction (unreleased)** replaces
+  DE421 grid. The **lunar-series correction (source and demo)** replaces
   wrong signs/arguments and missing terms with the complete Meeus longitude
   series. On 10,801 independent DE440s positions from 1900 through 2100, maximum
   mean-equinox error falls from 0.966 to 0.00385 degrees. For the actual UTC
@@ -222,7 +220,7 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   nutation and UT-to-TT conversion are still omitted. The
   [lunar study](studies/lunar-series/README.md) separates these comparisons,
   checks new-moon times and retains changed reconstructed-calendar examples.
-  **Planet pointers (unreleased source correction)** now precess their J2000
+  **Planet pointers (source and demo)** now precess their J2000
   vectors to the selected date's ecliptic and equinox. Against JPL DE440s at
   2,755 dates from 1850 through 2050, the largest geometric longitude error
   falls from 2.28 to 0.23 degrees. Twelve of 13,775 positions still differ in

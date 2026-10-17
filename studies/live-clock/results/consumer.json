@@ -1,0 +1,68 @@
+{
+  "node": "v24.21.0",
+  "registry": {
+    "version": "0.2.3",
+    "summary": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in",
+    "nightLabel": "G1",
+    "inspector": "undefined",
+    "invalidForwardDate": 2460735.5
+  },
+  "source": {
+    "commit": "48adbe3a063a13c16474515370bbbcfc79b8b3f1",
+    "summary": "Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9",
+    "nightLabel": "G9",
+    "inspector": "function",
+    "invalidForwardDate": {
+      "name": "RangeError",
+      "message": "Calendar day must be at least 1 and less than 29."
+    }
+  },
+  "events": [
+    {
+      "id": "babylonian-2020",
+      "utc": "2020-01-24T21:41:59.703306+00:00",
+      "jdUTC": 2458873.4041632325,
+      "jdTT": 2458873.4049639734,
+      "longitudeDegEast": 44.4275,
+      "clockJD": 2458873.876590278,
+      "conjunctionMeanDay": 2458874,
+      "clockMeanDay": 2458874,
+      "expectedDayInModeledMonth": 1,
+      "registryEventJd": 2458873.3656822694,
+      "sourceEventJd": 2458873.4045828492,
+      "registryUTCErrorMinutes": -55.412586852908134,
+      "sourceUTCErrorMinutes": 0.604248046875,
+      "registryDay": 2,
+      "sourceDay": 1
+    },
+    {
+      "id": "greek-2022",
+      "utc": "2022-09-25T21:54:34.202774+00:00",
+      "jdUTC": 2459848.4128958653,
+      "jdTT": 2459848.413696606,
+      "longitudeDegEast": 23.7275,
+      "clockJD": 2459848.9340902776,
+      "conjunctionMeanDay": 2459848,
+      "clockMeanDay": 2459849,
+      "expectedDayInModeledMonth": 2,
+      "registryEventJd": 2459848.4419812215,
+      "sourceEventJd": 2459848.413356537,
+      "registryUTCErrorMinutes": 41.882913038134575,
+      "sourceUTCErrorMinutes": 0.663367286324501,
+      "registryDay": 1,
+      "sourceDay": 2
+    }
+  ],
+  "stableReadmeExample": [
+    {
+      "name": "registry",
+      "longCount": "13.0.0.0.0",
+      "hebrew": "ח׳ טבת תשע״ג"
+    },
+    {
+      "name": "source",
+      "longCount": "13.0.0.0.0",
+      "hebrew": "ח׳ טבת תשע״ג"
+    }
+  ]
+}

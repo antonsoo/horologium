@@ -1,0 +1,37 @@
+{
+  "checkedAtUtc": "2026-10-17T04:37:31.838638+00:00",
+  "kernel": {
+    "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp",
+    "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+    "bytes": 32726016
+  },
+  "versions": {
+    "skyfield": "1.54",
+    "numpy": "2.4.4"
+  },
+  "timeBasis": "Apparent geocentric Sun/Moon conjunction found in dynamical time, converted to past UTC with Skyfield's built-in leap-second table; then apply the project's fixed longitude and mean-midnight rule",
+  "events": [
+    {
+      "id": "babylonian-2020",
+      "utc": "2020-01-24T21:41:59.703306+00:00",
+      "jdUTC": 2458873.4041632325,
+      "jdTT": 2458873.4049639734,
+      "longitudeDegEast": 44.4275,
+      "clockJD": 2458873.876590278,
+      "conjunctionMeanDay": 2458874,
+      "clockMeanDay": 2458874,
+      "expectedDayInModeledMonth": 1
+    },
+    {
+      "id": "greek-2022",
+      "utc": "2022-09-25T21:54:34.202774+00:00",
+      "jdUTC": 2459848.4128958653,
+      "jdTT": 2459848.413696606,
+      "longitudeDegEast": 23.7275,
+      "clockJD": 2459848.9340902776,
+      "conjunctionMeanDay": 2459848,
+      "clockMeanDay": 2459849,
+      "expectedDayInModeledMonth": 2
+    }
+  ]
+}

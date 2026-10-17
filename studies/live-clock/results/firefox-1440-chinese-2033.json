@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "yearNumber": 2033,
+  "startJD": 2463628.1666666665,
+  "endJD": 2464012.1666666665,
+  "clock": "UTC+8",
+  "basis": "modern-rule-calculation",
+  "eventTimeNote": "Approximate event instants from Meeus chapters 25 and 49, converted from TT to estimated UT with Espenak-Meeus Delta-T polynomials. Future UTC civil dates are not guaranteed.",
+  "nearMidnightThresholdMinutes": 15,
+  "note": "Modern rules in UTC+8. Month/day labels were checked against Hong Kong Observatory for 1929–2100; future events close to midnight can still move to another civil day.",
+  "months": [
+    {
+      "month": 1,
+      "isLeapMonth": false,
+      "startJD": 2463628.1666666665,
+      "endJD": 2463657.1666666665,
+      "days": 29,
+      "newMoonJD": 2463628.416476094,
+      "nextNewMoonJD": 2463657.849537967,
+      "principalTerms": [
+        {
+          "longitudeDeg": 330,
+          "name": "Rain water",
+          "jd": 2463646.854170213
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 2,
+      "isLeapMonth": false,
+      "startJD": 2463657.1666666665,
+      "endJD": 2463687.1666666665,
+      "days": 30,
+      "newMoonJD": 2463657.849537967,
+      "nextNewMoonJD": 2463687.244106042,
+      "principalTerms": [
+        {
+          "longitudeDeg": 0,
+          "name": "Spring equinox",
+          "jd": 2463676.805208917
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 3,
+      "isLeapMonth": false,
+      "startJD": 2463687.1666666665,
+      "endJD": 2463716.1666666665,
+      "days": 29,
+      "newMoonJD": 2463687.244106042,
+      "nextNewMoonJD": 2463716.615336021,
+      "principalTerms": [
+        {
+          "longitudeDeg": 30,
+          "name": "Grain rain",
+          "jd": 2463707.256258055
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 4,
+      "isLeapMonth": false,
+      "startJD": 2463716.1666666665,
+      "endJD": 2463745.1666666665,
+      "days": 29,
+      "newMoonJD": 2463716.615336021,
+      "nextNewMoonJD": 2463745.9836020446,
+      "principalTerms": [
+        {
+          "longitudeDeg": 60,
+          "name": "Grain buds",
+          "jd": 2463738.2124169893
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 5,
+      "isLeapMonth": false,
+      "startJD": 2463745.1666666665,
+      "endJD": 2463775.1666666665,
+      "days": 30,
+      "newMoonJD": 2463745.9836020446,
+      "nextNewMoonJD": 2463775.3798081093,
+      "principalTerms": [
+        {
+          "longitudeDeg": 90,
+          "name": "Summer solstice",
+          "jd": 2463769.538854979
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 6,
+      "isLeapMonth": false,
+      "startJD": 2463775.1666666665,
+      "endJD": 2463804.1666666665,
+      "days": 29,
+      "newMoonJD": 2463775.3798081093,
+      "nextNewMoonJD": 2463804.8420098736,
+      "principalTerms": [
+        {
+          "longitudeDeg": 120,
+          "name": "Major heat",
+          "jd": 2463800.992414564
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 7,
+      "isLeapMonth": false,
+      "startJD": 2463804.1666666665,
+      "endJD": 2463834.1666666665,
+      "days": 30,
+      "newMoonJD": 2463804.8420098736,
+      "nextNewMoonJD": 2463834.4025700893,
+      "principalTerms": [
+        {
+          "longitudeDeg": 150,
+          "name": "End of heat",
+          "jd": 2463832.2915971032
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 8,
+      "isLeapMonth": false,
+      "startJD": 2463834.1666666665,
+      "endJD": 2463863.1666666665,
+      "days": 29,
+      "newMoonJD": 2463834.4025700893,
+      "nextNewMoonJD": 2463864.069250593,
+      "principalTerms": [],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "twelve-month-cycle",
+      "nearMidnight": []
+    },
+    {
+      "month": 9,
+      "isLeapMonth": false,
+      "startJD": 2463863.1666666665,
+      "endJD": 2463893.1666666665,
+      "days": 30,
+      "newMoonJD": 2463864.069250593,
+      "nextNewMoonJD": 2463893.811430699,
+      "principalTerms": [
+        {
+          "longitudeDeg": 180,
+          "name": "Autumn equinox",
+          "jd": 2463863.2013911335
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 10,
+      "isLeapMonth": false,
+      "startJD": 2463893.1666666665,
+      "endJD": 2463923.1666666665,
+      "days": 30,
+      "newMoonJD": 2463893.811430699,
+      "nextNewMoonJD": 2463923.5688827867,
+      "principalTerms": [
+        {
+          "longitudeDeg": 210,
+          "name": "Frost descent",
+          "jd": 2463893.600189243
+        }
+      ],
+      "solsticeYear": 2032,
+      "monthsInSolsticeCycle": 12,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    },
+    {
+      "month": 11,
+      "isLeapMonth": false,
+      "startJD": 2463923.1666666665,
+      "endJD": 2463953.1666666665,
+      "days": 30,
+      "newMoonJD": 2463923.5688827867,
+      "nextNewMoonJD": 2463953.2823277884,
+      "principalTerms": [
+        {
+          "longitudeDeg": 240,
+          "name": "Minor snow",
+          "jd": 2463923.5070620994
+        },
+        {
+          "longitudeDeg": 270,
+          "name": "Winter solstice",
+          "jd": 2463953.067879075
+        }
+      ],
+      "solsticeYear": 2033,
+      "monthsInSolsticeCycle": 13,
+      "rule": "solstice-month",
+      "nearMidnight": []
+    },
+    {
+      "month": 11,
+      "isLeapMonth": true,
+      "startJD": 2463953.1666666665,
+      "endJD": 2463982.1666666665,
+      "days": 29,
+      "newMoonJD": 2463953.2823277884,
+      "nextNewMoonJD": 2463982.917776064,
+      "principalTerms": [],
+      "solsticeYear": 2033,
+      "monthsInSolsticeCycle": 13,
+      "rule": "leap-month",
+      "nearMidnight": []
+    },
+    {
+      "month": 12,
+      "isLeapMonth": false,
+      "startJD": 2463982.1666666665,
+      "endJD": 2464012.1666666665,
+      "days": 30,
+      "newMoonJD": 2463982.917776064,
+      "nextNewMoonJD": 2464012.4654170107,
+      "principalTerms": [
+        {
+          "longitudeDeg": 300,
+          "name": "Major cold",
+          "jd": 2463982.512575782
+        },
+        {
+          "longitudeDeg": 330,
+          "name": "Rain water",
+          "jd": 2464012.0983268903
+        }
+      ],
+      "solsticeYear": 2033,
+      "monthsInSolsticeCycle": 13,
+      "rule": "has-principal-term",
+      "nearMidnight": []
+    }
+  ]
+}
