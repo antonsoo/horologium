@@ -1,0 +1,16 @@
+{
+  "dateChanges": 56,
+  "allRecordedStateAndServedBytesIdentical": true,
+  "screenshots": [
+    {
+      "file": "chromium-1440.png",
+      "sha256": "766bff80b16fc86498db6a7a9450d2ae456d0aa472328fea01102a9d4a1c122f",
+      "identicalToReviewedLocalScreenshot": true
+    },
+    {
+      "file": "firefox-375.png",
+      "sha256": "ec5d81046a75e457e2a226a0da00d5602c8a530502cf9f2ad57e5195d62e1887",
+      "identicalToReviewedLocalScreenshot": true
+    }
+  ]
+}

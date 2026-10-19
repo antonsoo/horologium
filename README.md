@@ -21,14 +21,14 @@ era. The Chinese lunar-year inspector shows the month boundaries and
 solar terms behind a leap-month decision. The arithmetic and astronomical
 limits are documented alongside the results.
 
-**Ancient planet pointers now use an ancient-range fit.** The current source
-selects JPL's 3000 BCE–3000 CE elements outside its modern 1800–2050 CE fit,
+**Ancient planet pointers now use an ancient-range fit.** The source checkout and live demo
+select JPL's 3000 BCE–3000 CE elements outside its modern 1800–2050 CE fit,
 including the required Jupiter/Saturn anomaly terms and matching Earth model.
 On 256 retained dates outside the modern interval, maximum longitude error
 against Horizons falls from 30.48 to 0.39 degrees for Saturn. The modern
 interval retains exactly the previous positions. The dial names the selected
 fit and marks dates outside its coverage. [Data, before/after and limits](studies/long-range-planets/README.md).
-The npm release predates this API; live publication is recorded separately.
+The npm release predates this API; [clean install and live publication](studies/long-range-planets/README.md#browser-and-package-verification) are recorded separately.
 
 ## Quickstart
 
@@ -62,14 +62,15 @@ the surfaces:
 
 | Surface | Calendar behavior |
 | --- | --- |
-| Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing and Chinese-year inspector |
-| npm `0.2.3` | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, and unchecked forward-date overflow |
+| Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing, Chinese-year inspector and date-selected planet fits |
+| npm `0.2.3` | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, unchecked forward-date overflow, and no `planets` namespace |
 
-For the earlier calendar corrections, a pinned public Git install builds their
-calendar API (it predates the new `planets` namespace). This has been verified from a clean consumer project:
+For the corrected library, including the new planetary API, a pinned public Git
+install builds the same implementation used by the current demo. This has been
+verified from a clean consumer project:
 
 ```sh
-npm install git+https://github.com/antonsoo/horologium.git#48adbe3a063a13c16474515370bbbcfc79b8b3f1
+npm install git+https://github.com/antonsoo/horologium.git#52e75dc6cda1c8321c6f7e44d87e717bf1ad9bb0
 ```
 
 Invalid dates now raise `RangeError`; callers doing arithmetic should add days

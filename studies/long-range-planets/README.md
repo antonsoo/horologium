@@ -137,7 +137,27 @@ unchanged and predates this namespace.
 
 The [original public site](results/hosted-before.json) matched all 30 baseline
 build files and its canonical root before source publication. Corrected public
-deployment is verified separately. The source implementation, installed package, hosted bytes and
+deployment now [matches all 30 tested files and the canonical root](results/hosted-after.json).
+Pages `f6f9669` retains both previous hashed assets for cached pages. Public
+source `151c95a` and the deployed build were verified separately; no GitHub
+Actions run was available for this publication.
+
+The [canonical live browser replay](results/hosted-browser.json) repeats all
+56 offline date changes, with zero page/console errors, policy violations,
+external/late requests, document overflow or accessibility violations. All
+recorded page states and fetched bytes match the clean replay. Both live
+screenshots are byte-identical to the reviewed local images; the
+[paired comparison](results/hosted-comparison.json) records their hashes.
+
+A [fresh pinned public Git installation](results/git-install.json) resolves
+implementation `52e75dc6cda1c8321c6f7e44d87e717bf1ad9bb0`; all 44 installed
+files match the tested packed package. The complete installed replay is also
+[identical on Node 20 and 24](results/installed-node-compatibility.json).
+A [fresh npm 0.2.3 consumer](results/registry.json) verifies the registry
+quickstart still works and that neither the planetary namespace nor the
+Chinese inspector is present there. No registry version was published.
+The documented development server was also exercised in a real browser;
+its [receipt](results/dev.json) retains the ancient Saturn pointer and model note. The source implementation, installed package, hosted bytes and
 browser behavior are separate surfaces; no npm release is implied.
 
 ## Reproduce

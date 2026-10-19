@@ -1,0 +1,8 @@
+{
+  "command": "npm run dev -- --host 127.0.0.1 --port 14371 --strictPort",
+  "status": 200,
+  "jd": 698654.5,
+  "note": "Planets use JPL’s 3000 BCE–3000 CE fit: approximate geometric positions.",
+  "saturnDegrees": 15.0248,
+  "pageErrors": []
+}

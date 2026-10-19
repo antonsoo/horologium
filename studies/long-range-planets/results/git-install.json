@@ -1,0 +1,231 @@
+{
+  "node": "24.21.0",
+  "npm": "11.19.0",
+  "spec": "git+https://github.com/antonsoo/horologium.git#52e75dc6cda1c8321c6f7e44d87e717bf1ad9bb0",
+  "resolved": "git+ssh://git@github.com/antonsoo/horologium.git#52e75dc6cda1c8321c6f7e44d87e717bf1ad9bb0",
+  "freshConsumer": true,
+  "publicImportAndDocumentedExamplesPassed": true,
+  "allFilesMatchTestedPackedPackage": true,
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1071,
+      "sha256": "e26144be8673d69c175126ad8dcd9ed78431464f0b97120b799dc75ec7edb647"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15855,
+      "sha256": "8f68aa0a79b865a75371fefc722528c7432868d4546cfe4bcc80d51e54ab36be"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2731,
+      "sha256": "9b458344b9da1b61b28b184c6219a45e93d0fe74d5124a3f1e0d61f6c78abdf4"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.d.ts",
+      "bytes": 1673,
+      "sha256": "9011a02cf67666b428207f537840970f04081500e7f6dd21435aff5ecb328238"
+    },
+    {
+      "path": "dist/lib/astronomy/calendar-events.js",
+      "bytes": 7343,
+      "sha256": "b2a055ceb40cacf1d31f8630e69d4a9195db9f3eb6585181cc4d5e49a50b8494"
+    },
+    {
+      "path": "dist/lib/astronomy/moon-longitude.d.ts",
+      "bytes": 829,
+      "sha256": "e4c6b5680b921d46b5619cbf54bfdbfe11f75738255be77f2c5878b7aaf9820a"
+    },
+    {
+      "path": "dist/lib/astronomy/moon-longitude.js",
+      "bytes": 3343,
+      "sha256": "c38965bf2159cd1e4173f729c595ab9b7d0770a308e465ce2e6cc0295a03061f"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.d.ts",
+      "bytes": 3226,
+      "sha256": "41f4801506105f06b86ad50fa7e6b13fa27f339c2ce0ab312f20592a6ce3c703"
+    },
+    {
+      "path": "dist/lib/astronomy/planets.js",
+      "bytes": 9836,
+      "sha256": "f740e868f7dca2def876a1cc53e6f0ea3f7ad20ea284144599520fe1a4c86624"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.d.ts",
+      "bytes": 248,
+      "sha256": "df2465fa928e9c69bc10944bb0f95f1581192b89eff6d976ce313207ae4cff1a"
+    },
+    {
+      "path": "dist/lib/astronomy/precession.js",
+      "bytes": 2114,
+      "sha256": "b8b514ff8863bc28197c25e5d51131f2cd510aeed0d008148f51b727330ac97e"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.d.ts",
+      "bytes": 5726,
+      "sha256": "bd30178f91d3ea216af2a8c2a37fa1ddee71a27a40b5f4e2d82b303956e07b81"
+    },
+    {
+      "path": "dist/lib/astronomy/sun-moon.js",
+      "bytes": 13809,
+      "sha256": "0ab66386da6ff732f7d175d299a2c4d14e5e1c8ad1849b0ca640f9548045cc30"
+    },
+    {
+      "path": "dist/lib/babylonian.d.ts",
+      "bytes": 3585,
+      "sha256": "4fb05cd811386eb64c9bd52683a7ea9018531e2160d0f4663a36e0a918546556"
+    },
+    {
+      "path": "dist/lib/babylonian.js",
+      "bytes": 8086,
+      "sha256": "64cd7c20ee6c6252a76c095666b7adfe3980cac9aa953fd3f24605b5d8f0ed66"
+    },
+    {
+      "path": "dist/lib/byzantine.d.ts",
+      "bytes": 2535,
+      "sha256": "c5456d3cda60a1ecd9cfea7faf54382693dca799fb8b2dca8ac663887ef49a7e"
+    },
+    {
+      "path": "dist/lib/byzantine.js",
+      "bytes": 4381,
+      "sha256": "beb6a00841c0b01e9632bce67a2b6b80af53e6733a90b9116e6a02263fb1a8e4"
+    },
+    {
+      "path": "dist/lib/chinese.d.ts",
+      "bytes": 7320,
+      "sha256": "14dd94f58dac71abc1edcc787945155a11857f4b2b630641559b9fd496433820"
+    },
+    {
+      "path": "dist/lib/chinese.js",
+      "bytes": 17758,
+      "sha256": "cc87f33c66eac9e9ac7442fb372891d8562acadf7cfce7cedcf315cd6538dadd"
+    },
+    {
+      "path": "dist/lib/coptic.d.ts",
+      "bytes": 3329,
+      "sha256": "508918e6dd107c5593a955c1be0e165c1a94772597dad8964a4bf654bb18ab7f"
+    },
+    {
+      "path": "dist/lib/coptic.js",
+      "bytes": 7004,
+      "sha256": "33f09f121b3d0b515bf28f01cea47b8489f5e6958c1e54ac26980db53a750160"
+    },
+    {
+      "path": "dist/lib/core/jd.d.ts",
+      "bytes": 3845,
+      "sha256": "9f56215a5e1b0871c09bc9d1752caa679b7875a781d56f0597c4be564b757fe5"
+    },
+    {
+      "path": "dist/lib/core/jd.js",
+      "bytes": 6246,
+      "sha256": "44b897725bc10cf3fed1555f1a60815bb46a76f457c7354660aecc3f94d666f1"
+    },
+    {
+      "path": "dist/lib/core/validation.d.ts",
+      "bytes": 1248,
+      "sha256": "bcf33bba2bbdadc3bf41b868d2750f6b789b2e4d4fd364f4db54dd529bad98f5"
+    },
+    {
+      "path": "dist/lib/core/validation.js",
+      "bytes": 2847,
+      "sha256": "4670ad406f5804effd4072000220fca4ba239f66c0b35c34ce86265baea0a7c2"
+    },
+    {
+      "path": "dist/lib/egyptian.d.ts",
+      "bytes": 4343,
+      "sha256": "3b04d6cb061bb0e2e07018e9aaf7ffb2d3caf9da18bbdbd7491948d0e95ac9da"
+    },
+    {
+      "path": "dist/lib/egyptian.js",
+      "bytes": 6971,
+      "sha256": "8c2050bbbd12de5fb0a1cb8c8eedcb6b28916b726b75d38d3960e4b0d901a496"
+    },
+    {
+      "path": "dist/lib/greek.d.ts",
+      "bytes": 2119,
+      "sha256": "8af8e68e08ac725c6504bac7d3032e88deba1d2a3293a2d5e41e35519b58932c"
+    },
+    {
+      "path": "dist/lib/greek.js",
+      "bytes": 7413,
+      "sha256": "364a8985c10c711604170379bbb02f974cf98d1f597362f223790c1c7ce259b0"
+    },
+    {
+      "path": "dist/lib/hebrew.d.ts",
+      "bytes": 6308,
+      "sha256": "c64b4ba0aeb2c716a6677883c507f5c6e344bc89eae845a4ee8dc3d59eef31f5"
+    },
+    {
+      "path": "dist/lib/hebrew.js",
+      "bytes": 15488,
+      "sha256": "7a8da613fa32b7f8e51479bcb561d530b861866461e8872bbb09a2e26626ba32"
+    },
+    {
+      "path": "dist/lib/index.d.ts",
+      "bytes": 1087,
+      "sha256": "9c29cecb7d5307f50f1a70df1594ca1397bf7c0458724571b1d4618751c3e595"
+    },
+    {
+      "path": "dist/lib/index.js",
+      "bytes": 1002,
+      "sha256": "fc03c3845dec57153ead6e4ab0182b6224d2032b8ad9da9e25baefab46a1c479"
+    },
+    {
+      "path": "dist/lib/islamic.d.ts",
+      "bytes": 3477,
+      "sha256": "6f63760b3c3cb9c01c6500caa0453917b437bdacb634dbaabc1ff7ba1a66123c"
+    },
+    {
+      "path": "dist/lib/islamic.js",
+      "bytes": 5528,
+      "sha256": "5994dee105411f47a2a35856a75fe6ef4988332ef57cba13f97789717589b419"
+    },
+    {
+      "path": "dist/lib/maya.d.ts",
+      "bytes": 3792,
+      "sha256": "0bca3c940eb1110afa1bccb0f0a4d4eb928f11f99b4deb8c05b4495cda5bf9ac"
+    },
+    {
+      "path": "dist/lib/maya.js",
+      "bytes": 10533,
+      "sha256": "34a2c5647bac5f1251b53d937b12a0d1f3dbed36e856ce20976aae5ac8317454"
+    },
+    {
+      "path": "dist/lib/roman.d.ts",
+      "bytes": 6489,
+      "sha256": "febd27566576a93e87259f24f6107053f59a78a3a9f0fe63fa9663d6fee6924d"
+    },
+    {
+      "path": "dist/lib/roman.js",
+      "bytes": 18110,
+      "sha256": "58b76ca2ab8f6dc29c82126565b80e534946c121af3f6d816d2e82f660c2788a"
+    },
+    {
+      "path": "dist/lib/types.d.ts",
+      "bytes": 1485,
+      "sha256": "bdf1ac6be322efa4a4cafcfa98483201e618a7167cab7f3775ed9c5081b40663"
+    },
+    {
+      "path": "dist/lib/types.js",
+      "bytes": 196,
+      "sha256": "5f3a4a71726333c329d055940a675d2b30145b8d6f259684079f74274237b7f7"
+    },
+    {
+      "path": "dist/lib/zoroastrian.d.ts",
+      "bytes": 2155,
+      "sha256": "ec38f7271df281d4ed5c210e31fc86ab4c66a5959a73af48448d0bb9d08c672e"
+    },
+    {
+      "path": "dist/lib/zoroastrian.js",
+      "bytes": 3973,
+      "sha256": "abaf05beda2497726613d68e8782d750ac78f0ce2dba53637cbbd4de2428dabe"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1819,
+      "sha256": "44de3ade5aa0b96fda1f6c38dd73d8606afd619fc0e1cc6d085b246ccf749e91"
+    }
+  ]
+}

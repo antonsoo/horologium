@@ -1,0 +1,10 @@
+{
+  "nodeVersions": [
+    "v24.21.0",
+    "v20.0.0"
+  ],
+  "allReplayFieldsIdentical": true,
+  "positions": 1365,
+  "modernUnchangedPositions": 13775,
+  "replayPayloadSha256": "12ded680d9b25324d36c8d9c09799e17b668a4dee262dacd6ac82e65a7ead13b"
+}
