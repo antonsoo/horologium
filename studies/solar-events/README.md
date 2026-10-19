@@ -146,7 +146,7 @@ From this checkout, with Node 24+ and Python/uv:
 
 ```sh
 npm ci && npm run build
-uv run --with skyfield python studies/solar-events/capture.py
+uv run --with skyfield==1.55 python studies/solar-events/capture.py
 node studies/solar-events/replay.mjs studies/solar-events/after
 ```
 
@@ -168,3 +168,17 @@ retained screenshot was inspected. The visual identity, dial and layout remain
 those of the existing clock; the new states use its current typography and
 spacing. Local/source, installed-package and deployment results are recorded
 separately when verified. npm 0.2.3 predates this source API.
+
+## Publication
+
+Source `520813a` and Pages `2197d44` were pushed after clean and installed-package
+verification. Pages appends to the previous branch history; old hashed assets
+remain available to cached pages. All 30 current static files matched the live
+site by SHA-256 ([receipt](hosted-bytes.json)). All 62 production browser
+workflows and the sixteen dedicated offline controls passed on that deployment
+([study receipt](hosted-browser.json)).
+
+A fresh public Git consumer resolved the pinned implementation revision and
+reproduced the complete reference replay. The README's pinned Git install now
+selects that implementation. [Publication receipt](publication.json). No npm
+registry version or tag was published.

@@ -1,0 +1,16 @@
+{
+  "implementationCommit": "7efec4e84a1fbae700c291bcf3b2f034a82b38d8",
+  "sourceAtDeployment": "520813a",
+  "pagesCommit": "2197d44",
+  "pagesParent": "f6f9669ef5c1df97b09654bcce418cddcbcf6cf3",
+  "site": "https://antonsoo.github.io/horologium/",
+  "hostedFilesMatched": 30,
+  "productionBrowserWorkflowsPassed": 62,
+  "studyControlsPassed": 16,
+  "previousHashedAssetsPreserved": true,
+  "publicGitConsumer": {
+    "resolved": "git+ssh://git@github.com/antonsoo/horologium.git#7efec4e84a1fbae700c291bcf3b2f034a82b38d8",
+    "fullReferenceReplayMatches": true
+  },
+  "registryRelease": false
+}

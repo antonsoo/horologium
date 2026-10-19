@@ -30,7 +30,7 @@ interval retains exactly the previous positions. The dial names the selected
 fit and marks dates outside its coverage. [Data, before/after and limits](studies/long-range-planets/README.md).
 The npm release predates this API; [clean install and live publication](studies/long-range-planets/README.md#browser-and-package-verification) are recorded separately.
 
-**Polar sunrise and sunset correction in current source.** The seasonal clock
+**Polar sunrise and sunset correction in source and the live demo.** The seasonal clock
 now searches for each horizon crossing instead of freezing the Sun at UTC noon.
 It retains a known sunrise when that solar day has no sunset, and marks grazing
 boundaries **uncertain**. The original calculation could be over two hours wrong
@@ -70,15 +70,15 @@ the surfaces:
 
 | Surface | Calendar behavior |
 | --- | --- |
-| Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing, Chinese-year inspector and date-selected planet fits |
+| Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing, Chinese-year inspector and date-selected planet fits and guarded solar crossings |
 | npm `0.2.3` | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, unchecked forward-date overflow, and no `planets` namespace |
 
-For the corrected library, including the new planetary API, a pinned public Git
+For the corrected library, including the planetary and solar-event APIs, a pinned public Git
 install builds the same implementation used by the current demo. This has been
 verified from a clean consumer project:
 
 ```sh
-npm install git+https://github.com/antonsoo/horologium.git#52e75dc6cda1c8321c6f7e44d87e717bf1ad9bb0
+npm install git+https://github.com/antonsoo/horologium.git#7efec4e84a1fbae700c291bcf3b2f034a82b38d8
 ```
 
 Invalid dates now raise `RangeError`; callers doing arithmetic should add days

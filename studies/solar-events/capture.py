@@ -1,6 +1,6 @@
 """Capture independent solar crossings from Skyfield/JPL DE421.
 
-uv run --with skyfield python studies/solar-events/capture.py
+uv run --with skyfield==1.55 python studies/solar-events/capture.py
 The larger working data and downloaded ephemeris stay in ignored cache/.
 """
 
