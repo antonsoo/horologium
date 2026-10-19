@@ -13,7 +13,9 @@
       "!**/studies/planet-frame/*.json",
       "!**/studies/lunar-series/*.json",
       "!**/studies/forward-dates/*.json",
-      "!**/studies/forward-dates/results/*.json"
+      "!**/studies/forward-dates/results/*.json",
+      "!**/studies/long-range-planets/*.json",
+      "!**/studies/long-range-planets/results"
     ]
   },
   "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },

@@ -1,5 +1,6 @@
 import './fonts/fonts.css';
 import './style.css';
+import { planetModel } from '../lib/astronomy/planets.js';
 import { dateToJD } from '../lib/core/jd.js';
 import { buildBackDial } from './backdial.js';
 import { buildChineseYear } from './chinese-year.js';
@@ -31,8 +32,8 @@ app.innerHTML = `
     </section>
     <p class="dial-caption">Sun · Moon · Mercury · Venus · Mars · Jupiter · Saturn · date pointer</p>
     <p class="dial-caption dial-caption-note">
-      Positions are computed, not observed. Sun/Moon accuracy is checked for 1900&ndash;2053 CE;
-      planetary elements cover 1800&ndash;2050 CE. Outside those ranges, positions are illustrative.
+      Positions are computed, not observed. Sun/Moon positions outside 1900&ndash;2053 CE are illustrative.
+      <span id="planet-model-note"></span>
     </p>
     <div class="readout">
       <div class="primary" id="readout-primary"></div>
@@ -95,6 +96,14 @@ tabletsMount.addEventListener('inspect-chinese-year', () => chineseYear.open());
 function render() {
   const state = controls.getState();
   updateDial(state.jd);
+  const model = planetModel(state.jd);
+  const note = document.getElementById('planet-model-note');
+  if (note)
+    note.textContent = !model.inRange
+      ? 'Planet date is outside the 3000 BCE–3000 CE fit; pointers are illustrative.'
+      : model.id === 'jpl-1800-2050'
+        ? 'Planets use JPL’s 1800–2050 CE fit: approximate geometric positions.'
+        : 'Planets use JPL’s 3000 BCE–3000 CE fit: approximate geometric positions.';
   updateBackDial(state.jd);
   buildTablets(tabletsMount, state.jd);
   chineseYear.update(state.jd);

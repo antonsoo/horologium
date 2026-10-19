@@ -1,0 +1,348 @@
+{
+  "dateChangesPerRevision": 56,
+  "unchangedFields": [
+    "non-planet pointers",
+    "date readout",
+    "all calendar summaries",
+    "document width"
+  ],
+  "modernPlanetStylesUnchanged": true,
+  "cases": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "Saturn ancient example",
+      "jd": 698654.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "Ides of March era",
+      "jd": 1705427.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "J2000 unchanged control",
+      "jd": 2451545
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "modern 2026",
+      "jd": 2461041.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "long fit first epoch",
+      "jd": 625697.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "long fit last epoch",
+      "jd": 2816787.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "first supported year",
+      "jd": -105152
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "last supported year",
+      "jd": 3547637
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "fit switch 1800 -0.001",
+      "jd": 2378496.499
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "fit switch 1800 0",
+      "jd": 2378496.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "fit switch 1800 0.001",
+      "jd": 2378496.501
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "fit switch 2050 -0.001",
+      "jd": 2469807.499
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "fit switch 2050 0",
+      "jd": 2469807.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "case": "fit switch 2050 0.001",
+      "jd": 2469807.501
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "Saturn ancient example",
+      "jd": 698654.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "Ides of March era",
+      "jd": 1705427.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "J2000 unchanged control",
+      "jd": 2451545
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "modern 2026",
+      "jd": 2461041.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "long fit first epoch",
+      "jd": 625697.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "long fit last epoch",
+      "jd": 2816787.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "first supported year",
+      "jd": -105152
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "last supported year",
+      "jd": 3547637
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "fit switch 1800 -0.001",
+      "jd": 2378496.499
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "fit switch 1800 0",
+      "jd": 2378496.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "fit switch 1800 0.001",
+      "jd": 2378496.501
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "fit switch 2050 -0.001",
+      "jd": 2469807.499
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "fit switch 2050 0",
+      "jd": 2469807.5
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "case": "fit switch 2050 0.001",
+      "jd": 2469807.501
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "Saturn ancient example",
+      "jd": 698654.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "Ides of March era",
+      "jd": 1705427.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "J2000 unchanged control",
+      "jd": 2451545
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "modern 2026",
+      "jd": 2461041.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "long fit first epoch",
+      "jd": 625697.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "long fit last epoch",
+      "jd": 2816787.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "first supported year",
+      "jd": -105152
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "last supported year",
+      "jd": 3547637
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "fit switch 1800 -0.001",
+      "jd": 2378496.499
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "fit switch 1800 0",
+      "jd": 2378496.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "fit switch 1800 0.001",
+      "jd": 2378496.501
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "fit switch 2050 -0.001",
+      "jd": 2469807.499
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "fit switch 2050 0",
+      "jd": 2469807.5
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "case": "fit switch 2050 0.001",
+      "jd": 2469807.501
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "Saturn ancient example",
+      "jd": 698654.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "Ides of March era",
+      "jd": 1705427.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "J2000 unchanged control",
+      "jd": 2451545
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "modern 2026",
+      "jd": 2461041.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "long fit first epoch",
+      "jd": 625697.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "long fit last epoch",
+      "jd": 2816787.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "first supported year",
+      "jd": -105152
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "last supported year",
+      "jd": 3547637
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "fit switch 1800 -0.001",
+      "jd": 2378496.499
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "fit switch 1800 0",
+      "jd": 2378496.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "fit switch 1800 0.001",
+      "jd": 2378496.501
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "fit switch 2050 -0.001",
+      "jd": 2469807.499
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "fit switch 2050 0",
+      "jd": 2469807.5
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "case": "fit switch 2050 0.001",
+      "jd": 2469807.501
+    }
+  ]
+}

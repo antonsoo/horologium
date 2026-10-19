@@ -21,6 +21,15 @@ era. The Chinese lunar-year inspector shows the month boundaries and
 solar terms behind a leap-month decision. The arithmetic and astronomical
 limits are documented alongside the results.
 
+**Ancient planet pointers now use an ancient-range fit.** The current source
+selects JPL's 3000 BCE–3000 CE elements outside its modern 1800–2050 CE fit,
+including the required Jupiter/Saturn anomaly terms and matching Earth model.
+On 256 retained dates outside the modern interval, maximum longitude error
+against Horizons falls from 30.48 to 0.39 degrees for Saturn. The modern
+interval retains exactly the previous positions. The dial names the selected
+fit and marks dates outside its coverage. [Data, before/after and limits](studies/long-range-planets/README.md).
+The npm release predates this API; live publication is recorded separately.
+
 ## Quickstart
 
 ```sh
@@ -56,8 +65,8 @@ the surfaces:
 | Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing and Chinese-year inspector |
 | npm `0.2.3` | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, and unchecked forward-date overflow |
 
-For the corrected library, a pinned public Git install builds the same API used
-by the current demo. This has been verified from a clean consumer project:
+For the earlier calendar corrections, a pinned public Git install builds their
+calendar API (it predates the new `planets` namespace). This has been verified from a clean consumer project:
 
 ```sh
 npm install git+https://github.com/antonsoo/horologium.git#48adbe3a063a13c16474515370bbbcfc79b8b3f1
@@ -133,6 +142,23 @@ roman.describe(ides);
 egyptian.sothicCyclePosition(ides);
 // { yearsIntoCycle: 1278, cycleAnchorCE: 139 } - see docs/CALENDARS.md for the caveat
 ```
+
+For the new planetary API, build the current source (`npm run build:lib`):
+
+```js
+import { core, planets } from './dist/lib/index.js';
+
+const ides = core.julianToJD(-43, 3, 15); // 44 BCE, Julian calendar
+const { model, positions } = planets.planetPositions(ides);
+model.id;      // 'jpl-3000bce-3000ce'
+model.inRange; // true: fit coverage, not a precision guarantee
+positions.find(p => p.name === 'Jupiter').longitudeDeg; // 295.5940022409385
+```
+
+Run `node examples/planet-positions.mjs` for all five pointers and the model's
+exact Julian-day bounds. `planets.planetModel(jd)` returns coverage without
+computing positions. Model switches can introduce a small discontinuity;
+[the study](studies/long-range-planets/README.md) measures both boundaries.
 
 For the corrected Chinese calendar, build this source revision with
 `npm run build:lib`; the registry release does not yet include these changes:
@@ -227,10 +253,13 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   zodiac sector near a boundary; these remain approximate pointers. The
   [frame study](studies/planet-frame/README.md) separates geometric and apparent
   comparisons and retains the independent reference data. Planetary
-  elements are only valid 1800-2050 CE by their source's own statement;
-  outside that (and for all astronomy across the project's full ±5000-year
-  date range) treat positions as illustrative, not precise — this is stated
-  in the UI wherever it applies.
+  elements now use JPL Table 1 for 1800–2050 CE and Tables 2a/2b for other
+  dates, within a 3000 BCE–3000 CE fit. The [long-range study](studies/long-range-planets/README.md)
+  retains a separate DE441 comparison; those sampled errors are not a
+  universal accuracy bound. These are geometric model positions, with no
+  light-time, aberration, nutation or historical civil-time conversion.
+  Dates beyond the long fit remain illustrative and are labelled in the UI.
+  Sun/Moon accuracy has not been extended to the ancient era.
 - **Roman seasonal hours** depend on sunrise/sunset, computed with no
   Delta-T correction (Earth's rotation has slowed over millennia; this
   isn't modeled), so ancient hour boundaries drift by unquantified minutes

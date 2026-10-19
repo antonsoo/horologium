@@ -7,6 +7,7 @@
  * shared foundation everything else is built on.
  */
 
+export * as planets from './astronomy/planets.js';
 export * as astronomy from './astronomy/sun-moon.js';
 export * as babylonian from './babylonian.js';
 export * as byzantine from './byzantine.js';

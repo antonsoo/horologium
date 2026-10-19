@@ -2,14 +2,11 @@
  * Approximate geocentric ecliptic longitudes of the five naked-eye planets,
  * for the Antikythera dial's planet pointers.
  *
- * Elements and rates are E.M. Standish (JPL/Caltech), "Keplerian Elements
- * for Approximate Positions of the Major Planets", Table 1 ("1800 AD -
- * 2050 AD" low-order fit; see https://ssd.jpl.nasa.gov/planets/approx_pos.html).
- * That table (and this module) is explicitly only valid 1800-2050 CE - well
- * short of this project's ancient date range. Outside that window we still
- * compute a position (the underlying two-body Keplerian propagation is
- * well-defined for any date), but it should be read as illustrative motion
- * only, not a claim of positional accuracy; the UI must label it as such.
+ * Elements and rates: JPL/Caltech, "Approximate Positions of the Planets",
+ * https://ssd.jpl.nasa.gov/planets/approx_pos.html. Table 1 covers 1800-2050
+ * CE; Tables 2a/2b cover 3000 BCE-3000 CE. planetPositions selects the fit
+ * appropriate to the supplied date. Outside both intervals it extrapolates
+ * Table 2 and explicitly reports inRange: false.
  * Standish's nominal error table describes heliocentric coordinates, not the
  * geocentric dial. Our measured geocentric errors are retained in the study.
  *
@@ -26,7 +23,8 @@
  * no UTC-to-TT conversion is made for these illustrative pointers.
  */
 
-import type { JulianDay } from '../core/jd.js';
+import { gregorianToJD, type JulianDay } from '../core/jd.js';
+import { checkJulianDay } from '../core/validation.js';
 import { eclipticOfDate } from './precession.js';
 
 const DEG = Math.PI / 180;
@@ -45,6 +43,8 @@ interface OrbitalElements {
   periDot: number;
   node0: number;
   nodeDot: number;
+  /** Table 2b mean-anomaly terms; b, c, s in degrees, f in degrees/century. */
+  correction?: readonly [b: number, c: number, s: number, f: number];
 }
 
 // Table 1, Standish (1800 AD - 2050 AD). Units: a in AU/AU-per-century, all
@@ -144,6 +144,68 @@ const EARTH: OrbitalElements = {
   nodeDot: 0,
 };
 
+// Tables 2a and 2b. Each tuple follows the source columns a, e, I, L, peri, node.
+// The Earth-Moon barycenter must use the same fit as the planet being subtracted.
+function longElements(
+  name: string,
+  base: readonly [number, number, number, number, number, number],
+  rates: readonly [number, number, number, number, number, number],
+  correction?: OrbitalElements['correction'],
+): OrbitalElements {
+  return {
+    name,
+    a0: base[0],
+    aDot: rates[0],
+    e0: base[1],
+    eDot: rates[1],
+    i0: base[2],
+    iDot: rates[2],
+    l0: base[3],
+    lDot: rates[3],
+    peri0: base[4],
+    periDot: rates[4],
+    node0: base[5],
+    nodeDot: rates[5],
+    ...(correction ? { correction } : {}),
+  };
+}
+
+const LONG_PLANETS: OrbitalElements[] = [
+  longElements(
+    'Mercury',
+    [0.38709843, 0.20563661, 7.00559432, 252.25166724, 77.45771895, 48.33961819],
+    [0.0, 2.123e-5, -0.00590158, 149472.67486623, 0.15940013, -0.12214182],
+  ),
+  longElements(
+    'Venus',
+    [0.72332102, 0.00676399, 3.39777545, 181.9797085, 131.76755713, 76.67261496],
+    [-2.6e-7, -5.107e-5, 0.00043494, 58517.8156026, 0.05679648, -0.27274174],
+  ),
+  longElements(
+    'Mars',
+    [1.52371243, 0.09336511, 1.85181869, -4.56813164, -23.91744784, 49.71320984],
+    [9.7e-7, 9.149e-5, -0.00724757, 19140.29934243, 0.45223625, -0.26852431],
+  ),
+  longElements(
+    'Jupiter',
+    [5.20248019, 0.0485359, 1.29861416, 34.33479152, 14.27495244, 100.29282654],
+    [-2.864e-5, 0.00018026, -0.00322699, 3034.90371757, 0.18199196, 0.13024619],
+    [-0.00012452, 0.0606406, -0.35635438, 38.35125],
+  ),
+  longElements(
+    'Saturn',
+    [9.54149883, 0.05550825, 2.49424102, 50.07571329, 92.86136063, 113.63998702],
+    [-3.065e-5, -0.00032044, 0.00451969, 1222.11494724, 0.54179478, -0.25015002],
+    [0.00025899, -0.13434469, 0.87320147, 38.35125],
+  ),
+];
+
+const LONG_EARTH = longElements(
+  'Earth',
+  [1.00000018, 0.01673163, -0.00054346, 100.46691572, 102.93005885, -5.11260389],
+  [-3e-8, -3.661e-5, -0.01337178, 35999.37306329, 0.3179526, -0.24123856],
+);
+
 function normalizeDeg(deg: number): number {
   let d = deg % 360;
   if (d > 180) d -= 360;
@@ -162,7 +224,15 @@ function heliocentricPosition(el: OrbitalElements, t: number): [number, number, 
   const omega = (peri - node) * DEG; // argument of perihelion
   const nodeRad = node * DEG;
 
-  const mDeg = normalizeDeg(l - peri);
+  const correction = el.correction;
+  const anomaly = correction
+    ? l -
+      peri +
+      correction[0] * t * t +
+      correction[1] * Math.cos(correction[3] * t * DEG) +
+      correction[2] * Math.sin(correction[3] * t * DEG)
+    : l - peri;
+  const mDeg = normalizeDeg(anomaly);
   const m = mDeg * DEG;
 
   // Kepler's equation, Newton's method (converges in a handful of steps for e < ~0.2).
@@ -189,12 +259,73 @@ function heliocentricPosition(el: OrbitalElements, t: number): [number, number, 
   return [x, y, z];
 }
 
-/** Geometric geocentric longitude in the mean ecliptic/equinox of date (0-360 degrees). */
+/** Legacy explicit-element helper, always subtracting Table 1 Earth.
+ * PLANETS + planetLongitude retain their original Table 1 behavior.
+ * Use planetPositions for date-dependent selection and fit coverage metadata.
+ */
 export function planetLongitude(planet: OrbitalElements, jd: JulianDay): number {
+  return geocentricLongitude(planet, EARTH, jd);
+}
+
+function geocentricLongitude(
+  planet: OrbitalElements,
+  earth: OrbitalElements,
+  jd: JulianDay,
+): number {
   const t = (jd - 2451545.0) / 36525;
   const [px, py, pz] = heliocentricPosition(planet, t);
-  const [ex, ey, ez] = heliocentricPosition(EARTH, t);
+  const [ex, ey, ez] = heliocentricPosition(earth, t);
   const [gx, gy] = eclipticOfDate([px - ex, py - ey, pz - ez], t);
   const lon = (Math.atan2(gy, gx) / DEG) % 360;
   return lon < 0 ? lon + 360 : lon;
+}
+
+export interface PlanetModel {
+  id: 'jpl-1800-2050' | 'jpl-3000bce-3000ce';
+  /** Inclusive bounds, at January 1 midnight in the proleptic Gregorian calendar. */
+  fromJD: JulianDay;
+  toJD: JulianDay;
+  /** Fit coverage only; not a guarantee of geocentric or apparent-place accuracy. */
+  inRange: boolean;
+}
+
+const MODERN_FROM = gregorianToJD(1800, 1, 1);
+const MODERN_TO = gregorianToJD(2050, 1, 1);
+const LONG_FROM = gregorianToJD(-2999, 1, 1); // 3000 BCE, astronomical year numbering
+const LONG_TO = gregorianToJD(3000, 1, 1);
+
+/** Select a published fit; the modern fit keeps its established precision. */
+export function planetModel(jd: JulianDay): PlanetModel {
+  checkJulianDay(jd);
+  if (jd >= MODERN_FROM && jd <= MODERN_TO) {
+    return { id: 'jpl-1800-2050', fromJD: MODERN_FROM, toJD: MODERN_TO, inRange: true };
+  }
+  return {
+    id: 'jpl-3000bce-3000ce',
+    fromJD: LONG_FROM,
+    toJD: LONG_TO,
+    inRange: jd >= LONG_FROM && jd <= LONG_TO,
+  };
+}
+
+/** Five geometric longitudes, mean ecliptic/equinox of date, with fit provenance.
+ * The nominal JD is used as JDTDB; no civil-time conversion is performed.
+ * Positions outside model coverage remain illustrative extrapolations.
+ */
+export function planetPositions(jd: JulianDay): {
+  model: PlanetModel;
+  positions: { name: string; longitudeDeg: number }[];
+} {
+  const model = planetModel(jd);
+  const modern = model.id === 'jpl-1800-2050';
+  return {
+    model,
+    positions: (modern ? PLANETS : LONG_PLANETS).map((p) => {
+      const longitudeDeg = geocentricLongitude(p, modern ? EARTH : LONG_EARTH, jd);
+      if (!Number.isFinite(longitudeDeg)) {
+        throw new RangeError('Planet position exceeds usable Keplerian arithmetic.');
+      }
+      return { name: p.name, longitudeDeg };
+    }),
+  };
 }

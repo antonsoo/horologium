@@ -1,4 +1,4 @@
-import { PLANETS, planetLongitude } from '../lib/astronomy/planets.js';
+import { PLANETS, planetPositions } from '../lib/astronomy/planets.js';
 import { moonLongitude, moonPhase, sunLongitude } from '../lib/astronomy/sun-moon.js';
 import type { JulianDay } from '../lib/core/jd.js';
 /**
@@ -284,8 +284,8 @@ export function buildDial(): DialHandles {
     moonLit.setAttribute('d', moonPhasePath(10, phase.illuminatedFraction, waxing));
     moonBallGroup.style.transform = `translate(${CX}px, ${CY - 220}px) rotate(${-moonLon}deg)`;
 
-    for (const p of PLANETS) {
-      const lon = planetLongitude(p, jd);
+    for (const p of planetPositions(jd).positions) {
+      const lon = p.longitudeDeg;
       const g = planetPointers[p.name];
       if (g) g.style.transform = `rotate(${lon}deg)`;
     }

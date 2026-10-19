@@ -4,10 +4,19 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
-Clock-page improvements, calendar corrections and a planetary coordinate-frame
-correction in source, not yet released to npm or the hosted demo.
+Source improvements below are not yet released to npm. Individual study
+publication records distinguish source, built packages and the live demo.
 
 ### Added
+
+- Date-selected planet fits: JPL Tables 2a/2b with the matching Earth model
+  outside the modern 1800–2050 CE interval. Jupiter/Saturn use the mandatory
+  quadratic and periodic anomaly terms. The dial states the selected fit;
+  dates outside 3000 BCE–3000 CE remain labelled illustrative.
+- Public `planets.planetPositions(jd)` and `planets.planetModel(jd)` APIs return
+  model identity and exact coverage bounds. Legacy Table 1 helpers retain
+  their numeric behavior. A pinned Horizons DE441 comparison retains both
+  before/after errors and model-switch discontinuities.
 
 - `chinese.inspectChineseYear(year)` and a browser lunar-year ledger:
   civil month boundaries, principal solar terms, leap-rule explanations,

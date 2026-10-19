@@ -32,3 +32,18 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Planetary elements and validation data
+
+The numeric orbital elements and mean-anomaly correction coefficients in
+`src/lib/astronomy/planets.ts` come from Tables 1, 2a and 2b of JPL Solar
+System Dynamics, [Approximate Positions of the Planets](https://ssd.jpl.nasa.gov/planets/approx_pos.html),
+which credits E.M. Standish and J.G. Williams (1992). These are approximate
+fitted elements, not an integrated ephemeris. The source's nominal errors
+refer to heliocentric coordinates.
+
+The independent study retains responses from the NASA/JPL Horizons API,
+using its DE441 planetary ephemeris, and rotates those vectors with ERFA.
+The API URLs, settings and raw-response hashes are in
+`studies/long-range-planets/sources.json`. No NASA/JPL endorsement is implied.
+ERFA is used only to produce validation fixtures, not bundled at runtime.
