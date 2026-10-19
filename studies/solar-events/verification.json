@@ -1,0 +1,470 @@
+{
+  "implementationCommit": "7efec4e",
+  "cleanNode": "24.21.0",
+  "cleanNpm": "11.19.0",
+  "workingNode": "26.7.0",
+  "checks": {
+    "unitTests": 285,
+    "testFiles": 27,
+    "locales": ["default", "de_DE.UTF-8"],
+    "productionBrowserWorkflows": 62,
+    "lint": true,
+    "typecheck": true,
+    "build": true,
+    "installedReferenceReplayMatches": true
+  },
+  "staticFiles": 30,
+  "libraryFiles": 60,
+  "files": [
+    {
+      "path": "app/THIRD_PARTY_NOTICES.txt",
+      "bytes": 2731,
+      "sha256": "9b458344b9da1b61b28b184c6219a45e93d0fe74d5124a3f1e0d61f6c78abdf4"
+    },
+    {
+      "path": "app/assets/cinzel-latin-DMUuCU8H.woff2",
+      "bytes": 25904,
+      "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+    },
+    {
+      "path": "app/assets/cinzel-latin-ext-CG36JvV6.woff2",
+      "bytes": 14540,
+      "sha256": "8fc2606f8ae6c569f444e138dba052d9a6e3f0657f9031796503bbb94eced600"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2",
+      "bytes": 21168,
+      "sha256": "017fab69b4be8ffc08ca312823327989ade6dc3d948f0afa125e12ec2e5e7ca1"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2",
+      "bytes": 23416,
+      "sha256": "a4d7cf345b8091e1d2c8c5c8fa3bd0f9bb9d00bc8988185471db398ddb5ae4c4"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2",
+      "bytes": 12704,
+      "sha256": "05c0ceae1b682821281884a877ea9135bdeeb6e0d0eeebc79cf0a1211e494538"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2",
+      "bytes": 14828,
+      "sha256": "7df5efb2547966c74f26a3b0b9ae5cc8d03ea2849f064258191b08c1b2e2e838"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2",
+      "bytes": 23924,
+      "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2",
+      "bytes": 20388,
+      "sha256": "e4078de1cff9d0f515515d83cc4ecb8a1ddbaaa86b580bfbcee403d17980b1ed"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2",
+      "bytes": 6896,
+      "sha256": "ad2e5588e0fddf08cdf133cc1ee72afb84a9b75a246ef1665797497a5f1b14c7"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-latin-CUoBjw-S.woff2",
+      "bytes": 37640,
+      "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2",
+      "bytes": 33736,
+      "sha256": "cfa9a397d86f66c5c51775a2500a712d5f632a04f0c5eca6930dfaf612d4566d"
+    },
+    {
+      "path": "app/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2",
+      "bytes": 11220,
+      "sha256": "6252e819a7665ae512c2d046308a9016ada63c06d0d8f96984c4b29f6c9e1bd2"
+    },
+    {
+      "path": "app/assets/eb-garamond-cyrillic-DBa2mnKT.woff2",
+      "bytes": 26024,
+      "sha256": "197ed98b8524dd8664aefb5d5ef4ca515d2df1ef90d3f771e19cb0893b95cc2b"
+    },
+    {
+      "path": "app/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2",
+      "bytes": 33948,
+      "sha256": "7738b6004721f3d23e4e284b1055120f0ac1fd96fd01e5786b58b3042998876c"
+    },
+    {
+      "path": "app/assets/eb-garamond-greek-DCPER7xl.woff2",
+      "bytes": 19868,
+      "sha256": "f6475b2f7530f248b5d3a0237d97dc2e1987665153dcb888fbeea3b0f9019b56"
+    },
+    {
+      "path": "app/assets/eb-garamond-greek-ext-CW-BywWH.woff2",
+      "bytes": 11484,
+      "sha256": "3cd432d0dc2b756e69eea4325fd40f3515a31753445238f7fb5d349588192511"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2",
+      "bytes": 13572,
+      "sha256": "2471084322da28cd71b77972fe5261495bd923b41edbfe1c1b7220959e274185"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2",
+      "bytes": 17952,
+      "sha256": "69762e1dda54fb65b871792ec3a42c182bf10ab68e8045c27ec3b0be2737dd24"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-greek-Dqr5KC66.woff2",
+      "bytes": 10500,
+      "sha256": "9a9f37128dd79d5a77aa61c0c91b8ce9957bf202c35721b13430a157819f53e3"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2",
+      "bytes": 6608,
+      "sha256": "0fbbfca37bdd1b4f99f7c38ad25918e25a620aabc4bbc13e78f9319cb0a5a718"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-latin-DSEbMgZu.woff2",
+      "bytes": 25388,
+      "sha256": "fc5851c4466e73bec048bb62d65f8abadf70d602816687e6d364214e35fa8abb"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2",
+      "bytes": 45468,
+      "sha256": "a7aad7b598be80caf14221e4b3066676537a2010bb51c1609e6b68973adb01d7"
+    },
+    {
+      "path": "app/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2",
+      "bytes": 6268,
+      "sha256": "7b8ef3e70791929569af845b202150cdf8165f2a6a50ffef49cf897bde9b8c7a"
+    },
+    {
+      "path": "app/assets/eb-garamond-latin-CRpggXlh.woff2",
+      "bytes": 44336,
+      "sha256": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b"
+    },
+    {
+      "path": "app/assets/eb-garamond-latin-ext-B6IpcvL2.woff2",
+      "bytes": 113928,
+      "sha256": "f8d3fa06e20989a938972165406a1b731cdc7fe33ff2b0b6798c75aa63709901"
+    },
+    {
+      "path": "app/assets/eb-garamond-vietnamese-DvUmmjCN.woff2",
+      "bytes": 10952,
+      "sha256": "af68d0b256558e0fecffabca6696d47c78902249db6bc7e1ac9964980a610a77"
+    },
+    {
+      "path": "app/assets/index-3uSCTewm.css",
+      "bytes": 21066,
+      "sha256": "24f053ef1bceb7dc62a55d36ceff48ad9f10ea1af511d6e86e62148403f145c3"
+    },
+    {
+      "path": "app/assets/index-BLPCaWJe.js",
+      "bytes": 81109,
+      "sha256": "24cac918dc18fbbb36e49ea67e4c9d34feb622e067073dbdc357690f35304fb7"
+    },
+    {
+      "path": "app/index.html",
+      "bytes": 2400,
+      "sha256": "bdcd008518875e8e9bbffd72bf59f75a04a8913dc4504aea434e0eace5ef424d"
+    },
+    {
+      "path": "lib/astronomy/calendar-events.d.ts",
+      "bytes": 1673,
+      "sha256": "9011a02cf67666b428207f537840970f04081500e7f6dd21435aff5ecb328238"
+    },
+    {
+      "path": "lib/astronomy/calendar-events.d.ts.map",
+      "bytes": 620,
+      "sha256": "c274748bd411edc4c6c1782b228461385af00522e17c6dbe1662c7df65c5a702"
+    },
+    {
+      "path": "lib/astronomy/calendar-events.js",
+      "bytes": 7343,
+      "sha256": "b2a055ceb40cacf1d31f8630e69d4a9195db9f3eb6585181cc4d5e49a50b8494"
+    },
+    {
+      "path": "lib/astronomy/moon-longitude.d.ts",
+      "bytes": 829,
+      "sha256": "e4c6b5680b921d46b5619cbf54bfdbfe11f75738255be77f2c5878b7aaf9820a"
+    },
+    {
+      "path": "lib/astronomy/moon-longitude.d.ts.map",
+      "bytes": 270,
+      "sha256": "630073f6d7907b2c2c26d0dd8f5f80fa24c51252deb7e3a72ef0b7b9ec9ff6e0"
+    },
+    {
+      "path": "lib/astronomy/moon-longitude.js",
+      "bytes": 3343,
+      "sha256": "c38965bf2159cd1e4173f729c595ab9b7d0770a308e465ce2e6cc0295a03061f"
+    },
+    {
+      "path": "lib/astronomy/planets.d.ts",
+      "bytes": 3226,
+      "sha256": "41f4801506105f06b86ad50fa7e6b13fa27f339c2ce0ab312f20592a6ce3c703"
+    },
+    {
+      "path": "lib/astronomy/planets.d.ts.map",
+      "bytes": 1218,
+      "sha256": "8b026f24a337a0a76ad811ff7562dca8183a762201cb0dd902c777f7f2fb385c"
+    },
+    {
+      "path": "lib/astronomy/planets.js",
+      "bytes": 9836,
+      "sha256": "f740e868f7dca2def876a1cc53e6f0ea3f7ad20ea284144599520fe1a4c86624"
+    },
+    {
+      "path": "lib/astronomy/precession.d.ts",
+      "bytes": 248,
+      "sha256": "df2465fa928e9c69bc10944bb0f95f1581192b89eff6d976ce313207ae4cff1a"
+    },
+    {
+      "path": "lib/astronomy/precession.d.ts.map",
+      "bytes": 286,
+      "sha256": "b47103d548bdb125711603b051e8141bb446608e12e47836a51f5ceca2ad0f92"
+    },
+    {
+      "path": "lib/astronomy/precession.js",
+      "bytes": 2114,
+      "sha256": "b8b514ff8863bc28197c25e5d51131f2cd510aeed0d008148f51b727330ac97e"
+    },
+    {
+      "path": "lib/astronomy/sun-moon.d.ts",
+      "bytes": 6916,
+      "sha256": "c562213f226966a89c0416f1c0a70faa7ad3bbf1302f22d055d1f1b2cf256b5c"
+    },
+    {
+      "path": "lib/astronomy/sun-moon.d.ts.map",
+      "bytes": 2576,
+      "sha256": "9083f946e8c19cbdf8a15b37544eb7a19035330ad0dce53b435b37e1e657c7d8"
+    },
+    {
+      "path": "lib/astronomy/sun-moon.js",
+      "bytes": 17146,
+      "sha256": "6741e6531ffbb2be52f7d33e95ba8cbf4093182fe04507f50380570e7336ccba"
+    },
+    {
+      "path": "lib/babylonian.d.ts",
+      "bytes": 3585,
+      "sha256": "4fb05cd811386eb64c9bd52683a7ea9018531e2160d0f4663a36e0a918546556"
+    },
+    {
+      "path": "lib/babylonian.d.ts.map",
+      "bytes": 631,
+      "sha256": "1b6f3d79773d809fa6ee64a01f8fe504c982880ce05f1e6d5f71e28553150577"
+    },
+    {
+      "path": "lib/babylonian.js",
+      "bytes": 8086,
+      "sha256": "64cd7c20ee6c6252a76c095666b7adfe3980cac9aa953fd3f24605b5d8f0ed66"
+    },
+    {
+      "path": "lib/byzantine.d.ts",
+      "bytes": 2535,
+      "sha256": "c5456d3cda60a1ecd9cfea7faf54382693dca799fb8b2dca8ac663887ef49a7e"
+    },
+    {
+      "path": "lib/byzantine.d.ts.map",
+      "bytes": 667,
+      "sha256": "f4919ee09b9bf04cb405206827f76e0aa1582e3ba0a29b6462831623ba9d1247"
+    },
+    {
+      "path": "lib/byzantine.js",
+      "bytes": 4381,
+      "sha256": "beb6a00841c0b01e9632bce67a2b6b80af53e6733a90b9116e6a02263fb1a8e4"
+    },
+    {
+      "path": "lib/chinese.d.ts",
+      "bytes": 7320,
+      "sha256": "14dd94f58dac71abc1edcc787945155a11857f4b2b630641559b9fd496433820"
+    },
+    {
+      "path": "lib/chinese.d.ts.map",
+      "bytes": 2263,
+      "sha256": "cc1a02793d201f0d4737657f14039590d25d4cfd7529a4ae698381b82656c89f"
+    },
+    {
+      "path": "lib/chinese.js",
+      "bytes": 17758,
+      "sha256": "cc87f33c66eac9e9ac7442fb372891d8562acadf7cfce7cedcf315cd6538dadd"
+    },
+    {
+      "path": "lib/coptic.d.ts",
+      "bytes": 3329,
+      "sha256": "508918e6dd107c5593a955c1be0e165c1a94772597dad8964a4bf654bb18ab7f"
+    },
+    {
+      "path": "lib/coptic.d.ts.map",
+      "bytes": 955,
+      "sha256": "e6ad30f4039a6d0ce2b230a8616e9fe1abfe38f0f2e1ef6e46f4b876a0799a2c"
+    },
+    {
+      "path": "lib/coptic.js",
+      "bytes": 7004,
+      "sha256": "33f09f121b3d0b515bf28f01cea47b8489f5e6958c1e54ac26980db53a750160"
+    },
+    {
+      "path": "lib/core/jd.d.ts",
+      "bytes": 3845,
+      "sha256": "9f56215a5e1b0871c09bc9d1752caa679b7875a781d56f0597c4be564b757fe5"
+    },
+    {
+      "path": "lib/core/jd.d.ts.map",
+      "bytes": 1449,
+      "sha256": "94f4d1669f89cbd2f8e7aec4e1d0ad30fdb0c1c89fc4f981378e3070d833be33"
+    },
+    {
+      "path": "lib/core/jd.js",
+      "bytes": 6246,
+      "sha256": "44b897725bc10cf3fed1555f1a60815bb46a76f457c7354660aecc3f94d666f1"
+    },
+    {
+      "path": "lib/core/validation.d.ts",
+      "bytes": 1248,
+      "sha256": "bcf33bba2bbdadc3bf41b868d2750f6b789b2e4d4fd364f4db54dd529bad98f5"
+    },
+    {
+      "path": "lib/core/validation.d.ts.map",
+      "bytes": 652,
+      "sha256": "562b414fae12e339fb1ac4e97f66d1500df5dd9512b06626f54f10b27dc8fd51"
+    },
+    {
+      "path": "lib/core/validation.js",
+      "bytes": 2847,
+      "sha256": "4670ad406f5804effd4072000220fca4ba239f66c0b35c34ce86265baea0a7c2"
+    },
+    {
+      "path": "lib/egyptian.d.ts",
+      "bytes": 4343,
+      "sha256": "3b04d6cb061bb0e2e07018e9aaf7ffb2d3caf9da18bbdbd7491948d0e95ac9da"
+    },
+    {
+      "path": "lib/egyptian.d.ts.map",
+      "bytes": 1118,
+      "sha256": "7729d71ad9d412419ab321a442169c714bd062ee9592e1aeab66dbbbbd037f58"
+    },
+    {
+      "path": "lib/egyptian.js",
+      "bytes": 6971,
+      "sha256": "8c2050bbbd12de5fb0a1cb8c8eedcb6b28916b726b75d38d3960e4b0d901a496"
+    },
+    {
+      "path": "lib/greek.d.ts",
+      "bytes": 2119,
+      "sha256": "8af8e68e08ac725c6504bac7d3032e88deba1d2a3293a2d5e41e35519b58932c"
+    },
+    {
+      "path": "lib/greek.d.ts.map",
+      "bytes": 769,
+      "sha256": "ae20421f3e91cce6fa59286bacd39ff5e55a506b3db5758850e226ad7860c416"
+    },
+    {
+      "path": "lib/greek.js",
+      "bytes": 7413,
+      "sha256": "364a8985c10c711604170379bbb02f974cf98d1f597362f223790c1c7ce259b0"
+    },
+    {
+      "path": "lib/hebrew.d.ts",
+      "bytes": 6308,
+      "sha256": "c64b4ba0aeb2c716a6677883c507f5c6e344bc89eae845a4ee8dc3d59eef31f5"
+    },
+    {
+      "path": "lib/hebrew.d.ts.map",
+      "bytes": 1902,
+      "sha256": "d07bba3284314181dccef5985bc6062db1ffd954ebaf32c99e5164376f2d43fa"
+    },
+    {
+      "path": "lib/hebrew.js",
+      "bytes": 15488,
+      "sha256": "7a8da613fa32b7f8e51479bcb561d530b861866461e8872bbb09a2e26626ba32"
+    },
+    {
+      "path": "lib/index.d.ts",
+      "bytes": 1087,
+      "sha256": "9c29cecb7d5307f50f1a70df1594ca1397bf7c0458724571b1d4618751c3e595"
+    },
+    {
+      "path": "lib/index.d.ts.map",
+      "bytes": 716,
+      "sha256": "9d8d97af1862521b8c3a5b4f8f94ac118f5d411b297f2437428a10ad23ade29e"
+    },
+    {
+      "path": "lib/index.js",
+      "bytes": 1002,
+      "sha256": "fc03c3845dec57153ead6e4ab0182b6224d2032b8ad9da9e25baefab46a1c479"
+    },
+    {
+      "path": "lib/islamic.d.ts",
+      "bytes": 3477,
+      "sha256": "6f63760b3c3cb9c01c6500caa0453917b437bdacb634dbaabc1ff7ba1a66123c"
+    },
+    {
+      "path": "lib/islamic.d.ts.map",
+      "bytes": 822,
+      "sha256": "3c4815f1282803cf5cf656a409ba0893815fade9dd7fab9039a343936d3bd092"
+    },
+    {
+      "path": "lib/islamic.js",
+      "bytes": 5528,
+      "sha256": "5994dee105411f47a2a35856a75fe6ef4988332ef57cba13f97789717589b419"
+    },
+    {
+      "path": "lib/maya.d.ts",
+      "bytes": 3792,
+      "sha256": "0bca3c940eb1110afa1bccb0f0a4d4eb928f11f99b4deb8c05b4495cda5bf9ac"
+    },
+    {
+      "path": "lib/maya.d.ts.map",
+      "bytes": 1726,
+      "sha256": "e20ebc3bd7c3eeb01632f1210164090afa624ec30c0a9683cc32e847dff2d60a"
+    },
+    {
+      "path": "lib/maya.js",
+      "bytes": 10533,
+      "sha256": "34a2c5647bac5f1251b53d937b12a0d1f3dbed36e856ce20976aae5ac8317454"
+    },
+    {
+      "path": "lib/roman.d.ts",
+      "bytes": 6501,
+      "sha256": "92b1315bf02a3c190a2d6e2e3d07e4f8c326a068b4113ba17cefa83708e92213"
+    },
+    {
+      "path": "lib/roman.d.ts.map",
+      "bytes": 1586,
+      "sha256": "2d6257b1c1aed9b46cf23216bbb5a8aaab0753fbe0bc2a4574667ae1b858680d"
+    },
+    {
+      "path": "lib/roman.js",
+      "bytes": 18233,
+      "sha256": "293276a590b629f5c21ecf9db596c2804bf60a1da886733dcbad414978cee8d0"
+    },
+    {
+      "path": "lib/types.d.ts",
+      "bytes": 1485,
+      "sha256": "bdf1ac6be322efa4a4cafcfa98483201e618a7167cab7f3775ed9c5081b40663"
+    },
+    {
+      "path": "lib/types.d.ts.map",
+      "bytes": 561,
+      "sha256": "6f32baeeeeded53a80305278f6b22cdfc06aa490d2a72aa7f4835402369b875c"
+    },
+    {
+      "path": "lib/types.js",
+      "bytes": 196,
+      "sha256": "5f3a4a71726333c329d055940a675d2b30145b8d6f259684079f74274237b7f7"
+    },
+    {
+      "path": "lib/zoroastrian.d.ts",
+      "bytes": 2155,
+      "sha256": "ec38f7271df281d4ed5c210e31fc86ab4c66a5959a73af48448d0bb9d08c672e"
+    },
+    {
+      "path": "lib/zoroastrian.d.ts.map",
+      "bytes": 705,
+      "sha256": "a4eee9e613093fce822be84fef6cd9591c7426ce971e6a3d2500bfd218e9aa80"
+    },
+    {
+      "path": "lib/zoroastrian.js",
+      "bytes": 3973,
+      "sha256": "abaf05beda2497726613d68e8782d750ac78f0ce2dba53637cbbd4de2428dabe"
+    }
+  ]
+}

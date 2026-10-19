@@ -134,6 +134,12 @@ was added. UTC approximates UT1 in the clock. The fixed low-precision solar
 series is still illustrative at ancient epochs. The 2026 grid does not extend
 its historical accuracy, and the sampled maximum latitude is 89 degrees.
 
+## Clean source and installed package
+
+The [clean verification](../../docs/verification-solar-events-2026-10-19.md)
+covers a fresh Node 24 install, numerical and production-browser checks,
+byte-identical library/site builds, and a separate packed consumer replay.
+
 ## Reproduce
 
 From this checkout, with Node 24+ and Python/uv:
