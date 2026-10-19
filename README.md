@@ -30,6 +30,14 @@ interval retains exactly the previous positions. The dial names the selected
 fit and marks dates outside its coverage. [Data, before/after and limits](studies/long-range-planets/README.md).
 The npm release predates this API; [clean install and live publication](studies/long-range-planets/README.md#browser-and-package-verification) are recorded separately.
 
+**Polar sunrise and sunset correction in current source.** The seasonal clock
+now searches for each horizon crossing instead of freezing the Sun at UTC noon.
+It retains a known sunrise when that solar day has no sunset, and marks grazing
+boundaries **uncertain**. The original calculation could be over two hours wrong
+near the poles. [Independent ephemeris comparison and actual clock output](studies/solar-events/README.md)
+retain the original errors, corrected results and model limits. npm 0.2.3 predates
+the new `astronomy.solarDayEvents` API.
+
 ## Quickstart
 
 ```sh
@@ -265,6 +273,12 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   Delta-T correction (Earth's rotation has slowed over millennia; this
   isn't modeled), so ancient hour boundaries drift by unquantified minutes
   over long timescales.
+  The current source reevaluates the Sun during each event search and treats
+  near-tangent horizon crossings as uncertain. A nominal 0.02-degree band around
+  daily extrema is a model guard, not a statistical or ancient-date error bound.
+  The [solar-event study](studies/solar-events/README.md) measures a modern JPL
+  grid separately; weather, elevation and actual observed sunrise remain outside
+  this model.
 - **Not implemented**: Aztec/Mexica and Hindu calendars — see the end of
   `docs/CALENDARS.md` for why (in short: the brief itself says to cut
   Aztec without a verifiable correlation constant, and Hindu was an

@@ -1,0 +1,3900 @@
+{
+  "oracleSha256": "081ff7f237ba8316bd993fccf8ece304f48d344abbbb08f9c2bfbb1747080f3a",
+  "provenance": {
+    "producer": "Skyfield 1.55",
+    "ephemeris": "JPL DE421",
+    "source": "https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de421.bsp",
+    "ephemerisSha256": "a20a7139da04cbc462454634918e9a9ca69127044e2cc9d4f9c16e238d2deedc",
+    "definition": "topocentric apparent solar center altitude -0.8333 degrees; no weather or elevation model",
+    "timeBasis": "UT1 Julian days; UTC approximates UT1 in the application"
+  },
+  "model": "event roots",
+  "year": 2026,
+  "grazingCycleEdgeToleranceSeconds": 60,
+  "sites": 74,
+  "calls": 27158,
+  "elapsedMs": 1683.277382,
+  "referenceEvents": 37247,
+  "predictedEvents": 37148,
+  "pairedEvents": 37148,
+  "withheldEvents": 99,
+  "grazingBoundaries": 188,
+  "missingEvents": 0,
+  "spuriousEvents": 0,
+  "eventsOver60Seconds": 12,
+  "eventsOver300Seconds": 0,
+  "maxErrorSeconds": 126.7455205321312,
+  "controls": [
+    {
+      "name": "north-short-day",
+      "result": {
+        "transitJD": 2461115.506345834,
+        "cycleStartJD": 2461114.996442499,
+        "cycleEndJD": 2461115.9962380906,
+        "sunriseJD": null,
+        "sunsetJD": null,
+        "sunriseStatus": "grazing",
+        "sunsetStatus": "grazing"
+      }
+    },
+    {
+      "name": "south-short-day",
+      "result": {
+        "transitJD": 2461124.7541733515,
+        "cycleStartJD": 2461124.264239964,
+        "cycleEndJD": 2461125.264012274,
+        "sunriseJD": null,
+        "sunsetJD": null,
+        "sunriseStatus": "grazing",
+        "sunsetStatus": "grazing"
+      }
+    },
+    {
+      "name": "first-sunset",
+      "result": {
+        "transitJD": 2461119.504985599,
+        "cycleStartJD": 2461119.01510636,
+        "cycleEndJD": 2461120.0148959174,
+        "sunriseJD": null,
+        "sunsetJD": 2461119.933304386,
+        "sunriseStatus": "absent",
+        "sunsetStatus": "crossing"
+      }
+    },
+    {
+      "name": "first-sunrise",
+      "result": {
+        "transitJD": 2461362.739640023,
+        "cycleStartJD": 2461362.239238085,
+        "cycleEndJD": 2461363.2393921586,
+        "sunriseJD": 2461362.2522582905,
+        "sunsetJD": null,
+        "sunriseStatus": "crossing",
+        "sunsetStatus": "absent"
+      }
+    },
+    {
+      "name": "phantom-daylight",
+      "result": {
+        "transitJD": 2461301.7460080143,
+        "cycleStartJD": 2461301.2363424688,
+        "cycleEndJD": 2461302.2360764975,
+        "sunriseJD": null,
+        "sunsetJD": null,
+        "sunriseStatus": "grazing",
+        "sunsetStatus": "grazing"
+      }
+    },
+    {
+      "name": "rome-summer",
+      "result": {
+        "transitJD": 2461212.966549583,
+        "cycleStartJD": 2461212.4664724963,
+        "cycleEndJD": 2461213.466627533,
+        "sunriseJD": 2461212.649229154,
+        "sunsetJD": 2461213.283868268,
+        "sunriseStatus": "crossing",
+        "sunsetStatus": "crossing"
+      }
+    },
+    {
+      "name": "babylon-winter",
+      "result": {
+        "transitJD": 2461395.87521197,
+        "cycleStartJD": 2461395.3750407076,
+        "cycleEndJD": 2461396.3753840774,
+        "sunriseJD": 2461395.6666329866,
+        "sunsetJD": 2461396.0837875037,
+        "sunriseStatus": "crossing",
+        "sunsetStatus": "crossing"
+      }
+    },
+    {
+      "name": "east-date-line",
+      "result": {
+        "transitJD": 2461115.506345834,
+        "cycleStartJD": 2461115.00630367,
+        "cycleEndJD": 2461116.00610544,
+        "sunriseJD": 2461115.257852913,
+        "sunsetJD": 2461115.7552968375,
+        "sunriseStatus": "crossing",
+        "sunsetStatus": "crossing"
+      }
+    },
+    {
+      "name": "west-date-line",
+      "result": {
+        "transitJD": 2461116.505592245,
+        "cycleStartJD": 2461116.0055499724,
+        "cycleEndJD": 2461117.0053494736,
+        "sunriseJD": 2461116.2561802156,
+        "sunsetJD": 2461116.7554641683,
+        "sunriseStatus": "crossing",
+        "sunsetStatus": "crossing"
+      }
+    },
+    {
+      "name": "polar-day",
+      "result": {
+        "transitJD": 2461213.001267046,
+        "cycleStartJD": 2461212.50118507,
+        "cycleEndJD": 2461213.501354637,
+        "sunriseJD": null,
+        "sunsetJD": null,
+        "sunriseStatus": "absent",
+        "sunsetStatus": "absent"
+      }
+    },
+    {
+      "name": "polar-night",
+      "result": {
+        "transitJD": 2461395.9986641617,
+        "cycleStartJD": 2461395.4985079532,
+        "cycleEndJD": 2461396.4988339194,
+        "sunriseJD": null,
+        "sunsetJD": null,
+        "sunriseStatus": "absent",
+        "sunsetStatus": "absent"
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "grid--89--179.9",
+      "latitudeDeg": -89,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461305.5,
+          "rising": false,
+          "cycleStartJD": 2461305.984827332,
+          "cycleEndJD": 2461306.9845759943
+        },
+        {
+          "jd": 2461306.5,
+          "rising": true,
+          "cycleStartJD": 2461306.9845760227,
+          "cycleEndJD": 2461307.984328807
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 2,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 61.46601140499115,
+      "worst": [
+        {
+          "jd": 2461120.0974048246,
+          "rising": true,
+          "referenceJD": 2461120.0966934124,
+          "errorSeconds": 61.46601140499115
+        },
+        {
+          "jd": 2461119.933304386,
+          "rising": false,
+          "referenceJD": 2461119.9340141634,
+          "errorSeconds": -61.32475286722183
+        }
+      ]
+    },
+    {
+      "name": "grid--89--90",
+      "latitudeDeg": -89,
+      "longitudeDeg": -90,
+      "referenceEvents": 22,
+      "predictedEvents": 22,
+      "pairedEvents": 22,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 2,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 126.7455205321312,
+      "worst": [
+        {
+          "jd": 2461119.805141216,
+          "rising": true,
+          "referenceJD": 2461119.803674254,
+          "errorSeconds": 126.7455205321312
+        },
+        {
+          "jd": 2461119.725522954,
+          "rising": false,
+          "referenceJD": 2461119.726988503,
+          "errorSeconds": -126.62341296672821
+        }
+      ]
+    },
+    {
+      "name": "grid--89-0",
+      "latitudeDeg": -89,
+      "longitudeDeg": 0,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 48.1388658285141,
+      "worst": [
+        {
+          "jd": 2461301.9414638663,
+          "rising": true,
+          "referenceJD": 2461301.9409067035,
+          "errorSeconds": 48.1388658285141
+        },
+        {
+          "jd": 2461302.070605509,
+          "rising": false,
+          "referenceJD": 2461302.0711568324,
+          "errorSeconds": -47.634342312812805
+        }
+      ]
+    },
+    {
+      "name": "grid--89-90",
+      "latitudeDeg": -89,
+      "longitudeDeg": 90,
+      "referenceEvents": 20,
+      "predictedEvents": 18,
+      "pairedEvents": 18,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461124.7322562155,
+          "rising": true
+        },
+        {
+          "jd": 2461124.756150309,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461124.5,
+          "rising": true,
+          "cycleStartJD": 2461124.264239964,
+          "cycleEndJD": 2461125.264012274
+        },
+        {
+          "jd": 2461124.5,
+          "rising": false,
+          "cycleStartJD": 2461124.264239964,
+          "cycleEndJD": 2461125.264012274
+        },
+        {
+          "jd": 2461301.5,
+          "rising": true,
+          "cycleStartJD": 2461301.2363424688,
+          "cycleEndJD": 2461302.2360764975
+        },
+        {
+          "jd": 2461301.5,
+          "rising": false,
+          "cycleStartJD": 2461301.2363424688,
+          "cycleEndJD": 2461302.2360764975
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 46.52354568243027,
+      "worst": [
+        {
+          "jd": 2461120.375856789,
+          "rising": true,
+          "referenceJD": 2461120.375318322,
+          "errorSeconds": 46.52354568243027
+        },
+        {
+          "jd": 2461120.156071998,
+          "rising": false,
+          "referenceJD": 2461120.156608468,
+          "errorSeconds": -46.35098576545715
+        }
+      ]
+    },
+    {
+      "name": "grid--89-179.9",
+      "latitudeDeg": -89,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461306.5,
+          "rising": false,
+          "cycleStartJD": 2461305.9853828424,
+          "cycleEndJD": 2461306.9851315618
+        },
+        {
+          "jd": 2461307.5,
+          "rising": true,
+          "cycleStartJD": 2461306.985131413,
+          "cycleEndJD": 2461307.9848842276
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 2,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 61.414673924446106,
+      "worst": [
+        {
+          "jd": 2461120.0980320554,
+          "rising": true,
+          "referenceJD": 2461120.0973212374,
+          "errorSeconds": 61.414673924446106
+        },
+        {
+          "jd": 2461119.9337896695,
+          "rising": false,
+          "referenceJD": 2461119.934498851,
+          "errorSeconds": -61.27329468727112
+        }
+      ]
+    },
+    {
+      "name": "grid--80--179.9",
+      "latitudeDeg": -80,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 212,
+      "predictedEvents": 210,
+      "pairedEvents": 210,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461277.494936406,
+          "rising": true
+        },
+        {
+          "jd": 2461277.5094124847,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461276.5,
+          "rising": true,
+          "cycleStartJD": 2461277.0005438905,
+          "cycleEndJD": 2461278.000346262
+        },
+        {
+          "jd": 2461276.5,
+          "rising": false,
+          "cycleStartJD": 2461277.0005438905,
+          "cycleEndJD": 2461278.000346262
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 16.60236418247223,
+      "worst": [
+        {
+          "jd": 2461148.4786537923,
+          "rising": true,
+          "referenceJD": 2461148.4784616353,
+          "errorSeconds": 16.60236418247223
+        },
+        {
+          "jd": 2461329.958165615,
+          "rising": false,
+          "referenceJD": 2461329.9583541844,
+          "errorSeconds": -16.292408108711243
+        }
+      ]
+    },
+    {
+      "name": "grid--80--90",
+      "latitudeDeg": -80,
+      "longitudeDeg": -90,
+      "referenceEvents": 210,
+      "predictedEvents": 210,
+      "pairedEvents": 210,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 20.57598978281021,
+      "worst": [
+        {
+          "jd": 2461096.782741269,
+          "rising": true,
+          "referenceJD": 2461096.782503121,
+          "errorSeconds": 20.57598978281021
+        },
+        {
+          "jd": 2461096.7373319706,
+          "rising": false,
+          "referenceJD": 2461096.737537958,
+          "errorSeconds": -17.797328531742096
+        }
+      ]
+    },
+    {
+      "name": "grid--80-0",
+      "latitudeDeg": -80,
+      "longitudeDeg": 0,
+      "referenceEvents": 210,
+      "predictedEvents": 208,
+      "pairedEvents": 208,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461096.504970236,
+          "rising": false
+        },
+        {
+          "jd": 2461096.515117205,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461095.5,
+          "rising": false,
+          "cycleStartJD": 2461095.510160111,
+          "cycleEndJD": 2461096.5100598475
+        },
+        {
+          "jd": 2461096.5,
+          "rising": true,
+          "cycleStartJD": 2461096.510059798,
+          "cycleEndJD": 2461097.5099524893
+        },
+        {
+          "jd": 2461329.5,
+          "rising": false,
+          "cycleStartJD": 2461329.4890844217,
+          "cycleEndJD": 2461330.488939625
+        },
+        {
+          "jd": 2461330.5,
+          "rising": true,
+          "cycleStartJD": 2461330.4889396327,
+          "cycleEndJD": 2461331.48880196
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 11.764651536941528,
+      "worst": [
+        {
+          "jd": 2461329.445614336,
+          "rising": false,
+          "referenceJD": 2461329.445750501,
+          "errorSeconds": -11.764651536941528
+        },
+        {
+          "jd": 2461097.5543118613,
+          "rising": true,
+          "referenceJD": 2461097.554181235,
+          "errorSeconds": 11.286118626594543
+        }
+      ]
+    },
+    {
+      "name": "grid--80-90",
+      "latitudeDeg": -80,
+      "longitudeDeg": 90,
+      "referenceEvents": 210,
+      "predictedEvents": 210,
+      "pairedEvents": 210,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461148.5,
+          "rising": true,
+          "cycleStartJD": 2461148.2505029314,
+          "cycleEndJD": 2461149.250340463
+        },
+        {
+          "jd": 2461148.5,
+          "rising": false,
+          "cycleStartJD": 2461148.2505029314,
+          "cycleEndJD": 2461149.250340463
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 22.66533672809601,
+      "worst": [
+        {
+          "jd": 2461330.217551832,
+          "rising": false,
+          "referenceJD": 2461330.2178141624,
+          "errorSeconds": -22.66533672809601
+        },
+        {
+          "jd": 2461330.2603932545,
+          "rising": true,
+          "referenceJD": 2461330.260174257,
+          "errorSeconds": 18.92136186361313
+        }
+      ]
+    },
+    {
+      "name": "grid--80-179.9",
+      "latitudeDeg": -80,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 212,
+      "predictedEvents": 210,
+      "pairedEvents": 210,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461277.495423736,
+          "rising": true
+        },
+        {
+          "jd": 2461277.5100360713,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461277.5,
+          "rising": true,
+          "cycleStartJD": 2461277.001099331,
+          "cycleEndJD": 2461278.000901723
+        },
+        {
+          "jd": 2461277.5,
+          "rising": false,
+          "cycleStartJD": 2461277.001099331,
+          "cycleEndJD": 2461278.000901723
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 16.62091165781021,
+      "worst": [
+        {
+          "jd": 2461148.479234782,
+          "rising": true,
+          "referenceJD": 2461148.4790424104,
+          "errorSeconds": 16.62091165781021
+        },
+        {
+          "jd": 2461329.9587383987,
+          "rising": false,
+          "referenceJD": 2461329.9589270614,
+          "errorSeconds": -16.30045473575592
+        }
+      ]
+    },
+    {
+      "name": "grid--70--179.9",
+      "latitudeDeg": -70,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 484,
+      "pairedEvents": 484,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 25.587429106235504,
+      "worst": [
+        {
+          "jd": 2461065.0187890073,
+          "rising": true,
+          "referenceJD": 2461065.0184928565,
+          "errorSeconds": 25.587429106235504
+        },
+        {
+          "jd": 2461064.9981028633,
+          "rising": false,
+          "referenceJD": 2461064.9983778195,
+          "errorSeconds": -23.75621795654297
+        }
+      ]
+    },
+    {
+      "name": "grid--70--90",
+      "latitudeDeg": -70,
+      "longitudeDeg": -90,
+      "referenceEvents": 482,
+      "predictedEvents": 482,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 13.633842766284943,
+      "worst": [
+        {
+          "jd": 2461241.238577082,
+          "rising": true,
+          "referenceJD": 2461241.238734881,
+          "errorSeconds": -13.633842766284943
+        },
+        {
+          "jd": 2461241.2707674336,
+          "rising": false,
+          "referenceJD": 2461241.270616878,
+          "errorSeconds": 13.008016347885132
+        }
+      ]
+    },
+    {
+      "name": "grid--70-0",
+      "latitudeDeg": -70,
+      "longitudeDeg": 0,
+      "referenceEvents": 485,
+      "predictedEvents": 482,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461184.992621647,
+          "rising": true
+        },
+        {
+          "jd": 2461185.0024832333,
+          "rising": false
+        },
+        {
+          "jd": 2461362.4893566095,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461184.5,
+          "rising": true,
+          "cycleStartJD": 2461184.4979854277,
+          "cycleEndJD": 2461185.4980444014
+        },
+        {
+          "jd": 2461184.5,
+          "rising": false,
+          "cycleStartJD": 2461184.4979854277,
+          "cycleEndJD": 2461185.4980444014
+        },
+        {
+          "jd": 2461361.5,
+          "rising": false,
+          "cycleStartJD": 2461361.489128984,
+          "cycleEndJD": 2461362.4892756953
+        },
+        {
+          "jd": 2461362.5,
+          "rising": true,
+          "cycleStartJD": 2461362.48927567,
+          "cycleEndJD": 2461363.4894322017
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 19.309812784194946,
+      "worst": [
+        {
+          "jd": 2461240.9931834172,
+          "rising": true,
+          "referenceJD": 2461240.9934069104,
+          "errorSeconds": -19.309812784194946
+        },
+        {
+          "jd": 2461241.016135008,
+          "rising": false,
+          "referenceJD": 2461241.0159184607,
+          "errorSeconds": 18.70969533920288
+        }
+      ]
+    },
+    {
+      "name": "grid--70-90",
+      "latitudeDeg": -70,
+      "longitudeDeg": 90,
+      "referenceEvents": 486,
+      "predictedEvents": 484,
+      "pairedEvents": 484,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461240.754095888,
+          "rising": true
+        },
+        {
+          "jd": 2461240.7552022524,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461240.5,
+          "rising": true,
+          "cycleStartJD": 2461240.254183068,
+          "cycleEndJD": 2461241.2542229393
+        },
+        {
+          "jd": 2461240.5,
+          "rising": false,
+          "cycleStartJD": 2461240.254183068,
+          "cycleEndJD": 2461241.2542229393
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 19.275212287902832,
+      "worst": [
+        {
+          "jd": 2461362.2262173984,
+          "rising": false,
+          "referenceJD": 2461362.226440491,
+          "errorSeconds": -19.275212287902832
+        },
+        {
+          "jd": 2461065.2753139185,
+          "rising": true,
+          "referenceJD": 2461065.2751272502,
+          "errorSeconds": 16.128136217594147
+        }
+      ]
+    },
+    {
+      "name": "grid--70-179.9",
+      "latitudeDeg": -70,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 484,
+      "pairedEvents": 484,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 25.54285079240799,
+      "worst": [
+        {
+          "jd": 2461065.0193624813,
+          "rising": true,
+          "referenceJD": 2461065.0190668465,
+          "errorSeconds": 25.54285079240799
+        },
+        {
+          "jd": 2461064.99864069,
+          "rising": false,
+          "referenceJD": 2461064.998915135,
+          "errorSeconds": -23.712041974067688
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4--179.9",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 642,
+      "predictedEvents": 634,
+      "pairedEvents": 634,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461051.9997787387,
+          "rising": false
+        },
+        {
+          "jd": 2461052.0110377865,
+          "rising": true
+        },
+        {
+          "jd": 2461210.4951112135,
+          "rising": true
+        },
+        {
+          "jd": 2461210.5060560564,
+          "rising": false
+        },
+        {
+          "jd": 2461214.4987642444,
+          "rising": true
+        },
+        {
+          "jd": 2461214.5036861757,
+          "rising": false
+        },
+        {
+          "jd": 2461215.494803838,
+          "rising": true
+        },
+        {
+          "jd": 2461215.507963374,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461050.5,
+          "rising": false,
+          "cycleStartJD": 2461051.0051314756,
+          "cycleEndJD": 2461052.0054162955
+        },
+        {
+          "jd": 2461051.5,
+          "rising": true,
+          "cycleStartJD": 2461052.0054163067,
+          "cycleEndJD": 2461053.0056942296
+        },
+        {
+          "jd": 2461209.5,
+          "rising": true,
+          "cycleStartJD": 2461210.0005527576,
+          "cycleEndJD": 2461211.000697895
+        },
+        {
+          "jd": 2461209.5,
+          "rising": false,
+          "cycleStartJD": 2461210.0005527576,
+          "cycleEndJD": 2461211.000697895
+        },
+        {
+          "jd": 2461210.5,
+          "rising": true,
+          "cycleStartJD": 2461211.0006978977,
+          "cycleEndJD": 2461212.000843172
+        },
+        {
+          "jd": 2461210.5,
+          "rising": false,
+          "cycleStartJD": 2461211.0006978977,
+          "cycleEndJD": 2461212.000843172
+        },
+        {
+          "jd": 2461211.5,
+          "rising": true,
+          "cycleStartJD": 2461212.000843172,
+          "cycleEndJD": 2461213.0009883046
+        },
+        {
+          "jd": 2461211.5,
+          "rising": false,
+          "cycleStartJD": 2461212.000843172,
+          "cycleEndJD": 2461213.0009883046
+        },
+        {
+          "jd": 2461212.5,
+          "rising": true,
+          "cycleStartJD": 2461213.000988312,
+          "cycleEndJD": 2461214.0011330396
+        },
+        {
+          "jd": 2461212.5,
+          "rising": false,
+          "cycleStartJD": 2461213.000988312,
+          "cycleEndJD": 2461214.0011330396
+        },
+        {
+          "jd": 2461213.5,
+          "rising": true,
+          "cycleStartJD": 2461214.0011330354,
+          "cycleEndJD": 2461215.001277084
+        },
+        {
+          "jd": 2461213.5,
+          "rising": false,
+          "cycleStartJD": 2461214.0011330354,
+          "cycleEndJD": 2461215.001277084
+        },
+        {
+          "jd": 2461214.5,
+          "rising": true,
+          "cycleStartJD": 2461215.001277092,
+          "cycleEndJD": 2461216.001420186
+        },
+        {
+          "jd": 2461214.5,
+          "rising": false,
+          "cycleStartJD": 2461215.001277092,
+          "cycleEndJD": 2461216.001420186
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 25.10797083377838,
+      "worst": [
+        {
+          "jd": 2461209.5096122846,
+          "rising": false,
+          "referenceJD": 2461209.509321683,
+          "errorSeconds": 25.10797083377838
+        },
+        {
+          "jd": 2461209.4912503622,
+          "rising": true,
+          "referenceJD": 2461209.4915235946,
+          "errorSeconds": -23.607274889945984
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4--90",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": -90,
+      "referenceEvents": 640,
+      "predictedEvents": 634,
+      "pairedEvents": 634,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461210.2444475307,
+          "rising": true
+        },
+        {
+          "jd": 2461210.257194853,
+          "rising": false
+        },
+        {
+          "jd": 2461211.248892591,
+          "rising": true
+        },
+        {
+          "jd": 2461211.253071918,
+          "rising": false
+        },
+        {
+          "jd": 2461215.2459317013,
+          "rising": true
+        },
+        {
+          "jd": 2461215.2573121837,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461209.5,
+          "rising": true,
+          "cycleStartJD": 2461209.7507943474,
+          "cycleEndJD": 2461210.750939401
+        },
+        {
+          "jd": 2461209.5,
+          "rising": false,
+          "cycleStartJD": 2461209.7507943474,
+          "cycleEndJD": 2461210.750939401
+        },
+        {
+          "jd": 2461210.5,
+          "rising": true,
+          "cycleStartJD": 2461210.7509394037,
+          "cycleEndJD": 2461211.751084674
+        },
+        {
+          "jd": 2461210.5,
+          "rising": false,
+          "cycleStartJD": 2461210.7509394037,
+          "cycleEndJD": 2461211.751084674
+        },
+        {
+          "jd": 2461211.5,
+          "rising": true,
+          "cycleStartJD": 2461211.7510846676,
+          "cycleEndJD": 2461212.7512298687
+        },
+        {
+          "jd": 2461211.5,
+          "rising": false,
+          "cycleStartJD": 2461211.7510846676,
+          "cycleEndJD": 2461212.7512298687
+        },
+        {
+          "jd": 2461212.5,
+          "rising": true,
+          "cycleStartJD": 2461212.7512298687,
+          "cycleEndJD": 2461213.751374729
+        },
+        {
+          "jd": 2461212.5,
+          "rising": false,
+          "cycleStartJD": 2461212.7512298687,
+          "cycleEndJD": 2461213.751374729
+        },
+        {
+          "jd": 2461213.5,
+          "rising": true,
+          "cycleStartJD": 2461213.751374729,
+          "cycleEndJD": 2461214.7515189704
+        },
+        {
+          "jd": 2461213.5,
+          "rising": false,
+          "cycleStartJD": 2461213.751374729,
+          "cycleEndJD": 2461214.7515189704
+        },
+        {
+          "jd": 2461214.5,
+          "rising": true,
+          "cycleStartJD": 2461214.7515189704,
+          "cycleEndJD": 2461215.7516623335
+        },
+        {
+          "jd": 2461214.5,
+          "rising": false,
+          "cycleStartJD": 2461214.7515189704,
+          "cycleEndJD": 2461215.7516623335
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 23.669394850730896,
+      "worst": [
+        {
+          "jd": 2461216.2611389,
+          "rising": false,
+          "referenceJD": 2461216.260864949,
+          "errorSeconds": 23.669394850730896
+        },
+        {
+          "jd": 2461209.260632978,
+          "rising": false,
+          "referenceJD": 2461209.2603654615,
+          "errorSeconds": 23.113413155078888
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4-0",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": 0,
+      "referenceEvents": 642,
+      "predictedEvents": 636,
+      "pairedEvents": 636,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461210.997505771,
+          "rising": true
+        },
+        {
+          "jd": 2461211.0043782163,
+          "rising": false
+        },
+        {
+          "jd": 2461214.9968358916,
+          "rising": true
+        },
+        {
+          "jd": 2461215.0063288664,
+          "rising": false
+        },
+        {
+          "jd": 2461375.48864922,
+          "rising": false
+        },
+        {
+          "jd": 2461375.4954319857,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461210.5,
+          "rising": true,
+          "cycleStartJD": 2461210.500903112,
+          "cycleEndJD": 2461211.5010483526
+        },
+        {
+          "jd": 2461210.5,
+          "rising": false,
+          "cycleStartJD": 2461210.500903112,
+          "cycleEndJD": 2461211.5010483526
+        },
+        {
+          "jd": 2461211.5,
+          "rising": true,
+          "cycleStartJD": 2461211.501048354,
+          "cycleEndJD": 2461212.501193589
+        },
+        {
+          "jd": 2461211.5,
+          "rising": false,
+          "cycleStartJD": 2461211.501048354,
+          "cycleEndJD": 2461212.501193589
+        },
+        {
+          "jd": 2461212.5,
+          "rising": true,
+          "cycleStartJD": 2461212.50119359,
+          "cycleEndJD": 2461213.5013385564
+        },
+        {
+          "jd": 2461212.5,
+          "rising": false,
+          "cycleStartJD": 2461212.50119359,
+          "cycleEndJD": 2461213.5013385564
+        },
+        {
+          "jd": 2461213.5,
+          "rising": true,
+          "cycleStartJD": 2461213.501338556,
+          "cycleEndJD": 2461214.5014829785
+        },
+        {
+          "jd": 2461213.5,
+          "rising": false,
+          "cycleStartJD": 2461213.501338556,
+          "cycleEndJD": 2461214.5014829785
+        },
+        {
+          "jd": 2461214.5,
+          "rising": true,
+          "cycleStartJD": 2461214.5014829785,
+          "cycleEndJD": 2461215.501626591
+        },
+        {
+          "jd": 2461214.5,
+          "rising": false,
+          "cycleStartJD": 2461214.5014829785,
+          "cycleEndJD": 2461215.501626591
+        },
+        {
+          "jd": 2461374.5,
+          "rising": false,
+          "cycleStartJD": 2461374.491791884,
+          "cycleEndJD": 2461375.49205424
+        },
+        {
+          "jd": 2461375.5,
+          "rising": true,
+          "cycleStartJD": 2461375.492054224,
+          "cycleEndJD": 2461376.4923241776
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 30.52789717912674,
+      "worst": [
+        {
+          "jd": 2461210.008372564,
+          "rising": false,
+          "referenceJD": 2461210.0080192317,
+          "errorSeconds": 30.52789717912674
+        },
+        {
+          "jd": 2461209.9932052298,
+          "rising": true,
+          "referenceJD": 2461209.9935426363,
+          "errorSeconds": -29.151923954486847
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4-90",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": 90,
+      "referenceEvents": 642,
+      "predictedEvents": 638,
+      "pairedEvents": 638,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461210.7463927595,
+          "rising": true
+        },
+        {
+          "jd": 2461210.755410693,
+          "rising": false
+        },
+        {
+          "jd": 2461214.7478336347,
+          "rising": true
+        },
+        {
+          "jd": 2461214.755251847,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461210.5,
+          "rising": true,
+          "cycleStartJD": 2461210.250866835,
+          "cycleEndJD": 2461211.2510120305
+        },
+        {
+          "jd": 2461210.5,
+          "rising": false,
+          "cycleStartJD": 2461210.250866835,
+          "cycleEndJD": 2461211.2510120305
+        },
+        {
+          "jd": 2461211.5,
+          "rising": true,
+          "cycleStartJD": 2461211.2510120324,
+          "cycleEndJD": 2461212.2511572936
+        },
+        {
+          "jd": 2461211.5,
+          "rising": false,
+          "cycleStartJD": 2461211.2510120324,
+          "cycleEndJD": 2461212.2511572936
+        },
+        {
+          "jd": 2461212.5,
+          "rising": true,
+          "cycleStartJD": 2461212.2511572936,
+          "cycleEndJD": 2461213.251302359
+        },
+        {
+          "jd": 2461212.5,
+          "rising": false,
+          "cycleStartJD": 2461212.2511572936,
+          "cycleEndJD": 2461213.251302359
+        },
+        {
+          "jd": 2461213.5,
+          "rising": true,
+          "cycleStartJD": 2461213.2513023554,
+          "cycleEndJD": 2461214.2514469414
+        },
+        {
+          "jd": 2461213.5,
+          "rising": false,
+          "cycleStartJD": 2461213.2513023554,
+          "cycleEndJD": 2461214.2514469414
+        },
+        {
+          "jd": 2461214.5,
+          "rising": true,
+          "cycleStartJD": 2461214.2514469447,
+          "cycleEndJD": 2461215.251590782
+        },
+        {
+          "jd": 2461214.5,
+          "rising": false,
+          "cycleStartJD": 2461214.2514469447,
+          "cycleEndJD": 2461215.251590782
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 28.718894720077515,
+      "worst": [
+        {
+          "jd": 2461215.7594703166,
+          "rising": false,
+          "referenceJD": 2461215.759137922,
+          "errorSeconds": 28.718894720077515
+        },
+        {
+          "jd": 2461215.7439392935,
+          "rising": true,
+          "referenceJD": 2461215.7442637375,
+          "errorSeconds": -28.031954169273376
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4-179.9",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 642,
+      "predictedEvents": 634,
+      "pairedEvents": 634,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461052.000315117,
+          "rising": false
+        },
+        {
+          "jd": 2461052.0116128316,
+          "rising": true
+        },
+        {
+          "jd": 2461210.4956689193,
+          "rising": true
+        },
+        {
+          "jd": 2461210.506609641,
+          "rising": false
+        },
+        {
+          "jd": 2461214.4993166607,
+          "rising": true
+        },
+        {
+          "jd": 2461214.5042450475,
+          "rising": false
+        },
+        {
+          "jd": 2461215.4953575456,
+          "rising": true
+        },
+        {
+          "jd": 2461215.508520953,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461051.5,
+          "rising": false,
+          "cycleStartJD": 2461051.005687209,
+          "cycleEndJD": 2461052.0059720045
+        },
+        {
+          "jd": 2461052.5,
+          "rising": true,
+          "cycleStartJD": 2461052.005972014,
+          "cycleEndJD": 2461053.0062499405
+        },
+        {
+          "jd": 2461210.5,
+          "rising": true,
+          "cycleStartJD": 2461210.00110839,
+          "cycleEndJD": 2461211.001253537
+        },
+        {
+          "jd": 2461210.5,
+          "rising": false,
+          "cycleStartJD": 2461210.00110839,
+          "cycleEndJD": 2461211.001253537
+        },
+        {
+          "jd": 2461211.5,
+          "rising": true,
+          "cycleStartJD": 2461211.0012535313,
+          "cycleEndJD": 2461212.0013988
+        },
+        {
+          "jd": 2461211.5,
+          "rising": false,
+          "cycleStartJD": 2461211.0012535313,
+          "cycleEndJD": 2461212.0013988
+        },
+        {
+          "jd": 2461212.5,
+          "rising": true,
+          "cycleStartJD": 2461212.001398806,
+          "cycleEndJD": 2461213.001543944
+        },
+        {
+          "jd": 2461212.5,
+          "rising": false,
+          "cycleStartJD": 2461212.001398806,
+          "cycleEndJD": 2461213.001543944
+        },
+        {
+          "jd": 2461213.5,
+          "rising": true,
+          "cycleStartJD": 2461213.00154394,
+          "cycleEndJD": 2461214.001688673
+        },
+        {
+          "jd": 2461213.5,
+          "rising": false,
+          "cycleStartJD": 2461213.00154394,
+          "cycleEndJD": 2461214.001688673
+        },
+        {
+          "jd": 2461214.5,
+          "rising": true,
+          "cycleStartJD": 2461214.0016886685,
+          "cycleEndJD": 2461215.0018327283
+        },
+        {
+          "jd": 2461214.5,
+          "rising": false,
+          "cycleStartJD": 2461214.0016886685,
+          "cycleEndJD": 2461215.0018327283
+        },
+        {
+          "jd": 2461215.5,
+          "rising": true,
+          "cycleStartJD": 2461215.001832719,
+          "cycleEndJD": 2461216.0019758246
+        },
+        {
+          "jd": 2461215.5,
+          "rising": false,
+          "cycleStartJD": 2461215.001832719,
+          "cycleEndJD": 2461216.0019758246
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 25.11295974254608,
+      "worst": [
+        {
+          "jd": 2461209.5101661803,
+          "rising": false,
+          "referenceJD": 2461209.509875521,
+          "errorSeconds": 25.11295974254608
+        },
+        {
+          "jd": 2461209.4918077523,
+          "rising": true,
+          "referenceJD": 2461209.492081047,
+          "errorSeconds": -23.612666130065918
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5--179.9",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 674,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461043.5,
+          "rising": false,
+          "cycleStartJD": 2461044.0029639164,
+          "cycleEndJD": 2461045.003288554
+        },
+        {
+          "jd": 2461044.5,
+          "rising": true,
+          "cycleStartJD": 2461045.003288549,
+          "cycleEndJD": 2461046.0036084177
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 20.859915018081665,
+      "worst": [
+        {
+          "jd": 2461382.0028264336,
+          "rising": true,
+          "referenceJD": 2461382.0025849994,
+          "errorSeconds": 20.859915018081665
+        },
+        {
+          "jd": 2461381.984491271,
+          "rising": false,
+          "referenceJD": 2461381.9846984167,
+          "errorSeconds": -17.897388339042664
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5--90",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": -90,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 674,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 19.801823794841766,
+      "worst": [
+        {
+          "jd": 2461045.766437363,
+          "rising": true,
+          "referenceJD": 2461045.766208175,
+          "errorSeconds": 19.801823794841766
+        },
+        {
+          "jd": 2461045.74117635,
+          "rising": false,
+          "referenceJD": 2461045.741397343,
+          "errorSeconds": -19.093801081180573
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5-0",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": 0,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 674,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461381.5,
+          "rising": false,
+          "cycleStartJD": 2461381.4937829114,
+          "cycleEndJD": 2461382.494092009
+        },
+        {
+          "jd": 2461382.5,
+          "rising": true,
+          "cycleStartJD": 2461382.4940920253,
+          "cycleEndJD": 2461383.4944066373
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 25.79825073480606,
+      "worst": [
+        {
+          "jd": 2461045.5133277355,
+          "rising": true,
+          "referenceJD": 2461045.5130291446,
+          "errorSeconds": 25.79825073480606
+        },
+        {
+          "jd": 2461045.4941262826,
+          "rising": false,
+          "referenceJD": 2461045.494417133,
+          "errorSeconds": -25.12945532798767
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5-90",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": 90,
+      "referenceEvents": 676,
+      "predictedEvents": 672,
+      "pairedEvents": 672,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461045.2491230373,
+          "rising": false
+        },
+        {
+          "jd": 2461045.258163384,
+          "rising": true
+        },
+        {
+          "jd": 2461382.240249166,
+          "rising": false
+        },
+        {
+          "jd": 2461382.2477451786,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461044.5,
+          "rising": false,
+          "cycleStartJD": 2461044.2533233548,
+          "cycleEndJD": 2461045.2536468445
+        },
+        {
+          "jd": 2461045.5,
+          "rising": true,
+          "cycleStartJD": 2461045.253646855,
+          "cycleEndJD": 2461046.2539654477
+        },
+        {
+          "jd": 2461381.5,
+          "rising": false,
+          "cycleStartJD": 2461381.2437065416,
+          "cycleEndJD": 2461382.2440142296
+        },
+        {
+          "jd": 2461382.5,
+          "rising": true,
+          "cycleStartJD": 2461382.244014207,
+          "cycleEndJD": 2461383.24432749
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 14.899536967277527,
+      "worst": [
+        {
+          "jd": 2461046.2712168796,
+          "rising": true,
+          "referenceJD": 2461046.2710444313,
+          "errorSeconds": 14.899536967277527
+        },
+        {
+          "jd": 2461046.236714321,
+          "rising": false,
+          "referenceJD": 2461046.2368776877,
+          "errorSeconds": -14.114870131015778
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5-179.9",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 674,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461044.5,
+          "rising": false,
+          "cycleStartJD": 2461044.003519651,
+          "cycleEndJD": 2461045.0038442924
+        },
+        {
+          "jd": 2461045.5,
+          "rising": true,
+          "cycleStartJD": 2461045.003844297,
+          "cycleEndJD": 2461046.0041641514
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 20.877698063850403,
+      "worst": [
+        {
+          "jd": 2461382.003374112,
+          "rising": true,
+          "referenceJD": 2461382.003132472,
+          "errorSeconds": 20.877698063850403
+        },
+        {
+          "jd": 2461381.985055049,
+          "rising": false,
+          "referenceJD": 2461381.9852623995,
+          "errorSeconds": -17.915090918540955
+        }
+      ]
+    },
+    {
+      "name": "grid--65--179.9",
+      "latitudeDeg": -65,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.365853011608124,
+      "worst": [
+        {
+          "jd": 2461081.1589448424,
+          "rising": true,
+          "referenceJD": 2461081.1588827376,
+          "errorSeconds": 5.365853011608124
+        },
+        {
+          "jd": 2461080.1563612074,
+          "rising": true,
+          "referenceJD": 2461080.156299233,
+          "errorSeconds": 5.354587733745575
+        }
+      ]
+    },
+    {
+      "name": "grid--65--90",
+      "latitudeDeg": -65,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.367663502693176,
+      "worst": [
+        {
+          "jd": 2461080.9085788243,
+          "rising": true,
+          "referenceJD": 2461080.9085166985,
+          "errorSeconds": 5.367663502693176
+        },
+        {
+          "jd": 2461079.9059914714,
+          "rising": true,
+          "referenceJD": 2461079.9059296222,
+          "errorSeconds": 5.343765020370483
+        }
+      ]
+    },
+    {
+      "name": "grid--65-0",
+      "latitudeDeg": -65,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.366496741771698,
+      "worst": [
+        {
+          "jd": 2461080.6579333823,
+          "rising": true,
+          "referenceJD": 2461080.65787127,
+          "errorSeconds": 5.366496741771698
+        },
+        {
+          "jd": 2461081.6605095584,
+          "rising": true,
+          "referenceJD": 2461081.6604476026,
+          "errorSeconds": 5.352978408336639
+        }
+      ]
+    },
+    {
+      "name": "grid--65-90",
+      "latitudeDeg": -65,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.362352728843689,
+      "worst": [
+        {
+          "jd": 2461080.407287011,
+          "rising": true,
+          "referenceJD": 2461080.4072249467,
+          "errorSeconds": 5.362352728843689
+        },
+        {
+          "jd": 2461081.409866917,
+          "rising": true,
+          "referenceJD": 2461081.409804866,
+          "errorSeconds": 5.361185967922211
+        }
+      ]
+    },
+    {
+      "name": "grid--65-179.9",
+      "latitudeDeg": -65,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.36569207906723,
+      "worst": [
+        {
+          "jd": 2461081.1595018273,
+          "rising": true,
+          "referenceJD": 2461081.1594397244,
+          "errorSeconds": 5.36569207906723
+        },
+        {
+          "jd": 2461080.1569182007,
+          "rising": true,
+          "referenceJD": 2461080.1568562277,
+          "errorSeconds": 5.354467034339905
+        }
+      ]
+    },
+    {
+      "name": "grid-0--179.9",
+      "latitudeDeg": 0,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 2.9929831624031067,
+      "worst": [
+        {
+          "jd": 2461081.7619768176,
+          "rising": false,
+          "referenceJD": 2461081.7619421766,
+          "errorSeconds": 2.9929831624031067
+        },
+        {
+          "jd": 2461080.761965804,
+          "rising": false,
+          "referenceJD": 2461080.761931279,
+          "errorSeconds": 2.9829248785972595
+        }
+      ]
+    },
+    {
+      "name": "grid-0--90",
+      "latitudeDeg": 0,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 2.9930636286735535,
+      "worst": [
+        {
+          "jd": 2461081.512252696,
+          "rising": false,
+          "referenceJD": 2461081.512218054,
+          "errorSeconds": 2.9930636286735535
+        },
+        {
+          "jd": 2461082.512256928,
+          "rising": false,
+          "referenceJD": 2461082.5122224,
+          "errorSeconds": 2.9832065105438232
+        }
+      ]
+    },
+    {
+      "name": "grid-0-0",
+      "latitudeDeg": 0,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 2.991454303264618,
+      "worst": [
+        {
+          "jd": 2461081.262250228,
+          "rising": false,
+          "referenceJD": 2461081.2622156045,
+          "errorSeconds": 2.991454303264618
+        },
+        {
+          "jd": 2461082.262256709,
+          "rising": false,
+          "referenceJD": 2461082.262222128,
+          "errorSeconds": 2.9877930879592896
+        }
+      ]
+    },
+    {
+      "name": "grid-0-90",
+      "latitudeDeg": 0,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 2.9913336038589478,
+      "worst": [
+        {
+          "jd": 2461082.012255936,
+          "rising": false,
+          "referenceJD": 2461082.012221314,
+          "errorSeconds": 2.9913336038589478
+        },
+        {
+          "jd": 2461081.0122471927,
+          "rising": false,
+          "referenceJD": 2461081.0122126075,
+          "errorSeconds": 2.9881551861763
+        }
+      ]
+    },
+    {
+      "name": "grid-0-179.9",
+      "latitudeDeg": 0,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 2.9929831624031067,
+      "worst": [
+        {
+          "jd": 2461081.7625323767,
+          "rising": false,
+          "referenceJD": 2461081.7624977357,
+          "errorSeconds": 2.9929831624031067
+        },
+        {
+          "jd": 2461080.7625213694,
+          "rising": false,
+          "referenceJD": 2461080.7624868434,
+          "errorSeconds": 2.9830455780029297
+        }
+      ]
+    },
+    {
+      "name": "grid-40--179.9",
+      "latitudeDeg": 40,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.7604302167892456,
+      "worst": [
+        {
+          "jd": 2461081.7283629477,
+          "rising": false,
+          "referenceJD": 2461081.728319424,
+          "errorSeconds": 3.7604302167892456
+        },
+        {
+          "jd": 2461080.7275325116,
+          "rising": false,
+          "referenceJD": 2461080.7274891054,
+          "errorSeconds": 3.7502914667129517
+        }
+      ]
+    },
+    {
+      "name": "grid-40--90",
+      "latitudeDeg": 40,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.7612751126289368,
+      "worst": [
+        {
+          "jd": 2461081.478433543,
+          "rising": false,
+          "referenceJD": 2461081.4783900096,
+          "errorSeconds": 3.7612751126289368
+        },
+        {
+          "jd": 2461082.47926238,
+          "rising": false,
+          "referenceJD": 2461082.4792190217,
+          "errorSeconds": 3.7461474537849426
+        }
+      ]
+    },
+    {
+      "name": "grid-40-0",
+      "latitudeDeg": 40,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.759343922138214,
+      "worst": [
+        {
+          "jd": 2461081.228225991,
+          "rising": false,
+          "referenceJD": 2461081.22818248,
+          "errorSeconds": 3.759343922138214
+        },
+        {
+          "jd": 2461082.2290553767,
+          "rising": false,
+          "referenceJD": 2461082.2290119417,
+          "errorSeconds": 3.7527859210968018
+        }
+      ]
+    },
+    {
+      "name": "grid-40-90",
+      "latitudeDeg": 40,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.7574127316474915,
+      "worst": [
+        {
+          "jd": 2461081.978848233,
+          "rising": false,
+          "referenceJD": 2461081.9788047443,
+          "errorSeconds": 3.7574127316474915
+        },
+        {
+          "jd": 2461080.9780183192,
+          "rising": false,
+          "referenceJD": 2461080.977974847,
+          "errorSeconds": 3.756004571914673
+        }
+      ]
+    },
+    {
+      "name": "grid-40-179.9",
+      "latitudeDeg": 40,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.7604302167892456,
+      "worst": [
+        {
+          "jd": 2461081.728918964,
+          "rising": false,
+          "referenceJD": 2461081.7288754405,
+          "errorSeconds": 3.7604302167892456
+        },
+        {
+          "jd": 2461080.728088528,
+          "rising": false,
+          "referenceJD": 2461080.7280451227,
+          "errorSeconds": 3.750211000442505
+        }
+      ]
+    },
+    {
+      "name": "grid-65--179.9",
+      "latitudeDeg": 65,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.7448893785476685,
+      "worst": [
+        {
+          "jd": 2461209.042762691,
+          "rising": true,
+          "referenceJD": 2461209.0426961994,
+          "errorSeconds": 5.7448893785476685
+        },
+        {
+          "jd": 2461210.0422932524,
+          "rising": true,
+          "referenceJD": 2461210.0422268133,
+          "errorSeconds": 5.7403430342674255
+        }
+      ]
+    },
+    {
+      "name": "grid-65--90",
+      "latitudeDeg": 65,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.7441651821136475,
+      "worst": [
+        {
+          "jd": 2461209.792671456,
+          "rising": true,
+          "referenceJD": 2461209.7926049726,
+          "errorSeconds": 5.7441651821136475
+        },
+        {
+          "jd": 2461208.793185264,
+          "rising": true,
+          "referenceJD": 2461208.793118811,
+          "errorSeconds": 5.741509795188904
+        }
+      ]
+    },
+    {
+      "name": "grid-65-0",
+      "latitudeDeg": 65,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.74585497379303,
+      "worst": [
+        {
+          "jd": 2461209.5427832752,
+          "rising": true,
+          "referenceJD": 2461209.5427167723,
+          "errorSeconds": 5.74585497379303
+        },
+        {
+          "jd": 2461208.543340993,
+          "rising": true,
+          "referenceJD": 2461208.5432745903,
+          "errorSeconds": 5.737204849720001
+        }
+      ]
+    },
+    {
+      "name": "grid-65-90",
+      "latitudeDeg": 65,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.746015906333923,
+      "worst": [
+        {
+          "jd": 2461209.2929062694,
+          "rising": true,
+          "referenceJD": 2461209.2928397646,
+          "errorSeconds": 5.746015906333923
+        },
+        {
+          "jd": 2461210.292481796,
+          "rising": true,
+          "referenceJD": 2461210.2924154243,
+          "errorSeconds": 5.734509229660034
+        }
+      ]
+    },
+    {
+      "name": "grid-65-179.9",
+      "latitudeDeg": 65,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 5.744768679141998,
+      "worst": [
+        {
+          "jd": 2461209.0433179354,
+          "rising": true,
+          "referenceJD": 2461209.043251445,
+          "errorSeconds": 5.744768679141998
+        },
+        {
+          "jd": 2461210.0428485973,
+          "rising": true,
+          "referenceJD": 2461210.042782158,
+          "errorSeconds": 5.7403430342674255
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5--179.9",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 670,
+      "predictedEvents": 668,
+      "pairedEvents": 668,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461227.9972957773,
+          "rising": false
+        },
+        {
+          "jd": 2461228.009047255,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461196.5,
+          "rising": false,
+          "cycleStartJD": 2461196.998575097,
+          "cycleEndJD": 2461197.9987083524
+        },
+        {
+          "jd": 2461197.5,
+          "rising": true,
+          "cycleStartJD": 2461197.9987083524,
+          "cycleEndJD": 2461198.9988451293
+        },
+        {
+          "jd": 2461226.5,
+          "rising": false,
+          "cycleStartJD": 2461227.0030557215,
+          "cycleEndJD": 2461228.003180815
+        },
+        {
+          "jd": 2461227.5,
+          "rising": true,
+          "cycleStartJD": 2461228.0031808093,
+          "cycleEndJD": 2461229.00330163
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 17.48974621295929,
+      "worst": [
+        {
+          "jd": 2461229.020488888,
+          "rising": true,
+          "referenceJD": 2461229.0202864604,
+          "errorSeconds": 17.48974621295929
+        },
+        {
+          "jd": 2461228.986114622,
+          "rising": false,
+          "referenceJD": 2461228.9862987995,
+          "errorSeconds": -15.91292917728424
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5--90",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": -90,
+      "referenceEvents": 670,
+      "predictedEvents": 668,
+      "pairedEvents": 668,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461197.7433433295,
+          "rising": false
+        },
+        {
+          "jd": 2461197.754516607,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461196.5,
+          "rising": false,
+          "cycleStartJD": 2461196.74882017,
+          "cycleEndJD": 2461197.7489525015
+        },
+        {
+          "jd": 2461197.5,
+          "rising": true,
+          "cycleStartJD": 2461197.7489525015,
+          "cycleEndJD": 2461198.749088435
+        },
+        {
+          "jd": 2461226.5,
+          "rising": false,
+          "cycleStartJD": 2461226.7533016144,
+          "cycleEndJD": 2461227.753427739
+        },
+        {
+          "jd": 2461227.5,
+          "rising": true,
+          "cycleStartJD": 2461227.753427752,
+          "cycleEndJD": 2461228.753549636
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 19.670140743255615,
+      "worst": [
+        {
+          "jd": 2461228.768728788,
+          "rising": true,
+          "referenceJD": 2461228.7685011243,
+          "errorSeconds": 19.670140743255615
+        },
+        {
+          "jd": 2461228.7383707063,
+          "rising": false,
+          "referenceJD": 2461228.738579981,
+          "errorSeconds": -18.081334233283997
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5-0",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": 0,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 670,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 22.988690435886383,
+      "worst": [
+        {
+          "jd": 2461228.516416015,
+          "rising": true,
+          "referenceJD": 2461228.5161499423,
+          "errorSeconds": 22.988690435886383
+        },
+        {
+          "jd": 2461228.4906232813,
+          "rising": false,
+          "referenceJD": 2461228.4908708627,
+          "errorSeconds": -21.39103263616562
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5-90",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": 90,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 670,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 29.01802808046341,
+      "worst": [
+        {
+          "jd": 2461228.263648561,
+          "rising": true,
+          "referenceJD": 2461228.2633127044,
+          "errorSeconds": 29.01802808046341
+        },
+        {
+          "jd": 2461228.243329998,
+          "rising": false,
+          "referenceJD": 2461228.243647282,
+          "errorSeconds": -27.413329482078552
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5-179.9",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 670,
+      "predictedEvents": 668,
+      "pairedEvents": 668,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461227.9978397647,
+          "rising": false
+        },
+        {
+          "jd": 2461228.009614515,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461197.5,
+          "rising": false,
+          "cycleStartJD": 2461196.999130716,
+          "cycleEndJD": 2461197.999263977
+        },
+        {
+          "jd": 2461198.5,
+          "rising": true,
+          "cycleStartJD": 2461197.9992639795,
+          "cycleEndJD": 2461198.99940078
+        },
+        {
+          "jd": 2461227.5,
+          "rising": false,
+          "cycleStartJD": 2461227.0036113416,
+          "cycleEndJD": 2461228.003736441
+        },
+        {
+          "jd": 2461228.5,
+          "rising": true,
+          "cycleStartJD": 2461228.0037364243,
+          "cycleEndJD": 2461229.003857254
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 17.48608499765396,
+      "worst": [
+        {
+          "jd": 2461229.0210487517,
+          "rising": true,
+          "referenceJD": 2461229.0208463664,
+          "errorSeconds": 17.48608499765396
+        },
+        {
+          "jd": 2461228.986666005,
+          "rising": false,
+          "referenceJD": 2461228.986850137,
+          "errorSeconds": -15.908986330032349
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4--179.9",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 634,
+      "predictedEvents": 630,
+      "pairedEvents": 630,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461394.4936286,
+          "rising": true
+        },
+        {
+          "jd": 2461394.5020591174,
+          "rising": false
+        },
+        {
+          "jd": 2461398.493958604,
+          "rising": true
+        },
+        {
+          "jd": 2461398.504559541,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461233.5,
+          "rising": false,
+          "cycleStartJD": 2461234.0038403375,
+          "cycleEndJD": 2461235.0039313775
+        },
+        {
+          "jd": 2461234.5,
+          "rising": true,
+          "cycleStartJD": 2461235.0039313952,
+          "cycleEndJD": 2461236.004016768
+        },
+        {
+          "jd": 2461393.5,
+          "rising": true,
+          "cycleStartJD": 2461393.997715695,
+          "cycleEndJD": 2461394.9980518064
+        },
+        {
+          "jd": 2461393.5,
+          "rising": false,
+          "cycleStartJD": 2461393.997715695,
+          "cycleEndJD": 2461394.9980518064
+        },
+        {
+          "jd": 2461394.5,
+          "rising": true,
+          "cycleStartJD": 2461394.9980518064,
+          "cycleEndJD": 2461395.99838881
+        },
+        {
+          "jd": 2461394.5,
+          "rising": false,
+          "cycleStartJD": 2461394.9980518064,
+          "cycleEndJD": 2461395.99838881
+        },
+        {
+          "jd": 2461395.5,
+          "rising": true,
+          "cycleStartJD": 2461395.9983888124,
+          "cycleEndJD": 2461396.9987263354
+        },
+        {
+          "jd": 2461395.5,
+          "rising": false,
+          "cycleStartJD": 2461395.9983888124,
+          "cycleEndJD": 2461396.9987263354
+        },
+        {
+          "jd": 2461396.5,
+          "rising": true,
+          "cycleStartJD": 2461396.998726338,
+          "cycleEndJD": 2461397.9990639966
+        },
+        {
+          "jd": 2461396.5,
+          "rising": false,
+          "cycleStartJD": 2461396.998726338,
+          "cycleEndJD": 2461397.9990639966
+        },
+        {
+          "jd": 2461397.5,
+          "rising": true,
+          "cycleStartJD": 2461397.999063996,
+          "cycleEndJD": 2461398.9994014064
+        },
+        {
+          "jd": 2461397.5,
+          "rising": false,
+          "cycleStartJD": 2461397.999063996,
+          "cycleEndJD": 2461398.9994014064
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 23.77050071954727,
+      "worst": [
+        {
+          "jd": 2461393.5057859896,
+          "rising": false,
+          "referenceJD": 2461393.505510868,
+          "errorSeconds": 23.77050071954727
+        },
+        {
+          "jd": 2461393.489214599,
+          "rising": true,
+          "referenceJD": 2461393.489472213,
+          "errorSeconds": -22.257855534553528
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4--90",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": -90,
+      "referenceEvents": 634,
+      "predictedEvents": 630,
+      "pairedEvents": 630,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461394.2427846678,
+          "rising": true
+        },
+        {
+          "jd": 2461394.2532824343,
+          "rising": false
+        },
+        {
+          "jd": 2461398.245176398,
+          "rising": true
+        },
+        {
+          "jd": 2461398.253720559,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461189.5,
+          "rising": false,
+          "cycleStartJD": 2461189.748005358,
+          "cycleEndJD": 2461190.748106928
+        },
+        {
+          "jd": 2461190.5,
+          "rising": true,
+          "cycleStartJD": 2461190.748106937,
+          "cycleEndJD": 2461191.7482135287
+        },
+        {
+          "jd": 2461393.5,
+          "rising": true,
+          "cycleStartJD": 2461393.747909728,
+          "cycleEndJD": 2461394.748245554
+        },
+        {
+          "jd": 2461393.5,
+          "rising": false,
+          "cycleStartJD": 2461393.747909728,
+          "cycleEndJD": 2461394.748245554
+        },
+        {
+          "jd": 2461394.5,
+          "rising": true,
+          "cycleStartJD": 2461394.748245546,
+          "cycleEndJD": 2461395.7485823687
+        },
+        {
+          "jd": 2461394.5,
+          "rising": false,
+          "cycleStartJD": 2461394.748245546,
+          "cycleEndJD": 2461395.7485823687
+        },
+        {
+          "jd": 2461395.5,
+          "rising": true,
+          "cycleStartJD": 2461395.748582371,
+          "cycleEndJD": 2461396.7489198004
+        },
+        {
+          "jd": 2461395.5,
+          "rising": false,
+          "cycleStartJD": 2461395.748582371,
+          "cycleEndJD": 2461396.7489198004
+        },
+        {
+          "jd": 2461396.5,
+          "rising": true,
+          "cycleStartJD": 2461396.7489197957,
+          "cycleEndJD": 2461397.74925746
+        },
+        {
+          "jd": 2461396.5,
+          "rising": false,
+          "cycleStartJD": 2461396.7489197957,
+          "cycleEndJD": 2461397.74925746
+        },
+        {
+          "jd": 2461397.5,
+          "rising": true,
+          "cycleStartJD": 2461397.7492574626,
+          "cycleEndJD": 2461398.749594964
+        },
+        {
+          "jd": 2461397.5,
+          "rising": false,
+          "cycleStartJD": 2461397.7492574626,
+          "cycleEndJD": 2461398.749594964
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 23.89679253101349,
+      "worst": [
+        {
+          "jd": 2461399.258143354,
+          "rising": false,
+          "referenceJD": 2461399.257866771,
+          "errorSeconds": 23.89679253101349
+        },
+        {
+          "jd": 2461399.2414798755,
+          "rising": true,
+          "referenceJD": 2461399.2417375804,
+          "errorSeconds": -22.26570099592209
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4-0",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": 0,
+      "referenceEvents": 638,
+      "predictedEvents": 632,
+      "pairedEvents": 632,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461393.991734869,
+          "rising": true
+        },
+        {
+          "jd": 2461394.0041559967,
+          "rising": false
+        },
+        {
+          "jd": 2461394.996935503,
+          "rising": true
+        },
+        {
+          "jd": 2461394.999661045,
+          "rising": false
+        },
+        {
+          "jd": 2461397.9962580283,
+          "rising": true
+        },
+        {
+          "jd": 2461398.002461945,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461393.5,
+          "rising": true,
+          "cycleStartJD": 2461393.497825971,
+          "cycleEndJD": 2461394.498161485
+        },
+        {
+          "jd": 2461393.5,
+          "rising": false,
+          "cycleStartJD": 2461393.497825971,
+          "cycleEndJD": 2461394.498161485
+        },
+        {
+          "jd": 2461394.5,
+          "rising": true,
+          "cycleStartJD": 2461394.4981614826,
+          "cycleEndJD": 2461395.498498086
+        },
+        {
+          "jd": 2461394.5,
+          "rising": false,
+          "cycleStartJD": 2461394.4981614826,
+          "cycleEndJD": 2461395.498498086
+        },
+        {
+          "jd": 2461395.5,
+          "rising": true,
+          "cycleStartJD": 2461395.498498087,
+          "cycleEndJD": 2461396.4988354044
+        },
+        {
+          "jd": 2461395.5,
+          "rising": false,
+          "cycleStartJD": 2461395.498498087,
+          "cycleEndJD": 2461396.4988354044
+        },
+        {
+          "jd": 2461396.5,
+          "rising": true,
+          "cycleStartJD": 2461396.4988354044,
+          "cycleEndJD": 2461397.499173048
+        },
+        {
+          "jd": 2461396.5,
+          "rising": false,
+          "cycleStartJD": 2461396.4988354044,
+          "cycleEndJD": 2461397.499173048
+        },
+        {
+          "jd": 2461397.5,
+          "rising": true,
+          "cycleStartJD": 2461397.4991730424,
+          "cycleEndJD": 2461398.4995106277
+        },
+        {
+          "jd": 2461397.5,
+          "rising": false,
+          "cycleStartJD": 2461397.4991730424,
+          "cycleEndJD": 2461398.4995106277
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 26.429951190948486,
+      "worst": [
+        {
+          "jd": 2461399.0071960697,
+          "rising": false,
+          "referenceJD": 2461399.0068901675,
+          "errorSeconds": 26.429951190948486
+        },
+        {
+          "jd": 2461398.992250287,
+          "rising": true,
+          "referenceJD": 2461398.9925374375,
+          "errorSeconds": -24.809803068637848
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4-90",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": 90,
+      "referenceEvents": 638,
+      "predictedEvents": 632,
+      "pairedEvents": 632,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461394.745177881,
+          "rising": true
+        },
+        {
+          "jd": 2461394.751242074,
+          "rising": false
+        },
+        {
+          "jd": 2461397.747781131,
+          "rising": true
+        },
+        {
+          "jd": 2461397.750761825,
+          "rising": false
+        },
+        {
+          "jd": 2461398.7433652147,
+          "rising": true
+        },
+        {
+          "jd": 2461398.7558855684,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461394.5,
+          "rising": true,
+          "cycleStartJD": 2461394.248077491,
+          "cycleEndJD": 2461395.248413854
+        },
+        {
+          "jd": 2461394.5,
+          "rising": false,
+          "cycleStartJD": 2461394.248077491,
+          "cycleEndJD": 2461395.248413854
+        },
+        {
+          "jd": 2461395.5,
+          "rising": true,
+          "cycleStartJD": 2461395.248413857,
+          "cycleEndJD": 2461396.2487510317
+        },
+        {
+          "jd": 2461395.5,
+          "rising": false,
+          "cycleStartJD": 2461395.248413857,
+          "cycleEndJD": 2461396.2487510317
+        },
+        {
+          "jd": 2461396.5,
+          "rising": true,
+          "cycleStartJD": 2461396.2487510345,
+          "cycleEndJD": 2461397.2490886245
+        },
+        {
+          "jd": 2461396.5,
+          "rising": false,
+          "cycleStartJD": 2461396.2487510345,
+          "cycleEndJD": 2461397.2490886245
+        },
+        {
+          "jd": 2461397.5,
+          "rising": true,
+          "cycleStartJD": 2461397.2490886264,
+          "cycleEndJD": 2461398.2494262564
+        },
+        {
+          "jd": 2461397.5,
+          "rising": false,
+          "cycleStartJD": 2461397.2490886264,
+          "cycleEndJD": 2461398.2494262564
+        },
+        {
+          "jd": 2461398.5,
+          "rising": true,
+          "cycleStartJD": 2461398.2494262564,
+          "cycleEndJD": 2461399.2497635493
+        },
+        {
+          "jd": 2461398.5,
+          "rising": false,
+          "cycleStartJD": 2461398.2494262564,
+          "cycleEndJD": 2461399.2497635493
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 31.912600994110107,
+      "worst": [
+        {
+          "jd": 2461235.2628355054,
+          "rising": true,
+          "referenceJD": 2461235.2624661466,
+          "errorSeconds": 31.912600994110107
+        },
+        {
+          "jd": 2461235.245626729,
+          "rising": false,
+          "referenceJD": 2461235.24598996,
+          "errorSeconds": -31.383173167705536
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4-179.9",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 634,
+      "predictedEvents": 630,
+      "pairedEvents": 630,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461394.4941867716,
+          "rising": true
+        },
+        {
+          "jd": 2461394.5026124488,
+          "rising": false
+        },
+        {
+          "jd": 2461398.4945121617,
+          "rising": true
+        },
+        {
+          "jd": 2461398.5051174876,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461234.5,
+          "rising": false,
+          "cycleStartJD": 2461234.0043959543,
+          "cycleEndJD": 2461235.0044869795
+        },
+        {
+          "jd": 2461235.5,
+          "rising": true,
+          "cycleStartJD": 2461235.004486977,
+          "cycleEndJD": 2461236.0045723706
+        },
+        {
+          "jd": 2461394.5,
+          "rising": true,
+          "cycleStartJD": 2461393.998271441,
+          "cycleEndJD": 2461394.998607547
+        },
+        {
+          "jd": 2461394.5,
+          "rising": false,
+          "cycleStartJD": 2461393.998271441,
+          "cycleEndJD": 2461394.998607547
+        },
+        {
+          "jd": 2461395.5,
+          "rising": true,
+          "cycleStartJD": 2461394.9986075475,
+          "cycleEndJD": 2461395.998944557
+        },
+        {
+          "jd": 2461395.5,
+          "rising": false,
+          "cycleStartJD": 2461394.9986075475,
+          "cycleEndJD": 2461395.998944557
+        },
+        {
+          "jd": 2461396.5,
+          "rising": true,
+          "cycleStartJD": 2461395.9989445554,
+          "cycleEndJD": 2461396.9992820784
+        },
+        {
+          "jd": 2461396.5,
+          "rising": false,
+          "cycleStartJD": 2461395.9989445554,
+          "cycleEndJD": 2461396.9992820784
+        },
+        {
+          "jd": 2461397.5,
+          "rising": true,
+          "cycleStartJD": 2461396.999282079,
+          "cycleEndJD": 2461397.9996197377
+        },
+        {
+          "jd": 2461397.5,
+          "rising": false,
+          "cycleStartJD": 2461396.999282079,
+          "cycleEndJD": 2461397.9996197377
+        },
+        {
+          "jd": 2461398.5,
+          "rising": true,
+          "cycleStartJD": 2461397.9996197373,
+          "cycleEndJD": 2461398.9999571573
+        },
+        {
+          "jd": 2461398.5,
+          "rising": false,
+          "cycleStartJD": 2461397.9996197373,
+          "cycleEndJD": 2461398.9999571573
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 23.775891959667206,
+      "worst": [
+        {
+          "jd": 2461393.506339851,
+          "rising": false,
+          "referenceJD": 2461393.506064667,
+          "errorSeconds": 23.775891959667206
+        },
+        {
+          "jd": 2461393.489772239,
+          "rising": true,
+          "referenceJD": 2461393.4900299166,
+          "errorSeconds": -22.263367474079132
+        }
+      ]
+    },
+    {
+      "name": "grid-70--179.9",
+      "latitudeDeg": 70,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 482,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461176.9951927876,
+          "rising": false
+        },
+        {
+          "jd": 2461176.9985644086,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461175.5,
+          "rising": false,
+          "cycleStartJD": 2461175.996881385,
+          "cycleEndJD": 2461176.9969010307
+        },
+        {
+          "jd": 2461176.5,
+          "rising": true,
+          "cycleStartJD": 2461176.9969010395,
+          "cycleEndJD": 2461177.996927326
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 28.89608144760132,
+      "worst": [
+        {
+          "jd": 2461057.5189724695,
+          "rising": false,
+          "referenceJD": 2461057.518638024,
+          "errorSeconds": 28.89608144760132
+        },
+        {
+          "jd": 2461057.4947933136,
+          "rising": true,
+          "referenceJD": 2461057.4951110776,
+          "errorSeconds": -27.454809844493866
+        }
+      ]
+    },
+    {
+      "name": "grid-70--90",
+      "latitudeDeg": 70,
+      "longitudeDeg": -90,
+      "referenceEvents": 482,
+      "predictedEvents": 480,
+      "pairedEvents": 480,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461057.2552176313,
+          "rising": true
+        },
+        {
+          "jd": 2461057.2589659197,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461056.5,
+          "rising": true,
+          "cycleStartJD": 2461056.756513736,
+          "cycleEndJD": 2461057.7567404807
+        },
+        {
+          "jd": 2461056.5,
+          "rising": false,
+          "cycleStartJD": 2461056.756513736,
+          "cycleEndJD": 2461057.7567404807
+        },
+        {
+          "jd": 2461369.5,
+          "rising": true,
+          "cycleStartJD": 2461369.741101605,
+          "cycleEndJD": 2461370.741310069
+        },
+        {
+          "jd": 2461369.5,
+          "rising": false,
+          "cycleStartJD": 2461369.741101605,
+          "cycleEndJD": 2461370.741310069
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 14.714182913303375,
+      "worst": [
+        {
+          "jd": 2461058.280966849,
+          "rising": false,
+          "referenceJD": 2461058.280796546,
+          "errorSeconds": 14.714182913303375
+        },
+        {
+          "jd": 2461058.233712118,
+          "rising": true,
+          "referenceJD": 2461058.2338658357,
+          "errorSeconds": -13.281199336051941
+        }
+      ]
+    },
+    {
+      "name": "grid-70-0",
+      "latitudeDeg": 70,
+      "longitudeDeg": 0,
+      "referenceEvents": 482,
+      "predictedEvents": 482,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 16.987837851047516,
+      "worst": [
+        {
+          "jd": 2461058.027768679,
+          "rising": false,
+          "referenceJD": 2461058.0275720605,
+          "errorSeconds": 16.987837851047516
+        },
+        {
+          "jd": 2461369.980963884,
+          "rising": true,
+          "referenceJD": 2461369.98115068,
+          "errorSeconds": -16.13920032978058
+        }
+      ]
+    },
+    {
+      "name": "grid-70-90",
+      "latitudeDeg": 70,
+      "longitudeDeg": 90,
+      "referenceEvents": 482,
+      "predictedEvents": 482,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 20.728594064712524,
+      "worst": [
+        {
+          "jd": 2461057.7740271864,
+          "rising": false,
+          "referenceJD": 2461057.773787272,
+          "errorSeconds": 20.728594064712524
+        },
+        {
+          "jd": 2461057.740414477,
+          "rising": true,
+          "referenceJD": 2461057.740637742,
+          "errorSeconds": -19.290098547935486
+        }
+      ]
+    },
+    {
+      "name": "grid-70-179.9",
+      "latitudeDeg": 70,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 482,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461176.995855117,
+          "rising": false
+        },
+        {
+          "jd": 2461176.999013218,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461176.5,
+          "rising": false,
+          "cycleStartJD": 2461175.9974369267,
+          "cycleEndJD": 2461176.9974565967
+        },
+        {
+          "jd": 2461177.5,
+          "rising": true,
+          "cycleStartJD": 2461176.9974566,
+          "cycleEndJD": 2461177.9974828768
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 28.865423798561096,
+      "worst": [
+        {
+          "jd": 2461057.519540606,
+          "rising": false,
+          "referenceJD": 2461057.5192065155,
+          "errorSeconds": 28.865423798561096
+        },
+        {
+          "jd": 2461057.4953365447,
+          "rising": true,
+          "referenceJD": 2461057.4956539655,
+          "errorSeconds": -27.42515802383423
+        }
+      ]
+    },
+    {
+      "name": "grid-80--179.9",
+      "latitudeDeg": 80,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 210,
+      "predictedEvents": 208,
+      "pairedEvents": 208,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461143.9897178803,
+          "rising": false
+        },
+        {
+          "jd": 2461144.008547826,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461142.5,
+          "rising": false,
+          "cycleStartJD": 2461142.9993177345,
+          "cycleEndJD": 2461143.999147146
+        },
+        {
+          "jd": 2461143.5,
+          "rising": true,
+          "cycleStartJD": 2461143.9991471292,
+          "cycleEndJD": 2461144.9989805454
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 17.62295812368393,
+      "worst": [
+        {
+          "jd": 2461092.5426030345,
+          "rising": false,
+          "referenceJD": 2461092.542399065,
+          "errorSeconds": 17.62295812368393
+        },
+        {
+          "jd": 2461334.454839903,
+          "rising": true,
+          "referenceJD": 2461334.455017913,
+          "errorSeconds": -15.380081534385681
+        }
+      ]
+    },
+    {
+      "name": "grid-80--90",
+      "latitudeDeg": 80,
+      "longitudeDeg": -90,
+      "referenceEvents": 210,
+      "predictedEvents": 210,
+      "pairedEvents": 210,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 23.365876078605652,
+      "worst": [
+        {
+          "jd": 2461092.2846107213,
+          "rising": false,
+          "referenceJD": 2461092.284340283,
+          "errorSeconds": 23.365876078605652
+        },
+        {
+          "jd": 2461143.72613501,
+          "rising": false,
+          "referenceJD": 2461143.7258712407,
+          "errorSeconds": 22.78965711593628
+        }
+      ]
+    },
+    {
+      "name": "grid-80-0",
+      "latitudeDeg": 80,
+      "longitudeDeg": 0,
+      "referenceEvents": 212,
+      "predictedEvents": 212,
+      "pairedEvents": 212,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 51.662322878837585,
+      "worst": [
+        {
+          "jd": 2461092.0212533018,
+          "rising": false,
+          "referenceJD": 2461092.020655358,
+          "errorSeconds": 51.662322878837585
+        },
+        {
+          "jd": 2461091.999653198,
+          "rising": true,
+          "referenceJD": 2461092.000206781,
+          "errorSeconds": -47.82959371805191
+        }
+      ]
+    },
+    {
+      "name": "grid-80-90",
+      "latitudeDeg": 80,
+      "longitudeDeg": 90,
+      "referenceEvents": 210,
+      "predictedEvents": 208,
+      "pairedEvents": 208,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461282.243241741,
+          "rising": false
+        },
+        {
+          "jd": 2461282.259801049,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461281.5,
+          "rising": false,
+          "cycleStartJD": 2461281.2517278777,
+          "cycleEndJD": 2461282.2515249
+        },
+        {
+          "jd": 2461282.5,
+          "rising": true,
+          "cycleStartJD": 2461282.2515248843,
+          "cycleEndJD": 2461283.2513178126
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 19.18758451938629,
+      "worst": [
+        {
+          "jd": 2461334.71299736,
+          "rising": true,
+          "referenceJD": 2461334.7132194387,
+          "errorSeconds": -19.18758451938629
+        },
+        {
+          "jd": 2461143.2110020285,
+          "rising": false,
+          "referenceJD": 2461143.210830295,
+          "errorSeconds": 14.837779104709625
+        }
+      ]
+    },
+    {
+      "name": "grid-80-179.9",
+      "latitudeDeg": 80,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 210,
+      "predictedEvents": 208,
+      "pairedEvents": 208,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461143.9903286053,
+          "rising": false
+        },
+        {
+          "jd": 2461144.0090480368,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461143.5,
+          "rising": false,
+          "cycleStartJD": 2461142.9998731585,
+          "cycleEndJD": 2461143.9997025593
+        },
+        {
+          "jd": 2461144.5,
+          "rising": true,
+          "cycleStartJD": 2461143.999702588,
+          "cycleEndJD": 2461144.9995360496
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 17.61454939842224,
+      "worst": [
+        {
+          "jd": 2461092.5431746664,
+          "rising": false,
+          "referenceJD": 2461092.5429707943,
+          "errorSeconds": 17.61454939842224
+        },
+        {
+          "jd": 2461334.45541091,
+          "rising": true,
+          "referenceJD": 2461334.45558898,
+          "errorSeconds": -15.385271608829498
+        }
+      ]
+    },
+    {
+      "name": "grid-89--179.9",
+      "latitudeDeg": 89,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 18,
+      "pairedEvents": 18,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461115.4937444828,
+          "rising": true
+        },
+        {
+          "jd": 2461115.5379364886,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461114.5,
+          "rising": true,
+          "cycleStartJD": 2461114.9958868963,
+          "cycleEndJD": 2461115.995682422
+        },
+        {
+          "jd": 2461114.5,
+          "rising": false,
+          "cycleStartJD": 2461114.9958868963,
+          "cycleEndJD": 2461115.995682422
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 50.024592876434326,
+      "worst": [
+        {
+          "jd": 2461116.666589897,
+          "rising": false,
+          "referenceJD": 2461116.666010909,
+          "errorSeconds": 50.024592876434326
+        },
+        {
+          "jd": 2461119.8883108003,
+          "rising": false,
+          "referenceJD": 2461119.887732309,
+          "errorSeconds": 49.98166412115097
+        }
+      ]
+    },
+    {
+      "name": "grid-89--90",
+      "latitudeDeg": 89,
+      "longitudeDeg": -90,
+      "referenceEvents": 18,
+      "predictedEvents": 18,
+      "pairedEvents": 18,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [
+        {
+          "jd": 2461310.5,
+          "rising": true,
+          "cycleStartJD": 2461310.753666786,
+          "cycleEndJD": 2461311.7534241304
+        },
+        {
+          "jd": 2461310.5,
+          "rising": false,
+          "cycleStartJD": 2461310.753666786,
+          "cycleEndJD": 2461311.7534241304
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 56.51693344116211,
+      "worst": [
+        {
+          "jd": 2461116.395898968,
+          "rising": false,
+          "referenceJD": 2461116.395244837,
+          "errorSeconds": 56.51693344116211
+        },
+        {
+          "jd": 2461116.1383476015,
+          "rising": true,
+          "referenceJD": 2461116.1389816655,
+          "errorSeconds": -54.7831267118454
+        }
+      ]
+    },
+    {
+      "name": "grid-89-0",
+      "latitudeDeg": 89,
+      "longitudeDeg": 0,
+      "referenceEvents": 22,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461120.465640697,
+          "rising": false
+        },
+        {
+          "jd": 2461120.524334674,
+          "rising": true
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461119.5,
+          "rising": false,
+          "cycleStartJD": 2461119.4952487377,
+          "cycleEndJD": 2461120.4950471427
+        },
+        {
+          "jd": 2461120.5,
+          "rising": true,
+          "cycleStartJD": 2461120.4950473723,
+          "cycleEndJD": 2461121.494847185
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 2,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 67.50532686710358,
+      "worst": [
+        {
+          "jd": 2461116.122006695,
+          "rising": false,
+          "referenceJD": 2461116.121225383,
+          "errorSeconds": 67.50532686710358
+        },
+        {
+          "jd": 2461115.9115092373,
+          "rising": true,
+          "referenceJD": 2461115.9122710857,
+          "errorSeconds": -65.8237025141716
+        }
+      ]
+    },
+    {
+      "name": "grid-89-90",
+      "latitudeDeg": 89,
+      "longitudeDeg": 90,
+      "referenceEvents": 22,
+      "predictedEvents": 22,
+      "pairedEvents": 22,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 4,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 91.5630117058754,
+      "worst": [
+        {
+          "jd": 2461115.842398436,
+          "rising": false,
+          "referenceJD": 2461115.8413386787,
+          "errorSeconds": 91.5630117058754
+        },
+        {
+          "jd": 2461115.6904569594,
+          "rising": true,
+          "referenceJD": 2461115.691497656,
+          "errorSeconds": -89.91618901491165
+        }
+      ]
+    },
+    {
+      "name": "grid-89-179.9",
+      "latitudeDeg": 89,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 18,
+      "pairedEvents": 18,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461115.4940489796,
+          "rising": true
+        },
+        {
+          "jd": 2461115.538744317,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461115.5,
+          "rising": true,
+          "cycleStartJD": 2461114.996442499,
+          "cycleEndJD": 2461115.9962380906
+        },
+        {
+          "jd": 2461115.5,
+          "rising": false,
+          "cycleStartJD": 2461114.996442499,
+          "cycleEndJD": 2461115.9962380906
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 50.01280456781387,
+      "worst": [
+        {
+          "jd": 2461116.6671898644,
+          "rising": false,
+          "referenceJD": 2461116.6666110125,
+          "errorSeconds": 50.01280456781387
+        },
+        {
+          "jd": 2461119.888923904,
+          "rising": false,
+          "referenceJD": 2461119.8883451866,
+          "errorSeconds": 50.001177191734314
+        }
+      ]
+    },
+    {
+      "name": "Rome",
+      "latitudeDeg": 41.9028,
+      "longitudeDeg": 12.4964,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.815348446369171,
+      "worst": [
+        {
+          "jd": 2461081.191124348,
+          "rising": false,
+          "referenceJD": 2461081.191080189,
+          "errorSeconds": 3.815348446369171
+        },
+        {
+          "jd": 2461082.1920135356,
+          "rising": false,
+          "referenceJD": 2461082.1919694445,
+          "errorSeconds": 3.8094744086265564
+        }
+      ]
+    },
+    {
+      "name": "Babylon",
+      "latitudeDeg": 32.5355,
+      "longitudeDeg": 44.4275,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 3.568880259990692,
+      "worst": [
+        {
+          "jd": 2461081.1128632,
+          "rising": false,
+          "referenceJD": 2461081.1128218933,
+          "errorSeconds": 3.568880259990692
+        },
+        {
+          "jd": 2461082.113490414,
+          "rising": false,
+          "referenceJD": 2461082.1134491367,
+          "errorSeconds": 3.5663455724716187
+        }
+      ]
+    },
+    {
+      "name": "Tromso",
+      "latitudeDeg": 69.6492,
+      "longitudeDeg": 18.9553,
+      "referenceEvents": 498,
+      "predictedEvents": 496,
+      "pairedEvents": 496,
+      "missing": [],
+      "withheld": [
+        {
+          "jd": 2461371.9313939353,
+          "rising": true
+        },
+        {
+          "jd": 2461371.9455570765,
+          "rising": false
+        }
+      ],
+      "uncertain": [
+        {
+          "jd": 2461371.5,
+          "rising": true,
+          "cycleStartJD": 2461371.4388026292,
+          "cycleEndJD": 2461372.439025447
+        },
+        {
+          "jd": 2461371.5,
+          "rising": false,
+          "cycleStartJD": 2461371.4388026292,
+          "cycleEndJD": 2461372.439025447
+        }
+      ],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 20.853477716445923,
+      "worst": [
+        {
+          "jd": 2461055.9712445224,
+          "rising": false,
+          "referenceJD": 2461055.9710031627,
+          "errorSeconds": 20.853477716445923
+        },
+        {
+          "jd": 2461247.4421791267,
+          "rising": false,
+          "referenceJD": 2461247.4424064946,
+          "errorSeconds": -19.644592702388763
+        }
+      ]
+    },
+    {
+      "name": "Utqiagvik",
+      "latitudeDeg": 71.2906,
+      "longitudeDeg": -156.7886,
+      "referenceEvents": 436,
+      "predictedEvents": 436,
+      "pairedEvents": 436,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 28.873349726200104,
+      "worst": [
+        {
+          "jd": 2461063.4545141095,
+          "rising": false,
+          "referenceJD": 2461063.4541799272,
+          "errorSeconds": 28.873349726200104
+        },
+        {
+          "jd": 2461063.4334545135,
+          "rising": true,
+          "referenceJD": 2461063.433769997,
+          "errorSeconds": -27.25778818130493
+        }
+      ]
+    }
+  ]
+}

@@ -19,7 +19,7 @@
  * than transcribed from a numbered algorithm.
  */
 
-import { sunTimes } from './astronomy/sun-moon.js';
+import { solarDayEvents } from './astronomy/sun-moon.js';
 import {
   type CalendarDate,
   displayYear,
@@ -511,18 +511,21 @@ export interface RomanHour {
 /**
  * Which Roman seasonal hour (of 12 daylight horae) or night watch (of 4
  * vigiliae) `jd` falls in, at (`latDeg`, `lonDeg`). Daylight is
- * {@link sunTimes}'s sunrise..sunset divided into 12 equal parts; night is
+ * {@link solarDayEvents}'s sunrise..sunset divided into 12 equal parts; night is
  * the sunset..next-sunrise span divided into 4 equal parts. Inherits
- * {@link sunTimes}'s accuracy caveats: no Delta-T correction and the civil
+ * {@link solarDayEvents}'s accuracy caveats: no Delta-T correction and the civil
  * day is treated as a constant 86400 SI seconds, so treat results as
  * approximate over historical timescales.
  */
 export function romanHour(jd: JulianDay, latDeg: number, lonDeg: number): RomanHour {
   // A solar day can cross the UTC date boundary. Check the neighboring days
   // before choosing daylight or the sunset..sunrise interval that contains jd.
-  const days = [-1, 0, 1].map((offset) => sunTimes(jd + offset, latDeg, lonDeg));
-  const daylight = days.find((day) => !day.circumpolar && jd >= day.sunriseJD && jd < day.sunsetJD);
-  if (daylight) {
+  const days = [-1, 0, 1].map((offset) => solarDayEvents(jd + offset, latDeg, lonDeg));
+  const daylight = days.find(
+    (day) =>
+      day.sunriseJD !== null && day.sunsetJD !== null && jd >= day.sunriseJD && jd < day.sunsetJD,
+  );
+  if (daylight && daylight.sunriseJD !== null && daylight.sunsetJD !== null) {
     const frac = (jd - daylight.sunriseJD) / (daylight.sunsetJD - daylight.sunriseJD);
     const index = Math.min(12, Math.floor(frac * 12) + 1);
     const name = HORA_NAMES[index - 1] ?? HORA_NAMES[11];
@@ -530,10 +533,10 @@ export function romanHour(jd: JulianDay, latDeg: number, lonDeg: number): RomanH
   }
 
   const nightStart = Math.max(
-    ...days.filter((day) => !day.circumpolar && day.sunsetJD <= jd).map((day) => day.sunsetJD),
+    ...days.flatMap((day) => (day.sunsetJD !== null && day.sunsetJD <= jd ? [day.sunsetJD] : [])),
   );
   const nightEnd = Math.min(
-    ...days.filter((day) => !day.circumpolar && day.sunriseJD > jd).map((day) => day.sunriseJD),
+    ...days.flatMap((day) => (day.sunriseJD !== null && day.sunriseJD > jd ? [day.sunriseJD] : [])),
   );
   if (!Number.isFinite(nightStart) || !Number.isFinite(nightEnd) || nightEnd - nightStart > 1) {
     return { isDaytime: true, index: 1, label: 'hora prima', circumpolar: true };

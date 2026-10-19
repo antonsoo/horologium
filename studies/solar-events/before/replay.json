@@ -1,0 +1,3030 @@
+{
+  "oracleSha256": "081ff7f237ba8316bd993fccf8ece304f48d344abbbb08f9c2bfbb1747080f3a",
+  "provenance": {
+    "producer": "Skyfield 1.55",
+    "ephemeris": "JPL DE421",
+    "source": "https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de421.bsp",
+    "ephemerisSha256": "a20a7139da04cbc462454634918e9a9ca69127044e2cc9d4f9c16e238d2deedc",
+    "definition": "topocentric apparent solar center altitude -0.8333 degrees; no weather or elevation model",
+    "timeBasis": "UT1 Julian days; UTC approximates UT1 in the application"
+  },
+  "model": "noon declination",
+  "year": 2026,
+  "grazingCycleEdgeToleranceSeconds": 60,
+  "sites": 74,
+  "calls": 27158,
+  "elapsedMs": 288.593614,
+  "referenceEvents": 37247,
+  "predictedEvents": 37262,
+  "pairedEvents": 37172,
+  "withheldEvents": 0,
+  "grazingBoundaries": 0,
+  "missingEvents": 75,
+  "spuriousEvents": 90,
+  "eventsOver60Seconds": 16946,
+  "eventsOver300Seconds": 1495,
+  "maxErrorSeconds": 7988.085097074509,
+  "controls": [
+    {
+      "name": "north-short-day",
+      "result": {
+        "sunriseJD": 2461115.401594291,
+        "transitJD": 2461115.5062482893,
+        "sunsetJD": 2461115.6109022875,
+        "circumpolar": false
+      }
+    },
+    {
+      "name": "south-short-day",
+      "result": {
+        "sunriseJD": 2461124.7541218675,
+        "transitJD": 2461124.7541218675,
+        "sunsetJD": 2461124.7541218675,
+        "circumpolar": true
+      }
+    },
+    {
+      "name": "first-sunset",
+      "result": {
+        "sunriseJD": 2461119.5050888443,
+        "transitJD": 2461119.5050888443,
+        "sunsetJD": 2461119.5050888443,
+        "circumpolar": true
+      }
+    },
+    {
+      "name": "first-sunrise",
+      "result": {
+        "sunriseJD": 2461362.739678541,
+        "transitJD": 2461362.739678541,
+        "sunsetJD": 2461362.739678541,
+        "circumpolar": true
+      }
+    },
+    {
+      "name": "phantom-daylight",
+      "result": {
+        "sunriseJD": 2461301.6805761126,
+        "transitJD": 2461301.7459450383,
+        "sunsetJD": 2461301.811313964,
+        "circumpolar": false
+      }
+    },
+    {
+      "name": "rome-summer",
+      "result": {
+        "sunriseJD": 2461212.6492710537,
+        "transitJD": 2461212.9665546324,
+        "sunsetJD": 2461213.283838211,
+        "circumpolar": false
+      }
+    },
+    {
+      "name": "babylon-winter",
+      "result": {
+        "sunriseJD": 2461395.6667415844,
+        "transitJD": 2461395.875254899,
+        "sunsetJD": 2461396.083768213,
+        "circumpolar": false
+      }
+    },
+    {
+      "name": "east-date-line",
+      "result": {
+        "sunriseJD": 2461115.257013827,
+        "transitJD": 2461115.5062482893,
+        "sunsetJD": 2461115.7554827514,
+        "circumpolar": false
+      }
+    },
+    {
+      "name": "west-date-line",
+      "result": {
+        "sunriseJD": 2461116.2564582718,
+        "transitJD": 2461116.505692734,
+        "sunsetJD": 2461116.754927196,
+        "circumpolar": false
+      }
+    },
+    {
+      "name": "polar-day",
+      "result": {
+        "sunriseJD": 2461213.001266855,
+        "transitJD": 2461213.001266855,
+        "sunsetJD": 2461213.001266855,
+        "circumpolar": true
+      }
+    },
+    {
+      "name": "polar-night",
+      "result": {
+        "sunriseJD": 2461395.998664621,
+        "transitJD": 2461395.998664621,
+        "sunsetJD": 2461395.998664621,
+        "circumpolar": true
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "grid--89--179.9",
+      "latitudeDeg": -89,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 19,
+      "missing": [
+        {
+          "jd": 2461119.9340141634,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461306.8544207616,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 19,
+      "over300Seconds": 19,
+      "maxErrorSeconds": 6834.429636597633,
+      "worst": [
+        {
+          "jd": 2461120.924981826,
+          "rising": false,
+          "referenceJD": 2461120.845879631,
+          "errorSeconds": 6834.429636597633
+        },
+        {
+          "jd": 2461302.5610361863,
+          "rising": false,
+          "referenceJD": 2461302.627652672,
+          "errorSeconds": -5755.664375424385
+        }
+      ]
+    },
+    {
+      "name": "grid--89--90",
+      "latitudeDeg": -89,
+      "longitudeDeg": -90,
+      "referenceEvents": 22,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [
+        {
+          "jd": 2461119.726988503,
+          "rising": false
+        },
+        {
+          "jd": 2461306.7976490357,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 19,
+      "over300Seconds": 17,
+      "maxErrorSeconds": 5784.052714705467,
+      "worst": [
+        {
+          "jd": 2461306.6046985392,
+          "rising": false,
+          "referenceJD": 2461306.671643594,
+          "errorSeconds": -5784.052714705467
+        },
+        {
+          "jd": 2461120.6752596037,
+          "rising": false,
+          "referenceJD": 2461120.6142380014,
+          "errorSeconds": 5272.266434133053
+        }
+      ]
+    },
+    {
+      "name": "grid--89-0",
+      "latitudeDeg": -89,
+      "longitudeDeg": 0,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 19,
+      "missing": [
+        {
+          "jd": 2461306.579866177,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461119.585064,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 19,
+      "over300Seconds": 19,
+      "maxErrorSeconds": 3560.073709487915,
+      "worst": [
+        {
+          "jd": 2461120.4252596037,
+          "rising": false,
+          "referenceJD": 2461120.384055047,
+          "errorSeconds": 3560.073709487915
+        },
+        {
+          "jd": 2461306.3546985392,
+          "rising": false,
+          "referenceJD": 2461306.3888398632,
+          "errorSeconds": -2949.810393154621
+        }
+      ]
+    },
+    {
+      "name": "grid--89-90",
+      "latitudeDeg": -89,
+      "longitudeDeg": 90,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 17,
+      "missing": [
+        {
+          "jd": 2461124.7322562155,
+          "rising": true
+        },
+        {
+          "jd": 2461124.756150309,
+          "rising": false
+        },
+        {
+          "jd": 2461306.3542886185,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461119.335064,
+          "rising": true
+        },
+        {
+          "jd": 2461301.6805761126,
+          "rising": true
+        },
+        {
+          "jd": 2461301.811313964,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 17,
+      "over300Seconds": 13,
+      "maxErrorSeconds": 4292.091344296932,
+      "worst": [
+        {
+          "jd": 2461120.424995305,
+          "rising": true,
+          "referenceJD": 2461120.375318322,
+          "errorSeconds": 4292.091344296932
+        },
+        {
+          "jd": 2461305.3852169593,
+          "rising": true,
+          "referenceJD": 2461305.427435144,
+          "errorSeconds": -3647.651146352291
+        }
+      ]
+    },
+    {
+      "name": "grid--89-179.9",
+      "latitudeDeg": -89,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 17,
+      "missing": [
+        {
+          "jd": 2461124.421965612,
+          "rising": true
+        },
+        {
+          "jd": 2461124.566410455,
+          "rising": false
+        },
+        {
+          "jd": 2461306.1253658934,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461119.0853417777,
+          "rising": true
+        },
+        {
+          "jd": 2461301.4308538903,
+          "rising": true
+        },
+        {
+          "jd": 2461301.5615917416,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 17,
+      "over300Seconds": 17,
+      "maxErrorSeconds": 6735.039429366589,
+      "worst": [
+        {
+          "jd": 2461120.1752730827,
+          "rising": true,
+          "referenceJD": 2461120.0973212374,
+          "errorSeconds": 6735.039429366589
+        },
+        {
+          "jd": 2461305.135494737,
+          "rising": true,
+          "referenceJD": 2461305.1933465735,
+          "errorSeconds": -4998.398678004742
+        }
+      ]
+    },
+    {
+      "name": "grid--80--179.9",
+      "latitudeDeg": -80,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 212,
+      "predictedEvents": 210,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461096.9783085044,
+          "rising": false
+        },
+        {
+          "jd": 2461277.494936406,
+          "rising": true
+        },
+        {
+          "jd": 2461277.5094124847,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461330.9596594027,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 208,
+      "over300Seconds": 116,
+      "maxErrorSeconds": 1920.1180905103683,
+      "worst": [
+        {
+          "jd": 2461097.977683927,
+          "rising": false,
+          "referenceJD": 2461097.955460338,
+          "errorSeconds": 1920.1180905103683
+        },
+        {
+          "jd": 2461329.9367305264,
+          "rising": false,
+          "referenceJD": 2461329.9583541844,
+          "errorSeconds": -1868.2840526103973
+        }
+      ]
+    },
+    {
+      "name": "grid--80--90",
+      "latitudeDeg": -80,
+      "longitudeDeg": -90,
+      "referenceEvents": 210,
+      "predictedEvents": 210,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461096.737537958,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461330.7099371804,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 150,
+      "over300Seconds": 53,
+      "maxErrorSeconds": 1510.0056901574135,
+      "worst": [
+        {
+          "jd": 2461097.7279617046,
+          "rising": false,
+          "referenceJD": 2461097.710484787,
+          "errorSeconds": 1510.0056901574135
+        },
+        {
+          "jd": 2461329.687008304,
+          "rising": false,
+          "referenceJD": 2461329.7016434674,
+          "errorSeconds": -1264.478114247322
+        }
+      ]
+    },
+    {
+      "name": "grid--80-0",
+      "latitudeDeg": -80,
+      "longitudeDeg": 0,
+      "referenceEvents": 210,
+      "predictedEvents": 210,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461096.504970236,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461330.4599371804,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 209,
+      "over300Seconds": 26,
+      "maxErrorSeconds": 2161.520764231682,
+      "worst": [
+        {
+          "jd": 2461096.5401348067,
+          "rising": true,
+          "referenceJD": 2461096.515117205,
+          "errorSeconds": 2161.520764231682
+        },
+        {
+          "jd": 2461329.5199742606,
+          "rising": true,
+          "referenceJD": 2461329.53243636,
+          "errorSeconds": -1076.7254009842873
+        }
+      ]
+    },
+    {
+      "name": "grid--80-90",
+      "latitudeDeg": -80,
+      "longitudeDeg": 90,
+      "referenceEvents": 210,
+      "predictedEvents": 210,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461330.260174257,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461096.2901348067,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 151,
+      "over300Seconds": 56,
+      "maxErrorSeconds": 1531.3886359333992,
+      "worst": [
+        {
+          "jd": 2461329.2699742606,
+          "rising": true,
+          "referenceJD": 2461329.287698666,
+          "errorSeconds": -1531.3886359333992
+        },
+        {
+          "jd": 2461097.312910821,
+          "rising": true,
+          "referenceJD": 2461097.2983246557,
+          "errorSeconds": 1260.2446630597115
+        }
+      ]
+    },
+    {
+      "name": "grid--80-179.9",
+      "latitudeDeg": -80,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 212,
+      "predictedEvents": 210,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461148.4790424104,
+          "rising": true
+        },
+        {
+          "jd": 2461148.518902036,
+          "rising": false
+        },
+        {
+          "jd": 2461330.0196822044,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461096.0404125843,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 208,
+      "over300Seconds": 117,
+      "maxErrorSeconds": 2130.167403817177,
+      "worst": [
+        {
+          "jd": 2461277.4707690207,
+          "rising": true,
+          "referenceJD": 2461277.495423736,
+          "errorSeconds": -2130.167403817177
+        },
+        {
+          "jd": 2461277.5327102738,
+          "rising": false,
+          "referenceJD": 2461277.5100360713,
+          "errorSeconds": 1959.0510919690132
+        }
+      ]
+    },
+    {
+      "name": "grid--70--179.9",
+      "latitudeDeg": -70,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 486,
+      "pairedEvents": 483,
+      "missing": [
+        {
+          "jd": 2461064.9983778195,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461185.491831865,
+          "rising": true
+        },
+        {
+          "jd": 2461185.5032572513,
+          "rising": false
+        },
+        {
+          "jd": 2461362.9713333007,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 380,
+      "over300Seconds": 45,
+      "maxErrorSeconds": 1520.248483121395,
+      "worst": [
+        {
+          "jd": 2461065.9983780943,
+          "rising": false,
+          "referenceJD": 2461065.9807826257,
+          "errorSeconds": 1520.248483121395
+        },
+        {
+          "jd": 2461361.957606285,
+          "rising": false,
+          "referenceJD": 2461361.9707783046,
+          "errorSeconds": -1138.0625054240227
+        }
+      ]
+    },
+    {
+      "name": "grid--70--90",
+      "latitudeDeg": -70,
+      "longitudeDeg": -90,
+      "referenceEvents": 482,
+      "predictedEvents": 486,
+      "pairedEvents": 482,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461064.768124576,
+          "rising": true
+        },
+        {
+          "jd": 2461185.242109643,
+          "rising": true
+        },
+        {
+          "jd": 2461185.253535029,
+          "rising": false
+        },
+        {
+          "jd": 2461362.7216110784,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 288,
+      "over300Seconds": 18,
+      "maxErrorSeconds": 1244.206327199936,
+      "worst": [
+        {
+          "jd": 2461065.748655872,
+          "rising": false,
+          "referenceJD": 2461065.7342553358,
+          "errorSeconds": 1244.206327199936
+        },
+        {
+          "jd": 2461361.7078840625,
+          "rising": false,
+          "referenceJD": 2461361.71690683,
+          "errorSeconds": -779.5671254396439
+        }
+      ]
+    },
+    {
+      "name": "grid--70-0",
+      "latitudeDeg": -70,
+      "longitudeDeg": 0,
+      "referenceEvents": 485,
+      "predictedEvents": 486,
+      "pairedEvents": 485,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461064.518124576,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 250,
+      "over300Seconds": 12,
+      "maxErrorSeconds": 1533.2138925790787,
+      "worst": [
+        {
+          "jd": 2461362.4716110784,
+          "rising": false,
+          "referenceJD": 2461362.4893566095,
+          "errorSeconds": -1533.2138925790787
+        },
+        {
+          "jd": 2461065.498655872,
+          "rising": false,
+          "referenceJD": 2461065.487925504,
+          "errorSeconds": 927.10380256176
+        }
+      ]
+    },
+    {
+      "name": "grid--70-90",
+      "latitudeDeg": -70,
+      "longitudeDeg": 90,
+      "referenceEvents": 486,
+      "predictedEvents": 486,
+      "pairedEvents": 485,
+      "missing": [
+        {
+          "jd": 2461362.252080181,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461064.268124576,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 290,
+      "over300Seconds": 22,
+      "maxErrorSeconds": 981.374117732048,
+      "worst": [
+        {
+          "jd": 2461240.7427373915,
+          "rising": true,
+          "referenceJD": 2461240.754095888,
+          "errorSeconds": -981.374117732048
+        },
+        {
+          "jd": 2461065.2862489903,
+          "rising": true,
+          "referenceJD": 2461065.2751272502,
+          "errorSeconds": 960.9183445572853
+        }
+      ]
+    },
+    {
+      "name": "grid--70-179.9",
+      "latitudeDeg": -70,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 486,
+      "pairedEvents": 483,
+      "missing": [
+        {
+          "jd": 2461362.00765876,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461064.018402354,
+          "rising": true
+        },
+        {
+          "jd": 2461240.493015169,
+          "rising": true
+        },
+        {
+          "jd": 2461240.516351075,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 380,
+      "over300Seconds": 48,
+      "maxErrorSeconds": 1508.537220954895,
+      "worst": [
+        {
+          "jd": 2461065.036526768,
+          "rising": true,
+          "referenceJD": 2461065.0190668465,
+          "errorSeconds": 1508.537220954895
+        },
+        {
+          "jd": 2461361.00773504,
+          "rising": true,
+          "referenceJD": 2461361.021015658,
+          "errorSeconds": -1147.4453955888748
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4--179.9",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 642,
+      "predictedEvents": 644,
+      "pairedEvents": 641,
+      "missing": [
+        {
+          "jd": 2461051.9997787387,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461211.495880603,
+          "rising": true
+        },
+        {
+          "jd": 2461211.505492815,
+          "rising": false
+        },
+        {
+          "jd": 2461375.977623342,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 482,
+      "over300Seconds": 24,
+      "maxErrorSeconds": 1279.0448024868965,
+      "worst": [
+        {
+          "jd": 2461052.9996821573,
+          "rising": false,
+          "referenceJD": 2461052.984878398,
+          "errorSeconds": 1279.0448024868965
+        },
+        {
+          "jd": 2461374.966930766,
+          "rising": false,
+          "referenceJD": 2461374.9771921714,
+          "errorSeconds": -886.5854144096375
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4--90",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": -90,
+      "referenceEvents": 640,
+      "predictedEvents": 644,
+      "pairedEvents": 640,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461051.761032969,
+          "rising": true
+        },
+        {
+          "jd": 2461214.24916422,
+          "rising": true
+        },
+        {
+          "jd": 2461214.253670902,
+          "rising": false
+        },
+        {
+          "jd": 2461375.7279011197,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 348,
+      "over300Seconds": 10,
+      "maxErrorSeconds": 1059.3737348914146,
+      "worst": [
+        {
+          "jd": 2461052.749959935,
+          "rising": false,
+          "referenceJD": 2461052.737698665,
+          "errorSeconds": 1059.3737348914146
+        },
+        {
+          "jd": 2461374.717208544,
+          "rising": false,
+          "referenceJD": 2461374.7242820244,
+          "errorSeconds": -611.148726940155
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4-0",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": 0,
+      "referenceEvents": 642,
+      "predictedEvents": 644,
+      "pairedEvents": 641,
+      "missing": [
+        {
+          "jd": 2461375.4954319857,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461051.511032969,
+          "rising": true
+        },
+        {
+          "jd": 2461213.99916422,
+          "rising": true
+        },
+        {
+          "jd": 2461214.003670902,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 268,
+      "over300Seconds": 8,
+      "maxErrorSeconds": 928.6358803510666,
+      "worst": [
+        {
+          "jd": 2461375.4779011197,
+          "rising": false,
+          "referenceJD": 2461375.48864922,
+          "errorSeconds": -928.6358803510666
+        },
+        {
+          "jd": 2461052.499959935,
+          "rising": false,
+          "referenceJD": 2461052.4906521146,
+          "errorSeconds": 804.1956782341003
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4-90",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": 90,
+      "referenceEvents": 642,
+      "predictedEvents": 644,
+      "pairedEvents": 641,
+      "missing": [
+        {
+          "jd": 2461375.252434176,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461051.261032969,
+          "rising": true
+        },
+        {
+          "jd": 2461213.74916422,
+          "rising": true
+        },
+        {
+          "jd": 2461213.753670902,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 352,
+      "over300Seconds": 13,
+      "maxErrorSeconds": 808.7939634919167,
+      "worst": [
+        {
+          "jd": 2461052.276539804,
+          "rising": true,
+          "referenceJD": 2461052.2671787627,
+          "errorSeconds": 808.7939634919167
+        },
+        {
+          "jd": 2461374.2563446034,
+          "rising": true,
+          "referenceJD": 2461374.264337736,
+          "errorSeconds": -690.6066745519638
+        }
+      ]
+    },
+    {
+      "name": "grid--67.4-179.9",
+      "latitudeDeg": -67.4,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 642,
+      "predictedEvents": 644,
+      "pairedEvents": 641,
+      "missing": [
+        {
+          "jd": 2461375.006618572,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461051.011310747,
+          "rising": true
+        },
+        {
+          "jd": 2461213.4994419976,
+          "rising": true
+        },
+        {
+          "jd": 2461213.5039486797,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 486,
+      "over300Seconds": 25,
+      "maxErrorSeconds": 1313.6904001235962,
+      "worst": [
+        {
+          "jd": 2461052.0268175816,
+          "rising": true,
+          "referenceJD": 2461052.0116128316,
+          "errorSeconds": 1313.6904001235962
+        },
+        {
+          "jd": 2461374.006622381,
+          "rising": true,
+          "referenceJD": 2461374.016727314,
+          "errorSeconds": -873.0661958456039
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5--179.9",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 673,
+      "missing": [
+        {
+          "jd": 2461045.9886967693,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461382.9850494196,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 457,
+      "over300Seconds": 18,
+      "maxErrorSeconds": 857.5226873159409,
+      "worst": [
+        {
+          "jd": 2461381.9747733856,
+          "rising": false,
+          "referenceJD": 2461381.9846984167,
+          "errorSeconds": -857.5226873159409
+        },
+        {
+          "jd": 2461046.9886054154,
+          "rising": false,
+          "referenceJD": 2461046.981400214,
+          "errorSeconds": 622.5293934345245
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5--90",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": -90,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 673,
+      "missing": [
+        {
+          "jd": 2461045.741397343,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461382.7353271972,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 319,
+      "over300Seconds": 7,
+      "maxErrorSeconds": 576.4325603842735,
+      "worst": [
+        {
+          "jd": 2461381.725051163,
+          "rising": false,
+          "referenceJD": 2461381.7317228364,
+          "errorSeconds": -576.4325603842735
+        },
+        {
+          "jd": 2461046.738883193,
+          "rising": false,
+          "referenceJD": 2461046.7332791584,
+          "errorSeconds": 484.1886028647423
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5-0",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": 0,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 673,
+      "missing": [
+        {
+          "jd": 2461045.494417133,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461382.4853271972,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 275,
+      "over300Seconds": 4,
+      "maxErrorSeconds": 484.8703131079674,
+      "worst": [
+        {
+          "jd": 2461381.502815281,
+          "rising": true,
+          "referenceJD": 2461381.508427206,
+          "errorSeconds": -484.8703131079674
+        },
+        {
+          "jd": 2461045.5186112006,
+          "rising": true,
+          "referenceJD": 2461045.5130291446,
+          "errorSeconds": 482.28963911533356
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5-90",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": 90,
+      "referenceEvents": 676,
+      "predictedEvents": 674,
+      "pairedEvents": 674,
+      "missing": [
+        {
+          "jd": 2461045.2491230373,
+          "rising": false
+        },
+        {
+          "jd": 2461382.2477451786,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 321,
+      "over300Seconds": 9,
+      "maxErrorSeconds": 902.6913419365883,
+      "worst": [
+        {
+          "jd": 2461045.2686112006,
+          "rising": true,
+          "referenceJD": 2461045.258163384,
+          "errorSeconds": 902.6913419365883
+        },
+        {
+          "jd": 2461381.252815281,
+          "rising": true,
+          "referenceJD": 2461381.260545994,
+          "errorSeconds": -667.9336130619049
+        }
+      ]
+    },
+    {
+      "name": "grid--66.5-179.9",
+      "latitudeDeg": -66.5,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 674,
+      "predictedEvents": 674,
+      "pairedEvents": 673,
+      "missing": [
+        {
+          "jd": 2461382.003132472,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461045.0188889783,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 459,
+      "over300Seconds": 20,
+      "maxErrorSeconds": 831.3948065042496,
+      "worst": [
+        {
+          "jd": 2461381.0030930587,
+          "rising": true,
+          "referenceJD": 2461381.012715684,
+          "errorSeconds": -831.3948065042496
+        },
+        {
+          "jd": 2461046.026818592,
+          "rising": true,
+          "referenceJD": 2461046.0190725056,
+          "errorSeconds": 669.2618697881699
+        }
+      ]
+    },
+    {
+      "name": "grid--65--179.9",
+      "latitudeDeg": -65,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 429,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 212.95076608657837,
+      "worst": [
+        {
+          "jd": 2461370.9027876724,
+          "rising": false,
+          "referenceJD": 2461370.9052523803,
+          "errorSeconds": -212.95076608657837
+        },
+        {
+          "jd": 2461369.9000396812,
+          "rising": false,
+          "referenceJD": 2461369.9025041857,
+          "errorSeconds": -212.93318420648575
+        }
+      ]
+    },
+    {
+      "name": "grid--65--90",
+      "latitudeDeg": -65,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 301,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 153.69814038276672,
+      "worst": [
+        {
+          "jd": 2461371.655809713,
+          "rising": false,
+          "referenceJD": 2461371.6575886267,
+          "errorSeconds": -153.69814038276672
+        },
+        {
+          "jd": 2461370.65306545,
+          "rising": false,
+          "referenceJD": 2461370.6548442887,
+          "errorSeconds": -153.69166284799576
+        }
+      ]
+    },
+    {
+      "name": "grid--65-0",
+      "latitudeDeg": -65,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 272,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 99.96606409549713,
+      "worst": [
+        {
+          "jd": 2461052.5825861264,
+          "rising": true,
+          "referenceJD": 2461052.581429112,
+          "errorSeconds": 99.96606409549713
+        },
+        {
+          "jd": 2461053.5853288965,
+          "rising": true,
+          "referenceJD": 2461053.5841721296,
+          "errorSeconds": 99.94466006755829
+        }
+      ]
+    },
+    {
+      "name": "grid--65-90",
+      "latitudeDeg": -65,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 304,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 159.48165357112885,
+      "worst": [
+        {
+          "jd": 2461054.33808637,
+          "rising": true,
+          "referenceJD": 2461054.3362405174,
+          "errorSeconds": 159.48165357112885
+        },
+        {
+          "jd": 2461055.34085537,
+          "rising": true,
+          "referenceJD": 2461055.33901042,
+          "errorSeconds": 159.40368175506592
+        }
+      ]
+    },
+    {
+      "name": "grid--65-179.9",
+      "latitudeDeg": -65,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 428,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 219.26539689302444,
+      "worst": [
+        {
+          "jd": 2461055.0911331475,
+          "rising": true,
+          "referenceJD": 2461055.0885953535,
+          "errorSeconds": 219.26539689302444
+        },
+        {
+          "jd": 2461056.093910817,
+          "rising": true,
+          "referenceJD": 2461056.0913737025,
+          "errorSeconds": 219.20669674873352
+        }
+      ]
+    },
+    {
+      "name": "grid-0--179.9",
+      "latitudeDeg": 0,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 20.933903753757477,
+      "worst": [
+        {
+          "jd": 2461396.7509096903,
+          "rising": false,
+          "referenceJD": 2461396.751151981,
+          "errorSeconds": -20.933903753757477
+        },
+        {
+          "jd": 2461397.751253914,
+          "rising": false,
+          "referenceJD": 2461397.7514961283,
+          "errorSeconds": -20.92730551958084
+        }
+      ]
+    },
+    {
+      "name": "grid-0--90",
+      "latitudeDeg": 0,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 13.551928102970123,
+      "worst": [
+        {
+          "jd": 2461041.5046646474,
+          "rising": false,
+          "referenceJD": 2461041.5048214984,
+          "errorSeconds": -13.551928102970123
+        },
+        {
+          "jd": 2461396.501187468,
+          "rising": false,
+          "referenceJD": 2461396.501343805,
+          "errorSeconds": -13.507510721683502
+        }
+      ]
+    },
+    {
+      "name": "grid-0-0",
+      "latitudeDeg": 0,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 7.675918936729431,
+      "worst": [
+        {
+          "jd": 2461398.7471750346,
+          "rising": true,
+          "referenceJD": 2461398.747086193,
+          "errorSeconds": 7.675918936729431
+        },
+        {
+          "jd": 2461399.7475189995,
+          "rising": true,
+          "referenceJD": 2461399.74743021,
+          "errorSeconds": 7.671412825584412
+        }
+      ]
+    },
+    {
+      "name": "grid-0-90",
+      "latitudeDeg": 0,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 15.11269211769104,
+      "worst": [
+        {
+          "jd": 2461398.4971750346,
+          "rising": true,
+          "referenceJD": 2461398.497000119,
+          "errorSeconds": 15.11269211769104
+        },
+        {
+          "jd": 2461397.496830586,
+          "rising": true,
+          "referenceJD": 2461397.496655701,
+          "errorSeconds": 15.110036730766296
+        }
+      ]
+    },
+    {
+      "name": "grid-0-179.9",
+      "latitudeDeg": 0,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 22.542665898799896,
+      "worst": [
+        {
+          "jd": 2461398.2474528123,
+          "rising": true,
+          "referenceJD": 2461398.247191902,
+          "errorSeconds": 22.542665898799896
+        },
+        {
+          "jd": 2461397.2471083635,
+          "rising": true,
+          "referenceJD": 2461397.246847465,
+          "errorSeconds": 22.541619837284088
+        }
+      ]
+    },
+    {
+      "name": "grid-40--179.9",
+      "latitudeDeg": 40,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 71,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 76.85486376285553,
+      "worst": [
+        {
+          "jd": 2461298.7573768497,
+          "rising": false,
+          "referenceJD": 2461298.7564873258,
+          "errorSeconds": 76.85486376285553
+        },
+        {
+          "jd": 2461299.756227878,
+          "rising": false,
+          "referenceJD": 2461299.7553383624,
+          "errorSeconds": 76.85413956642151
+        }
+      ]
+    },
+    {
+      "name": "grid-40--90",
+      "latitudeDeg": 40,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 52.10830718278885,
+      "worst": [
+        {
+          "jd": 2461296.509946675,
+          "rising": false,
+          "referenceJD": 2461296.5093435696,
+          "errorSeconds": 52.10830718278885
+        },
+        {
+          "jd": 2461297.5088017457,
+          "rising": false,
+          "referenceJD": 2461297.5081986873,
+          "errorSeconds": 52.10424363613129
+        }
+      ]
+    },
+    {
+      "name": "grid-40-0",
+      "latitudeDeg": 40,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 27.505624294281006,
+      "worst": [
+        {
+          "jd": 2461292.264497794,
+          "rising": false,
+          "referenceJD": 2461292.264179442,
+          "errorSeconds": 27.505624294281006
+        },
+        {
+          "jd": 2461293.2633649753,
+          "rising": false,
+          "referenceJD": 2461293.263046659,
+          "errorSeconds": 27.502526342868805
+        }
+      ]
+    },
+    {
+      "name": "grid-40-90",
+      "latitudeDeg": 40,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 50.67476034164429,
+      "worst": [
+        {
+          "jd": 2461127.4932200173,
+          "rising": true,
+          "referenceJD": 2461127.4938065307,
+          "errorSeconds": -50.67476034164429
+        },
+        {
+          "jd": 2461126.494345405,
+          "rising": true,
+          "referenceJD": 2461126.4949318515,
+          "errorSeconds": -50.66896677017212
+        }
+      ]
+    },
+    {
+      "name": "grid-40-179.9",
+      "latitudeDeg": 40,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 66,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 74.96342360973358,
+      "worst": [
+        {
+          "jd": 2461126.244623183,
+          "rising": true,
+          "referenceJD": 2461126.245490815,
+          "errorSeconds": -74.96342360973358
+        },
+        {
+          "jd": 2461127.243497795,
+          "rising": true,
+          "referenceJD": 2461127.244365214,
+          "errorSeconds": -74.94499683380127
+        }
+      ]
+    },
+    {
+      "name": "grid-65--179.9",
+      "latitudeDeg": 65,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 439,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 191.49350970983505,
+      "worst": [
+        {
+          "jd": 2461184.9074848257,
+          "rising": false,
+          "referenceJD": 2461184.9097011858,
+          "errorSeconds": -191.49350970983505
+        },
+        {
+          "jd": 2461185.9099591346,
+          "rising": false,
+          "referenceJD": 2461185.9121744367,
+          "errorSeconds": -191.4021000266075
+        }
+      ]
+    },
+    {
+      "name": "grid-65--90",
+      "latitudeDeg": 65,
+      "longitudeDeg": -90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 307,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 138.11041563749313,
+      "worst": [
+        {
+          "jd": 2461185.6602369123,
+          "rising": false,
+          "referenceJD": 2461185.6618354125,
+          "errorSeconds": -138.11041563749313
+        },
+        {
+          "jd": 2461186.662703892,
+          "rising": false,
+          "referenceJD": 2461186.664301635,
+          "errorSeconds": -138.0449965596199
+        }
+      ]
+    },
+    {
+      "name": "grid-65-0",
+      "latitudeDeg": 65,
+      "longitudeDeg": 0,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 268,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 86.5892305970192,
+      "worst": [
+        {
+          "jd": 2461234.5780430413,
+          "rising": true,
+          "referenceJD": 2461234.577040851,
+          "errorSeconds": 86.5892305970192
+        },
+        {
+          "jd": 2461235.5804145057,
+          "rising": true,
+          "referenceJD": 2461235.579412541,
+          "errorSeconds": 86.56975775957108
+        }
+      ]
+    },
+    {
+      "name": "grid-65-90",
+      "latitudeDeg": 65,
+      "longitudeDeg": 90,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 310,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 138.2694572210312,
+      "worst": [
+        {
+          "jd": 2461237.335206892,
+          "rising": true,
+          "referenceJD": 2461237.333606551,
+          "errorSeconds": 138.2694572210312
+        },
+        {
+          "jd": 2461238.3376223454,
+          "rising": true,
+          "referenceJD": 2461238.3360228105,
+          "errorSeconds": 138.1998136639595
+        }
+      ]
+    },
+    {
+      "name": "grid-65-179.9",
+      "latitudeDeg": 65,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 444,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 190.46140909194946,
+      "worst": [
+        {
+          "jd": 2461239.090325219,
+          "rising": true,
+          "referenceJD": 2461239.0881208046,
+          "errorSeconds": 190.46140909194946
+        },
+        {
+          "jd": 2461238.087900123,
+          "rising": true,
+          "referenceJD": 2461238.085696068,
+          "errorSeconds": 190.430349111557
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5--179.9",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 669,
+      "missing": [
+        {
+          "jd": 2461227.9972957773,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461197.983943519,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 454,
+      "over300Seconds": 16,
+      "maxErrorSeconds": 941.381898522377,
+      "worst": [
+        {
+          "jd": 2461228.9971944233,
+          "rising": false,
+          "referenceJD": 2461228.9862987995,
+          "errorSeconds": 941.381898522377
+        },
+        {
+          "jd": 2461196.9765672106,
+          "rising": false,
+          "referenceJD": 2461196.983678964,
+          "errorSeconds": -614.4554883241653
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5--90",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": -90,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 669,
+      "missing": [
+        {
+          "jd": 2461197.754516607,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461227.7591978204,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 321,
+      "over300Seconds": 7,
+      "maxErrorSeconds": 788.1436228752136,
+      "worst": [
+        {
+          "jd": 2461197.734221297,
+          "rising": false,
+          "referenceJD": 2461197.7433433295,
+          "errorSeconds": -788.1436228752136
+        },
+        {
+          "jd": 2461228.747472201,
+          "rising": false,
+          "referenceJD": 2461228.738579981,
+          "errorSeconds": 768.2878062129021
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5-0",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": 0,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 669,
+      "missing": [
+        {
+          "jd": 2461197.5085676624,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461227.5091978204,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 279,
+      "over300Seconds": 4,
+      "maxErrorSeconds": 570.3556269407272,
+      "worst": [
+        {
+          "jd": 2461228.497472201,
+          "rising": false,
+          "referenceJD": 2461228.4908708627,
+          "errorSeconds": 570.3556269407272
+        },
+        {
+          "jd": 2461197.484221297,
+          "rising": false,
+          "referenceJD": 2461197.489225395,
+          "errorSeconds": -432.3540821671486
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5-90",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": 90,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 669,
+      "missing": [
+        {
+          "jd": 2461197.2613871093,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461227.2591978204,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 322,
+      "over300Seconds": 7,
+      "maxErrorSeconds": 615.4968023300171,
+      "worst": [
+        {
+          "jd": 2461228.27043651,
+          "rising": true,
+          "referenceJD": 2461228.2633127044,
+          "errorSeconds": 615.4968023300171
+        },
+        {
+          "jd": 2461196.2637435305,
+          "rising": true,
+          "referenceJD": 2461196.2692271806,
+          "errorSeconds": -473.78737181425095
+        }
+      ]
+    },
+    {
+      "name": "grid-66.5-179.9",
+      "latitudeDeg": 66.5,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 670,
+      "predictedEvents": 670,
+      "pairedEvents": 669,
+      "missing": [
+        {
+          "jd": 2461197.0139769386,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461227.009475598,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 459,
+      "over300Seconds": 16,
+      "maxErrorSeconds": 959.020346403122,
+      "worst": [
+        {
+          "jd": 2461228.0207142876,
+          "rising": true,
+          "referenceJD": 2461228.009614515,
+          "errorSeconds": 959.020346403122
+        },
+        {
+          "jd": 2461196.014021308,
+          "rising": true,
+          "referenceJD": 2461196.021074031,
+          "errorSeconds": -609.355254471302
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4--179.9",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 634,
+      "predictedEvents": 636,
+      "pairedEvents": 633,
+      "missing": [
+        {
+          "jd": 2461235.9853388253,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461190.9818950454,
+          "rising": false
+        },
+        {
+          "jd": 2461395.4945558533,
+          "rising": true
+        },
+        {
+          "jd": 2461395.5015303865,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 473,
+      "over300Seconds": 20,
+      "maxErrorSeconds": 783.8738411664963,
+      "worst": [
+        {
+          "jd": 2461189.9724753834,
+          "rising": false,
+          "referenceJD": 2461189.9815479973,
+          "errorSeconds": -783.8738411664963
+        },
+        {
+          "jd": 2461236.9851938826,
+          "rising": false,
+          "referenceJD": 2461236.976949464,
+          "errorSeconds": 712.3177617788315
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4--90",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": -90,
+      "referenceEvents": 634,
+      "predictedEvents": 636,
+      "pairedEvents": 633,
+      "missing": [
+        {
+          "jd": 2461235.738325962,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461190.732172823,
+          "rising": false
+        },
+        {
+          "jd": 2461395.244833631,
+          "rising": true
+        },
+        {
+          "jd": 2461395.251808164,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 347,
+      "over300Seconds": 8,
+      "maxErrorSeconds": 551.8916755914688,
+      "worst": [
+        {
+          "jd": 2461236.7354716603,
+          "rising": false,
+          "referenceJD": 2461236.729084025,
+          "errorSeconds": 551.8916755914688
+        },
+        {
+          "jd": 2461189.722753161,
+          "rising": false,
+          "referenceJD": 2461189.7290910925,
+          "errorSeconds": -547.5972712039948
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4-0",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": 0,
+      "referenceEvents": 638,
+      "predictedEvents": 636,
+      "pairedEvents": 636,
+      "missing": [
+        {
+          "jd": 2461190.506692153,
+          "rising": true
+        },
+        {
+          "jd": 2461235.491577886,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 274,
+      "over300Seconds": 7,
+      "maxErrorSeconds": 627.2727593779564,
+      "worst": [
+        {
+          "jd": 2461190.482172823,
+          "rising": false,
+          "referenceJD": 2461190.4894329244,
+          "errorSeconds": -627.2727593779564
+        },
+        {
+          "jd": 2461235.5227371342,
+          "rising": true,
+          "referenceJD": 2461235.5169221032,
+          "errorSeconds": 502.41867899894714
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4-90",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": 90,
+      "referenceEvents": 638,
+      "predictedEvents": 636,
+      "pairedEvents": 636,
+      "missing": [
+        {
+          "jd": 2461190.260986596,
+          "rising": true
+        },
+        {
+          "jd": 2461235.24598996,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 354,
+      "over300Seconds": 9,
+      "maxErrorSeconds": 887.4133318662643,
+      "worst": [
+        {
+          "jd": 2461235.2727371342,
+          "rising": true,
+          "referenceJD": 2461235.2624661466,
+          "errorSeconds": 887.4133318662643
+        },
+        {
+          "jd": 2461189.264266387,
+          "rising": true,
+          "referenceJD": 2461189.2713977564,
+          "errorSeconds": -616.1503091454506
+        }
+      ]
+    },
+    {
+      "name": "grid-67.4-179.9",
+      "latitudeDeg": 67.4,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 634,
+      "predictedEvents": 636,
+      "pairedEvents": 633,
+      "missing": [
+        {
+          "jd": 2461190.0144694606,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461235.023014912,
+          "rising": true
+        },
+        {
+          "jd": 2461397.4951598756,
+          "rising": true
+        },
+        {
+          "jd": 2461397.5041021667,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 479,
+      "over300Seconds": 21,
+      "maxErrorSeconds": 787.1463239192963,
+      "worst": [
+        {
+          "jd": 2461189.0145441648,
+          "rising": true,
+          "referenceJD": 2461189.0236546546,
+          "errorSeconds": -787.1463239192963
+        },
+        {
+          "jd": 2461236.0315637793,
+          "rising": true,
+          "referenceJD": 2461236.0232524406,
+          "errorSeconds": 718.0996656417847
+        }
+      ]
+    },
+    {
+      "name": "grid-70--179.9",
+      "latitudeDeg": 70,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 482,
+      "pairedEvents": 480,
+      "missing": [
+        {
+          "jd": 2461057.4951110776,
+          "rising": true
+        },
+        {
+          "jd": 2461057.518638024,
+          "rising": false
+        },
+        {
+          "jd": 2461176.9985644086,
+          "rising": true
+        },
+        {
+          "jd": 2461248.995233509,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461370.4808645654,
+          "rising": true
+        },
+        {
+          "jd": 2461370.5004835124,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 369,
+      "over300Seconds": 45,
+      "maxErrorSeconds": 1994.5769101381302,
+      "worst": [
+        {
+          "jd": 2461176.9721074067,
+          "rising": false,
+          "referenceJD": 2461176.9951927876,
+          "errorSeconds": -1994.5769101381302
+        },
+        {
+          "jd": 2461249.9951767433,
+          "rising": false,
+          "referenceJD": 2461249.9777775817,
+          "errorSeconds": 1503.287561237812
+        }
+      ]
+    },
+    {
+      "name": "grid-70--90",
+      "latitudeDeg": 70,
+      "longitudeDeg": -90,
+      "referenceEvents": 482,
+      "predictedEvents": 482,
+      "pairedEvents": 479,
+      "missing": [
+        {
+          "jd": 2461057.2552176313,
+          "rising": true
+        },
+        {
+          "jd": 2461057.2589659197,
+          "rising": false
+        },
+        {
+          "jd": 2461176.7597997054,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461248.763646502,
+          "rising": true
+        },
+        {
+          "jd": 2461370.231142343,
+          "rising": true
+        },
+        {
+          "jd": 2461370.25076129,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 285,
+      "over300Seconds": 15,
+      "maxErrorSeconds": 1230.8870270848274,
+      "worst": [
+        {
+          "jd": 2461249.745454521,
+          "rising": false,
+          "referenceJD": 2461249.7312081433,
+          "errorSeconds": 1230.8870270848274
+        },
+        {
+          "jd": 2461176.7223851844,
+          "rising": false,
+          "referenceJD": 2461176.7345009656,
+          "errorSeconds": -1046.8034952878952
+        }
+      ]
+    },
+    {
+      "name": "grid-70-0",
+      "latitudeDeg": 70,
+      "longitudeDeg": 0,
+      "referenceEvents": 482,
+      "predictedEvents": 482,
+      "pairedEvents": 481,
+      "missing": [
+        {
+          "jd": 2461176.51498623,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461248.513646502,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 257,
+      "over300Seconds": 10,
+      "maxErrorSeconds": 917.8318351507187,
+      "worst": [
+        {
+          "jd": 2461249.495454521,
+          "rising": false,
+          "referenceJD": 2461249.4848314673,
+          "errorSeconds": 917.8318351507187
+        },
+        {
+          "jd": 2461176.4723851844,
+          "rising": false,
+          "referenceJD": 2461176.4793031784,
+          "errorSeconds": -597.7146819233894
+        }
+      ]
+    },
+    {
+      "name": "grid-70-90",
+      "latitudeDeg": 70,
+      "longitudeDeg": 90,
+      "referenceEvents": 482,
+      "predictedEvents": 482,
+      "pairedEvents": 481,
+      "missing": [
+        {
+          "jd": 2461176.2689936915,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461248.263646502,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 288,
+      "over300Seconds": 19,
+      "maxErrorSeconds": 930.6816145777702,
+      "worst": [
+        {
+          "jd": 2461249.281254901,
+          "rising": true,
+          "referenceJD": 2461249.270483123,
+          "errorSeconds": 930.6816145777702
+        },
+        {
+          "jd": 2461175.2725739074,
+          "rising": true,
+          "referenceJD": 2461175.2806554683,
+          "errorSeconds": -698.2468664646149
+        }
+      ]
+    },
+    {
+      "name": "grid-70-179.9",
+      "latitudeDeg": 70,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 484,
+      "predictedEvents": 482,
+      "pairedEvents": 481,
+      "missing": [
+        {
+          "jd": 2461176.0226648888,
+          "rising": true
+        },
+        {
+          "jd": 2461176.995855117,
+          "rising": false
+        },
+        {
+          "jd": 2461176.999013218,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461248.0139242797,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 375,
+      "over300Seconds": 46,
+      "maxErrorSeconds": 1470.440062880516,
+      "worst": [
+        {
+          "jd": 2461249.0315326788,
+          "rising": true,
+          "referenceJD": 2461249.0145136965,
+          "errorSeconds": 1470.440062880516
+        },
+        {
+          "jd": 2461175.022851685,
+          "rising": true,
+          "referenceJD": 2461175.033291444,
+          "errorSeconds": -901.995187997818
+        }
+      ]
+    },
+    {
+      "name": "grid-80--179.9",
+      "latitudeDeg": 80,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 210,
+      "predictedEvents": 212,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461282.9629374593,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461144.9920883165,
+          "rising": false
+        },
+        {
+          "jd": 2461335.475755,
+          "rising": true
+        },
+        {
+          "jd": 2461335.5022863247,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 207,
+      "over300Seconds": 117,
+      "maxErrorSeconds": 2902.0520120859146,
+      "worst": [
+        {
+          "jd": 2461143.9561293153,
+          "rising": false,
+          "referenceJD": 2461143.9897178803,
+          "errorSeconds": -2902.0520120859146
+        },
+        {
+          "jd": 2461092.5197634767,
+          "rising": false,
+          "referenceJD": 2461092.542399065,
+          "errorSeconds": -1955.7148396968842
+        }
+      ]
+    },
+    {
+      "name": "grid-80--90",
+      "latitudeDeg": 80,
+      "longitudeDeg": -90,
+      "referenceEvents": 210,
+      "predictedEvents": 212,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461282.7199278516,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461144.742366094,
+          "rising": false
+        },
+        {
+          "jd": 2461335.2260327777,
+          "rising": true
+        },
+        {
+          "jd": 2461335.2525641024,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 151,
+      "over300Seconds": 56,
+      "maxErrorSeconds": 1681.7023649811745,
+      "worst": [
+        {
+          "jd": 2461143.706407093,
+          "rising": false,
+          "referenceJD": 2461143.7258712407,
+          "errorSeconds": -1681.7023649811745
+        },
+        {
+          "jd": 2461283.7124056015,
+          "rising": false,
+          "referenceJD": 2461283.6977231205,
+          "errorSeconds": 1268.5663640499115
+        }
+      ]
+    },
+    {
+      "name": "grid-80-0",
+      "latitudeDeg": 80,
+      "longitudeDeg": 0,
+      "referenceEvents": 212,
+      "predictedEvents": 212,
+      "pairedEvents": 211,
+      "missing": [
+        {
+          "jd": 2461282.478466352,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461144.492366094,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 210,
+      "over300Seconds": 27,
+      "maxErrorSeconds": 2001.8068850040436,
+      "worst": [
+        {
+          "jd": 2461143.508349566,
+          "rising": true,
+          "referenceJD": 2461143.531518627,
+          "errorSeconds": -2001.8068850040436
+        },
+        {
+          "jd": 2461282.5384875154,
+          "rising": true,
+          "referenceJD": 2461282.524478064,
+          "errorSeconds": 1210.4166090488434
+        }
+      ]
+    },
+    {
+      "name": "grid-80-90",
+      "latitudeDeg": 80,
+      "longitudeDeg": 90,
+      "referenceEvents": 210,
+      "predictedEvents": 212,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461282.243241741,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461091.7490000213,
+          "rising": true
+        },
+        {
+          "jd": 2461091.7700412543,
+          "rising": false
+        },
+        {
+          "jd": 2461144.242366094,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 151,
+      "over300Seconds": 55,
+      "maxErrorSeconds": 2581.693258881569,
+      "worst": [
+        {
+          "jd": 2461143.258349566,
+          "rising": true,
+          "referenceJD": 2461143.288230275,
+          "errorSeconds": -2581.693258881569
+        },
+        {
+          "jd": 2461282.2884875154,
+          "rising": true,
+          "referenceJD": 2461282.259801049,
+          "errorSeconds": 2478.5107165575027
+        }
+      ]
+    },
+    {
+      "name": "grid-80-179.9",
+      "latitudeDeg": 80,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 210,
+      "predictedEvents": 212,
+      "pairedEvents": 209,
+      "missing": [
+        {
+          "jd": 2461144.0090480368,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461091.499277799,
+          "rising": true
+        },
+        {
+          "jd": 2461091.520319032,
+          "rising": false
+        },
+        {
+          "jd": 2461282.038765293,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 209,
+      "over300Seconds": 117,
+      "maxErrorSeconds": 3077.3561507463455,
+      "worst": [
+        {
+          "jd": 2461143.0086273435,
+          "rising": true,
+          "referenceJD": 2461143.0442448915,
+          "errorSeconds": -3077.3561507463455
+        },
+        {
+          "jd": 2461334.4763105554,
+          "rising": true,
+          "referenceJD": 2461334.45558898,
+          "errorSeconds": 1790.344101190567
+        }
+      ]
+    },
+    {
+      "name": "grid-89--179.9",
+      "latitudeDeg": 89,
+      "longitudeDeg": -179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 17,
+      "missing": [
+        {
+          "jd": 2461115.4937444828,
+          "rising": true
+        },
+        {
+          "jd": 2461115.5379364886,
+          "rising": false
+        },
+        {
+          "jd": 2461306.865662009,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461120.8998499513,
+          "rising": false
+        },
+        {
+          "jd": 2461311.4277633843,
+          "rising": true
+        },
+        {
+          "jd": 2461311.5591843906,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 17,
+      "over300Seconds": 17,
+      "maxErrorSeconds": 5880.300512909889,
+      "worst": [
+        {
+          "jd": 2461119.819673275,
+          "rising": false,
+          "referenceJD": 2461119.887732309,
+          "errorSeconds": -5880.300512909889
+        },
+        {
+          "jd": 2461307.855250178,
+          "rising": false,
+          "referenceJD": 2461307.797337483,
+          "errorSeconds": 5003.656826913357
+        }
+      ]
+    },
+    {
+      "name": "grid-89--90",
+      "latitudeDeg": 89,
+      "longitudeDeg": -90,
+      "referenceEvents": 18,
+      "predictedEvents": 20,
+      "pairedEvents": 17,
+      "missing": [
+        {
+          "jd": 2461306.636934679,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461120.650127729,
+          "rising": false
+        },
+        {
+          "jd": 2461311.178041162,
+          "rising": true
+        },
+        {
+          "jd": 2461311.3094621683,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 16,
+      "over300Seconds": 14,
+      "maxErrorSeconds": 3832.2247982025146,
+      "worst": [
+        {
+          "jd": 2461119.569951053,
+          "rising": false,
+          "referenceJD": 2461119.6143055065,
+          "errorSeconds": -3832.2247982025146
+        },
+        {
+          "jd": 2461307.6055279556,
+          "rising": false,
+          "referenceJD": 2461307.563303945,
+          "errorSeconds": 3648.154503107071
+        }
+      ]
+    },
+    {
+      "name": "grid-89-0",
+      "latitudeDeg": 89,
+      "longitudeDeg": 0,
+      "referenceEvents": 22,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [
+        {
+          "jd": 2461120.524334674,
+          "rising": true
+        },
+        {
+          "jd": 2461306.4117093193,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 20,
+      "over300Seconds": 20,
+      "maxErrorSeconds": 5660.320454835892,
+      "worst": [
+        {
+          "jd": 2461120.400127729,
+          "rising": false,
+          "referenceJD": 2461120.465640697,
+          "errorSeconds": -5660.320454835892
+        },
+        {
+          "jd": 2461306.633898566,
+          "rising": true,
+          "referenceJD": 2461306.5988387745,
+          "errorSeconds": 3029.1659876704216
+        }
+      ]
+    },
+    {
+      "name": "grid-89-90",
+      "latitudeDeg": 89,
+      "longitudeDeg": 90,
+      "referenceEvents": 22,
+      "predictedEvents": 20,
+      "pairedEvents": 20,
+      "missing": [
+        {
+          "jd": 2461120.32208614,
+          "rising": true
+        },
+        {
+          "jd": 2461306.194864012,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 19,
+      "over300Seconds": 17,
+      "maxErrorSeconds": 5944.462144374847,
+      "worst": [
+        {
+          "jd": 2461306.383898566,
+          "rising": true,
+          "referenceJD": 2461306.315096921,
+          "errorSeconds": 5944.462144374847
+        },
+        {
+          "jd": 2461119.3601958747,
+          "rising": true,
+          "referenceJD": 2461119.412046905,
+          "errorSeconds": -4479.929029941559
+        }
+      ]
+    },
+    {
+      "name": "grid-89-179.9",
+      "latitudeDeg": 89,
+      "longitudeDeg": 179.9,
+      "referenceEvents": 20,
+      "predictedEvents": 20,
+      "pairedEvents": 19,
+      "missing": [
+        {
+          "jd": 2461120.100927344,
+          "rising": true
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461306.1341763437,
+          "rising": true
+        }
+      ],
+      "over60Seconds": 19,
+      "over300Seconds": 19,
+      "maxErrorSeconds": 7988.085097074509,
+      "worst": [
+        {
+          "jd": 2461115.401594291,
+          "rising": true,
+          "referenceJD": 2461115.4940489796,
+          "errorSeconds": -7988.085097074509
+        },
+        {
+          "jd": 2461115.6109022875,
+          "rising": false,
+          "referenceJD": 2461115.538744317,
+          "errorSeconds": 6234.448662400246
+        }
+      ]
+    },
+    {
+      "name": "Rome",
+      "latitudeDeg": 41.9028,
+      "longitudeDeg": 12.4964,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 31.483514606952667,
+      "worst": [
+        {
+          "jd": 2461128.706728048,
+          "rising": true,
+          "referenceJD": 2461128.7070924407,
+          "errorSeconds": -31.483514606952667
+        },
+        {
+          "jd": 2461129.7055426906,
+          "rising": true,
+          "referenceJD": 2461129.7059070664,
+          "errorSeconds": -31.482066214084625
+        }
+      ]
+    },
+    {
+      "name": "Babylon",
+      "latitudeDeg": 32.5355,
+      "longitudeDeg": 44.4275,
+      "referenceEvents": 730,
+      "predictedEvents": 730,
+      "pairedEvents": 730,
+      "missing": [],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 0,
+      "over300Seconds": 0,
+      "maxErrorSeconds": 30.877402424812317,
+      "worst": [
+        {
+          "jd": 2461126.6227313625,
+          "rising": true,
+          "referenceJD": 2461126.62308874,
+          "errorSeconds": -30.877402424812317
+        },
+        {
+          "jd": 2461125.6236379575,
+          "rising": true,
+          "referenceJD": 2461125.6239952017,
+          "errorSeconds": -30.865895748138428
+        }
+      ]
+    },
+    {
+      "name": "Tromso",
+      "latitudeDeg": 69.6492,
+      "longitudeDeg": 18.9553,
+      "referenceEvents": 498,
+      "predictedEvents": 496,
+      "pairedEvents": 496,
+      "missing": [
+        {
+          "jd": 2461178.4528746395,
+          "rising": true
+        },
+        {
+          "jd": 2461247.4424064946,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [],
+      "over60Seconds": 273,
+      "over300Seconds": 11,
+      "maxErrorSeconds": 899.7682437300682,
+      "worst": [
+        {
+          "jd": 2461247.4724116996,
+          "rising": true,
+          "referenceJD": 2461247.4619977153,
+          "errorSeconds": 899.7682437300682
+        },
+        {
+          "jd": 2461178.426666533,
+          "rising": false,
+          "referenceJD": 2461178.4362246017,
+          "errorSeconds": -825.8171260356903
+        }
+      ]
+    },
+    {
+      "name": "Utqiagvik",
+      "latitudeDeg": 71.2906,
+      "longitudeDeg": -156.7886,
+      "referenceEvents": 436,
+      "predictedEvents": 436,
+      "pairedEvents": 433,
+      "missing": [
+        {
+          "jd": 2461063.433769997,
+          "rising": true
+        },
+        {
+          "jd": 2461063.4541799272,
+          "rising": false
+        },
+        {
+          "jd": 2461254.9172364543,
+          "rising": false
+        }
+      ],
+      "withheld": [],
+      "uncertain": [],
+      "spurious": [
+        {
+          "jd": 2461171.910407705,
+          "rising": false
+        },
+        {
+          "jd": 2461364.4177045906,
+          "rising": true
+        },
+        {
+          "jd": 2461364.4330082433,
+          "rising": false
+        }
+      ],
+      "over60Seconds": 307,
+      "over300Seconds": 39,
+      "maxErrorSeconds": 997.707362473011,
+      "worst": [
+        {
+          "jd": 2461255.9159199395,
+          "rising": false,
+          "referenceJD": 2461255.9043724006,
+          "errorSeconds": 997.707362473011
+        },
+        {
+          "jd": 2461170.8973643263,
+          "rising": false,
+          "referenceJD": 2461170.908721347,
+          "errorSeconds": -981.2465786933899
+        }
+      ]
+    }
+  ]
+}

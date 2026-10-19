@@ -338,39 +338,138 @@ export interface SunTimes {
   sunriseJD: JulianDay;
   transitJD: JulianDay;
   sunsetJD: JulianDay;
-  /** True if the location sees no sunrise/sunset this day (polar day/night). */
+  /** True if either boundary is absent or uncertain. Missing boundaries use transitJD here;
+   * prefer solarDayEvents for individually nullable sunrise/sunset values. */
   circumpolar: boolean;
 }
 
-/**
- * Sunrise, solar transit, and sunset for the UTC calendar day containing
- * `jd`, at geographic (`latDeg`, `lonDeg`, east positive). Standard
- * low-precision hour-angle method (equivalent to the NOAA Solar Calculator);
- * ignores refraction variability, elevation, and Delta-T, so treat results
- * as accurate to a few minutes near the present and degrading (the civil day
- * is treated as a constant 86400 SI seconds) over historical timescales.
- */
-export function sunTimes(jd: JulianDay, latDeg: number, lonDeg: number): SunTimes {
-  const midnightUtc = Math.floor(jd + 0.5) - 0.5;
-  const noonUtc = midnightUtc + 0.5;
-  const decl = solarDeclination(noonUtc) * DEG;
-  const eqtime = equationOfTimeMinutes(noonUtc);
-  const transitJD = noonUtc - lonDeg / 360 - eqtime / 1440;
+export interface SolarDayEvents {
+  /** Upper meridian transit for the solar day labelled by the input's UTC date.
+   * At longitudes near the date line this can fall on a neighboring UTC date. */
+  transitJD: JulianDay;
+  /** Lower-altitude boundaries enclosing this day's upper culmination. */
+  cycleStartJD: JulianDay;
+  cycleEndJD: JulianDay;
+  sunriseJD: JulianDay | null;
+  sunsetJD: JulianDay | null;
+  /** Grazing events are withheld: a daily extremum lies within the nominal
+   * low-precision solar model's 0.02-degree horizon band. This is not a
+   * statistical confidence interval or a weather/ancient-time error bound. */
+  sunriseStatus: 'crossing' | 'absent' | 'grazing';
+  sunsetStatus: 'crossing' | 'absent' | 'grazing';
+}
 
-  const latRad = latDeg * DEG;
-  const h0 = -0.8333 * DEG; // standard refraction + solar semidiameter
-  const cosH =
-    (Math.sin(h0) - Math.sin(latRad) * Math.sin(decl)) / (Math.cos(latRad) * Math.cos(decl));
+/** Find a daily altitude extremum without assuming it occurs at meridian
+ * transit. Near the poles, changing declination shifts the maximum/minimum. */
+function altitudeExtremum(
+  altitude: (jd: number) => number,
+  start: number,
+  end: number,
+  maximum: boolean,
+): number {
+  const ratio = (Math.sqrt(5) - 1) / 2;
+  let a = start;
+  let b = end;
+  let x = b - ratio * (b - a);
+  let y = a + ratio * (b - a);
+  let fx = altitude(x);
+  let fy = altitude(y);
+  for (let i = 0; i < 48 && b - a > 1e-8; i++) {
+    if (fx < fy === maximum) {
+      a = x;
+      x = y;
+      fx = fy;
+      y = a + ratio * (b - a);
+      fy = altitude(y);
+    } else {
+      b = y;
+      y = x;
+      fy = fx;
+      x = b - ratio * (b - a);
+      fx = altitude(x);
+    }
+  }
+  return (a + b) / 2;
+}
 
-  if (cosH > 1) return { sunriseJD: transitJD, transitJD, sunsetJD: transitJD, circumpolar: true }; // polar night
-  if (cosH < -1) return { sunriseJD: transitJD, transitJD, sunsetJD: transitJD, circumpolar: true }; // polar day
-
-  const haDeg = Math.acos(cosH) / DEG;
+/** Model sunrise and sunset independently, including one-sided polar-season
+ * transitions. Reevaluate the Sun throughout each event search instead of
+ * freezing its declination at UTC noon. Fixed -0.8333 degree topocentric
+ * center altitude represents nominal refraction and semidiameter. Elevation,
+ * weather and Delta-T are not modeled; grazing events are especially sensitive
+ * to the low-precision solar series. These are model crossings, not observations. */
+export function solarDayEvents(jd: JulianDay, latDeg: number, lonDeg: number): SolarDayEvents {
+  if (
+    ![jd, latDeg, lonDeg].every(Number.isFinite) ||
+    Math.abs(latDeg) > 90 ||
+    Math.abs(lonDeg) > 180
+  )
+    throw new RangeError(
+      'Solar events require a finite Julian day, latitude -90..90 and longitude -180..180.',
+    );
+  const meanNoon = Math.floor(jd + 0.5) - lonDeg / 360;
+  let transitJD = meanNoon;
+  for (let i = 0; i < 5; i++) transitJD = meanNoon - equationOfTimeMinutes(transitJD) / 1440;
+  if (!Number.isFinite(transitJD) || transitJD - 0.75 === transitJD)
+    throw new RangeError('Julian day exceeds the numeric range of the solar event model.');
+  const sinLat = Math.sin(latDeg * DEG);
+  const cosLat = Math.cos(latDeg * DEG);
+  const altitude = (time: number): number => {
+    const dec = solarDeclination(time) * DEG;
+    const h = (((time + 0.5) % 1) * 360 + lonDeg + equationOfTimeMinutes(time) / 4 - 180) * DEG;
+    const sinAlt = Math.max(
+      -1,
+      Math.min(1, sinLat * Math.sin(dec) + cosLat * Math.cos(dec) * Math.cos(h)),
+    );
+    // Leading-order solar parallax at 1 AU; the annual distance variation is
+    // smaller than this low-precision model's angular error.
+    return Math.asin(sinAlt) / DEG - (8.794 / 3600) * Math.sqrt(1 - sinAlt * sinAlt);
+  };
+  const peak = altitudeExtremum(altitude, transitJD - 0.25, transitJD + 0.25, true);
+  const cycleStartJD = altitudeExtremum(altitude, peak - 0.75, peak - 0.25, false);
+  const cycleEndJD = altitudeExtremum(altitude, peak + 0.25, peak + 0.75, false);
+  const horizon = -0.8333;
+  const peakAltitude = altitude(peak);
+  const beforeAltitude = altitude(cycleStartJD);
+  const afterAltitude = altitude(cycleEndJD);
+  const peakAbove = peakAltitude > horizon;
+  const grazingBand = 0.02;
+  const peakGrazes = Math.abs(peakAltitude - horizon) <= grazingBand;
+  const sunriseGrazes = peakGrazes || Math.abs(beforeAltitude - horizon) <= grazingBand;
+  const sunsetGrazes = peakGrazes || Math.abs(afterAltitude - horizon) <= grazingBand;
+  const hasSunrise = peakAbove && beforeAltitude < horizon;
+  const hasSunset = peakAbove && afterAltitude < horizon;
+  function crossing(start: number, end: number, rising: boolean): number {
+    let a = start;
+    let b = end;
+    for (let i = 0; i < 40 && b - a > 1e-8; i++) {
+      const mid = (a + b) / 2;
+      if (altitude(mid) > horizon === rising) b = mid;
+      else a = mid;
+    }
+    return (a + b) / 2;
+  }
   return {
-    sunriseJD: transitJD - haDeg / 360,
     transitJD,
-    sunsetJD: transitJD + haDeg / 360,
-    circumpolar: false,
+    cycleStartJD,
+    cycleEndJD,
+    sunriseJD: hasSunrise && !sunriseGrazes ? crossing(cycleStartJD, peak, true) : null,
+    sunsetJD: hasSunset && !sunsetGrazes ? crossing(peak, cycleEndJD, false) : null,
+    sunriseStatus: sunriseGrazes ? 'grazing' : hasSunrise ? 'crossing' : 'absent',
+    sunsetStatus: sunsetGrazes ? 'grazing' : hasSunset ? 'crossing' : 'absent',
+  };
+}
+
+/** Compatibility shape for existing consumers. An absent/uncertain event retains the
+ * historical transit placeholder and sets circumpolar; use solarDayEvents to
+ * distinguish individual missing boundaries. */
+export function sunTimes(jd: JulianDay, latDeg: number, lonDeg: number): SunTimes {
+  const day = solarDayEvents(jd, latDeg, lonDeg);
+  return {
+    transitJD: day.transitJD,
+    sunriseJD: day.sunriseJD ?? day.transitJD,
+    sunsetJD: day.sunsetJD ?? day.transitJD,
+    circumpolar: day.sunriseJD === null || day.sunsetJD === null,
   };
 }
 

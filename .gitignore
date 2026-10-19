@@ -13,3 +13,4 @@ docs/assets/*.tmp.png
 *.bsp
 studies/chinese-calendar/.cache/
 __pycache__/
+studies/solar-events/cache/

@@ -1,4 +1,4 @@
-import { sunTimes } from '../lib/astronomy/sun-moon.js';
+import { solarDayEvents } from '../lib/astronomy/sun-moon.js';
 import { romanHour } from '../lib/roman.js';
 
 function utcTime(eventJD: number, referenceJD: number): string {
@@ -11,7 +11,7 @@ function utcTime(eventJD: number, referenceJD: number): string {
 }
 
 export function seasonalReadout(jd: number, latDeg: number, lonDeg: number) {
-  const days = [-1, 0, 1].map((offset) => sunTimes(jd + offset, latDeg, lonDeg));
+  const days = [-1, 0, 1].map((offset) => solarDayEvents(jd + offset, latDeg, lonDeg));
   const times = days.reduce((nearest, day) =>
     Math.abs(day.transitJD - jd) < Math.abs(nearest.transitJD - jd) ? day : nearest,
   );
@@ -19,15 +19,26 @@ export function seasonalReadout(jd: number, latDeg: number, lonDeg: number) {
   return {
     label: hour.circumpolar ? 'Seasonal hour unavailable' : hour.label,
     phase: hour.circumpolar
-      ? 'Sunrise or sunset is absent near this instant.'
+      ? 'A sunrise or sunset is absent or uncertain near this instant.'
       : hour.isDaytime
         ? `Daylight hour ${hour.index} of 12`
         : `Night watch ${hour.index} of 4`,
-    sunrise: times.circumpolar ? 'No sunrise' : utcTime(times.sunriseJD, jd),
-    sunset: times.circumpolar ? 'No sunset' : utcTime(times.sunsetJD, jd),
-    duration: times.circumpolar
-      ? 'Daylight hours cannot be divided here.'
-      : `One daylight hour ≈ ${Math.round(((times.sunsetJD - times.sunriseJD) * 1440) / 12)} minutes`,
+    sunrise:
+      times.sunriseStatus === 'grazing'
+        ? 'Near horizon; uncertain'
+        : times.sunriseJD === null
+          ? 'No sunrise'
+          : utcTime(times.sunriseJD, jd),
+    sunset:
+      times.sunsetStatus === 'grazing'
+        ? 'Near horizon; uncertain'
+        : times.sunsetJD === null
+          ? 'No sunset'
+          : utcTime(times.sunsetJD, jd),
+    duration:
+      times.sunriseJD === null || times.sunsetJD === null
+        ? 'Daylight hours cannot be divided here.'
+        : `One daylight hour ≈ ${Math.round(((times.sunsetJD - times.sunriseJD) * 1440) / 12)} minutes`,
   };
 }
 
@@ -50,7 +61,9 @@ export function buildSeasonalReadout() {
       <p>Romans divided daylight into twelve seasonal hours whose length changes with the season and night into four watches.
       These approximate times use the solar day nearest this instant. All times are UTC;
       day offsets are relative to the date above. Elevation, varying refraction and Delta-T are
-      not modeled; ancient boundaries have unquantified drift.</p>
+      not modeled; ancient boundaries have unquantified drift. When the Sun barely reaches or
+      barely dips below the horizon, the model may not reliably establish a crossing; those
+      boundaries are marked uncertain.</p>
     </details>`;
   const node = (selector: string): HTMLElement => {
     const found = root.querySelector<HTMLElement>(selector);

@@ -9,6 +9,9 @@ publication records distinguish source, built packages and the live demo.
 
 ### Added
 
+- `astronomy.solarDayEvents(jd, latitude, longitude)` returns individually
+  nullable sunrise/sunset boundaries and crossing/absent/grazing statuses.
+  Grazing boundaries are withheld rather than timed from this approximate model.
 - Date-selected planet fits: JPL Tables 2a/2b with the matching Earth model
   outside the modern 1800–2050 CE interval. Jupiter/Saturn use the mandatory
   quadratic and periodic anomaly terms. The dial states the selected fit;
@@ -30,6 +33,12 @@ publication records distinguish source, built packages and the live demo.
 
 ### Fixed
 
+- Solar events reevaluate declination and solar time during a bracketed
+  altitude search. The former UTC-noon snapshot produced errors over two hours
+  near the poles, missed one-sided transitions and invented some crossings.
+  The seasonal clock retains individual known boundaries, withholds uncertain
+  hours, and labels grazing events. `sunTimes` retains its legacy numeric shape.
+  [Independent JPL comparison and original browser output](studies/solar-events/README.md).
 - Forward month/day conversions reject nonexistent dates instead of silently
   selecting another month or year. Check safe integer years, month membership,
   leap/variable month lengths and representable midnight arithmetic across ten

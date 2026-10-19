@@ -1,0 +1,122 @@
+{
+  "provenance": {
+    "producer": "Skyfield 1.55",
+    "ephemeris": "JPL DE421",
+    "source": "https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de421.bsp",
+    "ephemerisSha256": "a20a7139da04cbc462454634918e9a9ca69127044e2cc9d4f9c16e238d2deedc",
+    "definition": "topocentric apparent solar center altitude -0.8333 degrees; no weather or elevation model",
+    "timeBasis": "UT1 Julian days; UTC approximates UT1 in the application"
+  },
+  "cases": [
+    {
+      "name": "north-short-day",
+      "jd": 2461115.5,
+      "date": "2026-03-16",
+      "latitudeDeg": 89,
+      "longitudeDeg": 179.9,
+      "sunriseJD": 2461115.4940489796,
+      "sunsetJD": 2461115.538744317,
+      "toleranceSeconds": 360
+    },
+    {
+      "name": "south-short-day",
+      "jd": 2461124.5,
+      "date": "2026-03-25",
+      "latitudeDeg": -89,
+      "longitudeDeg": 90,
+      "sunriseJD": 2461124.7322562155,
+      "sunsetJD": 2461124.756150309,
+      "toleranceSeconds": 600
+    },
+    {
+      "name": "first-sunset",
+      "jd": 2461118.5,
+      "date": "2026-03-19",
+      "latitudeDeg": -89,
+      "longitudeDeg": -179.9,
+      "sunriseJD": null,
+      "sunsetJD": 2461119.9340141634,
+      "toleranceSeconds": 120
+    },
+    {
+      "name": "first-sunrise",
+      "jd": 2461362.5,
+      "date": "2026-11-18",
+      "latitudeDeg": -70,
+      "longitudeDeg": 90,
+      "sunriseJD": 2461362.252080181,
+      "sunsetJD": null,
+      "toleranceSeconds": 60
+    },
+    {
+      "name": "phantom-daylight",
+      "jd": 2461301.5,
+      "date": "2026-09-18",
+      "latitudeDeg": -89,
+      "longitudeDeg": 90,
+      "sunriseJD": null,
+      "sunsetJD": null,
+      "toleranceSeconds": 60
+    },
+    {
+      "name": "rome-summer",
+      "jd": 2461212.5,
+      "date": "2026-06-21",
+      "latitudeDeg": 41.9028,
+      "longitudeDeg": 12.4964,
+      "sunriseJD": 2461212.6492170137,
+      "sunsetJD": 2461213.2838705652,
+      "toleranceSeconds": 30
+    },
+    {
+      "name": "babylon-winter",
+      "jd": 2461395.5,
+      "date": "2026-12-21",
+      "latitudeDeg": 32.5355,
+      "longitudeDeg": 44.4275,
+      "sunriseJD": 2461395.666628033,
+      "sunsetJD": 2461396.083775169,
+      "toleranceSeconds": 30
+    },
+    {
+      "name": "east-date-line",
+      "jd": 2461115.5,
+      "date": "2026-03-16",
+      "latitudeDeg": 40,
+      "longitudeDeg": 179.9,
+      "sunriseJD": 2461115.2578563476,
+      "sunsetJD": 2461115.7552866577,
+      "toleranceSeconds": 30
+    },
+    {
+      "name": "west-date-line",
+      "jd": 2461115.5,
+      "date": "2026-03-16",
+      "latitudeDeg": 40,
+      "longitudeDeg": -179.9,
+      "sunriseJD": 2461116.2561845696,
+      "sunsetJD": 2461116.7554557673,
+      "toleranceSeconds": 30
+    },
+    {
+      "name": "polar-day",
+      "jd": 2461212.5,
+      "date": "2026-06-21",
+      "latitudeDeg": 80,
+      "longitudeDeg": 0,
+      "sunriseJD": null,
+      "sunsetJD": null,
+      "toleranceSeconds": 30
+    },
+    {
+      "name": "polar-night",
+      "jd": 2461395.5,
+      "date": "2026-12-21",
+      "latitudeDeg": 80,
+      "longitudeDeg": 0,
+      "sunriseJD": null,
+      "sunsetJD": null,
+      "toleranceSeconds": 30
+    }
+  ]
+}

@@ -51,12 +51,12 @@ date used in Rome that day can differ from it by a day or two.
   labeling every date this way is itself a simplification for dates before
   then.
 - **Seasonal hours**: 12 unequal daylight horae and 4 night vigiliae,
-  computed by dividing the real sunrise-to-sunset (and sunset-to-sunrise)
+  computed by dividing the modeled sunrise-to-sunset (and sunset-to-sunrise)
   span at a chosen location into equal parts. Default location: Rome
   (41.9028N, 12.4964E).
 - **Accuracy**: calendar arithmetic is exact (pure integer/modular math).
-  Seasonal hours depend on `sunTimes` (see Astronomy below): accurate to a
-  few minutes near the present, and *not* corrected for Delta-T (the slow
+  Seasonal hours depend on `solarDayEvents` (see Astronomy below). Boundaries
+  are approximate and grazing events are withheld. They are *not* corrected for Delta-T (the slow
   drift between civil time and Earth's actual rotation), so ancient hour
   boundaries can be off by minutes and this error grows over millennia.
 
@@ -361,9 +361,17 @@ not rendered (same reasoning as Egyptian hieroglyphs, above).
   conjunctions with TT-to-UT conversion, as described above. The shared
   illustrative Moon pointer and `astronomy.previousNewMoon` use the corrected
   chapter 47 longitude model; they do not define Chinese month boundaries.
-- **Sunrise/sunset** (`sunTimes`): the standard low-precision hour-angle
-  method (equivalent to the NOAA Solar Calculator). No Delta-T correction;
-  treats the civil day as a constant 86400 SI seconds throughout history.
+- **Sunrise/sunset** (`solarDayEvents`): a bracketed altitude-crossing search
+  using the changing low-precision solar declination and equation of time,
+  with leading-order solar parallax. The target center altitude is -0.8333
+  degrees, representing nominal semidiameter and refraction. A daily extremum
+  within a nominal 0.02-degree horizon band makes its boundary uncertain and
+  withholds the timestamp. Returned sunrise/sunset values are individually
+  nullable with `crossing`, `absent` or `grazing` statuses. Legacy `sunTimes`
+  keeps numeric transit placeholders plus `circumpolar` for callers that already
+  use that shape. There is no Delta-T, elevation or weather correction; the civil
+  day remains a constant 86400 SI seconds throughout history. The modern
+  [JPL comparison](../studies/solar-events/README.md) retains coverage and limits.
 - **Planets** (`src/lib/astronomy/planets.ts`): E.M. Standish (JPL/Caltech),
   "Keplerian Elements for Approximate Positions of the Major Planets",
   Table 1 (the "1800 AD - 2050 AD" low-order fit), a pure two-body

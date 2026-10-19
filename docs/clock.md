@@ -64,11 +64,19 @@ and sunset of the solar day nearest the current instant, in UTC, with
 The implementation searches neighboring solar days to avoid mistaking an
 eastern dawn or western afternoon for a night watch. Polar conditions
 without the needed boundaries show an unavailable hour; the library's
-placeholder label is never presented as a measured hour.
+placeholder label is never presented as a measured hour. Sunrise and sunset are
+handled independently at polar-season transitions: a known boundary remains
+visible even when the other is absent. A grazing boundary reads **Near horizon;
+uncertain**, and hours requiring it stay unavailable.
 
 These are approximate modeled boundaries. Elevation, varying refraction
-and Delta-T are omitted; ancient-hour drift is unquantified. The new tests
-check interval ownership and display behavior, not independently measured
+and Delta-T are omitted; ancient-hour drift is unquantified. The calculation
+searches for model altitude crossings across the solar day instead of freezing
+the Sun's declination at noon. When a daily maximum or minimum lies within the
+nominal 0.02-degree horizon band, the model withholds that boundary. This is
+an uncertainty guard, not a forecast of refraction or a statistical interval.
+[Independent JPL comparison and before/after browser evidence](../studies/solar-events/README.md)
+cover contemporary calculations; they do not establish observed or ancient
 sunrise accuracy.
 
 ## Chinese lunar year

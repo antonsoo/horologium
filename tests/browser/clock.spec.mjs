@@ -291,6 +291,28 @@ test('personal location denial and invalid coordinates retain the city', async (
   await expect(page.getByRole('button', { name: 'Use my location' })).toBeEnabled();
 });
 
+test('a polar-season transition retains its known sunrise without fabricating a sunset', async ({
+  page,
+}) => {
+  await mockLocation(page);
+  await load(page, '#jd=2461362.75&loc=Rome');
+  await page.getByRole('button', { name: 'Use my location' }).click();
+  await position(page, 0, -70, 90);
+  await expect(page.locator('.seasonal-sunrise')).toHaveText('18:03 UTC (-1 day)');
+  await expect(page.locator('.seasonal-sunset')).toHaveText('No sunset');
+  await expect(page.locator('.seasonal-latin')).toHaveText('Seasonal hour unavailable');
+});
+
+test('grazing solar crossings remain uncertain in the seasonal clock', async ({ page }) => {
+  await mockLocation(page);
+  await load(page, '#jd=2461301.75&loc=Rome');
+  await page.getByRole('button', { name: 'Use my location' }).click();
+  await position(page, 0, -89, 90);
+  await expect(page.locator('.seasonal-sunrise')).toHaveText('Near horizon; uncertain');
+  await expect(page.locator('.seasonal-sunset')).toHaveText('Near horizon; uncertain');
+  await expect(page.locator('.seasonal-latin')).toHaveText('Seasonal hour unavailable');
+});
+
 test('keyboard skip link retains the time permalink', async ({ page }) => {
   await load(page);
   await page.keyboard.press('Tab');

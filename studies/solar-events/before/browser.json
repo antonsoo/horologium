@@ -1,0 +1,289 @@
+{
+  "mode": "before",
+  "workflows": [
+    {
+      "engine": "chromium",
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "offline": true,
+      "syntheticGeolocation": true,
+      "observations": [
+        {
+          "name": "north-short-day",
+          "input": {
+            "instantJD": 2461115.5002777777,
+            "latitudeDeg": 89,
+            "longitudeDeg": 179.9
+          },
+          "sunrise": "21:38 UTC (-1 day)",
+          "sunset": "02:40 UTC",
+          "label": "hora sexta",
+          "phase": "Daylight hour 6 of 12",
+          "duration": "One daylight hour ≈ 25 minutes",
+          "overflow": false,
+          "hash": "#jd=2461115.5002777777&loc=private"
+        },
+        {
+          "name": "first-sunset",
+          "input": {
+            "instantJD": 2461119.4997222223,
+            "latitudeDeg": -89,
+            "longitudeDeg": -179.9
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461119.4997222223&loc=private"
+        },
+        {
+          "name": "first-sunrise",
+          "input": {
+            "instantJD": 2461362.75,
+            "latitudeDeg": -70,
+            "longitudeDeg": 90
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461362.75&loc=private"
+        },
+        {
+          "name": "phantom-daylight",
+          "input": {
+            "instantJD": 2461301.75,
+            "latitudeDeg": -89,
+            "longitudeDeg": 90
+          },
+          "sunrise": "04:20 UTC",
+          "sunset": "07:28 UTC",
+          "label": "hora septima",
+          "phase": "Daylight hour 7 of 12",
+          "duration": "One daylight hour ≈ 16 minutes",
+          "overflow": false,
+          "hash": "#jd=2461301.75&loc=private"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "chromium",
+      "browser": "153.0.8010.12",
+      "width": 375,
+      "offline": true,
+      "syntheticGeolocation": true,
+      "observations": [
+        {
+          "name": "north-short-day",
+          "input": {
+            "instantJD": 2461115.5002777777,
+            "latitudeDeg": 89,
+            "longitudeDeg": 179.9
+          },
+          "sunrise": "21:38 UTC (-1 day)",
+          "sunset": "02:40 UTC",
+          "label": "hora sexta",
+          "phase": "Daylight hour 6 of 12",
+          "duration": "One daylight hour ≈ 25 minutes",
+          "overflow": false,
+          "hash": "#jd=2461115.5002777777&loc=private"
+        },
+        {
+          "name": "first-sunset",
+          "input": {
+            "instantJD": 2461119.4997222223,
+            "latitudeDeg": -89,
+            "longitudeDeg": -179.9
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461119.4997222223&loc=private"
+        },
+        {
+          "name": "first-sunrise",
+          "input": {
+            "instantJD": 2461362.75,
+            "latitudeDeg": -70,
+            "longitudeDeg": 90
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461362.75&loc=private"
+        },
+        {
+          "name": "phantom-daylight",
+          "input": {
+            "instantJD": 2461301.75,
+            "latitudeDeg": -89,
+            "longitudeDeg": 90
+          },
+          "sunrise": "04:20 UTC",
+          "sunset": "07:28 UTC",
+          "label": "hora septima",
+          "phase": "Daylight hour 7 of 12",
+          "duration": "One daylight hour ≈ 16 minutes",
+          "overflow": false,
+          "hash": "#jd=2461301.75&loc=private"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "browser": "155.0",
+      "width": 1440,
+      "offline": true,
+      "syntheticGeolocation": true,
+      "observations": [
+        {
+          "name": "north-short-day",
+          "input": {
+            "instantJD": 2461115.5002777777,
+            "latitudeDeg": 89,
+            "longitudeDeg": 179.9
+          },
+          "sunrise": "21:38 UTC (-1 day)",
+          "sunset": "02:40 UTC",
+          "label": "hora sexta",
+          "phase": "Daylight hour 6 of 12",
+          "duration": "One daylight hour ≈ 25 minutes",
+          "overflow": false,
+          "hash": "#jd=2461115.5002777777&loc=private"
+        },
+        {
+          "name": "first-sunset",
+          "input": {
+            "instantJD": 2461119.4997222223,
+            "latitudeDeg": -89,
+            "longitudeDeg": -179.9
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461119.4997222223&loc=private"
+        },
+        {
+          "name": "first-sunrise",
+          "input": {
+            "instantJD": 2461362.75,
+            "latitudeDeg": -70,
+            "longitudeDeg": 90
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461362.75&loc=private"
+        },
+        {
+          "name": "phantom-daylight",
+          "input": {
+            "instantJD": 2461301.75,
+            "latitudeDeg": -89,
+            "longitudeDeg": 90
+          },
+          "sunrise": "04:20 UTC",
+          "sunset": "07:28 UTC",
+          "label": "hora septima",
+          "phase": "Daylight hour 7 of 12",
+          "duration": "One daylight hour ≈ 16 minutes",
+          "overflow": false,
+          "hash": "#jd=2461301.75&loc=private"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "browser": "155.0",
+      "width": 375,
+      "offline": true,
+      "syntheticGeolocation": true,
+      "observations": [
+        {
+          "name": "north-short-day",
+          "input": {
+            "instantJD": 2461115.5002777777,
+            "latitudeDeg": 89,
+            "longitudeDeg": 179.9
+          },
+          "sunrise": "21:38 UTC (-1 day)",
+          "sunset": "02:40 UTC",
+          "label": "hora sexta",
+          "phase": "Daylight hour 6 of 12",
+          "duration": "One daylight hour ≈ 25 minutes",
+          "overflow": false,
+          "hash": "#jd=2461115.5002777777&loc=private"
+        },
+        {
+          "name": "first-sunset",
+          "input": {
+            "instantJD": 2461119.4997222223,
+            "latitudeDeg": -89,
+            "longitudeDeg": -179.9
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461119.4997222223&loc=private"
+        },
+        {
+          "name": "first-sunrise",
+          "input": {
+            "instantJD": 2461362.75,
+            "latitudeDeg": -70,
+            "longitudeDeg": 90
+          },
+          "sunrise": "No sunrise",
+          "sunset": "No sunset",
+          "label": "Seasonal hour unavailable",
+          "phase": "Sunrise or sunset is absent near this instant.",
+          "duration": "Daylight hours cannot be divided here.",
+          "overflow": false,
+          "hash": "#jd=2461362.75&loc=private"
+        },
+        {
+          "name": "phantom-daylight",
+          "input": {
+            "instantJD": 2461301.75,
+            "latitudeDeg": -89,
+            "longitudeDeg": 90
+          },
+          "sunrise": "04:20 UTC",
+          "sunset": "07:28 UTC",
+          "label": "hora septima",
+          "phase": "Daylight hour 7 of 12",
+          "duration": "One daylight hour ≈ 16 minutes",
+          "overflow": false,
+          "hash": "#jd=2461301.75&loc=private"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": []
+    }
+  ]
+}
