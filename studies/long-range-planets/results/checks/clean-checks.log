@@ -1,0 +1,127 @@
+v24.21.0
+11.19.0
+
+> @antonsoloviev/horologium@0.2.3 prepare
+> npm run build:lib
+
+
+> @antonsoloviev/horologium@0.2.3 build:lib
+> tsc -p tsconfig.lib.json
+
+
+added 47 packages, and audited 48 packages in 9s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> @antonsoloviev/horologium@0.2.3 lint
+> biome check .
+
+Checked 135 files in 100ms. No fixes applied.
+
+> @antonsoloviev/horologium@0.2.3 typecheck
+> tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.lib.json
+
+
+> @antonsoloviev/horologium@0.2.3 test
+> vitest run --maxWorkers=1 --testTimeout=30000
+
+
+ RUN  v5.0.1 /tmp/claude-1000/horologium-long-planets/clean
+
+
+ Test Files  26 passed (26)
+      Tests  271 passed (271)
+   Start at  19:49:28
+   Duration  11.65s (tests 90%, transform 4%, import 4%, worker 1%)
+
+    Isolate  26 workers spawned · ~86ms startup each (spawn + environment, per file)
+             at least ~2.16s faster with isolate: false — reuses workers across files instead of one per file
+
+
+> @antonsoloviev/horologium@0.2.3 build
+> tsc -p tsconfig.lib.json && vite build
+
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 34 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/app/index.html                                                      2.40 kB │ gzip:  0.89 kB
+dist/app/THIRD_PARTY_NOTICES.txt                                         2.73 kB │ gzip:  1.51 kB
+dist/app/assets/eb-garamond-italic-vietnamese-DQ8HKnks.woff2             6.26 kB
+dist/app/assets/eb-garamond-italic-greek-ext-CHZOQEtG.woff2              6.60 kB
+dist/app/assets/cormorant-garamond-italic-vietnamese-D3igDnAQ.woff2      6.89 kB
+dist/app/assets/eb-garamond-italic-greek-Dqr5KC66.woff2                 10.50 kB
+dist/app/assets/eb-garamond-vietnamese-DvUmmjCN.woff2                   10.95 kB
+dist/app/assets/cormorant-garamond-vietnamese-CDLFB6hb.woff2            11.22 kB
+dist/app/assets/eb-garamond-greek-ext-CW-BywWH.woff2                    11.48 kB
+dist/app/assets/cormorant-garamond-italic-cyrillic-DVnfXoMy.woff2       12.70 kB
+dist/app/assets/eb-garamond-italic-cyrillic-BGIwiowF.woff2              13.57 kB
+dist/app/assets/cinzel-latin-ext-CG36JvV6.woff2                         14.54 kB
+dist/app/assets/cormorant-garamond-italic-cyrillic-ext-ClXnudBg.woff2   14.82 kB
+dist/app/assets/eb-garamond-italic-cyrillic-ext-Bz1w3xqM.woff2          17.95 kB
+dist/app/assets/eb-garamond-greek-DCPER7xl.woff2                        19.86 kB
+dist/app/assets/cormorant-garamond-italic-latin-ext-CE7zdTnu.woff2      20.38 kB
+dist/app/assets/cormorant-garamond-cyrillic-BWCqVJN0.woff2              21.16 kB
+dist/app/assets/cormorant-garamond-cyrillic-ext-Bg62sWL9.woff2          23.41 kB
+dist/app/assets/cormorant-garamond-italic-latin-Y14P-dkT.woff2          23.92 kB
+dist/app/assets/eb-garamond-italic-latin-DSEbMgZu.woff2                 25.38 kB
+dist/app/assets/cinzel-latin-DMUuCU8H.woff2                             25.90 kB
+dist/app/assets/eb-garamond-cyrillic-DBa2mnKT.woff2                     26.02 kB
+dist/app/assets/cormorant-garamond-latin-ext-ltf1AbuM.woff2             33.73 kB
+dist/app/assets/eb-garamond-cyrillic-ext-Bt3rCdHq.woff2                 33.94 kB
+dist/app/assets/cormorant-garamond-latin-CUoBjw-S.woff2                 37.64 kB
+dist/app/assets/eb-garamond-latin-CRpggXlh.woff2                        44.33 kB
+dist/app/assets/eb-garamond-italic-latin-ext-V7s3nWfX.woff2             45.46 kB
+dist/app/assets/eb-garamond-latin-ext-B6IpcvL2.woff2                   113.92 kB
+dist/app/assets/index-3uSCTewm.css                                      21.06 kB │ gzip:  4.54 kB
+dist/app/assets/index-DoL2Um_d.js                                       79.75 kB │ gzip: 31.79 kB
+
+✓ built in 124ms
+Julian Day right now: 2461332.61784
+
+The Ides of March, 44 BCE:
+  The Ides of March, AUC 710. Julian date 15 March 44 BCE.
+  24 Adar 3717
+  26 Anthesterion, Ol. 183.4
+
+21 December 2012 (the famous Maya "end date"):
+  Long Count 13.0.0.0.0, Tzolk'in 4 Ajaw, Haab' 3 K'ank'in; Lord of the Night G9
+
+Today, in a few other calendars:
+  III Peret, day 66 of the season — year 427 of the 1460-year Sothic cycle since the 139 CE anchor.
+  Year of the Horse (Fire), 2026; most recent solar term: Cold Dew (Hanlu, 寒露)
+{
+  "jd": 1705425.5,
+  "model": {
+    "id": "jpl-3000bce-3000ce",
+    "fromJD": 625697.5,
+    "toJD": 2816787.5,
+    "inRange": true
+  },
+  "positions": [
+    {
+      "name": "Mercury",
+      "longitudeDeg": 352.16570589079276
+    },
+    {
+      "name": "Venus",
+      "longitudeDeg": 343.56285204455844
+    },
+    {
+      "name": "Mars",
+      "longitudeDeg": 318.72016569069166
+    },
+    {
+      "name": "Jupiter",
+      "longitudeDeg": 295.5940022409385
+    },
+    {
+      "name": "Saturn",
+      "longitudeDeg": 259.1776796483806
+    }
+  ]
+}

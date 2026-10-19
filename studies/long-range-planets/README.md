@@ -114,8 +114,30 @@ The [paired replay](results/browser-comparison.json) retains unchanged
 Sun/Moon pointers, date readouts and calendar summaries at all 56 cases.
 Both screenshot pairs were opened and visually reviewed.
 
-Clean-install and public-deployment receipts follow when those surfaces have
-been independently verified. The source implementation, installed package, hosted bytes and
+The [clean receipt](results/verification.json) covers implementation `52e75dc`:
+Node 24.21.0 / npm 11.19.0, a fresh `npm ci` (zero vulnerabilities), lint,
+strict types, 271 unit checks, 58 browser workflows and the documented examples.
+The default parallel run hit two five-second test timeouts under the shared
+host's load. The full single-worker invocation passed; no test deadlines or
+product behavior were edited to obtain that result. Raw [check logs](results/checks/)
+retain both runs.
+
+All 361 archived source files remained unchanged, and all 90 generated files
+match the Node 26 working build. The clean browser replay repeats 56 offline
+date changes and four accessibility scans with no violations, external/late
+requests or errors. Its complete page states and both screenshot bytes match
+the reviewed local build.
+
+The clean `npm pack` artifact was installed in a fresh consumer project.
+Public package imports and strict NodeNext declarations work; Node 20.0.0 and
+24.21.0 reproduce the documented planetary and calendar examples. The
+[installed replay](results/installed-replay.json) repeats all 1,365 position
+comparisons and the 13,775 unchanged modern controls. Registry npm 0.2.3 is
+unchanged and predates this namespace.
+
+The [original public site](results/hosted-before.json) matched all 30 baseline
+build files and its canonical root before source publication. Corrected public
+deployment is verified separately. The source implementation, installed package, hosted bytes and
 browser behavior are separate surfaces; no npm release is implied.
 
 ## Reproduce

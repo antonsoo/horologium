@@ -1,0 +1,35 @@
+{
+  "node": "v24.21.0",
+  "packageImport": "@antonsoloviev/horologium",
+  "jd": 1705425.5,
+  "model": {
+    "id": "jpl-3000bce-3000ce",
+    "fromJD": 625697.5,
+    "toJD": 2816787.5,
+    "inRange": true
+  },
+  "positions": [
+    {
+      "name": "Mercury",
+      "longitudeDeg": 352.16570589079276
+    },
+    {
+      "name": "Venus",
+      "longitudeDeg": 343.56285204455844
+    },
+    {
+      "name": "Mars",
+      "longitudeDeg": 318.72016569069166
+    },
+    {
+      "name": "Jupiter",
+      "longitudeDeg": 295.5940022409385
+    },
+    {
+      "name": "Saturn",
+      "longitudeDeg": 259.1776796483806
+    }
+  ],
+  "documentedCalendarExamples": true,
+  "invalidInputsRejected": true
+}

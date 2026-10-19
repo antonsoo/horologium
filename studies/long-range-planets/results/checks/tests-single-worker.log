@@ -1,0 +1,14 @@
+npm notice run @antonsoloviev/horologium@0.2.3 test
+npm notice run vitest run --maxWorkers=1 --testTimeout=30000
+
+ RUN  v5.0.1 /home/antonsoloviev/work/projects/showcases/horologium
+
+
+ Test Files  26 passed (26)
+      Tests  271 passed (271)
+   Start at  19:47:56
+   Duration  14.57s (tests 91%, transform 4%, import 4%, worker 1%)
+
+    Isolate  26 workers spawned · ~107ms startup each (spawn + environment, per file)
+             at least ~2.67s faster with isolate: false — reuses workers across files instead of one per file
+

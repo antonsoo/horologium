@@ -1,0 +1,322 @@
+
+> @antonsoloviev/horologium@0.2.3 test:browser
+> playwright test
+
+[WebServer] (node:738155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 58 tests using 2 workers
+
+(node:738213) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:738215) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium] › tests/browser/chinese-year.spec.mjs:72:1 › offline downloads agree with the public library and remain snapshots after navigation (1.3s)
+  ✓   1 [chromium] › tests/browser/chinese-year.spec.mjs:37:1 › 2033 leap-month evidence, keyboard navigation and month jumps preserve the time link (1.6s)
+  ✓   3 [chromium] › tests/browser/chinese-year.spec.mjs:92:1 › failed download leaves the evidence readable and can be retried (739ms)
+  ✓   4 [chromium] › tests/browser/chinese-year.spec.mjs:113:1 › live midnight changes the complete Chinese date together and preserves an unfinished date edit (661ms)
+  ✓   5 [chromium] › tests/browser/chinese-year.spec.mjs:131:1 › historical projections and near-midnight events carry their limits beside the result (768ms)
+  ✓   6 [chromium] › tests/browser/chinese-year.spec.mjs:152:1 › both ends of the date editor remain inspectable with bounded year navigation (929ms)
+  ✓   7 [chromium] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 320px in light and passes the accessibility scan (3.0s)
+  ✓   8 [chromium] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 320px in dark and passes the accessibility scan (2.8s)
+  ✓   9 [chromium] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 375px in light and passes the accessibility scan (2.8s)
+  ✓  10 [chromium] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 375px in dark and passes the accessibility scan (2.7s)
+  ✓  11 [chromium] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 1280px in light and passes the accessibility scan (3.4s)
+  ✓  12 [chromium] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 1280px in dark and passes the accessibility scan (3.4s)
+  ✓  13 [chromium] › tests/browser/clock.spec.mjs:64:1 › malformed links remain usable and a valid hash navigation recovers (1.2s)
+  ✓  15 [chromium] › tests/browser/clock.spec.mjs:105:1 › month/year steps clamp leap days and retain UTC time (1.6s)
+  ✓  14 [chromium] › tests/browser/clock.spec.mjs:82:1 › invalid date drafts preserve the result and recover with Enter (3.2s)
+  ✓  16 [chromium] › tests/browser/clock.spec.mjs:119:1 › year scrub keeps one anchor through multiple inputs and returns to a leap day (2.3s)
+  ✓  17 [chromium] › tests/browser/clock.spec.mjs:146:1 › pointer dragging keeps a stable year anchor until release (1.9s)
+  ✓  18 [chromium] › tests/browser/clock.spec.mjs:165:1 › browser history restores each valid time hash (1.5s)
+  ✓  19 [chromium] › tests/browser/clock.spec.mjs:179:1 › date bounds disable outward moves and bound the scrubber (2.4s)
+  ✓  20 [chromium] › tests/browser/clock.spec.mjs:193:1 › live ticks preserve date drafts, open explanations, focus and link mode across reload (1.6s)
+  ✓  21 [chromium] › tests/browser/clock.spec.mjs:212:1 › calendar nodes and explanations survive travel and location changes (1.3s)
+  ✓  22 [chromium] › tests/browser/clock.spec.mjs:229:1 › city selection changes the seasonal time and round-trips in the link (1.3s)
+  ✓  23 [chromium] › tests/browser/clock.spec.mjs:240:1 › late geolocation cannot replace a chosen city or a cancelled request (1.3s)
+  ✓  24 [chromium] › tests/browser/clock.spec.mjs:254:1 › new geolocation request owns its response after an unanswered timeout (1.7s)
+  ✓  25 [chromium] › tests/browser/clock.spec.mjs:274:1 › geolocation exceptions and invalid coordinates recover (1.1s)
+  ✓  27 [chromium] › tests/browser/clock.spec.mjs:294:1 › keyboard skip link retains the time permalink (989ms)
+  ✓  26 [chromium] › tests/browser/clock.spec.mjs:282:1 › personal location denial and invalid coordinates retain the city (1.2s)
+  ✓  29 [chromium] › tests/browser/clock.spec.mjs:328:1 › reconstructed year labels stay on the same civil boundary (1.3s)
+(node:739411) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  30 [firefox] › tests/browser/chinese-year.spec.mjs:37:1 › 2033 leap-month evidence, keyboard navigation and month jumps preserve the time link (4.2s)
+  ✓  31 [firefox] › tests/browser/chinese-year.spec.mjs:72:1 › offline downloads agree with the public library and remain snapshots after navigation (1.6s)
+  ✓  28 [chromium] › tests/browser/clock.spec.mjs:303:1 › light/dark desktop and mobile views remain accessible without overflow (10.9s)
+  ✓  32 [firefox] › tests/browser/chinese-year.spec.mjs:92:1 › failed download leaves the evidence readable and can be retried (1.4s)
+(node:739975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  33 [firefox] › tests/browser/chinese-year.spec.mjs:131:1 › historical projections and near-midnight events carry their limits beside the result (2.1s)
+  ✓  35 [firefox] › tests/browser/chinese-year.spec.mjs:152:1 › both ends of the date editor remain inspectable with bounded year navigation (2.1s)
+  ✓  34 [firefox] › tests/browser/chinese-year.spec.mjs:113:1 › live midnight changes the complete Chinese date together and preserves an unfinished date edit (3.2s)
+  ✓  36 [firefox] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 320px in light and passes the accessibility scan (5.3s)
+  ✓  37 [firefox] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 320px in dark and passes the accessibility scan (5.2s)
+  ✓  38 [firefox] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 375px in light and passes the accessibility scan (5.5s)
+  ✓  39 [firefox] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 375px in dark and passes the accessibility scan (5.8s)
+  ✓  40 [firefox] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 1280px in light and passes the accessibility scan (5.1s)
+  ✓  42 [firefox] › tests/browser/clock.spec.mjs:64:1 › malformed links remain usable and a valid hash navigation recovers (1.4s)
+  ✓  41 [firefox] › tests/browser/chinese-year.spec.mjs:177:3 › lunar-year inspection fits 1280px in dark and passes the accessibility scan (5.1s)
+  ✓  44 [firefox] › tests/browser/clock.spec.mjs:105:1 › month/year steps clamp leap days and retain UTC time (2.1s)
+  ✓  45 [firefox] › tests/browser/clock.spec.mjs:119:1 › year scrub keeps one anchor through multiple inputs and returns to a leap day (1.6s)
+  ✓  43 [firefox] › tests/browser/clock.spec.mjs:82:1 › invalid date drafts preserve the result and recover with Enter (4.5s)
+  ✓  46 [firefox] › tests/browser/clock.spec.mjs:146:1 › pointer dragging keeps a stable year anchor until release (1.2s)
+  ✓  47 [firefox] › tests/browser/clock.spec.mjs:165:1 › browser history restores each valid time hash (917ms)
+  ✓  48 [firefox] › tests/browser/clock.spec.mjs:179:1 › date bounds disable outward moves and bound the scrubber (1.6s)
+  ✓  49 [firefox] › tests/browser/clock.spec.mjs:193:1 › live ticks preserve date drafts, open explanations, focus and link mode across reload (1.4s)
+  ✓  50 [firefox] › tests/browser/clock.spec.mjs:212:1 › calendar nodes and explanations survive travel and location changes (1.3s)
+  ✓  51 [firefox] › tests/browser/clock.spec.mjs:229:1 › city selection changes the seasonal time and round-trips in the link (1.1s)
+  ✓  53 [firefox] › tests/browser/clock.spec.mjs:254:1 › new geolocation request owns its response after an unanswered timeout (1.5s)
+  ✓  54 [firefox] › tests/browser/clock.spec.mjs:274:1 › geolocation exceptions and invalid coordinates recover (1.2s)
+  ✓  52 [firefox] › tests/browser/clock.spec.mjs:240:1 › late geolocation cannot replace a chosen city or a cancelled request (3.7s)
+  ✓  55 [firefox] › tests/browser/clock.spec.mjs:282:1 › personal location denial and invalid coordinates retain the city (1.3s)
+  ✓  56 [firefox] › tests/browser/clock.spec.mjs:294:1 › keyboard skip link retains the time permalink (1.3s)
+  ✓  58 [firefox] › tests/browser/clock.spec.mjs:328:1 › reconstructed year labels stay on the same civil boundary (1.3s)
+  ✓  57 [firefox] › tests/browser/clock.spec.mjs:303:1 › light/dark desktop and mobile views remain accessible without overflow (12.0s)
+
+  58 passed (1.4m)
+{"browserSessions":4,"dateChanges":56,"screenshots":2}
+
+> @antonsoloviev/horologium@0.2.3 prepare
+> npm run build:lib
+
+
+> @antonsoloviev/horologium@0.2.3 build:lib
+> tsc -p tsconfig.lib.json
+
+[
+  {
+    "id": "@antonsoloviev/horologium@0.2.3",
+    "name": "@antonsoloviev/horologium",
+    "version": "0.2.3",
+    "size": 80111,
+    "unpackedSize": 238276,
+    "shasum": "1c9ccd7416402e30a3b6505909ffa72434db79ec",
+    "integrity": "sha512-mX0IRUcm9FUj3rdyyM5s1DSMmlovc7l1zT/6+8R/JbrwpFEepcu4kJy75+b7bzco/0Rp3R9QyGvQrc1n57qBaQ==",
+    "filename": "antonsoloviev-horologium-0.2.3.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1071,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 15855,
+        "mode": 420
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "size": 2731,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/calendar-events.d.ts",
+        "size": 1673,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/calendar-events.js",
+        "size": 7343,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/moon-longitude.d.ts",
+        "size": 829,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/moon-longitude.js",
+        "size": 3343,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/planets.d.ts",
+        "size": 3226,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/planets.js",
+        "size": 9836,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/precession.d.ts",
+        "size": 248,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/precession.js",
+        "size": 2114,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/sun-moon.d.ts",
+        "size": 5726,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/astronomy/sun-moon.js",
+        "size": 13809,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/babylonian.d.ts",
+        "size": 3585,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/babylonian.js",
+        "size": 8086,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/byzantine.d.ts",
+        "size": 2535,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/byzantine.js",
+        "size": 4381,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/chinese.d.ts",
+        "size": 7320,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/chinese.js",
+        "size": 17758,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/coptic.d.ts",
+        "size": 3329,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/coptic.js",
+        "size": 7004,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/core/jd.d.ts",
+        "size": 3845,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/core/jd.js",
+        "size": 6246,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/core/validation.d.ts",
+        "size": 1248,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/core/validation.js",
+        "size": 2847,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/egyptian.d.ts",
+        "size": 4343,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/egyptian.js",
+        "size": 6971,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/greek.d.ts",
+        "size": 2119,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/greek.js",
+        "size": 7413,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/hebrew.d.ts",
+        "size": 6308,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/hebrew.js",
+        "size": 15488,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/index.d.ts",
+        "size": 1087,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/index.js",
+        "size": 1002,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/islamic.d.ts",
+        "size": 3477,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/islamic.js",
+        "size": 5528,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/maya.d.ts",
+        "size": 3792,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/maya.js",
+        "size": 10533,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/roman.d.ts",
+        "size": 6489,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/roman.js",
+        "size": 18110,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/types.d.ts",
+        "size": 1485,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/types.js",
+        "size": 196,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/zoroastrian.d.ts",
+        "size": 2155,
+        "mode": 420
+      },
+      {
+        "path": "dist/lib/zoroastrian.js",
+        "size": 3973,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1819,
+        "mode": 420
+      }
+    ],
+    "entryCount": 44,
+    "bundled": []
+  }
+]

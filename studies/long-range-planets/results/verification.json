@@ -1,0 +1,58 @@
+{
+  "sourceCommit": "52e75dc6cda1c8321c6f7e44d87e717bf1ad9bb0",
+  "cleanArchive": true,
+  "node": "24.21.0",
+  "npm": "11.19.0",
+  "install": {
+    "fresh": true,
+    "auditedPackages": 48,
+    "vulnerabilities": 0
+  },
+  "checks": {
+    "lint": true,
+    "strictTypes": true,
+    "unitTests": 271,
+    "unitCommand": "npm test -- --maxWorkers=1 --testTimeout=30000",
+    "browserWorkflows": 58,
+    "offlineStudyDateChanges": 56,
+    "offlineStudyAccessibilityScans": 4,
+    "offlineStudyAccessibilityViolations": 0,
+    "documentedExamples": true
+  },
+  "initialParallelRun": {
+    "passed": 269,
+    "timeouts": 2,
+    "reasonObserved": "5000 ms test deadline under shared host load; full single-worker rerun passed",
+    "sourceChangeToTimeouts": false
+  },
+  "archiveSourceFiles": 361,
+  "identicalBuiltFiles": 90,
+  "browserStateMatchesReviewedLocalBuild": true,
+  "screenshotsByteIdenticalToReviewedLocalBuild": 2,
+  "pack": {
+    "name": "@antonsoloviev/horologium",
+    "version": "0.2.3",
+    "filename": "antonsoloviev-horologium-0.2.3.tgz",
+    "size": 80111,
+    "unpackedSize": 238276,
+    "integrity": "sha512-mX0IRUcm9FUj3rdyyM5s1DSMmlovc7l1zT/6+8R/JbrwpFEepcu4kJy75+b7bzco/0Rp3R9QyGvQrc1n57qBaQ==",
+    "entryCount": 44
+  },
+  "packSha256": "efe4407783f15ec3fa11c0c9641eb8966c99dc81fb85ccf89230a71689afaf6d",
+  "consumer": {
+    "freshInstall": true,
+    "publicPackageImport": true,
+    "nodeVersions": [
+      "20.0.0",
+      "24.21.0"
+    ],
+    "strictNodeNextDeclarations": true,
+    "replayedPositions": 1365,
+    "unchangedModernPositions": 13775
+  },
+  "registry": {
+    "version": "0.2.3",
+    "integrity": "sha512-yhRiQgGspJnxeQ/oBq4vpbj1NYKs/vijybVNYzsgcgQDBU+xKXWs7cIGX+XLISnwimPufN5T5bgBU1yNoctJzg==",
+    "publishedByThisWork": false
+  }
+}

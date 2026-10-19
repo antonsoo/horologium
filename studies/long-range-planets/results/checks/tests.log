@@ -1,0 +1,46 @@
+npm notice run @antonsoloviev/horologium@0.2.3 test
+npm notice run vitest run
+
+ RUN  v5.0.1 /home/antonsoloviev/work/projects/showcases/horologium
+
+ ❯ tests/greek.test.ts (6 tests | 1 failed) 5212ms
+   ❯ Greek calendar (6)
+     × month/day stay in valid range (1-12, 1-30) across ~1100 years, no negative days at year boundaries 5077ms
+ ❯ tests/properties.test.ts (22 tests | 1 failed) 8962ms
+   ❯ every calendar, on any day (20)
+     × every tablet renders without a NaN or an undefined in it 5154ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/greek.test.ts > Greek calendar > month/day stay in valid range (1-12, 1-30) across ~1100 years, no negative days at year boundaries
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/greek.test.ts:32:3
+     30|   });
+     31|
+     32|   it('month/day stay in valid range (1-12, 1-30) across ~1100 years, n…
+       |   ^
+     33|     const start = gregorianToJD(-2000, 1, 1);
+     34|     for (let i = 0; i < 3000; i++) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/properties.test.ts > every calendar, on any day > every tablet renders without a NaN or an undefined in it
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/properties.test.ts:69:3
+     67|   });
+     68|
+     69|   it('every tablet renders without a NaN or an undefined in it', () =>…
+       |   ^
+     70|     const tablets = [
+     71|       h.roman.describe,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 24 passed (26)
+      Tests  2 failed | 269 passed (271)
+   Start at  19:45:01
+   Duration  10.37s (tests 74%, transform 18%, import 6%, worker 1%)
+
