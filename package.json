@@ -3,7 +3,7 @@
   "version": "0.2.3",
   "description": "A live clock for the calendars of the ancient world, with an Antikythera-inspired dial.",
   "type": "module",
-  "author": "Anton Soloviev",
+  "author": "Anthony Mercer",
   "license": "MIT",
   "homepage": "https://antonsoo.github.io/horologium/",
   "repository": {

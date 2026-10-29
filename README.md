@@ -300,7 +300,7 @@ your source for any new calendar rule.
 
 ## License
 
-[MIT](LICENSE) © 2026 Anton Soloviev. The clock page's fonts (Cinzel,
+[MIT](LICENSE) © 2026 Anthony Mercer. The clock page's fonts (Cinzel,
 Cormorant Garamond, EB Garamond) are in `src/app/fonts/`, each under the SIL
 Open Font License ([`LICENSE.txt`](src/app/fonts/LICENSE.txt) there); the page
 serves them itself and asks no other host for anything. The new-moon
@@ -309,4 +309,4 @@ series adapts MIT-licensed code by Sonia Keys and Commenthol; see
 
 ---
 
-<sub>Part of [Officina](https://antonsoo.github.io/officina/), a set of small open-source tools by [Anton Soloviev](https://github.com/antonsoo).</sub>
+<sub>Part of [Officina](https://antonsoo.github.io/officina/), a set of small open-source tools by [Anthony Mercer](https://github.com/antonsoo).</sub>
