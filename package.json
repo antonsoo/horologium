@@ -4,7 +4,7 @@
   "description": "A live clock for the calendars of the ancient world, with an Antikythera-inspired dial.",
   "type": "module",
   "author": "Anthony Mercer",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "homepage": "https://antonsoo.github.io/horologium/",
   "repository": {
     "type": "git",

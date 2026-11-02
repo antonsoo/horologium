@@ -57,8 +57,8 @@ app.innerHTML = `
       (JPL/Caltech), "Keplerian Elements for Approximate Positions of the Major Planets".
     </p>
     <p>
-      <a href="https://github.com/antonsoo/horologium">Source on GitHub</a> · MIT licensed ·
-      built by Anton Soloviev · <a href="./THIRD_PARTY_NOTICES.txt">Third-party notices</a>
+      <a href="https://github.com/antonsoo/horologium">Source on GitHub</a> · licensed under PolyForm Noncommercial ·
+      built by Anthony Mercer · <a href="./THIRD_PARTY_NOTICES.txt">Third-party notices</a>
     </p>
   </footer>
 `;

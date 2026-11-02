@@ -3,7 +3,7 @@
 **What time is it in Babylon?** A live, Antikythera-inspired clock for the calendars of the ancient world — and a small, tested TypeScript library behind it.
 
 [![npm](https://img.shields.io/npm/v/@antonsoloviev/horologium)](https://www.npmjs.com/package/@antonsoloviev/horologium)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/demo-antonsoo.github.io%2Fhorologium-8a6d3b)](https://antonsoo.github.io/horologium/)
 
 ![Horologium: a bronze Antikythera-inspired dial, date controls and the seasonal hour in Babylon for 4 October 2026 CE](docs/assets/hero.png)
@@ -300,7 +300,9 @@ your source for any new calendar rule.
 
 ## License
 
-[MIT](LICENSE) © 2026 Anthony Mercer. The clock page's fonts (Cinzel,
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`e81bdd3`](https://github.com/antonsoo/horologium/tree/e81bdd3) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
+[PolyForm Noncommercial 1.0.0](LICENSE) © 2026 Anthony Mercer. The clock page's fonts (Cinzel,
 Cormorant Garamond, EB Garamond) are in `src/app/fonts/`, each under the SIL
 Open Font License ([`LICENSE.txt`](src/app/fonts/LICENSE.txt) there); the page
 serves them itself and asks no other host for anything. The new-moon
