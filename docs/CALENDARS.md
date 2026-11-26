@@ -288,8 +288,7 @@ rather than guessing at attested-but-irregular history:
   occasion).
 - **Olympiad**: 776 BCE (Julian) = Ol. 1.1, incrementing every 4 years from
   the same year-start; this is the traditional epoch, not independently
-  re-derived. The source checkout uses the same selected Attic year for
-  both labels, including the interval after solstice but before that
+  re-derived. Since 0.3.0 the same selected Attic year serves both labels, including the interval after solstice but before that
   year's first month. Both advance on the new moon's modeled civil day.
 - Month names verified against Wikipedia's "Attic calendar" article,
   including the polytonic Greek forms (e.g. Ἑκατομβαιών).
@@ -430,4 +429,4 @@ calendar's date range on the other calendars.
 
 [Native process replay and scope](../studies/date-inputs/README.md) include
 calculation timeouts, same-process recovery and unchanged valid outputs.
-Build this source revision before using these unreleased corrections.
+These corrections are in 0.3.0 and later.

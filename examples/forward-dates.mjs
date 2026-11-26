@@ -1,5 +1,5 @@
 // Run after npm run build:lib, or in a consumer of the built package.
-import { coptic, core, hebrew, islamic } from '@antonsoloviev/horologium';
+import { coptic, core, hebrew, islamic } from '@anthonymercer/horologium';
 
 const cases = [
   ['Gregorian 2025-02-29', () => core.gregorianToJD(2025, 2, 29)],

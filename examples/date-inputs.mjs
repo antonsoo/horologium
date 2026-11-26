@@ -1,6 +1,6 @@
 // Source checkout: npm run build:lib && node examples/date-inputs.mjs
 // Uses the package's public export; inputs below are deliberately invalid.
-import { coptic, core, hebrew, islamic, maya } from '@antonsoloviev/horologium';
+import { coptic, core, hebrew, islamic, maya } from '@anthonymercer/horologium';
 
 console.log('Calendar input errors (source correction, unreleased)');
 for (const [label, calculate] of [

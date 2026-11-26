@@ -4,8 +4,14 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
-Source improvements below are not yet released to npm. Individual study
-publication records distinguish source, built packages and the live demo.
+## [0.3.0] - 2026-11-26
+
+### Distribution
+
+- Published as `@anthonymercer/horologium`. The earlier
+  `@antonsoloviev/horologium` package is deprecated and points here; its
+  versions stay installable.
+- Package metadata names Anthony Mercer as the author.
 
 ### Added
 

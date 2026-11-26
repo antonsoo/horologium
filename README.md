@@ -2,7 +2,7 @@
 
 **What time is it in Babylon?** A live, Antikythera-inspired clock for the calendars of the ancient world — and a small, tested TypeScript library behind it.
 
-[![npm](https://img.shields.io/npm/v/@antonsoloviev/horologium)](https://www.npmjs.com/package/@antonsoloviev/horologium)
+[![npm](https://img.shields.io/npm/v/@anthonymercer/horologium)](https://www.npmjs.com/package/@anthonymercer/horologium)
 [![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/demo-antonsoo.github.io%2Fhorologium-8a6d3b)](https://antonsoo.github.io/horologium/)
 
@@ -21,22 +21,21 @@ era. The Chinese lunar-year inspector shows the month boundaries and
 solar terms behind a leap-month decision. The arithmetic and astronomical
 limits are documented alongside the results.
 
-**Ancient planet pointers now use an ancient-range fit.** The source checkout and live demo
-select JPL's 3000 BCE–3000 CE elements outside its modern 1800–2050 CE fit,
+**Ancient planet pointers now use an ancient-range fit.** The package and live demo select JPL's 3000 BCE–3000 CE elements outside its modern 1800–2050 CE fit,
 including the required Jupiter/Saturn anomaly terms and matching Earth model.
 On 256 retained dates outside the modern interval, maximum longitude error
 against Horizons falls from 30.48 to 0.39 degrees for Saturn. The modern
 interval retains exactly the previous positions. The dial names the selected
 fit and marks dates outside its coverage. [Data, before/after and limits](studies/long-range-planets/README.md).
-The npm release predates this API; [clean install and live publication](studies/long-range-planets/README.md#browser-and-package-verification) are recorded separately.
+[Clean install and live publication](studies/long-range-planets/README.md#browser-and-package-verification) are recorded separately.
 
 **Polar sunrise and sunset correction in source and the live demo.** The seasonal clock
 now searches for each horizon crossing instead of freezing the Sun at UTC noon.
 It retains a known sunrise when that solar day has no sunset, and marks grazing
 boundaries **uncertain**. The original calculation could be over two hours wrong
 near the poles. [Independent ephemeris comparison and actual clock output](studies/solar-events/README.md)
-retain the original errors, corrected results and model limits. npm 0.2.3 predates
-the new `astronomy.solarDayEvents` API.
+retain the original errors, corrected results and model limits. The
+`astronomy.solarDayEvents` API is new in 0.3.0.
 
 ## Quickstart
 
@@ -52,11 +51,11 @@ hot reload.
 To use the calendar library in your own project:
 
 ```sh
-npm install @antonsoloviev/horologium
+npm install @anthonymercer/horologium
 ```
 
 ```ts
-import { maya, hebrew, core } from '@antonsoloviev/horologium';
+import { maya, hebrew, core } from '@anthonymercer/horologium';
 
 const jd = core.gregorianToJD(2012, 12, 21);
 const lc = maya.fromJD(jd).longCount;
@@ -64,22 +63,13 @@ const lc = maya.fromJD(jd).longCount;
 hebrew.describe(jd).native; // "ח׳ טבת תשע״ג" (8 Tevet 5773)
 ```
 
-The example above works with the registry release and current source. The
-[publication and compatibility record](studies/live-clock/README.md) distinguishes
-the surfaces:
+The [publication and compatibility record](studies/live-clock/README.md)
+distinguishes the surfaces:
 
 | Surface | Calendar behavior |
 | --- | --- |
-| Current source and live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing, Chinese-year inspector and date-selected planet fits and guarded solar crossings |
-| npm `0.2.3` | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, unchecked forward-date overflow, and no `planets` namespace |
-
-For the corrected library, including the planetary and solar-event APIs, a pinned public Git
-install builds the same implementation used by the current demo. This has been
-verified from a clean consumer project:
-
-```sh
-npm install git+https://github.com/antonsoo/horologium.git#7efec4e84a1fbae700c291bcf3b2f034a82b38d8
-```
+| npm `0.3.0` and the live demo | Corrected Egyptian/Ethiopian labels, Maya G cycle, lunar timing, Chinese-year inspector and date-selected planet fits and guarded solar crossings |
+| npm `0.2.3` and earlier | Earlier calculations and API; no Chinese-year inspector, G1 at the Maya period ending, unchecked forward-date overflow, and no `planets` namespace |
 
 Invalid dates now raise `RangeError`; callers doing arithmetic should add days
 to a valid Julian Day instead of overflowing month/day fields. The
@@ -116,7 +106,7 @@ See [`examples/basic-usage.mjs`](examples/basic-usage.mjs) for a runnable versio
   principal solar terms, and the reason a month is regular or intercalary.
   Jump to a month, inspect approximate event times, and download the year's
   evidence as JSON. [Calculation and verification](docs/chinese-calendar.md).
-  The inspector is in source and the live demo; npm 0.2.3 predates it.
+  The inspector is new in 0.3.0.
 - **Location**: eight ancient cities (Rome, Athens, Alexandria, Babylon,
   Jerusalem, Chang'an, Tikal, Tenochtitlan) plus cancellable geolocation,
   feeding a visible approximate sunrise/sunset and Roman seasonal-hour
@@ -135,7 +125,7 @@ clamping, BCE dates and the browser's 5001 BCE–5000 CE input range.
 ## Usage examples
 
 ```ts
-import { roman, egyptian, core } from '@antonsoloviev/horologium';
+import { roman, egyptian, core } from '@anthonymercer/horologium';
 
 // The Roman calendar is Julian, not Gregorian - use julianToJD for a date
 // given in the calendar the Romans themselves used.
@@ -152,10 +142,10 @@ egyptian.sothicCyclePosition(ides);
 // { yearsIntoCycle: 1278, cycleAnchorCE: 139 } - see docs/CALENDARS.md for the caveat
 ```
 
-For the new planetary API, build the current source (`npm run build:lib`):
+The planetary API (0.3.0 and later):
 
 ```js
-import { core, planets } from './dist/lib/index.js';
+import { core, planets } from '@anthonymercer/horologium';
 
 const ides = core.julianToJD(-43, 3, 15); // 44 BCE, Julian calendar
 const { model, positions } = planets.planetPositions(ides);
@@ -169,11 +159,10 @@ exact Julian-day bounds. `planets.planetModel(jd)` returns coverage without
 computing positions. Model switches can introduce a small discontinuity;
 [the study](studies/long-range-planets/README.md) measures both boundaries.
 
-For the corrected Chinese calendar, build this source revision with
-`npm run build:lib`; the registry release does not yet include these changes:
+The corrected Chinese calendar (0.3.0 and later):
 
 ```js
-import { chinese, core } from './dist/lib/index.js';
+import { chinese, core } from '@anthonymercer/horologium';
 
 chinese.describe(core.gregorianToJD(2026, 9, 24)).native;
 // '丙午年 八月十四 (辛丑日)'
@@ -232,7 +221,7 @@ backward from it; the app shows it as a "proleptic" badge on the tablet.
   Roman, Byzantine, Egyptian-civil and Zoroastrian instead get hand-derived
   epoch verification and independent reference-fact checks — see each
   module's own tests and `docs/CALENDARS.md`.
-- **Chinese calendar**: the source revision matches all 62,821 available
+- **Chinese calendar**: since 0.3.0 it matches all 62,821 available
   daily month/day/year records in Hong Kong Observatory's 1929–2100 tables,
   checked at local midnight, noon and the final second. The original source
   disagreed on 1,315 of those dates. This is a modern-rule calculation in

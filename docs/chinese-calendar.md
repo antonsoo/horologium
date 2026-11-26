@@ -1,7 +1,7 @@
 # Inspecting the Chinese lunar year
 
-These corrections and the inspector are available from source, pending an
-npm release. See the [fresh source verification](verification-2026-10-10.md).
+These corrections and the inspector were released in 0.3.0. See the
+[fresh source verification](verification-2026-10-10.md).
 
 The Chinese tablet's **Inspect months and leap rule** button opens a year
 ledger. Its dates use UTC+8 even when the astronomical clock's editor shows
@@ -43,10 +43,10 @@ node examples/chinese-year.mjs 2033
 `node examples/chinese-year.mjs 2033 --json` emits the same data as the
 browser's **Download lunar year (JSON)** button. The download is a snapshot
 of the displayed year, independent of subsequent clock changes. No data
-leaves the browser. The public API, after a source build, is:
+leaves the browser. The public API is:
 
 ```js
-import { chinese, core } from './dist/lib/index.js';
+import { chinese, core } from '@anthonymercer/horologium';
 
 const year = chinese.inspectChineseYear(2033);
 console.log(year.months.filter((month) => month.isLeapMonth).map((month) => month.month));
