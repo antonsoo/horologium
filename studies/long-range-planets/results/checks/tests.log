@@ -1,7 +1,7 @@
 npm notice run @antonsoloviev/horologium@0.2.3 test
 npm notice run vitest run
 
- RUN  v5.0.1 /home/antonsoloviev/work/projects/showcases/horologium
+ RUN  v5.0.1 <workspace>/horologium
 
  ❯ tests/greek.test.ts (6 tests | 1 failed) 5212ms
    ❯ Greek calendar (6)

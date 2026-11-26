@@ -1,7 +1,7 @@
 npm notice run @antonsoloviev/horologium@0.2.3 test
 npm notice run vitest run --maxWorkers=1 --testTimeout=30000
 
- RUN  v5.0.1 /home/antonsoloviev/work/projects/showcases/horologium
+ RUN  v5.0.1 <workspace>/horologium
 
 
  Test Files  26 passed (26)
